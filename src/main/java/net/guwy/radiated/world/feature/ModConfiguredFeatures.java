@@ -1,6 +1,7 @@
 package net.guwy.radiated.world.feature;
 
 import com.google.common.base.Suppliers;
+import net.guwy.radiated.Radiated;
 import net.guwy.radiated.index.RDTResources;
 import net.guwy.sticky_foundations.StickyFoundations;
 import net.guwy.sticky_foundations.index.SFMinerals;
@@ -23,7 +24,7 @@ import java.util.function.Supplier;
 
 public class ModConfiguredFeatures {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
-            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, StickyFoundations.MOD_ID);
+            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Radiated.MOD_ID);
 
     private static final RuleTest NATURAL_SOIL = new TagMatchTest(SFTags.Blocks.NATURAL_SOIL);
     private static final RuleTest NATURAL_FOLIAGE = new TagMatchTest(SFTags.Blocks.NATURAL_FOLIAGE);
@@ -36,7 +37,7 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, RDTResources.BERYLLIUM_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, RDTResources.BERYLLIUM_ORE_DEEPSLATE.get().defaultBlockState())));
     public static final RegistryObject<ConfiguredFeature<?, ?>> BERYLLIUM_ORE = CONFIGURED_FEATURES.register("beryllium_ore",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_BERYLLIUM_ORES.get(),6)));
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_BERYLLIUM_ORES.get(),12)));
 
 
 

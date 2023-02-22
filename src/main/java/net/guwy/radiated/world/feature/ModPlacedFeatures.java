@@ -1,5 +1,6 @@
 package net.guwy.radiated.world.feature;
 
+import net.guwy.radiated.Radiated;
 import net.guwy.sticky_foundations.StickyFoundations;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES =
-            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, StickyFoundations.MOD_ID);
+            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Radiated.MOD_ID);
 
 
 
