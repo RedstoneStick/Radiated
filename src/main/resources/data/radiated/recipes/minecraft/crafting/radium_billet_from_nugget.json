@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xx",
+    "xx",
+    "xx"
+  ],
+  "key": {
+    "x": {
+      "item": "radiated:radium_nugget"
+    }
+  },
+  "result": {
+    "item": "radiated:radium_billet",
+    "count": 1
+  }
+}

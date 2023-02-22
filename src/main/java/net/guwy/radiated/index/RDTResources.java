@@ -1,0 +1,105 @@
+package net.guwy.radiated.index;
+
+import net.guwy.radiated.Radiated;
+import net.guwy.radiated.content.items.BasicRadioactiveItem;
+import net.guwy.sticky_foundations.StickyFoundations;
+import net.guwy.sticky_foundations.index.SFCreativeModTabs;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
+import java.util.function.Supplier;
+
+public class RDTResources {
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Radiated.MOD_ID);
+    public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Radiated.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Radiated.MOD_ID);
+
+
+
+
+
+
+    public static final RegistryObject<Item> BERYLLIUM_INGOT = ITEMS.register("beryllium_ingot",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> BERYLLIUM_NUGGET = ITEMS.register("beryllium_nugget",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> BERYLLIUM_BILLET = ITEMS.register("beryllium_billet",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+
+
+    public static final RegistryObject<Item> RADIUM_INGOT = ITEMS.register("radium_ingot",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 7.5));
+
+    public static final RegistryObject<Item> RADIUM_NUGGET = ITEMS.register("radium_nugget",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.75));
+
+    public static final RegistryObject<Item> RADIUM_BILLET = ITEMS.register("radium_billet",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 3.75));
+
+
+
+    public static final RegistryObject<Item> THORIUM_FUEL_INGOT = ITEMS.register("thorium_fuel_ingot",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 1.75));
+
+    public static final RegistryObject<Item> THORIUM_FUEL_NUGGET = ITEMS.register("thorium_fuel_nugget",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.175));
+
+    public static final RegistryObject<Item> THORIUM_FUEL_BILLET = ITEMS.register("thorium_fuel_billet",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.875));
+
+
+
+
+
+
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
+                                                                     CreativeModeTab tab){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab);
+        return toReturn;
+    }
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
+                                                                            CreativeModeTab tab){
+        return RDTResources.BLOCK_ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    }
+
+
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
+                                                                     CreativeModeTab tab, String tooltipKey){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab, tooltipKey);
+        return toReturn;
+    }
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
+                                                                            CreativeModeTab tab, String tooltipKey){
+        return RDTResources.BLOCK_ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)){
+            @Override
+            public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+                pTooltip.add(Component.literal(tooltipKey));
+            }
+        });
+    }
+
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block){
+        return BLOCKS.register(name, block);
+    }
+
+
+    public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
+        BLOCK_ITEMS.register(eventBus);
+        ITEMS.register(eventBus);
+    }
+}

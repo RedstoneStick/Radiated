@@ -1,0 +1,17 @@
+{
+  "itemGroup.radiated_tab": "Radiated",
+
+
+
+  "item.radiated.thorium_fuel_ingot": "Ingot of Thorium Fuel",
+  "item.radiated.thorium_fuel_nugget": "Nugget of Thorium Fuel",
+  "item.radiated.thorium_fuel_billet": "Thorium Fuel Billet",
+
+  "item.radiated.radium_ingot": "Radium-226 Ingot",
+  "item.radiated.radium_nugget": "Radium-226 Nugget",
+  "item.radiated.radium_billet": "Radium-226 Billet",
+
+  "item.radiated.beryllium_ingot": "Beryllium Ingot",
+  "item.radiated.beryllium_nugget": "Beryllium Nugget",
+  "item.radiated.beryllium_billet": "Beryllium Billet"
+}
