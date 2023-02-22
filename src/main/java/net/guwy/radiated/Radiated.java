@@ -2,6 +2,8 @@ package net.guwy.radiated;
 
 import com.mojang.logging.LogUtils;
 import net.guwy.radiated.index.RDTResources;
+import net.guwy.radiated.world.feature.ModConfiguredFeatures;
+import net.guwy.radiated.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +23,9 @@ public class Radiated {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         RDTResources.register(eventBus);
+
+        ModConfiguredFeatures.register(eventBus);
+        ModPlacedFeatures.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
