@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "items": "radiated:thorium_fuel_nugget",
+      "count": 6
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:thorium_fuel_billet"
+    }
+  ]
+}

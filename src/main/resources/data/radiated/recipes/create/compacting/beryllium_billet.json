@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "forge:nuggets/beryllium",
+      "count": 6
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:beryllium_billet"
+    }
+  ]
+}

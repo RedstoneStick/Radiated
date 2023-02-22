@@ -1,0 +1,29 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "radiated:crushed_beryllium"
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:beryllium_nugget",
+      "count": 9
+    },
+    {
+      "item": "radiated:beryllium_nugget",
+      "count": 9,
+      "chance": 0.60
+    },
+    {
+      "item": "minecraft:emerald",
+      "count": 1,
+      "chance": 0.15
+    },
+    {
+      "item": "minecraft:flint",
+      "count": 1,
+      "chance": 0.20
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "radiated:radium_nugget",
+      "count": 6
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:radium_billet"
+    }
+  ]
+}

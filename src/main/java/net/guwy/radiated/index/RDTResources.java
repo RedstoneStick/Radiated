@@ -5,9 +5,15 @@ import net.guwy.radiated.content.items.BasicRadioactiveItem;
 import net.guwy.sticky_foundations.StickyFoundations;
 import net.guwy.sticky_foundations.index.SFCreativeModTabs;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,6 +32,22 @@ public class RDTResources {
 
 
 
+
+    public static final RegistryObject<Block> BERYLLIUM_ORE = registerBlock("beryllium_ore", () ->
+            new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).
+                    strength(3f).explosionResistance(3f).requiresCorrectToolForDrops().
+                    sound(SoundType.STONE), UniformInt.of(3,7)), RDTCreativeModeTabs.MAIN);
+
+    public static final RegistryObject<Block> BERYLLIUM_ORE_DEEPSLATE = registerBlock("beryllium_ore_deepslate", () ->
+            new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).
+                    strength(3f).explosionResistance(6f).requiresCorrectToolForDrops().
+                    sound(SoundType.DEEPSLATE), UniformInt.of(3,7)), RDTCreativeModeTabs.MAIN);
+
+    public static final RegistryObject<Item> RAW_BERYLLIUM = ITEMS.register("raw_beryllium",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> CRUSHED_BERYLLIUM = ITEMS.register("crushed_beryllium",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
     public static final RegistryObject<Item> BERYLLIUM_INGOT = ITEMS.register("beryllium_ingot",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));

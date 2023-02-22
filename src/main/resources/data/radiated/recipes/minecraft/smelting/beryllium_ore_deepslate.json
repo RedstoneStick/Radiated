@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "radiated:beryllium_ore_deepslate"
+  },
+  "result": "radiated:beryllium_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

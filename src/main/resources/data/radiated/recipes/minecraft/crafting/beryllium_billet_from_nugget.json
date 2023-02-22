@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xx",
+    "xx",
+    "xx"
+  ],
+  "key": {
+    "x": {
+      "item": "radiated:beryllium_nugget"
+    }
+  },
+  "result": {
+    "item": "radiated:beryllium_billet",
+    "count": 1
+  }
+}

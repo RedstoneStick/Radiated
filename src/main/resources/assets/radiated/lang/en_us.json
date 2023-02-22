@@ -13,5 +13,9 @@
 
   "item.radiated.beryllium_ingot": "Beryllium Ingot",
   "item.radiated.beryllium_nugget": "Beryllium Nugget",
-  "item.radiated.beryllium_billet": "Beryllium Billet"
+  "item.radiated.beryllium_billet": "Beryllium Billet",
+  "item.radiated.raw_beryllium": "Raw Beryllium",
+  "item.radiated.crushed_beryllium": "Crushed Beryllium",
+  "block.radiated.beryllium_ore": "Beryllium Ore",
+  "block.radiated.beryllium_ore_deepslate": "Deepslate Beryllium Ore"
 }
