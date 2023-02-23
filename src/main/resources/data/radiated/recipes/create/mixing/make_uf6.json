@@ -28,5 +28,6 @@
       "nbt": {},
       "amount": 1000
     }
-  ]
+  ],
+  "heatRequirement": "heated"
 }

@@ -101,6 +101,17 @@ public class RDTResources {
 
 
 
+    public static final RegistryObject<Item> URANIUM_FUEL_INGOT = ITEMS.register("uranium_fuel_ingot",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.5));
+
+    public static final RegistryObject<Item> URANIUM_FUEL_NUGGET = ITEMS.register("uranium_fuel_nugget",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.05));
+
+    public static final RegistryObject<Item> URANIUM_FUEL_BILLET = ITEMS.register("uranium_fuel_billet",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.25));
+
+
+
     public static final RegistryObject<Item> THORIUM_FUEL_INGOT = ITEMS.register("thorium_fuel_ingot",
             () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 1.75));
 

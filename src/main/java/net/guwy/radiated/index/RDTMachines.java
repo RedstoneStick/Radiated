@@ -1,6 +1,7 @@
 package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
+import net.guwy.radiated.content.blocks.machines.rtg.RTGBlock;
 import net.guwy.radiated.content.blocks.machines.turbine.TurbineBlock;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -27,6 +28,11 @@ public class RDTMachines {
     // Machines
     public static final RegistryObject<Block> TURBINE = registerBlock("turbine", () ->
             new TurbineBlock(BlockBehaviour.Properties.of(Material.METAL).
+                    strength(4.5f).explosionResistance(3f).
+                    sound(SoundType.METAL).noOcclusion()), RDTCreativeModeTabs.MAIN);
+
+    public static final RegistryObject<Block> RTG = registerBlock("rtg", () ->
+            new RTGBlock(BlockBehaviour.Properties.of(Material.METAL).
                     strength(4.5f).explosionResistance(3f).
                     sound(SoundType.METAL).noOcclusion()), RDTCreativeModeTabs.MAIN);
 

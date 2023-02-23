@@ -1,0 +1,29 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "radiated:thorium_fuel_nugget"
+    },
+    {
+      "item": "radiated:thorium_fuel_nugget"
+    },
+    {
+      "item": "radiated:thorium_fuel_nugget"
+    },
+    {
+      "item": "radiated:thorium_fuel_nugget"
+    },
+    {
+      "item": "radiated:thorium_fuel_nugget"
+    },
+    {
+      "item": "radiated:thorium_fuel_nugget"
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:thorium_fuel_billet"
+    }
+  ],
+  "heatRequirement": "heated"
+}

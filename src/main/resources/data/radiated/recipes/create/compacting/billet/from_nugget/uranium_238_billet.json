@@ -1,0 +1,29 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "radiated:uranium_238_nugget"
+    },
+    {
+      "item": "radiated:uranium_238_nugget"
+    },
+    {
+      "item": "radiated:uranium_238_nugget"
+    },
+    {
+      "item": "radiated:uranium_238_nugget"
+    },
+    {
+      "item": "radiated:uranium_238_nugget"
+    },
+    {
+      "item": "radiated:uranium_238_nugget"
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:uranium_238_billet"
+    }
+  ],
+  "heatRequirement": "heated"
+}

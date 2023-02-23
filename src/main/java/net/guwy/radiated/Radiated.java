@@ -1,6 +1,7 @@
 package net.guwy.radiated;
 
 import com.mojang.logging.LogUtils;
+import net.guwy.radiated.content.blocks.machines.rtg.RTGScreen;
 import net.guwy.radiated.content.blocks.machines.turbine.TurbineScreen;
 import net.guwy.radiated.index.*;
 import net.guwy.radiated.world.feature.ModConfiguredFeatures;
@@ -26,9 +27,9 @@ public class Radiated {
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        RDTResources.register(eventBus);
         RDTMachines.register(eventBus);
         RDTItems.register(eventBus);
+        RDTResources.register(eventBus);
 
         ModEffects.register(eventBus);
 
@@ -68,9 +69,12 @@ public class Radiated {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             MenuScreens.register(RDTMenuTypes.TURBINE_MENU.get(), TurbineScreen::new);
+            MenuScreens.register(RDTMenuTypes.RTG_MENU.get(), RTGScreen::new);
 
             ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_UF6.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_UF6.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(RDTMachines.RTG.get(), RenderType.cutout());
         }
     }
 }

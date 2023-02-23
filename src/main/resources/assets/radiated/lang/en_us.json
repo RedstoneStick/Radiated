@@ -27,6 +27,10 @@
   "item.radiated.uranium_238_nugget": "Uranium-238 Nugget",
   "item.radiated.uranium_238_billet": "Uranium-238 Billet",
 
+  "item.radiated.uranium_fuel_ingot": "Ingot of Uranium Fuel",
+  "item.radiated.uranium_fuel_nugget": "Nugget of Uranium Fuel",
+  "item.radiated.uranium_fuel_billet": "Uranium Fuel Billet",
+
   "item.radiated.beryllium_ingot": "Beryllium Ingot",
   "item.radiated.beryllium_nugget": "Beryllium Nugget",
   "item.radiated.beryllium_billet": "Beryllium Billet",

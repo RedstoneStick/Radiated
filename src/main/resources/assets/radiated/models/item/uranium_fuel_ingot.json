@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "radiated:resources/uranium/uranium_fuel_ingot"
+  }
+}

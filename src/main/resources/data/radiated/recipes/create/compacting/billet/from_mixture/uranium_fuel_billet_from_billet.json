@@ -1,0 +1,30 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "radiated:uranium_238_billet"
+    },
+    {
+      "item": "radiated:uranium_238_billet"
+    },
+    {
+      "item": "radiated:uranium_238_billet"
+    },
+    {
+      "item": "radiated:uranium_238_billet"
+    },
+    {
+      "item": "radiated:uranium_238_billet"
+    },
+    {
+      "item": "radiated:uranium_235_billet"
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:uranium_fuel_billet",
+      "count": 6
+    }
+  ],
+  "heatRequirement": "heated"
+}

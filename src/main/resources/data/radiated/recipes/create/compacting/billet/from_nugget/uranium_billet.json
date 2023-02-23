@@ -24,5 +24,6 @@
     {
       "item": "radiated:uranium_billet"
     }
-  ]
+  ],
+  "heatRequirement": "heated"
 }

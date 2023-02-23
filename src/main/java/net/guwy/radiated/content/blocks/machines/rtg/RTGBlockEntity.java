@@ -1,6 +1,6 @@
-package net.guwy.radiated.content.blocks.machines.turbine;
+package net.guwy.radiated.content.blocks.machines.rtg;
 
-import net.guwy.radiated.content.network_packages.TurbineSyncS2CPacket;
+import net.guwy.radiated.content.network_packages.RTGSyncS2CPacket;
 import net.guwy.radiated.index.ModNetworking;
 import net.guwy.radiated.index.RDTBlockEntities;
 import net.guwy.radiated.index.RDTResources;
@@ -31,8 +31,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(1){
+public class RTGBlockEntity extends BlockEntity implements MenuProvider {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(16){
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -41,9 +41,14 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             AtomicBoolean valid = new AtomicBoolean(false);
-            stack.getCapability(ForgeCapabilities.ENERGY).ifPresent(energyStorage -> {
+            if(slot == 0){
+                stack.getCapability(ForgeCapabilities.ENERGY).ifPresent(energyStorage -> {
+                    valid.set(true);
+                });
+            } else {
                 valid.set(true);
-            });
+            }
+
             return valid.get();
         }
     };
@@ -54,14 +59,14 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
     private int progress = 0;
     private int maxProgress = 200;
 
-    public TurbineBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(RDTBlockEntities.TURBINE.get(), pPos, pBlockState);
+    public RTGBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(RDTBlockEntities.RTG.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                    case 0 -> TurbineBlockEntity.this.progress;
-                    case 1 -> TurbineBlockEntity.this.maxProgress;
+                    case 0 -> RTGBlockEntity.this.progress;
+                    case 1 -> RTGBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -69,8 +74,8 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pValue) {
-                    case 0 -> TurbineBlockEntity.this.progress = pValue;
-                    case 1 -> TurbineBlockEntity.this.maxProgress = pValue;
+                    case 0 -> RTGBlockEntity.this.progress = pValue;
+                    case 1 -> RTGBlockEntity.this.maxProgress = pValue;
                 }
             }
 
@@ -82,19 +87,19 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     public static void onUse(Level pLevel, BlockPos pPos, BlockState pState, Player pPlayer) {
-        TurbineBlockEntity blockEntity = (TurbineBlockEntity) pLevel.getBlockEntity(pPos);
-        ModNetworking.sendToClients(new TurbineSyncS2CPacket(blockEntity.getEnergyStorage().getEnergyStored(), pPos));
+        RTGBlockEntity blockEntity = (RTGBlockEntity) pLevel.getBlockEntity(pPos);
+        ModNetworking.sendToClients(new RTGSyncS2CPacket(blockEntity.getEnergyStorage().getEnergyStored(), pPos));
     }
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("block.radiated.turbine");
+        return Component.literal("block.radiated.rtg");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new TurbineMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new RTGMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
@@ -147,10 +152,12 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
     }
 
 
-    public static  void tick(Level level, BlockPos blockPos, BlockState state, TurbineBlockEntity pEntity) {
+    public static  void tick(Level level, BlockPos blockPos, BlockState state, RTGBlockEntity pEntity) {
         if(level.isClientSide()){
             return;
         }
+
+        RTGBlock.setConnections(state, level, pEntity.getBlockPos());
 
         SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
         for(int i=0; i < pEntity.itemHandler.getSlots(); i++){
@@ -162,31 +169,56 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
         boolean tempBool = hasCorrectItemInSlot && inventory.getItem(0).getCount() == 1;
 
         pEntity.ENERGY_STORAGE.setEnergy(Math.min(pEntity.CAPACITY, pEntity.ENERGY_STORAGE.getEnergyStored() + 100));
+        ModNetworking.sendToClients(new RTGSyncS2CPacket(pEntity.ENERGY_STORAGE.getEnergyStored(), pEntity.getBlockPos()));
         setChanged(level, blockPos, state);
 
-        inventory.getItem(0).getCapability(ForgeCapabilities.ENERGY).ifPresent(itemEnergy -> {
-            int chargeVal = itemEnergy.receiveEnergy(pEntity.ENERGY_STORAGE.getEnergyStored(), false);
-            pEntity.ENERGY_STORAGE.extractEnergy(chargeVal, false);
-            setChanged(level, blockPos, state);
-        });
+        PushEnergyToSlot(inventory, pEntity, 0);
+        PushEnergyInAllDirections(pEntity);
 
 
 
     }
 
+    private static void PushEnergyToSlot(SimpleContainer inventory, RTGBlockEntity pEntity, int slotIndex){
+        inventory.getItem(slotIndex).getCapability(ForgeCapabilities.ENERGY).ifPresent(itemEnergy -> {
+            int chargeVal = itemEnergy.receiveEnergy(pEntity.ENERGY_STORAGE.getEnergyStored(), false);
+            pEntity.ENERGY_STORAGE.extractEnergy(chargeVal, false);
+            setChanged(pEntity.getLevel(), pEntity.getBlockPos(), pEntity.getBlockState());
+        });
+    }
+
+    private static void PushEnergyInAllDirections(RTGBlockEntity pEntity){
+        for(Direction direction : Direction.values()){
+            PushEnergyInDirection(pEntity, direction);
+        }
+    }
+
+    private static void PushEnergyInDirection(RTGBlockEntity pEntity, Direction direction){
+        Level level = pEntity.getLevel();
+        BlockPos pos = pEntity.getBlockPos();
+        BlockEntity neighbor = level.getBlockEntity(pos.relative(direction));
+
+        if(neighbor != null){
+            neighbor.getCapability(ForgeCapabilities.ENERGY, direction.getOpposite()).ifPresent(nEnergy ->{
+                int maxEnergyExtract = pEntity.ENERGY_STORAGE.extractEnergy(Integer.MAX_VALUE, true);
+                int energySent = nEnergy.receiveEnergy(Math.min(pEntity.ENERGY_STORAGE.getEnergyStored(), maxEnergyExtract), false);
+                pEntity.ENERGY_STORAGE.extractEnergy(energySent, false);
+            });
+        }
+    }
 
 
-    private final int CAPACITY = 1000000;
+
+    private final int CAPACITY = 100000;
     private final ModEnergyStorage ENERGY_STORAGE = new ModEnergyStorage(CAPACITY, 0, CAPACITY) {
         @Override
         public void onEnergyChanged() {
             setChanged();
-            ModNetworking.sendToClients(new TurbineSyncS2CPacket(this.energy, getBlockPos()));
+            ModNetworking.sendToClients(new RTGSyncS2CPacket(this.energy, getBlockPos()));
         }
     };
 
     private LazyOptional<IEnergyStorage> lazyEnergyStorage = LazyOptional.empty();
-    private static final int MAX_ENERGY_DRAIN = 50000;
 
     public IEnergyStorage getEnergyStorage() {
         return ENERGY_STORAGE;

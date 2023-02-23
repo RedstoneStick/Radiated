@@ -1,6 +1,7 @@
 package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
+import net.guwy.radiated.content.network_packages.RTGSyncS2CPacket;
 import net.guwy.radiated.content.network_packages.TurbineSyncS2CPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -31,6 +32,12 @@ public class ModNetworking {
                 .decoder(TurbineSyncS2CPacket::new)
                 .encoder(TurbineSyncS2CPacket::toBytes)
                 .consumerMainThread(TurbineSyncS2CPacket::handle)
+                .add();
+
+        net.messageBuilder(RTGSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(RTGSyncS2CPacket::new)
+                .encoder(RTGSyncS2CPacket::toBytes)
+                .consumerMainThread(RTGSyncS2CPacket::handle)
                 .add();
 
 

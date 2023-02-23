@@ -24,5 +24,6 @@
     {
       "item": "radiated:uranium_235_billet"
     }
-  ]
+  ],
+  "heatRequirement": "heated"
 }

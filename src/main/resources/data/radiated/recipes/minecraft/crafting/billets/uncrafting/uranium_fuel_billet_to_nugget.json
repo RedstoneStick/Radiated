@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "radiated:uranium_fuel_billet"
+    }
+  ],
+  "result": {
+    "item": "radiated:uranium_fuel_nugget",
+    "count": 6
+  }
+}

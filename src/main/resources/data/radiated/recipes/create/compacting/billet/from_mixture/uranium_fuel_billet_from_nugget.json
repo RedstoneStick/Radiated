@@ -17,12 +17,13 @@
       "item": "radiated:uranium_238_nugget"
     },
     {
-      "item": "radiated:uranium_238_nugget"
+      "item": "radiated:uranium_235_nugget"
     }
   ],
   "results": [
     {
-      "item": "radiated:uranium_238_billet"
+      "item": "radiated:uranium_fuel_billet"
     }
-  ]
+  ],
+  "heatRequirement": "heated"
 }
