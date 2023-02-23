@@ -79,6 +79,28 @@ public class RDTResources {
 
 
 
+    public static final RegistryObject<Item> URANIUM_235_INGOT = ITEMS.register("uranium_235_ingot",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 1.0));
+
+    public static final RegistryObject<Item> URANIUM_235_NUGGET = ITEMS.register("uranium_235_nugget",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.1));
+
+    public static final RegistryObject<Item> URANIUM_235_BILLET = ITEMS.register("uranium_235_billet",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.5));
+
+
+
+    public static final RegistryObject<Item> URANIUM_238_INGOT = ITEMS.register("uranium_238_ingot",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.25));
+
+    public static final RegistryObject<Item> URANIUM_238_NUGGET = ITEMS.register("uranium_238_nugget",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.025));
+
+    public static final RegistryObject<Item> URANIUM_238_BILLET = ITEMS.register("uranium_238_billet",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.125));
+
+
+
     public static final RegistryObject<Item> THORIUM_FUEL_INGOT = ITEMS.register("thorium_fuel_ingot",
             () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 1.75));
 

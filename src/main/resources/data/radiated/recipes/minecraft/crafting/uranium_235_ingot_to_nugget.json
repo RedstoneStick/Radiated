@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "radiated:uranium_235_ingot"
+    }
+  ],
+  "result": {
+    "item": "radiated:uranium_235_nugget",
+    "count": 9
+  }
+}

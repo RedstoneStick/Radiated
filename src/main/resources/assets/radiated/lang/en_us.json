@@ -19,6 +19,14 @@
   "item.radiated.radium_nugget": "Radium-226 Nugget",
   "item.radiated.radium_billet": "Radium-226 Billet",
 
+  "item.radiated.uranium_235_ingot": "Uranium-235 Ingot",
+  "item.radiated.uranium_235_nugget": "Uranium-235 Nugget",
+  "item.radiated.uranium_235_billet": "Uranium-235 Billet",
+
+  "item.radiated.uranium_238_ingot": "Uranium-238 Ingot",
+  "item.radiated.uranium_238_nugget": "Uranium-238 Nugget",
+  "item.radiated.uranium_238_billet": "Uranium-238 Billet",
+
   "item.radiated.beryllium_ingot": "Beryllium Ingot",
   "item.radiated.beryllium_nugget": "Beryllium Nugget",
   "item.radiated.beryllium_billet": "Beryllium Billet",
@@ -34,6 +42,7 @@
 
 
   "item.radiated.uf6_bucket": "Bucket of Uranium Hexafluorite",
+  "fluid_type.radiated.uf6_fluid": "Uranium Hexafluorite",
 
 
 

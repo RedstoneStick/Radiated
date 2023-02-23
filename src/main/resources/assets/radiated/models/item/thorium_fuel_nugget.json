@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "radiated:resources/thorium_fuel/thorium_fuel_nugget"
+    "layer0": "radiated:resources/thorium/thorium_fuel_nugget"
   }
 }
