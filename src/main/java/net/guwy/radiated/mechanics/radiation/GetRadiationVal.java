@@ -40,7 +40,6 @@ public class GetRadiationVal {
         else if (itemStack.is(SFTags.Items.THORIUM_ORE)) {return 0.004;}
         else if (itemStack.is(SFTags.Items.THORIUM_BLOCK)) {return 1.0;}
         else if (itemStack.is(SFTags.Items.THORIUM_BLOCK_RAW)) {return 0.06;}
-        else if (itemStack.is(SFTags.Items.THORIUM_BLOCK_RAW)) {return 0.06;}
         else if (itemStack.is(SFTags.Items.THORIUM_CRUSHED)) {return 0.3;}
 
         else if (itemStack.getItem().equals(AllItems.CRUSHED_URANIUM.get())) {return 1.05;}

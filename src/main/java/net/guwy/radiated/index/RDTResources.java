@@ -60,6 +60,14 @@ public class RDTResources {
 
 
 
+    public static final RegistryObject<Item> URANIUM_BILLET = ITEMS.register("uranium_billet",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.175));
+
+    public static final RegistryObject<Item> THORIUM_BILLET = ITEMS.register("thorium_billet",
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.05));
+
+
+
     public static final RegistryObject<Item> RADIUM_INGOT = ITEMS.register("radium_ingot",
             () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 7.5));
 

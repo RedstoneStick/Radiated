@@ -1,9 +1,13 @@
 package net.guwy.radiated;
 
 import com.mojang.logging.LogUtils;
-import net.guwy.radiated.index.RDTResources;
+import net.guwy.radiated.content.blocks.machines.turbine.TurbineScreen;
+import net.guwy.radiated.index.*;
 import net.guwy.radiated.world.feature.ModConfiguredFeatures;
 import net.guwy.radiated.world.feature.ModPlacedFeatures;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,9 +27,17 @@ public class Radiated {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         RDTResources.register(eventBus);
+        RDTMachines.register(eventBus);
 
         ModConfiguredFeatures.register(eventBus);
         ModPlacedFeatures.register(eventBus);
+
+        RDTMenuTypes.register(eventBus);
+        RDTBlockEntities.register(eventBus);
+
+        RDTFluids.register(eventBus);
+        RDTFluidTypes.register(eventBus);
+        RDTFluidBlocknBuckets.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -37,6 +49,7 @@ public class Radiated {
 
     private void commonSetup(final FMLCommonSetupEvent event){
         event.enqueueWork(() -> {
+            ModNetworking.register();
         });
     }
 
@@ -51,6 +64,10 @@ public class Radiated {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            MenuScreens.register(RDTMenuTypes.TURBINE_MENU.get(), TurbineScreen::new);
+
+            ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_UF6.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_UF6.get(), RenderType.translucent());
         }
     }
 }

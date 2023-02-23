@@ -3,6 +3,9 @@
 
 
 
+  "item.radiated.uranium_billet": "Uranium Billet",
+  "item.radiated.thorium_billet": "Thorium Billet",
+
   "item.radiated.thorium_fuel_ingot": "Ingot of Thorium Fuel",
   "item.radiated.thorium_fuel_nugget": "Nugget of Thorium Fuel",
   "item.radiated.thorium_fuel_billet": "Thorium Fuel Billet",
@@ -17,5 +20,13 @@
   "item.radiated.raw_beryllium": "Raw Beryllium",
   "item.radiated.crushed_beryllium": "Crushed Beryllium",
   "block.radiated.beryllium_ore": "Beryllium Ore",
-  "block.radiated.beryllium_ore_deepslate": "Deepslate Beryllium Ore"
+  "block.radiated.beryllium_ore_deepslate": "Deepslate Beryllium Ore",
+
+
+
+  "block.radiated.turbine": "Turbine",
+
+
+
+  "item.radiated.uf6_bucket": "Bucket of Uranium Hexafluorite"
 }
