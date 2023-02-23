@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "radiated:radium_billet"
+    }
+  ],
+  "result": {
+    "item": "radiated:radium_nugget",
+    "count": 6
+  }
+}

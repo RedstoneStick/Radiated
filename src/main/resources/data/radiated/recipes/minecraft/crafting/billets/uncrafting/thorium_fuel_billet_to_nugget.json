@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "radiated:thorium_fuel_billet"
+    }
+  ],
+  "result": {
+    "item": "radiated:thorium_fuel_nugget",
+    "count": 6
+  }
+}

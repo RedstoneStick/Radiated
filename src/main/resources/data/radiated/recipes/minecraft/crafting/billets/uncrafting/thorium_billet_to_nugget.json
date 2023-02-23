@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "radiated:thorium_billet"
+    }
+  ],
+  "result": {
+    "item": "sticky_foundations:thorium_nugget",
+    "count": 6
+  }
+}
