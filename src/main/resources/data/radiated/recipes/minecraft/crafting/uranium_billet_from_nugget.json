@@ -7,11 +7,11 @@
   ],
   "key": {
     "x": {
-      "tag": "forge:nugget/beryllium"
+      "tag": "forge:nuggets/uranium"
     }
   },
   "result": {
-    "item": "radiated:beryllium_billet",
+    "item": "radiated:uranium_billet",
     "count": 1
   }
 }

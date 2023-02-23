@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "forge:nuggets/uranium",
+      "count": 6
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:uranium_billet"
+    }
+  ]
+}
