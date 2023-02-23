@@ -2,8 +2,22 @@
   "type": "create:compacting",
   "ingredients": [
     {
-      "tag": "forge:nuggets/uranium",
-      "count": 6
+      "tag": "forge:nuggets/uranium"
+    },
+    {
+      "tag": "forge:nuggets/uranium"
+    },
+    {
+      "tag": "forge:nuggets/uranium"
+    },
+    {
+      "tag": "forge:nuggets/uranium"
+    },
+    {
+      "tag": "forge:nuggets/uranium"
+    },
+    {
+      "tag": "forge:nuggets/uranium"
     }
   ],
   "results": [

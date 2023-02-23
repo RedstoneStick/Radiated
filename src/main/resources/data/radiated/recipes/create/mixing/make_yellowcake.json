@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "forge:dusts/sulfur",
+      "cound": 2
+    },
+    {
+      "item": "radiated:uranium_billet",
+      "cound": 2
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:yellowcake",
+      "count": 1
+    }
+  ]
+}

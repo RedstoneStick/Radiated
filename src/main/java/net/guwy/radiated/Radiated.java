@@ -28,6 +28,9 @@ public class Radiated {
 
         RDTResources.register(eventBus);
         RDTMachines.register(eventBus);
+        RDTItems.register(eventBus);
+
+        ModEffects.register(eventBus);
 
         ModConfiguredFeatures.register(eventBus);
         ModPlacedFeatures.register(eventBus);

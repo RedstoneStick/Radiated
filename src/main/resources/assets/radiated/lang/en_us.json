@@ -3,6 +3,11 @@
 
 
 
+  "item.radiated.yellowcake": "Yellowcake",
+  "tooltip.radiated.yellowcake": "22.8 billion calories",
+
+
+
   "item.radiated.uranium_billet": "Uranium Billet",
   "item.radiated.thorium_billet": "Thorium Billet",
 
@@ -28,5 +33,11 @@
 
 
 
-  "item.radiated.uf6_bucket": "Bucket of Uranium Hexafluorite"
+  "item.radiated.uf6_bucket": "Bucket of Uranium Hexafluorite",
+
+
+
+  "death.attack.yellowcake_1": "Ah yes \"THE RADIATION\" has killed the %1$s",
+  "death.attack.yellowcake_2": "%1$s has died due to excessive calorie intake",
+  "death.attack.yellowcake_3": "%1$s has made a bad decision"
 }

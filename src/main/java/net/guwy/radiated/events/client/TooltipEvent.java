@@ -22,6 +22,7 @@ public class TooltipEvent {
         if(radiationVal != 0){
             Component tooltip;
 
+            event.getToolTip().add(Component.literal("[Radioactive]").withStyle(ChatFormatting.GREEN));
 
             tooltip = Component.literal(
                     Double.toString(radiationVal)).append("RAD/s")
