@@ -1,0 +1,32 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "radiated:yellowcake"
+    },
+    {
+      "tag": "forge:dusts/fluorite"
+    },
+    {
+      "tag": "forge:dusts/fluorite"
+    },
+    {
+      "tag": "forge:dusts/fluorite"
+    },
+    {
+      "tag": "forge:dusts/fluorite"
+    },
+    {
+      "fluid": "minecraft:water",
+      "nbt": {},
+      "amount": 800
+    }
+  ],
+  "results": [
+    {
+      "fluid": "radiated:uf6_fluid",
+      "nbt": {},
+      "amount": 1000
+    }
+  ]
+}

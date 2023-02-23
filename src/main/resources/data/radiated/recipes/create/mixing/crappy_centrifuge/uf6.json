@@ -1,0 +1,24 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "radiated:uf6_fluid",
+      "nbt": {},
+      "amount": 1000
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:yellowcake",
+      "count": 11
+    },
+    {
+      "item": "radiated:yellowcake",
+      "count": 1
+    },
+    {
+      "item": "sticky_foundations:fluorite_dust",
+      "count": 4
+    }
+  ]
+}
