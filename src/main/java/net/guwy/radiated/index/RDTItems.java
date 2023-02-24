@@ -3,8 +3,13 @@ package net.guwy.radiated.index;
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.content.items.BasicRadioactiveItem;
 import net.guwy.radiated.content.items.RTGPelletItem;
+import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -22,6 +27,48 @@ public class RDTItems {
     public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Radiated.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Radiated.MOD_ID);
 
+
+
+    public static final RegistryObject<Item> THERMOELECTRIC_ELEMENT = ITEMS.register("thermoelectric_element",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+
+    public static final RegistryObject<Item> RTG_UNIT = ITEMS.register("rtg_unit",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+
+    public static final RegistryObject<Item> COPPER_PANEL = ITEMS.register("copper_panel",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> POLYMER_BAR = ITEMS.register("polymer_bar",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> DEV_ITEM = ITEMS.register("dev_item",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)){
+                @Override
+                public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+                    if(!pLevel.isClientSide){
+                        pPlayer.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler -> {
+                            handler.increaseGeigerVal(100);
+                            pPlayer.getCooldowns().addCooldown(pPlayer.getMainHandItem().getItem(), 20);
+                        });
+                    }
+
+
+                    return super.use(pLevel, pPlayer, pUsedHand);
+                }
+
+                @Override
+                public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+                    if(!pLevel.isClientSide){
+                        pEntity.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler -> {
+                            pEntity.sendSystemMessage(Component.literal(Double.toString(handler.getPlayerRadiationVal())));
+                        });
+                    }
+
+                    super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
+                }
+            });
 
 
     public static final RegistryObject<Item> YELLOWCAKE = ITEMS.register("yellowcake",

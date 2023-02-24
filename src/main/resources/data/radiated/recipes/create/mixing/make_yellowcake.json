@@ -2,12 +2,16 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "tag": "forge:dusts/sulfur",
-      "cound": 2
+      "tag": "forge:dusts/sulfur"
     },
     {
-      "item": "radiated:uranium_billet",
-      "cound": 2
+      "tag": "forge:dusts/sulfur"
+    },
+    {
+      "item": "radiated:uranium_billet"
+    },
+    {
+      "item": "radiated:uranium_billet"
     }
   ],
   "results": [

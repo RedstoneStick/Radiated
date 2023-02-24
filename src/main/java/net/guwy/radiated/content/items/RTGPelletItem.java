@@ -75,7 +75,7 @@ public class RTGPelletItem extends Item implements RadiatedItem {
                 .append(Integer.toString(getHeatVal(pStack)))
                 .withStyle(ChatFormatting.GRAY));
         pTooltipComponents.add(Component.translatable("tooltip.radiated.rtg_pellet.2")
-                .append(new ItemStack(decayedItem).getDisplayName())
+                .append(new ItemStack(decayedItem).getDisplayName().getString())
                 .withStyle(ChatFormatting.GRAY));
         pTooltipComponents.add(Component.translatable("tooltip.radiated.rtg_pellet.3")
                 .append(NumberToTextConverter.TicksToYMD(getRemainingLifetime(pStack)))

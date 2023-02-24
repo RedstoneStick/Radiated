@@ -3,6 +3,14 @@
 
 
 
+  "item.radiated.thermoelectric_element": "Thermoelectric Element",
+
+  "item.radiated.rtg_unit": "RTG Unit",
+
+  "item.radiated.copper_panel": "Copper Panel",
+
+  "item.radiated.polymer_bar": "Polymer Bar",
+
   "item.radiated.yellowcake": "Yellowcake",
   "tooltip.radiated.yellowcake": "22.8 billion calories",
 
@@ -39,6 +47,11 @@
   "block.radiated.beryllium_ore": "Beryllium Ore",
   "block.radiated.beryllium_ore_deepslate": "Deepslate Beryllium Ore",
 
+  "item.radiated.red_copper": "Minecraft Grade Copper",
+  "item.radiated.red_copper_wire": "Minecraft Grade Copper",
+
+  "item.radiated.quartz_dust": "Quartz Dust",
+
 
 
   "block.radiated.turbine": "Turbine",
@@ -51,6 +64,7 @@
   "tooltip.radiated.rtg_pellet.4": "Max Lifetime: ",
 
   "item.radiated.radium_rtg_pellet": "Radium-226 RTG Pellet",
+  "tooltip.radiated.radium_rtg_pellet.1": "Great starter pellet, sourced from all-natural radium!",
   "item.radiated.decayed_lead_rtg_pellet": "Decayed Lead RTG Pellet",
 
 
@@ -63,6 +77,7 @@
   "death.attack.yellowcake_1": "Ah yes \"THE RADIATION\" has killed the %1$s",
   "death.attack.yellowcake_2": "%1$s has died due to excessive calorie intake",
   "death.attack.yellowcake_3": "%1$s has made a bad decision",
+  "death.attack.radiation": "%1$s has died from radiation poisoning",
 
   "tooltip.radiated.generic.year_symbol": "y",
   "tooltip.radiated.generic.day_symbol": "d",

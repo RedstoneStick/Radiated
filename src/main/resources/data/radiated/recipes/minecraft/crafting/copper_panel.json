@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "tag": "forge:plates/copper"
+    }
+  },
+  "result": {
+    "item": "radiated:copper_panel",
+    "count": 1
+  }
+}

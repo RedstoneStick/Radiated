@@ -60,6 +60,19 @@ public class RDTResources {
 
 
 
+    public static final RegistryObject<Item> RED_COPPER = ITEMS.register("red_copper",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> RED_COPPER_WIRE = ITEMS.register("red_copper_wire",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+
+
+    public static final RegistryObject<Item> QUARTZ_DUST = ITEMS.register("quartz_dust",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+
+
     public static final RegistryObject<Item> URANIUM_BILLET = ITEMS.register("uranium_billet",
             () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.175));
 

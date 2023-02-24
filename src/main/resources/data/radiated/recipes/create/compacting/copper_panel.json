@@ -1,0 +1,28 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "forge:plates/copper"
+    },
+    {
+      "tag": "forge:plates/copper"
+    },
+    {
+      "tag": "forge:plates/copper"
+    },
+    {
+      "tag": "forge:plates/copper"
+    },
+    {
+      "tag": "forge:plates/copper"
+    },
+    {
+      "tag": "forge:plates/copper"
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:copper_panel"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:quartz"
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:quartz_dust",
+      "count": 1
+    }
+  ],
+  "processingTime": 200
+}

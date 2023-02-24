@@ -1,0 +1,30 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "forge:dusts/coal"
+    },
+    {
+      "tag": "forge:dusts/coal"
+    },
+    {
+      "tag": "forge:dusts/fluorite"
+    },
+    {
+      "fluid": "immersiveengineering:phenolic_resin",
+      "nbt": {},
+      "amount": 500
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:polymer_bar"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ]
+}
