@@ -29,6 +29,8 @@ public class Radiated {
 
         RDTMachines.register(eventBus);
         RDTItems.register(eventBus);
+        RDTRTGPellets.register(eventBus);
+
         RDTResources.register(eventBus);
 
         ModEffects.register(eventBus);
@@ -73,8 +75,6 @@ public class Radiated {
 
             ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_UF6.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_UF6.get(), RenderType.translucent());
-
-            ItemBlockRenderTypes.setRenderLayer(RDTMachines.RTG.get(), RenderType.cutout());
         }
     }
 }

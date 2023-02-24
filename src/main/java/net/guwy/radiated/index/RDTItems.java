@@ -2,6 +2,7 @@ package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.content.items.BasicRadioactiveItem;
+import net.guwy.radiated.content.items.RTGPelletItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;

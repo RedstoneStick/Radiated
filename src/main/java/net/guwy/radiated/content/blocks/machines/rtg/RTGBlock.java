@@ -64,8 +64,6 @@ public class RTGBlock extends BaseEntityBlock {
     @Override
     public void onNeighborChange(BlockState state, LevelReader level, BlockPos pos, BlockPos neighbor) {
         super.onNeighborChange(state, level, pos, neighbor);
-
-        setConnections(state, (Level) level, pos);
     }
 
     public static void setConnections(BlockState state, Level level, BlockPos pos){

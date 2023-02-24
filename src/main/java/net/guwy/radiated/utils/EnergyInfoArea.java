@@ -31,8 +31,8 @@ public class EnergyInfoArea extends InfoArea {
     }
 
     public List<Component> getTooltips() {
-        return List.of(Component.literal(NumberToTextConverter.ConvertEnergyToText(energy.getEnergyStored())
-                +"/"+NumberToTextConverter.ConvertEnergyToText(energy.getMaxEnergyStored())+" FE"));
+        return List.of(Component.literal(NumberToTextConverter.EnergyToText(energy.getEnergyStored())
+                +"/"+NumberToTextConverter.EnergyToText(energy.getMaxEnergyStored())+" FE"));
     }
 
     @Override

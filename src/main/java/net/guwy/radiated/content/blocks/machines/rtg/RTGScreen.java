@@ -11,6 +11,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
+import java.util.List;
 import java.util.Optional;
 
 public class RTGScreen extends AbstractContainerScreen<RTGMenu> {
@@ -41,6 +42,7 @@ public class RTGScreen extends AbstractContainerScreen<RTGMenu> {
         int y = (height - imageHeight) / 2;
 
         renderEnergyAreaTooltips(pPoseStack, pMouseX, pMouseY, x, y);
+        renderHeatAreaTooltips(pPoseStack, pMouseX, pMouseY, x, y);
     }
 
     private void renderEnergyAreaTooltips(PoseStack pPoseStack, int pMouseX, int pMouseY, int x, int y) {
@@ -48,6 +50,16 @@ public class RTGScreen extends AbstractContainerScreen<RTGMenu> {
             renderTooltip(pPoseStack, energyInfoArea.getTooltips(),
                     Optional.empty(), pMouseX - x, pMouseY - y);
         }
+    }
+
+    private void renderHeatAreaTooltips(PoseStack pPoseStack, int pMouseX, int pMouseY, int x, int y) {
+        if(isMouseAboveArea(pMouseX, pMouseY, x, y, 20, 17, 8, 52)) {
+            renderTooltip(pPoseStack, HeatTooltip(),
+                    Optional.empty(), pMouseX - x, pMouseY - y);
+        }
+    }
+    private List<Component> HeatTooltip(){
+        return List.of(Component.literal(menu.getHeatLevel() + " " + Component.translatable("tooltip.radiated.rtg.menu.heat").getString()));
     }
 
     private boolean isMouseAboveArea(int pMouseX, int pMouseY, int x, int y, int offsetX, int offsetY, int width, int height) {
@@ -64,14 +76,13 @@ public class RTGScreen extends AbstractContainerScreen<RTGMenu> {
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
-        renderProgressArrow(pPoseStack, x, y);
+        renderHeatBar(pPoseStack, x, y);
         energyInfoArea.draw(pPoseStack);
     }
 
-    private void renderProgressArrow(PoseStack pPoseStack, int x, int y) {
-        if(menu.isCrafting()) {
-            blit(pPoseStack, x + 95, y + 26, 176, 0, 9, menu.getScaledProgress());
-        }
+    private void renderHeatBar(PoseStack pPoseStack, int x, int y) {
+        int progress = menu.getScaledProgress();
+        blit(pPoseStack, x + 20, y + 17 + (52 - progress), 176, 52 - progress, 8, progress);
     }
 
     @Override

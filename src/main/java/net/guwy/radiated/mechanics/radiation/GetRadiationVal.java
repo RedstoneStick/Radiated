@@ -12,7 +12,7 @@ public class GetRadiationVal {
         if(item instanceof RadiatedItem){
             RadiatedItem radiatedItem = (RadiatedItem) item;
 
-            double val = radiatedItem.radiationVal();
+            double val = radiatedItem.radiationVal( itemStack);
             val = val * 1000;
             val = (double) Math.round(val);
             val = val / 1000;

@@ -1,5 +1,6 @@
 package net.guwy.radiated.content.blocks.machines.rtg;
 
+import net.guwy.radiated.content.items.RTGPelletItem;
 import net.guwy.radiated.content.network_packages.RTGSyncS2CPacket;
 import net.guwy.radiated.index.ModNetworking;
 import net.guwy.radiated.index.RDTBlockEntities;
@@ -46,7 +47,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
                     valid.set(true);
                 });
             } else {
-                valid.set(true);
+                valid.set(stack.getItem() instanceof RTGPelletItem);
             }
 
             return valid.get();
@@ -56,8 +57,13 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     protected final ContainerData data;
-    private int progress = 0;
-    private int maxProgress = 200;
+    private int heat = 0;
+    public int MAX_HEAT = 600;
+    public double ENERGY_MULTIPLIER = 25;
+
+    public static int getMaxHeat(){
+        return 2400;
+    }
 
     public RTGBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(RDTBlockEntities.RTG.get(), pPos, pBlockState);
@@ -65,8 +71,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                    case 0 -> RTGBlockEntity.this.progress;
-                    case 1 -> RTGBlockEntity.this.maxProgress;
+                    case 0 -> RTGBlockEntity.this.heat;
                     default -> 0;
                 };
             }
@@ -74,14 +79,13 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pValue) {
-                    case 0 -> RTGBlockEntity.this.progress = pValue;
-                    case 1 -> RTGBlockEntity.this.maxProgress = pValue;
+                    case 0 -> RTGBlockEntity.this.heat = pValue;
                 }
             }
 
             @Override
             public int getCount() {
-                return 2;
+                return 1;
             }
         };
     }
@@ -132,7 +136,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
         super.saveAdditional(pTag);
         pTag.put("inventory", this.itemHandler.serializeNBT());
         pTag.putInt("energy", this.ENERGY_STORAGE.getEnergyStored());
-        pTag.putInt("progress", this.progress);
+        pTag.putInt("heat", this.heat);
     }
 
     @Override
@@ -140,7 +144,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
         super.load(pTag);
         this.itemHandler.deserializeNBT(pTag.getCompound("inventory"));
         this.ENERGY_STORAGE.setEnergy(pTag.getInt("energy"));
-        this.progress = pTag.getInt("progress");
+        this.heat = pTag.getInt("heat");
     }
 
     public void drops(){
@@ -156,19 +160,17 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
         if(level.isClientSide()){
             return;
         }
-
-        RTGBlock.setConnections(state, level, pEntity.getBlockPos());
-
         SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
         for(int i=0; i < pEntity.itemHandler.getSlots(); i++){
             inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasCorrectItemInSlot = inventory.getItem(0).getItem().equals(RDTResources.THORIUM_FUEL_BILLET.get());
+        RTGBlock.setConnections(state, level, pEntity.getBlockPos());
+        HeatCheck(inventory, pEntity);
 
-        boolean tempBool = hasCorrectItemInSlot && inventory.getItem(0).getCount() == 1;
+        int energyGen = (int) (pEntity.heat * pEntity.ENERGY_MULTIPLIER);
 
-        pEntity.ENERGY_STORAGE.setEnergy(Math.min(pEntity.CAPACITY, pEntity.ENERGY_STORAGE.getEnergyStored() + 100));
+        pEntity.ENERGY_STORAGE.setEnergy(Math.min(pEntity.CAPACITY, pEntity.ENERGY_STORAGE.getEnergyStored() + energyGen));
         ModNetworking.sendToClients(new RTGSyncS2CPacket(pEntity.ENERGY_STORAGE.getEnergyStored(), pEntity.getBlockPos()));
         setChanged(level, blockPos, state);
 
@@ -177,6 +179,32 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
 
 
 
+    }
+
+    private static void HeatCheck(SimpleContainer container, RTGBlockEntity pEntity){
+        int heat = 0;
+        for(int i = 1; i <= 15; i++){
+            ItemStack itemStack = container.getItem(i);
+            if(itemStack.getItem() instanceof RTGPelletItem pelletItem){
+                heat = heat + pelletItem.getHeatVal(itemStack);
+
+                CompoundTag nbtTag = new CompoundTag();
+                if(itemStack.getTag() != null){
+                    long remainingLife = itemStack.getTag().getLong(RTGPelletItem.getKeyLifetime());
+                    nbtTag.putLong(RTGPelletItem.getKeyLifetime(), Math.max(0, remainingLife - 1));
+                    itemStack.setTag(nbtTag);
+
+                    if(remainingLife <= 0){
+                        itemStack.setCount(0);
+                        pEntity.itemHandler.setStackInSlot(i, new ItemStack(RTGPelletItem.getDecayedItem(pelletItem)));
+                    }
+                } else {
+                    nbtTag.putLong(RTGPelletItem.getKeyLifetime(), Math.max(0, RTGPelletItem.getMaxLifetime(pelletItem)));
+                    itemStack.setTag(nbtTag);
+                }
+            }
+        }
+        pEntity.heat = Math.min(heat, getMaxHeat());
     }
 
     private static void PushEnergyToSlot(SimpleContainer inventory, RTGBlockEntity pEntity, int slotIndex){

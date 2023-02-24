@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xx",
+    "xy"
+  ],
+  "key": {
+    "x": {
+      "item": "radiated:radium_billet"
+    },
+    "y": {
+      "tag": "forge:plates/iron"
+    }
+  },
+  "result": {
+    "item": "radiated:radium_rtg_pellet",
+    "count": 1
+  }
+}

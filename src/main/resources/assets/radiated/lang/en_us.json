@@ -43,6 +43,16 @@
 
   "block.radiated.turbine": "Turbine",
 
+  "block.radiated.rtg": "Radioisotope Thermoelectric Generator (RTG)",
+  "tooltip.radiated.rtg.menu.heat": "Heat",
+  "tooltip.radiated.rtg_pellet.1": "Heat: ",
+  "tooltip.radiated.rtg_pellet.2": "Decays to: ",
+  "tooltip.radiated.rtg_pellet.3": "Remaining Lifetime: ",
+  "tooltip.radiated.rtg_pellet.4": "Max Lifetime: ",
+
+  "item.radiated.radium_rtg_pellet": "Radium-226 RTG Pellet",
+  "item.radiated.decayed_lead_rtg_pellet": "Decayed Lead RTG Pellet",
+
 
 
   "item.radiated.uf6_bucket": "Bucket of Uranium Hexafluorite",
@@ -52,5 +62,9 @@
 
   "death.attack.yellowcake_1": "Ah yes \"THE RADIATION\" has killed the %1$s",
   "death.attack.yellowcake_2": "%1$s has died due to excessive calorie intake",
-  "death.attack.yellowcake_3": "%1$s has made a bad decision"
+  "death.attack.yellowcake_3": "%1$s has made a bad decision",
+
+  "tooltip.radiated.generic.year_symbol": "y",
+  "tooltip.radiated.generic.day_symbol": "d",
+  "tooltip.radiated.generic.hour_symbol": "h"
 }

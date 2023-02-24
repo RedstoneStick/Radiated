@@ -18,7 +18,7 @@ public class RTGMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public RTGMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(1));
     }
 
     public RTGMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -35,19 +35,31 @@ public class RTGMenu extends AbstractContainerMenu {
             this.addSlot(new SlotItemHandler(handler, 0, 131,61));
         });
 
+        addPelletSlots();
+
         addDataSlots(data);
     }
 
-    public boolean isCrafting() {
-        return data.get(0) > 0;
+    private void addPelletSlots(){
+        this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
+            for(int i = 0; i < 3; i++){
+                for(int k = 0; k < 5; k++){
+                    this.addSlot(new SlotItemHandler(handler, 1 + k + (i * 5), 33 + (k * 18),17 + (i * 18)));
+                }
+            }
+        });
     }
 
     public int getScaledProgress() {
         int progress = this.data.get(0);
-        int maxProgress = this.data.get(1);  // Max Progress
-        int progressArrowSize = 41; // This is the height in pixels of your arrow
+        int maxProgress = RTGBlockEntity.getMaxHeat();  // Max Progress
+        int progressArrowSize = 52; // This is the height in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getHeatLevel() {
+        return this.data.get(0);
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
