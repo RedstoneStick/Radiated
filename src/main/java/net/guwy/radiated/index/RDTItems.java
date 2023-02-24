@@ -43,33 +43,6 @@ public class RDTItems {
     public static final RegistryObject<Item> POLYMER_BAR = ITEMS.register("polymer_bar",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
-    public static final RegistryObject<Item> DEV_ITEM = ITEMS.register("dev_item",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)){
-                @Override
-                public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-                    if(!pLevel.isClientSide){
-                        pPlayer.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler -> {
-                            handler.increaseGeigerVal(100);
-                            pPlayer.getCooldowns().addCooldown(pPlayer.getMainHandItem().getItem(), 20);
-                        });
-                    }
-
-
-                    return super.use(pLevel, pPlayer, pUsedHand);
-                }
-
-                @Override
-                public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
-                    if(!pLevel.isClientSide){
-                        pEntity.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler -> {
-                            pEntity.sendSystemMessage(Component.literal(Double.toString(handler.getPlayerRadiationVal())));
-                        });
-                    }
-
-                    super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
-                }
-            });
-
 
     public static final RegistryObject<Item> YELLOWCAKE = ITEMS.register("yellowcake",
             () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.YELLOWCAKE), 1.05){
