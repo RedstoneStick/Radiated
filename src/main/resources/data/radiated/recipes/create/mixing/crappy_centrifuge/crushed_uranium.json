@@ -22,8 +22,7 @@
     },
     {
       "item": "radiated:radium_nugget",
-      "count": 1,
-      "chance": 0.60
+      "count": 1
     },
     {
       "item": "minecraft:flint",
