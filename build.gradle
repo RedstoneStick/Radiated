@@ -20,7 +20,7 @@ plugins {
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.0.2-1.19.2'
+version = '0.0.3-1.19.2'
 group = 'net.guwy.radiated' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'radiated'
 
