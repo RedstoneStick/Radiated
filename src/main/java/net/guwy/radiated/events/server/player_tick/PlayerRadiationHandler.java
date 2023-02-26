@@ -1,5 +1,6 @@
 package net.guwy.radiated.events.server.player_tick;
 
+import net.guwy.radiated.index.ModDamageSources;
 import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
 import net.guwy.radiated.mechanics.radiation.GetRadiationVal;
 import net.guwy.radiated.mechanics.radiation.RadiatedItem;
@@ -67,7 +68,7 @@ public class PlayerRadiationHandler {
 
             if(radiationVal > 0){
                 if(radiationVal >= handler.getMaxPlayerRadiation()){
-                    player.hurt(new DamageSource("radiation"), Float.MAX_VALUE);
+                    player.hurt(ModDamageSources.RADIATION, Float.MAX_VALUE);
                 }
                 if (radiationVal >= 900){
                     if(isTime && Math.random() < chance){
