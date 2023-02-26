@@ -45,6 +45,8 @@ public class Radiated {
         RDTFluidTypes.register(eventBus);
         RDTFluidBlocknBuckets.register(eventBus);
 
+        ModRecipes.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::commonSetup);
