@@ -59,7 +59,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
     protected final ContainerData data;
     private int heat = 0;
     public int MAX_HEAT = 600;
-    public double ENERGY_MULTIPLIER = 25;
+    public static final double ENERGY_MULTIPLIER = 25;
 
     public static int getMaxHeat(){
         return 2400;

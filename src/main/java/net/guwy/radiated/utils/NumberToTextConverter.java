@@ -38,7 +38,7 @@ public class NumberToTextConverter {
 
         else {
             val = energy;
-            text = Double.toString(val);
+            text = Integer.toString((int) val);
         }
         return text;
     }

@@ -5,6 +5,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.utils.EnergyInfoArea;
 import net.guwy.radiated.utils.MouseUtil;
+import net.guwy.radiated.utils.NumberToTextConverter;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
@@ -17,6 +18,8 @@ import java.util.Optional;
 public class RTGScreen extends AbstractContainerScreen<RTGMenu> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Radiated.MOD_ID,"textures/machines/rtg/gui_rtg.png");
+    private static final ResourceLocation UTILITY_TEXTURE =
+            new ResourceLocation(Radiated.MOD_ID,"textures/gui/gui_utility.png");
     private EnergyInfoArea energyInfoArea;
 
     public RTGScreen(RTGMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
@@ -43,6 +46,7 @@ public class RTGScreen extends AbstractContainerScreen<RTGMenu> {
 
         renderEnergyAreaTooltips(pPoseStack, pMouseX, pMouseY, x, y);
         renderHeatAreaTooltips(pPoseStack, pMouseX, pMouseY, x, y);
+        renderInfoBoxTooltips(pPoseStack, pMouseX, pMouseY, x, y);
     }
 
     private void renderEnergyAreaTooltips(PoseStack pPoseStack, int pMouseX, int pMouseY, int x, int y) {
@@ -59,7 +63,24 @@ public class RTGScreen extends AbstractContainerScreen<RTGMenu> {
         }
     }
     private List<Component> HeatTooltip(){
-        return List.of(Component.literal(menu.getHeatLevel() + " " + Component.translatable("tooltip.radiated.rtg.menu.heat").getString()));
+        return List.of(Component.literal(
+                menu.getHeatLevel()
+                        + " "
+                        + Component.translatable("tooltip.radiated.rtg.menu.heat").getString()));
+    }
+
+    private void renderInfoBoxTooltips(PoseStack pPoseStack, int pMouseX, int pMouseY, int x, int y) {
+        if(isMouseAboveArea(pMouseX, pMouseY, x, y, -16, 16, 16, 16)) {
+            renderTooltip(pPoseStack, InfoBoxTooltip(),
+                    Optional.empty(), pMouseX - x, pMouseY - y);
+        }
+    }
+    private List<Component> InfoBoxTooltip(){
+        return List.of(Component.literal(
+                Component.translatable("tooltip.radiated.rtg.menu.info_box").getString()
+                + NumberToTextConverter.EnergyToText((int) (menu.getHeatLevel() * RTGBlockEntity.ENERGY_MULTIPLIER))
+                + " "
+                + Component.literal("FE/t").getString()));
     }
 
     private boolean isMouseAboveArea(int pMouseX, int pMouseY, int x, int y, int offsetX, int offsetY, int width, int height) {
@@ -78,6 +99,10 @@ public class RTGScreen extends AbstractContainerScreen<RTGMenu> {
 
         renderHeatBar(pPoseStack, x, y);
         energyInfoArea.draw(pPoseStack);
+
+        //Draw info box
+        RenderSystem.setShaderTexture(0, UTILITY_TEXTURE);
+        this.blit(pPoseStack, x-16, y+16, 8, 0, 16, 16);
     }
 
     private void renderHeatBar(PoseStack pPoseStack, int x, int y) {

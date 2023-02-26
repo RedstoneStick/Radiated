@@ -60,6 +60,7 @@
 
   "block.radiated.rtg": "Radioisotope Thermoelectric Generator (RTG)",
   "tooltip.radiated.rtg.menu.heat": "Heat",
+  "tooltip.radiated.rtg.menu.info_box": "Generating: ",
   "tooltip.radiated.rtg_pellet.1": "Heat: ",
   "tooltip.radiated.rtg_pellet.2": "Decays to: ",
   "tooltip.radiated.rtg_pellet.3": "Remaining Lifetime: ",
