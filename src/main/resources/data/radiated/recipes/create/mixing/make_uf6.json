@@ -27,6 +27,9 @@
       "fluid": "radiated:uf6_fluid",
       "nbt": {},
       "amount": 1000
+    },
+    {
+      "item": "sticky_foundations:sulfur"
     }
   ],
   "heatRequirement": "heated"
