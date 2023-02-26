@@ -29,7 +29,8 @@
       "amount": 1000
     },
     {
-      "item": "sticky_foundations:sulfur_dust"
+      "item": "sticky_foundations:sulfur_dust",
+      "count": 2
     }
   ],
   "heatRequirement": "heated"
