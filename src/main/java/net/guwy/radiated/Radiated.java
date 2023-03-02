@@ -27,6 +27,7 @@ public class Radiated {
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        RDTTools.register(eventBus);
         RDTMachines.register(eventBus);
         RDTItems.register(eventBus);
         RDTRTGPellets.register(eventBus);

@@ -97,7 +97,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("block.radiated.rtg");
+        return Component.translatable("block.radiated.rtg");
     }
 
     @Nullable

@@ -16,6 +16,13 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> RADAWAY = registerSoundEvent("radaway");
 
+    public static final RegistryObject<SoundEvent> GEIGER1 = registerSoundEvent("geiger1");
+    public static final RegistryObject<SoundEvent> GEIGER2 = registerSoundEvent("geiger2");
+    public static final RegistryObject<SoundEvent> GEIGER3 = registerSoundEvent("geiger3");
+    public static final RegistryObject<SoundEvent> GEIGER4 = registerSoundEvent("geiger4");
+    public static final RegistryObject<SoundEvent> GEIGER5 = registerSoundEvent("geiger5");
+    public static final RegistryObject<SoundEvent> GEIGER6 = registerSoundEvent("geiger6");
+
 
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name){

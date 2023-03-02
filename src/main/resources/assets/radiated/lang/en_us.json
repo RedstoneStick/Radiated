@@ -42,6 +42,9 @@
   "item.radiated.radaway": "RadAway",
   "tooltip.radiated.radaway": "Removes %s Rads",
 
+  "sounds.radiated.geiger_counter": "Geiger Counter Ticks",
+  "item.radiated.geiger_counter": "Geiger Counter",
+
 
 
   "item.radiated.uranium_billet": "Uranium Billet",

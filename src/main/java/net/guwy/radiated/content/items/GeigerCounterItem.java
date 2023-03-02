@@ -1,0 +1,88 @@
+package net.guwy.radiated.content.items;
+
+import net.guwy.radiated.content.blocks.machines.rtg.RTGMenu;
+import net.guwy.radiated.index.ModSounds;
+import net.guwy.radiated.index.RDTMenuTypes;
+import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
+
+public class GeigerCounterItem extends Item {
+    public GeigerCounterItem(Properties pProperties) {
+        super(pProperties);
+    }
+
+    @Override
+    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+        if(pEntity.getType().equals(EntityType.PLAYER)){
+            Player player = (Player) pEntity;
+            playGeigerNoise(player, pLevel);
+        }
+        super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
+    }
+
+    public void playGeigerNoise(Player player, Level pLevel){
+        if(player.tickCount % 5 == 0){
+            player.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler ->{
+                double val = handler.getLastGeigerVal();
+                if(val > 0){
+
+                    if(val >= 30){
+                        playTargetSoundWithRandoms(player, pLevel, ModSounds.GEIGER6.get());
+                    } else if (val >= 25){
+                        playTargetSoundWithRandoms(player, pLevel, ModSounds.GEIGER5.get());
+                    } else if (val >= 20){
+                        playTargetSoundWithRandoms(player, pLevel, ModSounds.GEIGER4.get());
+                    } else if (val >= 15){
+                        playTargetSoundWithRandoms(player, pLevel, ModSounds.GEIGER3.get());
+                    } else if (val >= 10){
+                        playTargetSoundWithRandoms(player, pLevel, ModSounds.GEIGER2.get());
+                    } else if (val >= 5){
+                        playTargetSoundWithRandoms(player, pLevel, ModSounds.GEIGER1.get());
+                    } else if (val > 1){
+                        if(player.tickCount % 10 == 0 && Math.random() * 5 < val){
+                            playTargetSoundWithRandoms(player, pLevel, ModSounds.GEIGER1.get());
+                        }
+                    } else {
+                        if(player.tickCount % 20 == 0 && Math.random() < val){
+                            playTargetSoundWithRandoms(player, pLevel, ModSounds.GEIGER1.get());
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    private void playTargetSoundWithRandoms(Player player, Level pLevel, SoundEvent soundEvent){
+        double rand = Math.random();
+
+        if(rand < 0.60){
+            pLevel.playSound(null, player, soundEvent, SoundSource.PLAYERS, 100, 1);
+        } else if (rand < 0.68) {
+            pLevel.playSound(null, player, ModSounds.GEIGER5.get(), SoundSource.PLAYERS, 200, 1);
+        } else if (rand < 0.76) {
+            pLevel.playSound(null, player, ModSounds.GEIGER4.get(), SoundSource.PLAYERS, 200, 1);
+        } else if (rand < 0.84) {
+            pLevel.playSound(null, player, ModSounds.GEIGER3.get(), SoundSource.PLAYERS, 200, 1);
+        } else if (rand < 0.92) {
+            pLevel.playSound(null, player, ModSounds.GEIGER2.get(), SoundSource.PLAYERS, 200, 1);
+        } else {
+            pLevel.playSound(null, player, ModSounds.GEIGER1.get(), SoundSource.PLAYERS, 200, 1);
+        }
+    }
+}

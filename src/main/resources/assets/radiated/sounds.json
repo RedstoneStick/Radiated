@@ -4,5 +4,41 @@
     "sounds": [
       "radiated:item/radaway"
     ]
+  },
+  "geiger1": {
+    "subtitle": "sounds.radiated.geiger_counter",
+    "sounds": [
+      "radiated:item/geiger1"
+    ]
+  },
+  "geiger2": {
+    "subtitle": "sounds.radiated.geiger_counter",
+    "sounds": [
+      "radiated:item/geiger2"
+    ]
+  },
+  "geiger3": {
+    "subtitle": "sounds.radiated.geiger_counter",
+    "sounds": [
+      "radiated:item/geiger3"
+    ]
+  },
+  "geiger4": {
+    "subtitle": "sounds.radiated.geiger_counter",
+    "sounds": [
+      "radiated:item/geiger4"
+    ]
+  },
+  "geiger5": {
+    "subtitle": "sounds.radiated.geiger_counter",
+    "sounds": [
+      "radiated:item/geiger5"
+    ]
+  },
+  "geiger6": {
+    "subtitle": "sounds.radiated.geiger_counter",
+    "sounds": [
+      "radiated:item/geiger6"
+    ]
   }
 }
