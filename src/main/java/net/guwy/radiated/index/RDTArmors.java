@@ -46,16 +46,16 @@ public class RDTArmors {
 
 
     public static final RegistryObject<Item> HAZMAT_HIGH_PERFORMANCE_HELMET = ITEMS.register("hazmat_high_performance_helmet",
-            () -> new HazmatArmorItem(0.20, ModArmorMaterials.HAZMAT_HIGH_PERFORMANCE_ARMOR, EquipmentSlot.HEAD
+            () -> new HazmatArmorItem(0.17, ModArmorMaterials.HAZMAT_HIGH_PERFORMANCE_ARMOR, EquipmentSlot.HEAD
                     , new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
     public static final RegistryObject<Item> HAZMAT_HIGH_PERFORMANCE_CHESTPLATE = ITEMS.register("hazmat_high_performance_chestplate",
-            () -> new HazmatArmorItem(0.40, ModArmorMaterials.HAZMAT_HIGH_PERFORMANCE_ARMOR, EquipmentSlot.CHEST
+            () -> new HazmatArmorItem(0.33, ModArmorMaterials.HAZMAT_HIGH_PERFORMANCE_ARMOR, EquipmentSlot.CHEST
                     , new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
     public static final RegistryObject<Item> HAZMAT_HIGH_PERFORMANCE_LEGGINGS = ITEMS.register("hazmat_high_performance_leggings",
-            () -> new HazmatArmorItem(0.30, ModArmorMaterials.HAZMAT_HIGH_PERFORMANCE_ARMOR, EquipmentSlot.LEGS
+            () -> new HazmatArmorItem(0.22, ModArmorMaterials.HAZMAT_HIGH_PERFORMANCE_ARMOR, EquipmentSlot.LEGS
                     , new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
     public static final RegistryObject<Item> HAZMAT_HIGH_PERFORMANCE_BOOTS = ITEMS.register("hazmat_high_performance_boots",
-            () -> new HazmatArmorItem(0.10, ModArmorMaterials.HAZMAT_HIGH_PERFORMANCE_ARMOR, EquipmentSlot.FEET
+            () -> new HazmatArmorItem(0.08, ModArmorMaterials.HAZMAT_HIGH_PERFORMANCE_ARMOR, EquipmentSlot.FEET
                     , new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
 
