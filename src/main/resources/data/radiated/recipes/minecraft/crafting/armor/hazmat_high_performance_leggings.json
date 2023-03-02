@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "x x",
+    "x x"
+  ],
+  "key": {
+    "x": {
+      "item": "radiated:hazmat_high_performance_cloth"
+    }
+  },
+  "result": {
+    "item": "radiated:hazmat_high_performance_leggings",
+    "count": 1
+  }
+}

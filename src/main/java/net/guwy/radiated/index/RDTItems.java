@@ -42,6 +42,15 @@ public class RDTItems {
     public static final RegistryObject<Item> POLYMER_BAR = ITEMS.register("polymer_bar",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
+    public static final RegistryObject<Item> HAZMAT_CLOTH = ITEMS.register("hazmat_cloth",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> HAZMAT_ADVANCED_CLOTH = ITEMS.register("hazmat_advanced_cloth",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> HAZMAT_HIGH_PERFORMANCE_CLOTH = ITEMS.register("hazmat_high_performance_cloth",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
 
 
     public static final RegistryObject<Item> YELLOWCAKE = ITEMS.register("yellowcake",

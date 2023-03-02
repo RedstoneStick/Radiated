@@ -17,6 +17,10 @@
 
   "item.radiated.polymer_bar": "Polymer Bar",
 
+  "item.radiated.hazmat_cloth": "Hazmat Cloth",
+  "item.radiated.hazmat_advanced_cloth": "Advanced Hazmat Cloth",
+  "item.radiated.hazmat_high_performance_cloth": "High-Performance Hazmat Cloth",
+
   "item.radiated.yellowcake": "Yellowcake",
   "tooltip.radiated.yellowcake": "22.8 billion calories",
   "effect.radiated.food_yellowcake": "Yellowcake",

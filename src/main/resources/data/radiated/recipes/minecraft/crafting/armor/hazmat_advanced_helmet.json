@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "zxz",
+    " y "
+  ],
+  "key": {
+    "x": {
+      "item": "radiated:hazmat_advanced_cloth"
+    },
+    "y": {
+      "tag": "forge:plates/iron"
+    },
+    "z": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "result": {
+    "item": "radiated:hazmat_advanced_helmet",
+    "count": 1
+  }
+}

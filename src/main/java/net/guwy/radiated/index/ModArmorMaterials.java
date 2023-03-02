@@ -17,15 +17,15 @@ public enum ModArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () ->
             Ingredient.of()),
 
-    HAZMAT_ADVANCED_ARMOR("hazmat_advanced_armor", 1, new int[]{1,4,5,2}, 0,
+    HAZMAT_ADVANCED_ARMOR("hazmat_advanced_armor", 2, new int[]{1,4,5,2}, 0,
     SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () ->
             Ingredient.of()),
 
-    HAZMAT_HIGH_PERFORMANCE_ARMOR("hazmat_high_performance_armor", 1, new int[]{1,4,5,2}, 0,
+    HAZMAT_HIGH_PERFORMANCE_ARMOR("hazmat_high_performance_armor", 2, new int[]{1,4,5,2}, 0,
     SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () ->
             Ingredient.of());
 
-    private static final int[] HEALTH_PER_SLOT = new int[]{250, 250, 250, 250};
+    private static final int[] HEALTH_PER_SLOT = new int[]{100, 100, 100, 100};
     private final String name;
     private final int durabilityMultiplier;
     private final int[] slotProtections;
