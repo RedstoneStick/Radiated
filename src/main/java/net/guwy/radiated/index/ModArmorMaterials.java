@@ -11,15 +11,17 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    HAZMAT_ARMOR("hazmat_armor", 1, new int[]{1,3,5,2}, 0,
+    //Armor protection values are: boots, leggings, chestplate, helmet
+
+    HAZMAT_ARMOR("hazmat_armor", 1, new int[]{1,4,5,2}, 0,
             SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () ->
             Ingredient.of()),
 
-    HAZMAT_ADVANCED_ARMOR("hazmat_advanced_armor", 1, new int[]{1,3,5,2}, 0,
+    HAZMAT_ADVANCED_ARMOR("hazmat_advanced_armor", 1, new int[]{1,4,5,2}, 0,
     SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () ->
             Ingredient.of()),
 
-    HAZMAT_HIGH_PERFORMANCE_ARMOR("hazmat_high_performance_armor", 1, new int[]{1,3,5,2}, 0,
+    HAZMAT_HIGH_PERFORMANCE_ARMOR("hazmat_high_performance_armor", 1, new int[]{1,4,5,2}, 0,
     SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () ->
             Ingredient.of());
 
