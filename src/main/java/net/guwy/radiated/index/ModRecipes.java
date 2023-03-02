@@ -2,6 +2,7 @@ package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.recipes.RTGDecayRecipe;
+import net.guwy.radiated.recipes.UsageRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,6 +15,9 @@ public class ModRecipes {
 
     public static final RegistryObject<RecipeSerializer<RTGDecayRecipe>> RTG_DECAY_SERIALIZER =
             SERIALIZERS.register("rtg_decay", () -> RTGDecayRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<UsageRecipe>> USAGE_RECIPE_SERIALIZER =
+            SERIALIZERS.register("usage", () -> UsageRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

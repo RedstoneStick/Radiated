@@ -1,0 +1,8 @@
+{
+  "radaway": {
+    "subtitle": "sounds.radiated.player_cough",
+    "sounds": [
+      "radiated:item/radaway"
+    ]
+  }
+}

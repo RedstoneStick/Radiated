@@ -30,10 +30,12 @@ public class Radiated {
         RDTMachines.register(eventBus);
         RDTItems.register(eventBus);
         RDTRTGPellets.register(eventBus);
+        RDTArmors.register(eventBus);
 
         RDTResources.register(eventBus);
 
         ModEffects.register(eventBus);
+        ModSounds.register(eventBus);
 
         ModConfiguredFeatures.register(eventBus);
         ModPlacedFeatures.register(eventBus);
@@ -77,6 +79,9 @@ public class Radiated {
 
             ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_UF6.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_UF6.get(), RenderType.translucent());
+
+            ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_STEAM_LOW_PRESSURE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_STEAM_LOW_PRESSURE.get(), RenderType.translucent());
         }
     }
 }

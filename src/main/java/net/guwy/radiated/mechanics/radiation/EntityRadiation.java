@@ -37,10 +37,10 @@ public class EntityRadiation {
         this.geigerVal = geigerVal;
     }
     public void increaseGeigerVal(double increase){
-        this.geigerVal = increase + this.geigerVal;
+        this.geigerVal += increase;
     }
     public void decreaseGeigerVal(double decrease){
-        this.geigerVal = decrease;
+        this.geigerVal -= decrease;
     }
 
 

@@ -1,0 +1,11 @@
+{
+  "type": "radiated:usage",
+  "ingredients": [
+    {
+      "item": "radiated:iv_bag"
+    }
+  ],
+  "output": {
+    "item": "radiated:blood_bag"
+  }
+}

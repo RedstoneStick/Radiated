@@ -3,6 +3,7 @@ package net.guwy.radiated.index;
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.content.items.BasicRadioactiveItem;
 import net.guwy.radiated.content.items.RTGPelletItem;
+import net.guwy.radiated.content.items.RadawayItem;
 import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -32,10 +33,8 @@ public class RDTItems {
     public static final RegistryObject<Item> THERMOELECTRIC_ELEMENT = ITEMS.register("thermoelectric_element",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
-
     public static final RegistryObject<Item> RTG_UNIT = ITEMS.register("rtg_unit",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
-
 
     public static final RegistryObject<Item> COPPER_PANEL = ITEMS.register("copper_panel",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
@@ -44,11 +43,58 @@ public class RDTItems {
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
 
+
     public static final RegistryObject<Item> YELLOWCAKE = ITEMS.register("yellowcake",
             () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.YELLOWCAKE), 1.05){
                 @Override
                 public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                     pTooltipComponents.add(Component.translatable("tooltip.radiated.yellowcake").withStyle(ChatFormatting.GOLD));
+                    super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+                }
+            });
+
+
+
+    public static final RegistryObject<Item> RAD_X = ITEMS.register("rad_x",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.RAD_X)){
+                @Override
+                public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+                    pTooltipComponents.add(Component.translatable("tooltip.radiated.rad_x").withStyle(ChatFormatting.GRAY));
+                    super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+                }
+            });
+
+
+
+    public static final RegistryObject<Item> IV_BAG = ITEMS.register("iv_bag",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> BLOOD_BAG = ITEMS.register("blood_bag",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+    public static final RegistryObject<Item> RADAWAY = ITEMS.register("radaway",
+            () -> new RadawayItem(200, new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+
+
+
+    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE)){
+                @Override
+                public UseAnim getUseAnimation(ItemStack pStack) {
+                    return UseAnim.DRINK;
+                }
+            });
+
+    public static final RegistryObject<Item> COFFEE_RADIUM = ITEMS.register("coffee_radium",
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE_RADIUM)){
+                @Override
+                public UseAnim getUseAnimation(ItemStack pStack) {
+                    return UseAnim.DRINK;
+                }
+
+                @Override
+                public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+                    pTooltipComponents.add(Component.translatable("tooltip.radiated.radium_coffee").withStyle(ChatFormatting.GRAY));
                     super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
                 }
             });

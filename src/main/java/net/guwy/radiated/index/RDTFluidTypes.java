@@ -4,8 +4,6 @@ import com.mojang.math.Vector3f;
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.content.fluid.BaseFluidType;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraftforge.common.SoundAction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -27,18 +25,27 @@ public class RDTFluidTypes {
     //        FluidType.Properties.create().lightLevel(2).density(15).viscosity(5).sound(SoundAction.get("drink"),
     //                SoundEvents.HONEY_DRINK));
 
+
+
     public static final ResourceLocation UF6_STILL_RL = new ResourceLocation(Radiated.MOD_ID,"fluids/uf6_still");
     public static final ResourceLocation UF6_FLOWING_RL = new ResourceLocation(Radiated.MOD_ID,"fluids/uf6_flow");
 
-    public static final RegistryObject<FluidType> UF6_FLUID_TYPE = register("uf6_fluid",
+    public static final RegistryObject<FluidType> UF6_FLUID_TYPE = registerGenericFluid("uf6_fluid",
             FluidType.Properties.create().density(15).viscosity(5).lightLevel(2),
             0xffffffff, new Vector3f(186f / 255f, 174f / 255f, 163f / 255f),
             UF6_STILL_RL, UF6_FLOWING_RL, UF6_FLOWING_RL);
 
 
 
+    public static final RegistryObject<FluidType> STEAM_LOW_PRESSURE_FLUID_TYPE = registerGenericFluid("steam_low_pressure_fluid",
+            FluidType.Properties.create().canPushEntity(false),
+            0x99d1d5ed, new Vector3f(209f / 255f, 213f / 255f, 237f / 255f),
+            WATER_STILL_RL, WATER_FLOWING_RL, WATER_FLOWING_RL);
 
-    private static RegistryObject<FluidType> register(String name, FluidType.Properties properties, int tintColor, Vector3f fogColor,
+
+
+
+    private static RegistryObject<FluidType> registerGenericFluid(String name, FluidType.Properties properties, int tintColor, Vector3f fogColor,
                                                       ResourceLocation stillTexture, ResourceLocation flowingTexture, ResourceLocation overlayTexture) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(stillTexture, flowingTexture, overlayTexture,
                 tintColor, fogColor, properties));

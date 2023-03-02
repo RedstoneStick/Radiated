@@ -1,7 +1,11 @@
 {
   "itemGroup.radiated_tab": "Radiated",
 
+  "advancements.radiated.root.title": "Radiated",
+  "advancements.radiated.root.description": "Radiated",
+
   "text.radiated.jei.rtg": "RTG",
+  "text.radiated.jei.usage": "Use",
 
 
 
@@ -15,6 +19,24 @@
 
   "item.radiated.yellowcake": "Yellowcake",
   "tooltip.radiated.yellowcake": "22.8 billion calories",
+  "effect.radiated.food_yellowcake": "Yellowcake",
+
+  "item.radiated.rad_x": "Rad-X",
+  "tooltip.radiated.rad_x": "Increases radiation resistance by 37% for 3 minutes",
+  "effect.radiated.medicine_rad_x": "Rad-X",
+
+  "item.radiated.coffee": "Coffee",
+
+  "item.radiated.coffee_radium": "Radium Coffee",
+  "tooltip.radiated.radium_coffee": "\"Mr. Incredible, you're fired for pouring Radium in my coffee!\" ~ Mr. Who cares (Mr. Huph)",
+  "effect.radiated.coffee_radium": "Radium Coffee",
+
+  "item.radiated.iv_bag": "IV Bag",
+
+  "item.radiated.blood_bag": "Blood Bag",
+
+  "item.radiated.radaway": "RadAway",
+  "tooltip.radiated.radaway": "Removes %s Rads",
 
 
 
@@ -72,8 +94,29 @@
 
 
 
+  "item.radiated.hazmat_helmet": "Hazmat Helmet",
+  "item.radiated.hazmat_chestplate": "Hazmat Chestplate",
+  "item.radiated.hazmat_leggings": "Hazmat Leggings",
+  "item.radiated.hazmat_boots": "Hazmat Boots",
+
+  "item.radiated.hazmat_advanced_helmet": "Advanced Hazmat Helmet",
+  "item.radiated.hazmat_advanced_chestplate": "Advanced Hazmat Chestplate",
+  "item.radiated.hazmat_advanced_leggings": "Advanced Hazmat Leggings",
+  "item.radiated.hazmat_advanced_boots": "Advanced Hazmat Boots",
+
+  "item.radiated.hazmat_high_performance_helmet": "High-Performance Hazmat Helmet",
+  "item.radiated.hazmat_high_performance_chestplate": "High-Performance Hazmat Chestplate",
+  "item.radiated.hazmat_high_performance_leggings": "High-Performance Hazmat Leggings",
+  "item.radiated.hazmat_high_performance_boots": "High-Performance Hazmat Boots",
+
+
+
+
   "item.radiated.uf6_bucket": "Bucket of Uranium Hexafluorite",
   "fluid_type.radiated.uf6_fluid": "Uranium Hexafluorite",
+
+  "item.radiated.steam_low_pressure_bucket": "Bucket of Low Pressure Steam",
+  "fluid_type.radiated.steam_low_pressure_fluid": "Low Pressure Steam",
 
 
 
@@ -84,5 +127,18 @@
 
   "tooltip.radiated.generic.year_symbol": "y",
   "tooltip.radiated.generic.day_symbol": "d",
-  "tooltip.radiated.generic.hour_symbol": "h"
+  "tooltip.radiated.generic.hour_symbol": "h",
+
+
+
+  "tooltip.radiated.radiation.radioactive": "[Radioactive]",
+  "tooltip.radiated.radiation.stack": "Stack: ",
+  "tooltip.radiated.radiation.rad_s": "RAD/s",
+  "tooltip.radiated.radiation.resistance": "Radiation Resistance: %s%%",
+
+  "message.radiated.fluid.gas_dissipate": "The gaseous %s dissipates into the air",
+
+
+
+  "sounds.radiated.player_cough": "RadAway Being Used"
 }

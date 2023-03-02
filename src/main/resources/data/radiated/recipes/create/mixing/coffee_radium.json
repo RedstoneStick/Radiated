@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "radiated:coffee"
+    },
+    {
+      "item": "radiated:radium_nugget"
+    }
+  ],
+  "results": [
+    {
+      "item": "radiated:coffee_radium",
+      "count": 1
+    }
+  ]
+}

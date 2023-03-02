@@ -2,8 +2,11 @@ package net.guwy.radiated.mechanics.radiation;
 
 import com.simibubi.create.AllItems;
 import net.guwy.sticky_foundations.index.SFTags;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
 public class GetRadiationVal {
     public static double getVal(ItemStack itemStack){
@@ -58,6 +61,33 @@ public class GetRadiationVal {
         val = val / 1000;
         return val;
 
+    }
+
+    public static void tooltipHandler(ItemTooltipEvent event){
+        ItemStack itemStack = event.getItemStack();
+        Item item = itemStack.getItem();
+
+        double radiationVal = GetRadiationVal.getVal(itemStack);
+        if(radiationVal != 0){
+            Component tooltip;
+
+            event.getToolTip().add(Component.translatable("tooltip.radiated.radiation.radioactive").withStyle(ChatFormatting.GREEN));
+
+            tooltip = Component.literal(
+                            Double.toString(radiationVal)).append(Component.translatable("tooltip.radiated.radiation.rad_s").getString())
+                    .withStyle(ChatFormatting.YELLOW);
+            event.getToolTip().add(tooltip);
+
+
+            int count = itemStack.getCount();
+            if(count > 1){
+                tooltip = Component.translatable("tooltip.radiated.radiation.stack")
+                        .append(Double.toString(GetRadiationVal.getStackVal(itemStack)))
+                        .append(Component.translatable("tooltip.radiated.radiation.rad_s").getString())
+                        .withStyle(ChatFormatting.YELLOW);
+                event.getToolTip().add(tooltip);
+            }
+        }
     }
 }
 
