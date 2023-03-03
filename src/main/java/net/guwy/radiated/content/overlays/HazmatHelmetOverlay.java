@@ -1,4 +1,4 @@
-package net.guwy.radiated.overlays;
+package net.guwy.radiated.content.overlays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.guwy.radiated.Radiated;
@@ -6,13 +6,17 @@ import net.guwy.radiated.index.ModTags;
 import net.guwy.radiated.index.RDTArmors;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiComponent;
+import net.minecraft.client.gui.font.FontSet;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
+
+import java.awt.*;
 
 public class HazmatHelmetOverlay {
     public static final ResourceLocation HELMET_OVERLAY_TEXTURE = new ResourceLocation(Radiated.MOD_ID,
@@ -64,6 +68,8 @@ public class HazmatHelmetOverlay {
                 } else {
                     RenderSystem.setShaderTexture(0, DAMAGE_0_TEXTURE);
                     GuiComponent.blit(poseStack, 0, 0, 0, 0, screenWidth, screenHeight, screenWidth, screenHeight);
+
+                    //Minecraft.getInstance().font.draw(poseStack, "Hello", 100, 100, -12829636);
                 }
 
 

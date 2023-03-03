@@ -43,7 +43,12 @@
   "tooltip.radiated.radaway": "Removes %s Rads",
 
   "sounds.radiated.geiger_counter": "Geiger Counter Ticks",
+  "sounds.radiated.tech_boop": "Boop",
   "item.radiated.geiger_counter": "Geiger Counter",
+  "message.radiated.geiger_counter.1": "===== ☢ GEIGER COUNTER ☢ =====",
+  "message.radiated.geiger_counter.2": "Total environmental radiation: ",
+  "message.radiated.geiger_counter.3": "Player contamination: ",
+  "message.radiated.geiger_counter.4": "Player resistance: ",
 
 
 
@@ -141,6 +146,7 @@
   "tooltip.radiated.radiation.radioactive": "[Radioactive]",
   "tooltip.radiated.radiation.stack": "Stack: ",
   "tooltip.radiated.radiation.rad_s": "RAD/s",
+  "tooltip.radiated.radiation.rad": "RAD",
   "tooltip.radiated.radiation.resistance": "Radiation Resistance: %s%%",
 
   "message.radiated.fluid.gas_dissipate": "The gaseous %s dissipates into the air",

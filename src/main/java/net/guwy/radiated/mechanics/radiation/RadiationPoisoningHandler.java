@@ -9,7 +9,7 @@ public class RadiationPoisoningHandler {
     public static void handle(Player player){
         player.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler -> {
             double radiationVal = handler.getPlayerRadiationVal();
-            double chance = 0.25;
+            double chance = 0.50;
             boolean isTime = (player.tickCount % 100) == 0;
 
             if(radiationVal > 0){
@@ -55,7 +55,7 @@ public class RadiationPoisoningHandler {
                 } else {
 
                     if  (radiationVal < 500){
-                        chance = 0.08;
+                        chance = 0.20;
                     }
 
                     if (radiationVal >= 400){

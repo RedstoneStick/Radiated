@@ -40,5 +40,11 @@
     "sounds": [
       "radiated:item/geiger6"
     ]
+  },
+  "tech_boop": {
+    "subtitle": "sounds.radiated.tech_boop",
+    "sounds": [
+      "radiated:item/tech_boop"
+    ]
   }
 }

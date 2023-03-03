@@ -17,7 +17,7 @@ public class EntityRadiation {
      * it'll apply radiation resistance itself and record the instant value for use in geiger counter **/
 
     public double getPlayerRadiationVal(){
-        return this.playerRadiationVal;
+        return Math.round(this.playerRadiationVal * 1000) / 1000d;
     }
     public void setPlayerRadiationVal(double radiationVal){
         this.playerRadiationVal = radiationVal;
@@ -45,7 +45,7 @@ public class EntityRadiation {
 
 
     public double getLastGeigerVal(){
-        return this.lastGeigerVal;
+        return Math.round(this.lastGeigerVal * 1000) / 1000d;
     }
     public void setLastGeigerVal(double lastGeigerVal){
         this.lastGeigerVal = lastGeigerVal;
@@ -60,7 +60,7 @@ public class EntityRadiation {
     }
 
 
-    public double getMaxPlayerRadiation(){
+    public static double getMaxPlayerRadiation(){
         return MAX_PLAYER_RADIATION;
     }
 

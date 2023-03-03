@@ -43,6 +43,7 @@ public class PlayerRadiationHandler {
     private static void processGeigerVal(Player player){
         player.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler -> {
             double geigerVal = handler.getGeigerVal();
+            handler.setLastGeigerVal(geigerVal);
 
             if(!player.isCreative()){
                 if(geigerVal > 0){
@@ -50,12 +51,12 @@ public class PlayerRadiationHandler {
                     geigerVal = geigerVal * (1 - GetRadiationResistance.getVal(player));
 
                     handler.increasePlayerRadiationVal(geigerVal);
-                } else if(geigerVal < 0) {
-                    handler.decreasePlayerRadiationVal(Math.abs(geigerVal));
                 }
             }
+            if(geigerVal < 0) {
+                handler.decreasePlayerRadiationVal(Math.abs(geigerVal));
+            }
 
-            handler.setLastGeigerVal(geigerVal);
             handler.setGeigerVal(0);
         });
     }
