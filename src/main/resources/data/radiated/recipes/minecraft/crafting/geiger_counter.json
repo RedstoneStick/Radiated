@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyy",
+    "kpz",
+    "kll"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:gold_ingot"
+    },
+    "y": {
+      "item": "sticky_foundations:insulator"
+    },
+    "p": {
+      "item": "sticky_foundations:circuitry_advanced"
+    },
+    "k": {
+      "tag": "forge:wires/gold"
+    },
+    "z": {
+      "tag": "forge:plates/steel"
+    },
+    "l": {
+      "tag": "forge:ingots/beryllium"
+    }
+  },
+  "result": {
+    "item": "radiated:geiger_counter",
+    "count": 4
+  }
+}
