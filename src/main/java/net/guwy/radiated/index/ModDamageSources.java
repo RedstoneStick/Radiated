@@ -14,4 +14,7 @@ public class ModDamageSources {
 
     public static DamageSource YELLOWCAKE_3 = new DamageSource("yellowcake_3")
             .bypassArmor().bypassEnchantments().bypassInvul().bypassMagic();
+
+    public static DamageSource IV_BAG = new DamageSource("iv_bag")
+            .bypassArmor().bypassEnchantments().bypassMagic();
 }

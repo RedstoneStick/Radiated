@@ -136,6 +136,7 @@
   "death.attack.yellowcake_2": "%1$s has died due to excessive calorie intake",
   "death.attack.yellowcake_3": "%1$s has made a bad decision",
   "death.attack.radiation": "%1$s has died from radiation poisoning",
+  "death.attack.iv_bag": "%1$s has drained his own blood",
 
   "tooltip.radiated.generic.year_symbol": "y",
   "tooltip.radiated.generic.day_symbol": "d",

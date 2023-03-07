@@ -34,7 +34,7 @@ public class RadawayItem extends Item {
         itemStack.setCount(itemStack.getCount() - 1);
         pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 20);
 
-        pLevel.playSound(null, pPlayer.getOnPos(), ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
+        pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 

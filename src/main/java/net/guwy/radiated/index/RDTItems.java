@@ -2,6 +2,7 @@ package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.content.items.BasicRadioactiveItem;
+import net.guwy.radiated.content.items.IVBagItem;
 import net.guwy.radiated.content.items.RTGPelletItem;
 import net.guwy.radiated.content.items.RadawayItem;
 import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
@@ -76,7 +77,7 @@ public class RDTItems {
 
 
     public static final RegistryObject<Item> IV_BAG = ITEMS.register("iv_bag",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new IVBagItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
     public static final RegistryObject<Item> BLOOD_BAG = ITEMS.register("blood_bag",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
