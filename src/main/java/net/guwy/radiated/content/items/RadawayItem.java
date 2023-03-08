@@ -32,7 +32,9 @@ public class RadawayItem extends Item {
 
         ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
         itemStack.setCount(itemStack.getCount() - 1);
+
         pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 20);
+        pPlayer.swing(pUsedHand);
 
         pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
         return super.use(pLevel, pPlayer, pUsedHand);

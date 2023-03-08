@@ -11,6 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
+import java.util.function.Supplier;
+
 public class IVBagItem extends Item {
     public IVBagItem(Properties pProperties) {
         super(pProperties);
@@ -19,10 +21,12 @@ public class IVBagItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
 
-        ItemStack itemStack = pPlayer.getUseItem();
+        ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
         itemStack.setCount(itemStack.getCount() - 1);
 
         pPlayer.hurt(ModDamageSources.IV_BAG, 8);
+        pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 20);
+        pPlayer.swing(pUsedHand);
 
         pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
 
