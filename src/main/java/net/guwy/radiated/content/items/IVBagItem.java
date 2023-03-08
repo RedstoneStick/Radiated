@@ -31,7 +31,7 @@ public class IVBagItem extends Item {
         pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
 
         ItemStack output = new ItemStack(RDTItems.BLOOD_BAG.get());
-        pPlayer.addItem(output);
+        pPlayer.getInventory().placeItemBackInInventory(output);
 
         return super.use(pLevel, pPlayer, pUsedHand);
     }

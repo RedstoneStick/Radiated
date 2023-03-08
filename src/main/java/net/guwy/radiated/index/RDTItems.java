@@ -1,16 +1,14 @@
 package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
-import net.guwy.radiated.content.items.BasicRadioactiveItem;
-import net.guwy.radiated.content.items.IVBagItem;
-import net.guwy.radiated.content.items.RTGPelletItem;
-import net.guwy.radiated.content.items.RadawayItem;
+import net.guwy.radiated.content.items.*;
 import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
@@ -88,20 +86,10 @@ public class RDTItems {
 
 
     public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE)){
-                @Override
-                public UseAnim getUseAnimation(ItemStack pStack) {
-                    return UseAnim.DRINK;
-                }
-            });
+            () -> new CoffeeItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE)));
 
     public static final RegistryObject<Item> COFFEE_RADIUM = ITEMS.register("coffee_radium",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE_RADIUM)){
-                @Override
-                public UseAnim getUseAnimation(ItemStack pStack) {
-                    return UseAnim.DRINK;
-                }
-
+            () -> new CoffeeItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE_RADIUM)){
                 @Override
                 public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                     pTooltipComponents.add(Component.translatable("tooltip.radiated.radium_coffee").withStyle(ChatFormatting.GRAY));
