@@ -6,7 +6,8 @@ import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 
 public class RegisterGuiOverlaysEventHandler {
     public static void init(final RegisterGuiOverlaysEvent event){
-        event.registerBelowAll("hazmat_helmet", HazmatHelmetOverlay.HELMET_OVERLAY);
         event.registerBelowAll("geiger_counter", GeigerCounterOverlay.OVERLAY);
+
+        event.registerBelowAll("hazmat_helmet", HazmatHelmetOverlay.HELMET_OVERLAY);
     }
 }

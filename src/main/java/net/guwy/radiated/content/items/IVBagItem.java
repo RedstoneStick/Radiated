@@ -24,7 +24,6 @@ public class IVBagItem extends Item {
         ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
         itemStack.setCount(itemStack.getCount() - 1);
 
-        pPlayer.hurt(ModDamageSources.IV_BAG, 8);
         pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 20);
         pPlayer.swing(pUsedHand);
 
@@ -32,6 +31,8 @@ public class IVBagItem extends Item {
 
         ItemStack output = new ItemStack(RDTItems.BLOOD_BAG.get());
         pPlayer.getInventory().placeItemBackInInventory(output);
+
+        pPlayer.hurt(ModDamageSources.IV_BAG, 8);
 
         return super.use(pLevel, pPlayer, pUsedHand);
     }

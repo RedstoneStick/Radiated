@@ -26,6 +26,7 @@ public class RDTBlockEntities {
 
 
 
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

@@ -31,10 +31,12 @@ public class RDTMachines {
                     strength(4.5f).explosionResistance(3f).
                     sound(SoundType.METAL).noOcclusion()), RDTCreativeModeTabs.MAIN);
 
+
     public static final RegistryObject<Block> RTG = registerBlock("rtg", () ->
             new RTGBlock(BlockBehaviour.Properties.of(Material.METAL).
                     strength(4.5f).explosionResistance(3f).
                     sound(SoundType.METAL).noOcclusion()), RDTCreativeModeTabs.MAIN);
+
 
 
 

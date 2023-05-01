@@ -1,6 +1,7 @@
 package net.guwy.radiated.events.server;
 
 import net.guwy.radiated.events.server.player_tick.PlayerRadiationHandler;
+import net.guwy.radiated.mechanics.gasmask.VisorWearTick;
 import net.minecraftforge.event.TickEvent;
 
 public class PlayerTickEventOrganizer {
@@ -13,8 +14,9 @@ public class PlayerTickEventOrganizer {
 
 
 
-        //if((counter % 10) == 0){    //Every Half a Second
-        //}
+        if((counter % 10) == 0){    //Every Half a Second
+            VisorWearTick.process(event.player);
+        }
 
 
 

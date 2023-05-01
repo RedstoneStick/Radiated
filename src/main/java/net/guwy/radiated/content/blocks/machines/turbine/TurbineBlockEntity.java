@@ -20,10 +20,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
@@ -104,6 +108,9 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
         }
         if(cap == ForgeCapabilities.ENERGY){
             return lazyEnergyStorage.cast();
+        }
+        if(cap == ForgeCapabilities.FLUID_HANDLER) {
+            return lazyFluidHandler.cast();
         }
         return super.getCapability(cap, side);
     }
@@ -195,4 +202,47 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
     public void setEnergyLevel(int energy) {
         this.ENERGY_STORAGE.setEnergy(energy);
     }
+
+
+
+
+    private final FluidTank INPUT_FLUID_TANK = new FluidTank(1000) {
+        @Override
+        protected void onContentsChanged() {
+            setChanged();
+            //if(!level.isClientSide()) {
+            //    ModNetworking.sendToClients(new FluidSyncS2CPacket(this.fluid, worldPosition));
+            //}
+        }
+
+        @Override
+        public boolean isFluidValid(FluidStack stack) {
+            return stack.getFluid() == Fluids.WATER;
+        }
+    };
+
+    private final FluidTank OUTPUT_FLUID_TANK = new FluidTank(1000) {
+        @Override
+        protected void onContentsChanged() {
+            setChanged();
+            //if(!level.isClientSide()) {
+            //    ModNetworking.sendToClients(new FluidSyncS2CPacket(this.fluid, worldPosition));
+            //}
+        }
+
+        @Override
+        public boolean isFluidValid(FluidStack stack) {
+            return false;
+        }
+    };
+
+    public void setFluid(FluidStack stack) {
+        this.INPUT_FLUID_TANK.setFluid(stack);
+    }
+
+    public FluidStack getFluidStack() {
+        return this.OUTPUT_FLUID_TANK.getFluid();
+    }
+
+    private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
 }
