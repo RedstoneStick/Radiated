@@ -1,7 +1,6 @@
 package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
-import net.guwy.sticky_foundations.StickyFoundations;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -18,7 +17,7 @@ public class ModTags {
         public static final TagKey<Block> MASK_SAND = tag("mask_sand");
         public static final TagKey<Block> MASK_DIRT = tag("mask_dirt");
         public static final TagKey<Block> MASK_MUD = tag("mask_mud");
-        public static final TagKey<Block> MASK_SOOTH = tag("mask_sooth");
+        public static final TagKey<Block> MASK_SOOT = tag("mask_soot");
 
 
 

@@ -16,7 +16,7 @@ public interface VisorItem {
     public static String TAG_OUTER_SAND = "outer_sand";     // Environmental sand/dust accumulation on the helmet
     public static String TAG_OUTER_DIRT = "outer_dirt";     // Environmental dirt accumulation on the helmet
     public static String TAG_OUTER_MUD = "outer_mud";     // Environmental mud accumulation on the helmet
-    public static String TAG_OUTER_SOOTH = "outer_sooth";     // Environmental sooth (from coal) accumulation on the helmet
+    public static String TAG_OUTER_SOOT = "outer_soot";     // Environmental soot (from coal) accumulation on the helmet
     public static String TAG_OUTER_BLOOD = "outer_blood";   // Blood of the entity that the player damages from close distance
     public static String TAG_OUTER_WATER = "outer_water";   // Water droplets that show up after the player leaves a body of water
 
@@ -72,14 +72,14 @@ public interface VisorItem {
         return ItemTagUtils.getDouble(itemStack, TAG_OUTER_MUD);
     }
 
-    public static void setOuterSooth(ItemStack itemStack, double modifier){
-        ItemTagUtils.putDouble(itemStack, TAG_OUTER_SOOTH, clamp(modifier));
+    public static void setOuterSoot(ItemStack itemStack, double modifier){
+        ItemTagUtils.putDouble(itemStack, TAG_OUTER_SOOT, clamp(modifier));
     }
-    public static void addOuterSooth(ItemStack itemStack, double modifier){
-        ItemTagUtils.putDouble(itemStack, TAG_OUTER_SOOTH, clamp(getOuterSooth(itemStack) + modifier));
+    public static void addOuterSoot(ItemStack itemStack, double modifier){
+        ItemTagUtils.putDouble(itemStack, TAG_OUTER_SOOT, clamp(getOuterSoot(itemStack) + modifier));
     }
-    public static double getOuterSooth(ItemStack itemStack){
-        return ItemTagUtils.getDouble(itemStack, TAG_OUTER_SOOTH);
+    public static double getOuterSoot(ItemStack itemStack){
+        return ItemTagUtils.getDouble(itemStack, TAG_OUTER_SOOT);
     }
 
     public static void setOuterBlood(ItemStack itemStack, double modifier){

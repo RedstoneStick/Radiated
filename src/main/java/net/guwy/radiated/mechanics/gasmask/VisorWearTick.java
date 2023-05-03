@@ -15,7 +15,7 @@ public class VisorWearTick {
     private static final double SAND_ACCUMULATION_RATE = 0.0017 * OVERALL_MULTIPLIER;    // 0 to 1 in 10 min
     private static final double DIRT_ACCUMULATION_RATE = 0.0017 * OVERALL_MULTIPLIER;    // 0 to 1 in 10 min
     private static final double MUD_ACCUMULATION_RATE = 0.003 * OVERALL_MULTIPLIER;      // 0 to 1 in 5 min
-    private static final double SOOTH_ACCUMULATION_RATE = 0.017 * OVERALL_MULTIPLIER;    // 0 to 1 in 1 min
+    private static final double SOOT_ACCUMULATION_RATE = 0.017 * OVERALL_MULTIPLIER;    // 0 to 1 in 1 min
 
     private static final double WATER_CLEANSING_RATE_ABOVE_T = -0.1 * OVERALL_MULTIPLIER;
     private static final double WATER_CLEANSING_RATE_BELOW_T = -0.017 * OVERALL_MULTIPLIER;
@@ -48,8 +48,8 @@ public class VisorWearTick {
                 if(VisorItem.getOuterMud(itemStack) > WATER_THRESHOLD) VisorItem.addOuterMud(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
                 else VisorItem.addOuterMud(itemStack, WATER_CLEANSING_RATE_BELOW_T);
 
-                if(VisorItem.getOuterSooth(itemStack) > WATER_THRESHOLD) VisorItem.addOuterSooth(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
-                else VisorItem.addOuterSooth(itemStack, WATER_CLEANSING_RATE_BELOW_T);
+                if(VisorItem.getOuterSoot(itemStack) > WATER_THRESHOLD) VisorItem.addOuterSoot(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
+                else VisorItem.addOuterSoot(itemStack, WATER_CLEANSING_RATE_BELOW_T);
 
             } else {
 
@@ -57,7 +57,7 @@ public class VisorWearTick {
                 if(onBlock.is(ModTags.Blocks.MASK_SAND)) VisorItem.addOuterSand(itemStack, SAND_ACCUMULATION_RATE);
                 if(onBlock.is(ModTags.Blocks.MASK_DIRT)) VisorItem.addOuterDirt(itemStack, DIRT_ACCUMULATION_RATE);
                 if(onBlock.is(ModTags.Blocks.MASK_MUD)) VisorItem.addOuterMud(itemStack, MUD_ACCUMULATION_RATE);
-                if(onBlock.is(ModTags.Blocks.MASK_SOOTH)) VisorItem.addOuterSooth(itemStack, SOOTH_ACCUMULATION_RATE);
+                if(onBlock.is(ModTags.Blocks.MASK_SOOT)) VisorItem.addOuterSoot(itemStack, SOOT_ACCUMULATION_RATE);
 
                 // decreases the water accumulation on screen
                 // faster if there is more water slower if there is less
@@ -69,7 +69,7 @@ public class VisorWearTick {
             player.sendSystemMessage(Component.literal("sand: " + VisorItem.getOuterSand(itemStack)));
             player.sendSystemMessage(Component.literal("dirt: " + VisorItem.getOuterDirt(itemStack)));
             player.sendSystemMessage(Component.literal("mud: " + VisorItem.getOuterMud(itemStack)));
-            player.sendSystemMessage(Component.literal("sooth: " + VisorItem.getOuterSooth(itemStack)));
+            player.sendSystemMessage(Component.literal("sooth: " + VisorItem.getOuterSoot(itemStack)));
             player.sendSystemMessage(Component.literal("water: " + VisorItem.getOuterWater(itemStack)));
             player.sendSystemMessage(Component.literal("block: " + onBlock.getBlock().getName().getString()));
             player.sendSystemMessage(Component.literal("-----"));
