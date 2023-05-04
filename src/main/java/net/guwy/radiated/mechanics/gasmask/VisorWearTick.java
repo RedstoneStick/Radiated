@@ -12,14 +12,14 @@ import net.minecraft.world.level.block.state.BlockState;
 public class VisorWearTick {
     private static final double OVERALL_MULTIPLIER = 0.5;   // used for adjusting overall work rate (timings below are for 1.0) (Use with tick call amount)
 
-    private static final double SAND_ACCUMULATION_RATE = 0.0017 * OVERALL_MULTIPLIER;    // 0 to 1 in 10 min
-    private static final double DIRT_ACCUMULATION_RATE = 0.0017 * OVERALL_MULTIPLIER;    // 0 to 1 in 10 min
-    private static final double MUD_ACCUMULATION_RATE = 0.003 * OVERALL_MULTIPLIER;      // 0 to 1 in 5 min
-    private static final double SOOT_ACCUMULATION_RATE = 0.017 * OVERALL_MULTIPLIER;    // 0 to 1 in 1 min
+    private static final double SAND_ACCUMULATION_RATE = 0.0017 * OVERALL_MULTIPLIER;    // 0 to 1 in 10 min (0.0017)
+    private static final double DIRT_ACCUMULATION_RATE = 0.0017 * OVERALL_MULTIPLIER;    // 0 to 1 in 10 min (0.0017)
+    private static final double MUD_ACCUMULATION_RATE = 0.003 * OVERALL_MULTIPLIER;      // 0 to 1 in 5 min (0.003)
+    private static final double SOOT_ACCUMULATION_RATE = 0.017 * OVERALL_MULTIPLIER;    // 0 to 1 in 1 min (0.017)
 
-    private static final double WATER_CLEANSING_RATE_ABOVE_T = -0.1 * OVERALL_MULTIPLIER;
-    private static final double WATER_CLEANSING_RATE_BELOW_T = -0.017 * OVERALL_MULTIPLIER;
-    private static final double WATER_THRESHOLD = 0.2; // Used for water's effective accumulation and cleansing
+    private static final double WATER_CLEANSING_RATE_ABOVE_T = -0.1 * OVERALL_MULTIPLIER;       // (-0.1)
+    private static final double WATER_CLEANSING_RATE_BELOW_T = -0.017 * OVERALL_MULTIPLIER;     // (-0.017)
+    private static final double WATER_THRESHOLD = 0.2; // Used for water's effective accumulation and cleansing (0.2)
 
     public static void process(Player player){
         ItemStack itemStack = player.getItemBySlot(EquipmentSlot.HEAD);
