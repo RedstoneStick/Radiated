@@ -3,11 +3,14 @@ package net.guwy.radiated.events;
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.events.client.RegisterGuiOverlaysEventHandler;
 import net.guwy.radiated.events.client.TooltipEvent;
+import net.guwy.radiated.events.server.player.PlayerInteractRightClickEmptyHandler;
 import net.guwy.sticky_foundations.StickyFoundations;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 
 public class ModClientEvents {
@@ -22,6 +25,12 @@ public class ModClientEvents {
 
 
 
+        @SubscribeEvent
+        public static void onPlayerInteract(PlayerInteractEvent.RightClickEmpty event) {
+            if(event.getSide() == LogicalSide.CLIENT) {
+                PlayerInteractRightClickEmptyHandler.init(event);
+            }
+        }
     }
 
 

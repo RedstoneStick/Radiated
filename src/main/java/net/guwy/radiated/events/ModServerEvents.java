@@ -5,6 +5,8 @@ import net.guwy.radiated.events.server.AttachCapabilitiesHandler;
 import net.guwy.radiated.events.server.CapabilityCarryOverDeathHandler;
 import net.guwy.radiated.events.server.PlayerTickEventOrganizer;
 import net.guwy.radiated.events.server.RegisterCapabilitiesHandler;
+import net.guwy.radiated.events.server.player.PlayerInteractRightClickEmptyHandler;
+import net.guwy.radiated.mechanics.gasmask.IVisorItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
@@ -15,6 +17,8 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
@@ -29,6 +33,13 @@ public class ModServerEvents {
                 if(event.phase == TickEvent.Phase.END){
                     PlayerTickEventOrganizer.init(event);
                 }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onPlayerInteract(PlayerInteractEvent.RightClickBlock event) {
+            if(event.getSide() == LogicalSide.SERVER) {
+                IVisorItem.WipeVisor(event.getEntity());
             }
         }
 

@@ -1,9 +1,15 @@
 package net.guwy.radiated.mechanics.gasmask;
 
 import net.guwy.radiated.utils.ItemTagUtils;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
-public interface VisorItem {
+public interface IVisorItem {
 
 
 
@@ -102,9 +108,59 @@ public interface VisorItem {
         return ItemTagUtils.getDouble(itemStack, TAG_OUTER_WATER);
     }
 
+    // A function to return the sum of all gunk for easy use in other classes
+    public static double getOuterGunkSum(ItemStack itemStack){
+        return getOuterSand(itemStack) + getOuterMud(itemStack) + getOuterDirt(itemStack) + getOuterSoot(itemStack);
+    }
+
 
     // A basic function to clamp the entered number between 1 and 0
     private static double clamp(double val){
         return Math.max(0, Math.min(1, val));
+    }
+
+
+    public static void WipeVisor(Player player){
+        ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
+        double CLEANING_PERCENTAGE = 0.2;
+        double gunkSum = getOuterGunkSum(helmet);
+
+        if(player.getItemInHand(InteractionHand.MAIN_HAND).isEmpty() ){
+
+            // General Call for animations and alike
+            if(getOuterWater(helmet) > 0 || gunkSum > CLEANING_PERCENTAGE){
+                //Lazy Animation :D
+                player.swing(InteractionHand.MAIN_HAND, true);
+
+                player.getLevel().playSound(null, player, SoundEvents.ARMOR_EQUIP_LEATHER, SoundSource.PLAYERS, 100, 0.8f);
+            }
+            // Cleans the visor completely if it is wet
+            if(getOuterWater(helmet) > 0){
+                setOuterSand(helmet, 0);
+                setOuterMud(helmet, 0);
+                setOuterDirt(helmet, 0);
+                setOuterSoot(helmet, 0);
+                setOuterWater(helmet, 0);
+            }
+            // Otherwise cleans it partially
+            else if(gunkSum > CLEANING_PERCENTAGE){
+                double gunk;
+
+                gunk = getOuterSand(helmet);
+                addOuterSand(helmet, -gunk * CLEANING_PERCENTAGE);
+
+                gunk = getOuterMud(helmet);
+                addOuterMud(helmet, -gunk * CLEANING_PERCENTAGE);
+
+                gunk = getOuterDirt(helmet);
+                addOuterDirt(helmet, -gunk * CLEANING_PERCENTAGE);
+
+                gunk = getOuterSoot(helmet);
+                addOuterSoot(helmet, -gunk * CLEANING_PERCENTAGE);
+
+                //Lazy Animation :D
+                player.swing(InteractionHand.MAIN_HAND, true);
+            }
+        }
     }
 }

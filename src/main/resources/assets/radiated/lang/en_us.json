@@ -150,6 +150,10 @@
   "tooltip.radiated.radiation.rad": "RAD",
   "tooltip.radiated.radiation.resistance": "Radiation Resistance: %s%%",
 
+  "tooltip.radiated.visor.outer.water": "§3Visor is wet, wiping will clean all gunk",
+  "tooltip.radiated.visor.outer.gunk": "Visor is dirty",
+  "tooltip.radiated.visor.outer.wipe": "Press §6[Shift+Right Click] with empty hand§r to wipe the visor",
+
   "message.radiated.fluid.gas_dissipate": "The gaseous %s dissipates into the air",
 
 

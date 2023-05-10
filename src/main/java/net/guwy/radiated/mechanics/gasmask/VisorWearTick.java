@@ -17,15 +17,15 @@ public class VisorWearTick {
     private static final double MUD_ACCUMULATION_RATE = 0.003 * OVERALL_MULTIPLIER;      // 0 to 1 in 5 min (0.003)
     private static final double SOOT_ACCUMULATION_RATE = 0.017 * OVERALL_MULTIPLIER;    // 0 to 1 in 1 min (0.017)
 
-    private static final double WATER_CLEANSING_RATE_ABOVE_T = -0.1 * OVERALL_MULTIPLIER;       // (-0.1)
+    private static final double WATER_CLEANSING_RATE_ABOVE_T = -0.2 * OVERALL_MULTIPLIER;       // (-0.1)
     private static final double WATER_CLEANSING_RATE_BELOW_T = -0.017 * OVERALL_MULTIPLIER;     // (-0.017)
-    private static final double WATER_THRESHOLD = 0.2; // Used for water's effective accumulation and cleansing (0.2)
+    private static final double WATER_THRESHOLD = 0.201; // Used for water's effective accumulation and cleansing (0.2)
 
     public static void process(Player player){
         ItemStack itemStack = player.getItemBySlot(EquipmentSlot.HEAD);
         Level level = player.getLevel();
 
-        if(itemStack.getItem() instanceof VisorItem){
+        if(itemStack.getItem() instanceof IVisorItem){
 
             /** Processing of Screen Gunk **/
 
@@ -33,46 +33,57 @@ public class VisorWearTick {
             BlockPos pos = new BlockPos(player.getX(), player.getY() - 0.1, player.getZ());
             BlockState onBlock = level.getBlockState(pos);
 
+            // Visor will get wet up to a certain point in rain
+            boolean underRain = player.getLevel().isRainingAt(player.getOnPos().offset(0, 1, 0));
+            if(underRain){
+                double water = IVisorItem.getOuterWater(itemStack);
+                if(water < 0.40) IVisorItem.addOuterWater(itemStack, 0.01);
+            }
+
             if(player.isUnderWater()){
-                VisorItem.setOuterWater(itemStack, 1);
+                IVisorItem.setOuterWater(itemStack, 1);
 
                 // Water Cleans faster if there is a large quantity of gunk
                 // and slower if there is less
 
-                if(VisorItem.getOuterSand(itemStack) > WATER_THRESHOLD) VisorItem.addOuterSand(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
-                else VisorItem.addOuterSand(itemStack, WATER_CLEANSING_RATE_BELOW_T);
+                if(IVisorItem.getOuterSand(itemStack) > WATER_THRESHOLD) IVisorItem.addOuterSand(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
+                else IVisorItem.addOuterSand(itemStack, WATER_CLEANSING_RATE_BELOW_T);
 
-                if(VisorItem.getOuterDirt(itemStack) > WATER_THRESHOLD) VisorItem.addOuterDirt(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
-                else VisorItem.addOuterDirt(itemStack, WATER_CLEANSING_RATE_BELOW_T);
+                if(IVisorItem.getOuterDirt(itemStack) > WATER_THRESHOLD) IVisorItem.addOuterDirt(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
+                else IVisorItem.addOuterDirt(itemStack, WATER_CLEANSING_RATE_BELOW_T);
 
-                if(VisorItem.getOuterMud(itemStack) > WATER_THRESHOLD) VisorItem.addOuterMud(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
-                else VisorItem.addOuterMud(itemStack, WATER_CLEANSING_RATE_BELOW_T);
+                if(IVisorItem.getOuterMud(itemStack) > WATER_THRESHOLD) IVisorItem.addOuterMud(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
+                else IVisorItem.addOuterMud(itemStack, WATER_CLEANSING_RATE_BELOW_T);
 
-                if(VisorItem.getOuterSoot(itemStack) > WATER_THRESHOLD) VisorItem.addOuterSoot(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
-                else VisorItem.addOuterSoot(itemStack, WATER_CLEANSING_RATE_BELOW_T);
+                if(IVisorItem.getOuterSoot(itemStack) > WATER_THRESHOLD) IVisorItem.addOuterSoot(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
+                else IVisorItem.addOuterSoot(itemStack, WATER_CLEANSING_RATE_BELOW_T);
 
             } else {
+                // Dirt accumulates faster if the visor is wet
+                double wetMultiplier = Math.max(1, IVisorItem.getOuterWater(itemStack) * 10);
 
                 // Increases the corresponding gunk type depending on the block the player is standing on
-                if(onBlock.is(ModTags.Blocks.MASK_SAND)) VisorItem.addOuterSand(itemStack, SAND_ACCUMULATION_RATE);
-                if(onBlock.is(ModTags.Blocks.MASK_DIRT)) VisorItem.addOuterDirt(itemStack, DIRT_ACCUMULATION_RATE);
-                if(onBlock.is(ModTags.Blocks.MASK_MUD)) VisorItem.addOuterMud(itemStack, MUD_ACCUMULATION_RATE);
-                if(onBlock.is(ModTags.Blocks.MASK_SOOT)) VisorItem.addOuterSoot(itemStack, SOOT_ACCUMULATION_RATE);
+                if(onBlock.is(ModTags.Blocks.MASK_SAND)) IVisorItem.addOuterSand(itemStack, SAND_ACCUMULATION_RATE * wetMultiplier);
+                if(onBlock.is(ModTags.Blocks.MASK_DIRT)) IVisorItem.addOuterDirt(itemStack, DIRT_ACCUMULATION_RATE * wetMultiplier);
+                if(onBlock.is(ModTags.Blocks.MASK_MUD)) IVisorItem.addOuterMud(itemStack, MUD_ACCUMULATION_RATE * wetMultiplier);
+                if(onBlock.is(ModTags.Blocks.MASK_SOOT)) IVisorItem.addOuterSoot(itemStack, SOOT_ACCUMULATION_RATE * wetMultiplier);
 
-                // decreases the water accumulation on screen
-                // faster if there is more water slower if there is less
-                if(VisorItem.getOuterWater(itemStack) > WATER_THRESHOLD) VisorItem.addOuterWater(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
-                else VisorItem.addOuterWater(itemStack, WATER_CLEANSING_RATE_BELOW_T);
+                if(!underRain){
+                    // decreases the water accumulation on screen
+                    // faster if there is more water slower if there is less
+                    if(IVisorItem.getOuterWater(itemStack) > WATER_THRESHOLD) IVisorItem.addOuterWater(itemStack, WATER_CLEANSING_RATE_ABOVE_T);
+                    else IVisorItem.addOuterWater(itemStack, WATER_CLEANSING_RATE_BELOW_T);
+                }
             }
 
             // Debug
-            player.sendSystemMessage(Component.literal("sand: " + VisorItem.getOuterSand(itemStack)));
-            player.sendSystemMessage(Component.literal("dirt: " + VisorItem.getOuterDirt(itemStack)));
-            player.sendSystemMessage(Component.literal("mud: " + VisorItem.getOuterMud(itemStack)));
-            player.sendSystemMessage(Component.literal("sooth: " + VisorItem.getOuterSoot(itemStack)));
-            player.sendSystemMessage(Component.literal("water: " + VisorItem.getOuterWater(itemStack)));
-            player.sendSystemMessage(Component.literal("block: " + onBlock.getBlock().getName().getString()));
-            player.sendSystemMessage(Component.literal("-----"));
+            //player.sendSystemMessage(Component.literal("sand: " + IVisorItem.getOuterSand(itemStack)));
+            //player.sendSystemMessage(Component.literal("dirt: " + IVisorItem.getOuterDirt(itemStack)));
+            //player.sendSystemMessage(Component.literal("mud: " + IVisorItem.getOuterMud(itemStack)));
+            //player.sendSystemMessage(Component.literal("sooth: " + IVisorItem.getOuterSoot(itemStack)));
+            //player.sendSystemMessage(Component.literal("water: " + IVisorItem.getOuterWater(itemStack)));
+            //player.sendSystemMessage(Component.literal("block: " + onBlock.getBlock().getName().getString()));
+            //player.sendSystemMessage(Component.literal("-----"));
         }
     }
 }
