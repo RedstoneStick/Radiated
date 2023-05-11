@@ -6,12 +6,29 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
+import java.util.concurrent.atomic.AtomicReference;
+
 public class GetRadiationVal {
+
+    /** Gets Radiation of a given item * the amount of item from entered Item Stack **/
+    public static double getStackVal(ItemStack itemStack){
+        double val = getVal(itemStack) * itemStack.getCount();
+        val = val * 1000;
+        val = (double) Math.round(val);
+        val = val / 1000;
+        return val;
+
+    }
+
+    /** Gets the radiation of a entered Item Stack, Use getStackVal() if you don't know what you are doing **/
     public static double getVal(ItemStack itemStack){
         Item item = itemStack.getItem();
 
+        //Checks radiation capable item radioactivity
         if(item instanceof RadiatedItem){
             RadiatedItem radiatedItem = (RadiatedItem) item;
 
@@ -25,6 +42,7 @@ public class GetRadiationVal {
 
 
 
+        // Checks tags for radioactivity
         else if (itemStack.is(SFTags.Items.URANIUM_INGOT)) {return 0.35;}
         else if (itemStack.is(SFTags.Items.URANIUM_NUGGET)) {return 0.035;}
         else if (itemStack.is(SFTags.Items.URANIUM_RAW)) {return 0.02;}
@@ -49,20 +67,34 @@ public class GetRadiationVal {
 
 
 
+        // Checks if there is any item storage in that item (most mods have their own item inventory, so it mostly only works with shulkerboxes)
+        else if (itemStack.getCapability(ForgeCapabilities.ITEM_HANDLER).isPresent()){
+            AtomicReference<Double> returnVal = new AtomicReference<>(0.0);
+
+            itemStack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(inventory -> {
+                for(int i = 0; i < inventory.getSlots(); i++){
+                    ItemStack itemStack2 = inventory.getStackInSlot(i);
+
+                    if(!itemStack2.getItem().equals(Blocks.AIR.asItem())){
+                        returnVal.set(returnVal.get() + GetRadiationVal.getStackVal(itemStack2));
+                    }
+                }
+            });
+
+            return returnVal.get();
+        }
+
+
+
         else {
             return 0;
         }
     }
 
-    public static double getStackVal(ItemStack itemStack){
-        double val = getVal(itemStack) * itemStack.getCount();
-        val = val * 1000;
-        val = (double) Math.round(val);
-        val = val / 1000;
-        return val;
 
-    }
 
+    /** Formats tooltips of radioactive items
+     * Handles automatically so don't call this unless necessary **/
     public static void tooltipHandler(ItemTooltipEvent event){
         ItemStack itemStack = event.getItemStack();
         Item item = itemStack.getItem();

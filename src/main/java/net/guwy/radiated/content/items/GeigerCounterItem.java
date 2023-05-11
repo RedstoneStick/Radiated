@@ -51,7 +51,7 @@ public class GeigerCounterItem extends Item {
                                 .withStyle(getColorForPlayerRad(handler.getPlayerRadiationVal())));
                 pPlayer.sendSystemMessage(component);
 
-                component = Component.literal("").append(Component.translatable("message.radiated.geiger_counter.3").withStyle(ChatFormatting.YELLOW))
+                component = Component.literal("").append(Component.translatable("message.radiated.geiger_counter.4").withStyle(ChatFormatting.YELLOW))
                         .append(Component.literal(Double.toString(GetRadiationResistance.getVal(pPlayer) * 100)).append("%")
                                 .withStyle(getColorForPlayerResist(GetRadiationResistance.getVal(pPlayer))));
                 pPlayer.sendSystemMessage(component);
