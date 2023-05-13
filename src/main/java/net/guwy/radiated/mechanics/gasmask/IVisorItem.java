@@ -1,13 +1,16 @@
 package net.guwy.radiated.mechanics.gasmask;
 
 import net.guwy.radiated.utils.ItemTagUtils;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public interface IVisorItem {
 
@@ -162,5 +165,24 @@ public interface IVisorItem {
                 player.swing(InteractionHand.MAIN_HAND, true);
             }
         }
+    }
+
+    static List<Component> VisorGunkTooltip(ItemStack pStack){
+        List<Component> pTooltipComponents = new ArrayList<Component>();
+
+        double totalVisorGunk = IVisorItem.getOuterGunkSum(pStack);
+        double visorWater = IVisorItem.getOuterWater(pStack);
+
+        if(visorWater > 0){
+            pTooltipComponents.add(Component.translatable("tooltip.radiated.visor.outer.water"));
+        } else if (totalVisorGunk > 0.2){
+            pTooltipComponents.add(Component.translatable("tooltip.radiated.visor.outer.gunk"));
+        }
+
+        if(visorWater > 0 || totalVisorGunk > 0.2){
+            pTooltipComponents.add(Component.translatable("tooltip.radiated.visor.outer.wipe"));
+        }
+
+        return pTooltipComponents;
     }
 }

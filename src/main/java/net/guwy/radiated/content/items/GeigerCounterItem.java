@@ -23,6 +23,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class GeigerCounterItem extends Item {
@@ -31,7 +32,7 @@ public class GeigerCounterItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+    public InteractionResultHolder<ItemStack> use(Level pLevel, @NotNull Player pPlayer, InteractionHand pUsedHand) {
         if(!pLevel.isClientSide){
             pPlayer.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler -> {
                 pPlayer.getCooldowns().addCooldown(pPlayer.getUseItem().getItem(), 5);
@@ -52,7 +53,7 @@ public class GeigerCounterItem extends Item {
                 pPlayer.sendSystemMessage(component);
 
                 component = Component.literal("").append(Component.translatable("message.radiated.geiger_counter.4").withStyle(ChatFormatting.YELLOW))
-                        .append(Component.literal(Double.toString(GetRadiationResistance.getVal(pPlayer) * 100)).append("%")
+                        .append(Component.literal(Double.toString(Math.round(GetRadiationResistance.getVal(pPlayer) * 10000) / 100.0) + "%")
                                 .withStyle(getColorForPlayerResist(GetRadiationResistance.getVal(pPlayer))));
                 pPlayer.sendSystemMessage(component);
 

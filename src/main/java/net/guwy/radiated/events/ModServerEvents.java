@@ -50,9 +50,7 @@ public class ModServerEvents {
 
         @SubscribeEvent
         public static void onAttachCapabilitiesChunk(AttachCapabilitiesEvent<LevelChunk> event) {
-            //if (!event.getObject().getCapability(ArcReactorSlotProvider.PLAYER_REACTOR_SLOT).isPresent()) {
-            //    event.addCapability(new ResourceLocation(RsImm.MOD_ID, "chunk_data"), new ArcReactorSlotProvider());
-            //}
+            AttachCapabilitiesHandler.initChunk(event);
         }
 
         @SubscribeEvent

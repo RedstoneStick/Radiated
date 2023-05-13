@@ -50,6 +50,9 @@
   "message.radiated.geiger_counter.3": "Player contamination: ",
   "message.radiated.geiger_counter.4": "Player resistance: ",
 
+  "item.radiated.duct_tape": "Duct Tape",
+  "tooltip.radiated.duct_tape.1": "Used to patch damaged hazmat suits",
+
 
 
   "item.radiated.uranium_billet": "Uranium Billet",
@@ -148,11 +151,15 @@
   "tooltip.radiated.radiation.stack": "Stack: ",
   "tooltip.radiated.radiation.rad_s": "RAD/s",
   "tooltip.radiated.radiation.rad": "RAD",
-  "tooltip.radiated.radiation.resistance": "Radiation Resistance: %s%%",
+  "tooltip.radiated.radiation.resistance": "Radiation Resistance: %.2f%%",
 
   "tooltip.radiated.visor.outer.water": "§3Visor is wet, wiping will clean all gunk",
   "tooltip.radiated.visor.outer.gunk": "Visor is dirty",
   "tooltip.radiated.visor.outer.wipe": "Press §6[Shift+Right Click] with empty hand§r to wipe the visor",
+
+  "tooltip.radiated.armor.patching.1": "This armor can be patched with Duct Tape",
+  "tooltip.radiated.armor.patching.2": "to recover radiation resistance",
+  "tooltip.radiated.armor.patching.3": "Duct Tape: [%d/%d]",
 
   "message.radiated.fluid.gas_dissipate": "The gaseous %s dissipates into the air",
 

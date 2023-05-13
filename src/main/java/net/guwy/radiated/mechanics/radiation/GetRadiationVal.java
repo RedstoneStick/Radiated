@@ -18,8 +18,8 @@ public class GetRadiationVal {
     public static double getStackVal(ItemStack itemStack){
         double val = getVal(itemStack) * itemStack.getCount();
         val = val * 1000;
-        val = (double) Math.round(val);
-        val = val / 1000;
+        val = Math.round(val);
+        val = val / 1000.0;
         return val;
 
     }
@@ -29,13 +29,13 @@ public class GetRadiationVal {
         Item item = itemStack.getItem();
 
         //Checks radiation capable item radioactivity
-        if(item instanceof RadiatedItem){
-            RadiatedItem radiatedItem = (RadiatedItem) item;
+        if(item instanceof IRadiatedItem){
+            IRadiatedItem radiatedItem = (IRadiatedItem) item;
 
-            double val = radiatedItem.radiationVal( itemStack);
+            double val = radiatedItem.radiationVal(itemStack);
             val = val * 1000;
-            val = (double) Math.round(val);
-            val = val / 1000;
+            val = Math.round(val);
+            val = val / 1000.0;
 
             return val;
         }

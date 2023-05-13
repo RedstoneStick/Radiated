@@ -29,6 +29,7 @@ public class RDTItems {
 
 
 
+    // Components
     public static final RegistryObject<Item> THERMOELECTRIC_ELEMENT = ITEMS.register("thermoelectric_element",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
@@ -50,8 +51,6 @@ public class RDTItems {
     public static final RegistryObject<Item> HAZMAT_HIGH_PERFORMANCE_CLOTH = ITEMS.register("hazmat_high_performance_cloth",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
-
-
     public static final RegistryObject<Item> YELLOWCAKE = ITEMS.register("yellowcake",
             () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.YELLOWCAKE), 1.05){
                 @Override
@@ -63,28 +62,7 @@ public class RDTItems {
 
 
 
-    public static final RegistryObject<Item> RAD_X = ITEMS.register("rad_x",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.RAD_X)){
-                @Override
-                public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-                    pTooltipComponents.add(Component.translatable("tooltip.radiated.rad_x").withStyle(ChatFormatting.GRAY));
-                    super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-                }
-            });
-
-
-
-    public static final RegistryObject<Item> IV_BAG = ITEMS.register("iv_bag",
-            () -> new IVBagItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
-
-    public static final RegistryObject<Item> BLOOD_BAG = ITEMS.register("blood_bag",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
-
-    public static final RegistryObject<Item> RADAWAY = ITEMS.register("radaway",
-            () -> new RadawayItem(200, new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
-
-
-
+    // Foods
     public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
             () -> new CoffeeItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE)));
 
@@ -96,6 +74,7 @@ public class RDTItems {
                     super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
                 }
             });
+
 
 
 
