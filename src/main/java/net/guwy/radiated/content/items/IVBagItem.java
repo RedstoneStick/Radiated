@@ -3,6 +3,7 @@ package net.guwy.radiated.content.items;
 import net.guwy.radiated.index.ModDamageSources;
 import net.guwy.radiated.index.ModSounds;
 import net.guwy.radiated.index.RDTItems;
+import net.guwy.radiated.index.RDTTools;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -29,7 +30,7 @@ public class IVBagItem extends Item {
 
         pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
 
-        ItemStack output = new ItemStack(RDTItems.BLOOD_BAG.get());
+        ItemStack output = new ItemStack(RDTTools.BLOOD_BAG.get());
         pPlayer.getInventory().placeItemBackInInventory(output);
 
         pPlayer.hurt(ModDamageSources.IV_BAG, 8);

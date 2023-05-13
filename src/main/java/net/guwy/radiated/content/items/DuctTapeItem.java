@@ -9,6 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -26,13 +27,20 @@ public class DuctTapeItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
+        ItemStack armorItem;
 
-        if(IRadiationResistance.getMaxApplicableDuctTape(itemStack) > IRadiationResistance.getDuctTapeAmount(itemStack)){
-            IRadiationResistance.addDuctTape(itemStack, 1);
-            pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
+        for(EquipmentSlot equipmentSlot : EquipmentSlot.values()){
+            armorItem = pPlayer.getItemBySlot(equipmentSlot);
+            int durability = itemStack.getMaxDamage() - itemStack.getDamageValue();
 
-            pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 5);
-            itemStack.hurtAndBreak(1, pPlayer, player -> player.broadcastBreakEvent(pUsedHand));
+            if(IRadiationResistance.getMaxApplicableDuctTape(armorItem) > IRadiationResistance.getDuctTapeAmount(armorItem)
+                    && durability > 0){
+                IRadiationResistance.addDuctTape(armorItem, 1);
+                pLevel.playSound(null, pPlayer, ModSounds.DUCT_TAPE.get(), SoundSource.PLAYERS, 100,1);
+
+                pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 5);
+                itemStack.hurtAndBreak(1, pPlayer, player -> player.broadcastBreakEvent(pUsedHand));
+            }
         }
         return super.use(pLevel, pPlayer, pUsedHand);
     }

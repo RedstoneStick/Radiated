@@ -50,8 +50,8 @@ public class GetRadiationResistance {
 
             // Part used to lower resistance depending on durability + recovers some depending on duct tape
             double durabilityPercent = 1 - ((double) itemStack.getDamageValue() / itemStack.getMaxDamage());
-            durabilityPercent += 0.25 * ItemTagUtils.getInt(itemStack, IRadiationResistance.TAG_DUCT_TAPE);
-            durabilityPercent = Math.max(durabilityPercent, 1);
+            durabilityPercent += 0.25 * IRadiationResistance.getDuctTapeAmount(itemStack);
+            durabilityPercent = Math.min(durabilityPercent, 1);
 
 
             val = val * durabilityPercent;

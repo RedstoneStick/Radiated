@@ -2,6 +2,7 @@ package net.guwy.radiated.content.items;
 
 import net.guwy.radiated.index.ModSounds;
 import net.guwy.radiated.index.RDTItems;
+import net.guwy.radiated.index.RDTTools;
 import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -36,7 +37,7 @@ public class RadawayItem extends Item {
 
         pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 20);
         pPlayer.swing(pUsedHand);
-        pPlayer.getInventory().placeItemBackInInventory(new ItemStack(RDTItems.IV_BAG.get()));
+        pPlayer.getInventory().placeItemBackInInventory(new ItemStack(RDTTools.IV_BAG.get()));
 
         pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
         return super.use(pLevel, pPlayer, pUsedHand);
