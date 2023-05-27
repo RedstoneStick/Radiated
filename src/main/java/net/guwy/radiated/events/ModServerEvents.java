@@ -8,6 +8,9 @@ import net.guwy.radiated.events.server.RegisterCapabilitiesHandler;
 import net.guwy.radiated.events.server.player.PlayerInteractRightClickEmptyHandler;
 import net.guwy.radiated.mechanics.gasmask.IVisorItem;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.chunk.ChunkStatus;
 import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
@@ -35,6 +38,14 @@ public class ModServerEvents {
                 }
             }
         }
+
+        //@SubscribeEvent
+        //public static void onWorldTick(TickEvent.LevelTickEvent event) {
+        //    if(event.side == LogicalSide.SERVER) {
+        //        if(event.phase == TickEvent.Phase.END){
+        //        }
+        //    }
+        //}
 
         @SubscribeEvent
         public static void onPlayerInteract(PlayerInteractEvent.RightClickBlock event) {

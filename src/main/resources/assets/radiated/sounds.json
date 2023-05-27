@@ -46,5 +46,11 @@
     "sounds": [
       "radiated:item/tech_boop"
     ]
+  },
+  "duct_tape": {
+    "subtitle": "sounds.radiated.duct_tape",
+    "sounds": [
+      "radiated:item/duct_tape"
+    ]
   }
 }

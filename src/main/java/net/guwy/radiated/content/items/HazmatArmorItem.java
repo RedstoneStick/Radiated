@@ -1,9 +1,12 @@
 package net.guwy.radiated.content.items;
 
+import net.guwy.radiated.mechanics.gasmask.IGasmaskItem;
 import net.guwy.radiated.mechanics.gasmask.IVisorItem;
 import net.guwy.radiated.mechanics.radiation.IRadiationResistance;
+import net.guwy.radiated.utils.ItemTagUtils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
@@ -13,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class HazmatArmorItem extends ArmorItem implements IRadiationResistance, IVisorItem {
+public class HazmatArmorItem extends ArmorItem implements IRadiationResistance, IVisorItem, IGasmaskItem {
     double radResistance;
     public HazmatArmorItem(double radResistance, ArmorMaterial pMaterial, EquipmentSlot pSlot, Properties pProperties) {
         super(pMaterial, pSlot, pProperties);
@@ -30,9 +33,20 @@ public class HazmatArmorItem extends ArmorItem implements IRadiationResistance, 
         // Visor Gunk Tooltips
         pTooltipComponents.addAll(IVisorItem.VisorGunkTooltip(pStack));
 
+        // Filter Tooltips
+        pTooltipComponents.addAll(IGasmaskItem.FilterTooltip(pStack));
+
         // Armor patching with duct tape tooltips
         pTooltipComponents.addAll(IRadiationResistance.DuctTapeTooltip(pStack));
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+    }
+
+    @Override
+    public void onArmorTick(ItemStack stack, Level level, Player player) {
+        if(!level.isClientSide){
+            player.sendSystemMessage(Component.literal(Integer.toString(ItemTagUtils.getInt(player.getItemBySlot(EquipmentSlot.HEAD), IGasmaskItem.TAG_FILTER_ID))));
+        }
+        super.onArmorTick(stack, level, player);
     }
 }

@@ -6,7 +6,9 @@ import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
 import net.guwy.radiated.mechanics.radiation.IRadiationResistance;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -31,17 +33,20 @@ public class DuctTapeItem extends Item {
 
         for(EquipmentSlot equipmentSlot : EquipmentSlot.values()){
             armorItem = pPlayer.getItemBySlot(equipmentSlot);
-            int durability = itemStack.getMaxDamage() - itemStack.getDamageValue();
 
-            if(IRadiationResistance.getMaxApplicableDuctTape(armorItem) > IRadiationResistance.getDuctTapeAmount(armorItem)
-                    && durability > 0){
-                IRadiationResistance.addDuctTape(armorItem, 1);
-                pLevel.playSound(null, pPlayer, ModSounds.DUCT_TAPE.get(), SoundSource.PLAYERS, 100,1);
+            if(equipmentSlot.getType().equals(EquipmentSlot.Type.ARMOR)){
+                if(IRadiationResistance.getMaxApplicableDuctTape(armorItem) > IRadiationResistance.getDuctTapeAmount(armorItem)
+                        && itemStack.getCount() > 0){
+                    IRadiationResistance.addDuctTape(armorItem, 1);
+                    pLevel.playSound(null, pPlayer, ModSounds.DUCT_TAPE.get(), SoundSource.PLAYERS, 100,1);
 
-                pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 5);
-                itemStack.hurtAndBreak(1, pPlayer, player -> player.broadcastBreakEvent(pUsedHand));
+                    pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 5);
+                    itemStack.setCount(itemStack.getCount() - 1);
+                    pPlayer.swing(pUsedHand);
+                }
             }
         }
+
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 

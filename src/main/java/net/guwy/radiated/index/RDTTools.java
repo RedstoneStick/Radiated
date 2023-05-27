@@ -1,10 +1,7 @@
 package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
-import net.guwy.radiated.content.items.DuctTapeItem;
-import net.guwy.radiated.content.items.GeigerCounterItem;
-import net.guwy.radiated.content.items.IVBagItem;
-import net.guwy.radiated.content.items.RadawayItem;
+import net.guwy.radiated.content.items.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -27,6 +24,7 @@ public class RDTTools {
     public static final RegistryObject<Item> GEIGER_COUNTER = ITEMS.register("geiger_counter",
             () -> new GeigerCounterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
+
     public static final RegistryObject<Item> RAD_X = ITEMS.register("rad_x",
             () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.RAD_X)){
                 @Override
@@ -35,6 +33,12 @@ public class RDTTools {
                     super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
                 }
             });
+
+    public static final RegistryObject<Item> GAS_MASK_FILTER = ITEMS.register("gas_mask_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(1000), 1000,
+                    true, true, true, true, false, true));
+
+
 
     public static final RegistryObject<Item> IV_BAG = ITEMS.register("iv_bag",
             () -> new IVBagItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
@@ -46,7 +50,7 @@ public class RDTTools {
             () -> new RadawayItem(200, new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
     public static final RegistryObject<Item> DUCT_TAPE = ITEMS.register("duct_tape",
-            () -> new DuctTapeItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(16)));
+            () -> new DuctTapeItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
 
 
 

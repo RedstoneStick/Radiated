@@ -19,7 +19,7 @@ public interface IRadiationResistance {
         List<Component> pTooltipComponents = new ArrayList<Component>();
 
         int ductTapeAmount = getDuctTapeAmount(pStack);
-        if(ductTapeAmount > 0 || pStack.getDamageValue() > 0){
+        if(ductTapeAmount > 0 || getMaxApplicableDuctTape(pStack) > 0){
             pTooltipComponents.add(Component.literal(""));
 
             int currentMaxApplicableDuctTape = getMaxApplicableDuctTape(pStack);
@@ -46,6 +46,6 @@ public interface IRadiationResistance {
 
     static int getMaxApplicableDuctTape(ItemStack itemStack){
         double damagePercent = ((double) itemStack.getDamageValue() / itemStack.getMaxDamage());
-        return (int) Math.round(damagePercent * 3) + 1;
+        return (int) Math.ceil(damagePercent * 4);
     }
 }

@@ -52,6 +52,9 @@
 
   "item.radiated.duct_tape": "Duct Tape",
   "tooltip.radiated.duct_tape.1": "Used to patch damaged hazmat suits",
+  "sounds.radiated.duct_tape": "Duct Tape Ripping",
+
+  "item.radiated.gas_mask_filter": "Gas Mask Filter",
 
 
 
@@ -156,6 +159,8 @@
   "tooltip.radiated.visor.outer.water": "§3Visor is wet, wiping will clean all gunk",
   "tooltip.radiated.visor.outer.gunk": "Visor is dirty",
   "tooltip.radiated.visor.outer.wipe": "Press §6[Shift+Right Click] with empty hand§r to wipe the visor",
+
+  "message.radiated.gas_mask.filter.fail": "You need to wear a valid gas mask to put the filter",
 
   "tooltip.radiated.armor.patching.1": "This armor can be patched with Duct Tape",
   "tooltip.radiated.armor.patching.2": "to recover radiation resistance",

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xzx",
+    "zyz",
+    "xzx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:string"
+    },
+    "y": {
+      "item": "minecraft:slime_block"
+    },
+    "z": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "radiated:duct_tape",
+    "count": 16
+  }
+}
