@@ -39,7 +39,18 @@ public class RadawayItem extends Item {
         pPlayer.swing(pUsedHand);
         pPlayer.getInventory().placeItemBackInInventory(new ItemStack(RDTTools.IV_BAG.get()));
 
-        pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
+        Player soundPlayer = new Player(pPlayer.getLevel(), pPlayer.getOnPos(), 0, pPlayer.getGameProfile(), null) {
+            @Override
+            public boolean isSpectator() {
+                return false;
+            }
+
+            @Override
+            public boolean isCreative() {
+                return false;
+            }
+        };
+        soundPlayer.playSound(ModSounds.RADAWAY.get());
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 

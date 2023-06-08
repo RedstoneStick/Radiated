@@ -41,12 +41,4 @@ public class HazmatArmorItem extends ArmorItem implements IRadiationResistance, 
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
-    @Override
-    public void onArmorTick(ItemStack stack, Level level, Player player) {
-        if(!level.isClientSide){
-            player.sendSystemMessage(Component.literal(Integer.toString(ItemTagUtils.getInt(player.getItemBySlot(EquipmentSlot.HEAD), IGasmaskItem.TAG_FILTER_ID))));
-        }
-        super.onArmorTick(stack, level, player);
-    }
 }

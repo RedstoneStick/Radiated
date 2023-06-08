@@ -55,7 +55,10 @@
   "sounds.radiated.duct_tape": "Duct Tape Ripping",
 
   "item.radiated.gas_mask_filter": "Gas Mask Filter",
-
+  "item.radiated.catalytic_mask_filter": "Catalytic Mask Filter",
+  "item.radiated.gas_mask_combo_filter": "Gas Mask Combo Filter",
+  "item.radiated.makeshift_gas_mask_filter": "Makeshift Gas Mask Filter",
+  "item.radiated.advanced_makeshift_gas_mask_filter": "Advanced Makeshift Gas Mask Filter",
 
 
   "item.radiated.uranium_billet": "Uranium Billet",
@@ -165,6 +168,17 @@
   "tooltip.radiated.armor.patching.1": "This armor can be patched with Duct Tape",
   "tooltip.radiated.armor.patching.2": "to recover radiation resistance",
   "tooltip.radiated.armor.patching.3": "Duct Tape: [%d/%d]",
+
+  "tooltip.radiated.armor.gas_mask.warning": "§cNo filter installed!",
+  "tooltip.radiated.filter.generic": "§8Hold [§eShift§8] to display protection info",
+  "tooltip.radiated.filter.shift": "§6Protects against hazards",
+  "tooltip.radiated.filter.shift.airborne_particles": "§e Airborne Particles",
+  "tooltip.radiated.filter.shift.particulates": "§e Particulates",
+  "tooltip.radiated.filter.shift.chemical_gas": "§e Chemical Gas",
+  "tooltip.radiated.filter.shift.bacteria_aerosols": "§e Bacteria / Aerosols",
+  "tooltip.radiated.filter.shift.carbon_monoxide": "§e Carbon Monoxide",
+  "tooltip.radiated.filter.shift.nerve_agent": "§e Nerve Agent",
+  "sounds.radiated.gas_mask_screw": "Gas mask screws into place",
 
   "message.radiated.fluid.gas_dissipate": "The gaseous %s dissipates into the air",
 

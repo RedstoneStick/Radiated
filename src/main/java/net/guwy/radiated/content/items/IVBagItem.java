@@ -28,7 +28,18 @@ public class IVBagItem extends Item {
         pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 20);
         pPlayer.swing(pUsedHand);
 
-        pLevel.playSound(null, pPlayer, ModSounds.RADAWAY.get(), SoundSource.PLAYERS, 100,1);
+        Player soundPlayer = new Player(pPlayer.getLevel(), pPlayer.getOnPos(), 0, pPlayer.getGameProfile(), null) {
+            @Override
+            public boolean isSpectator() {
+                return false;
+            }
+
+            @Override
+            public boolean isCreative() {
+                return false;
+            }
+        };
+        soundPlayer.playSound(ModSounds.RADAWAY.get());
 
         ItemStack output = new ItemStack(RDTTools.BLOOD_BAG.get());
         pPlayer.getInventory().placeItemBackInInventory(output);

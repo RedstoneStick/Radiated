@@ -1,5 +1,6 @@
 package net.guwy.radiated.content.items;
 
+import com.mojang.authlib.GameProfile;
 import net.guwy.radiated.content.blocks.machines.rtg.RTGMenu;
 import net.guwy.radiated.index.ModSounds;
 import net.guwy.radiated.index.RDTMenuTypes;
@@ -35,7 +36,7 @@ public class GeigerCounterItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level pLevel, @NotNull Player pPlayer, InteractionHand pUsedHand) {
         if(!pLevel.isClientSide){
             pPlayer.getCapability(EntityRadiationProvider.ENTITY_RADIATION).ifPresent(handler -> {
-                pPlayer.getCooldowns().addCooldown(pPlayer.getUseItem().getItem(), 5);
+                pPlayer.getCooldowns().addCooldown(pPlayer.getItemInHand(pUsedHand).getItem(), 5);
 
                 Component component;
 
@@ -57,7 +58,19 @@ public class GeigerCounterItem extends Item {
                                 .withStyle(getColorForPlayerResist(GetRadiationResistance.getVal(pPlayer))));
                 pPlayer.sendSystemMessage(component);
 
-                pLevel.playSound(null, pPlayer, ModSounds.TECH_BOOP.get(), SoundSource.PLAYERS, 100, 1);
+
+                Player soundPlayer = new Player(pPlayer.getLevel(), pPlayer.getOnPos(), 0, pPlayer.getGameProfile(), null) {
+                    @Override
+                    public boolean isSpectator() {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean isCreative() {
+                        return false;
+                    }
+                };
+                soundPlayer.playSound(ModSounds.TECH_BOOP.get());
             });
         }
         return super.use(pLevel, pPlayer, pUsedHand);
@@ -176,19 +189,36 @@ public class GeigerCounterItem extends Item {
 
     private void playTargetSoundWithRandoms(Player player, Level pLevel, SoundEvent soundEvent){
         double rand = Math.random();
+        Player sPlayer = new Player(pLevel, player.getOnPos(), 0, player.getGameProfile(), null) {
+            @Override
+            public boolean isSpectator() {
+                return false;
+            }
+
+            @Override
+            public boolean isCreative() {
+                return false;
+            }
+        };
 
         if(rand < 0.60){
-            pLevel.playSound(null, player, soundEvent, SoundSource.PLAYERS, 100, 1);
+            sPlayer.playSound(soundEvent, 100, 1);
+            //pLevel.playSound(null, player, soundEvent, SoundSource.PLAYERS, 100, 1);
         } else if (rand < 0.68) {
-            pLevel.playSound(null, player, ModSounds.GEIGER5.get(), SoundSource.PLAYERS, 200, 1);
+            //pLevel.playSound(null, player, ModSounds.GEIGER5.get(), SoundSource.PLAYERS, 200, 1);
+            sPlayer.playSound(ModSounds.GEIGER5.get(), 100, 1);
         } else if (rand < 0.76) {
-            pLevel.playSound(null, player, ModSounds.GEIGER4.get(), SoundSource.PLAYERS, 200, 1);
+            //pLevel.playSound(null, player, ModSounds.GEIGER4.get(), SoundSource.PLAYERS, 200, 1);
+            sPlayer.playSound(ModSounds.GEIGER4.get(), 100, 1);
         } else if (rand < 0.84) {
-            pLevel.playSound(null, player, ModSounds.GEIGER3.get(), SoundSource.PLAYERS, 200, 1);
+            //pLevel.playSound(null, player, ModSounds.GEIGER3.get(), SoundSource.PLAYERS, 200, 1);
+            sPlayer.playSound(ModSounds.GEIGER3.get(), 100, 1);
         } else if (rand < 0.92) {
-            pLevel.playSound(null, player, ModSounds.GEIGER2.get(), SoundSource.PLAYERS, 200, 1);
+            //pLevel.playSound(null, player, ModSounds.GEIGER2.get(), SoundSource.PLAYERS, 200, 1);
+            sPlayer.playSound(ModSounds.GEIGER2.get(), 100, 1);
         } else {
-            pLevel.playSound(null, player, ModSounds.GEIGER1.get(), SoundSource.PLAYERS, 200, 1);
+            //pLevel.playSound(null, player, ModSounds.GEIGER1.get(), SoundSource.PLAYERS, 200, 1);
+            sPlayer.playSound(ModSounds.GEIGER1.get(), 100, 1);
         }
     }
 }

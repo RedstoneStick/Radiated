@@ -38,7 +38,19 @@ public class DuctTapeItem extends Item {
                 if(IRadiationResistance.getMaxApplicableDuctTape(armorItem) > IRadiationResistance.getDuctTapeAmount(armorItem)
                         && itemStack.getCount() > 0){
                     IRadiationResistance.addDuctTape(armorItem, 1);
-                    pLevel.playSound(null, pPlayer, ModSounds.DUCT_TAPE.get(), SoundSource.PLAYERS, 100,1);
+
+                    Player soundPlayer = new Player(pPlayer.getLevel(), pPlayer.getOnPos(), 0, pPlayer.getGameProfile(), null) {
+                        @Override
+                        public boolean isSpectator() {
+                            return false;
+                        }
+
+                        @Override
+                        public boolean isCreative() {
+                            return false;
+                        }
+                    };
+                    soundPlayer.playSound(ModSounds.DUCT_TAPE.get());
 
                     pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 5);
                     itemStack.setCount(itemStack.getCount() - 1);

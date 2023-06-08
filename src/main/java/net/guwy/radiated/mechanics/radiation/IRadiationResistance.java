@@ -30,6 +30,8 @@ public interface IRadiationResistance {
             }
 
             pTooltipComponents.add(Component.translatable("tooltip.radiated.armor.patching.3", ductTapeAmount, currentMaxApplicableDuctTape));
+
+            pTooltipComponents.add(Component.literal(""));  // Formatting
         }
 
         return pTooltipComponents;

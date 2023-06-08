@@ -34,9 +34,28 @@ public class RDTTools {
                 }
             });
 
+
+
     public static final RegistryObject<Item> GAS_MASK_FILTER = ITEMS.register("gas_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(1000), 1000,
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(20000),
                     true, true, true, true, false, true));
+
+    public static final RegistryObject<Item> CATALYTIC_MASK_FILTER = ITEMS.register("catalytic_mask_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(20000),
+                    true, false, false, false, true, false));
+
+    public static final RegistryObject<Item> GAS_MASK_COMBO_FILTER = ITEMS.register("gas_mask_combo_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(1000),
+                    true, true, true, true, true, true));
+
+    public static final RegistryObject<Item> MAKESHIFT_GAS_MASK_FILTER = ITEMS.register("makeshift_gas_mask_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(1000),
+                    true, false, false, false, false, false));
+
+    public static final RegistryObject<Item> ADVANCED_MAKESHIFT_GAS_MASK_FILTER = ITEMS.register("advanced_makeshift_gas_mask_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(1000),
+                    true, false, true, false, false, false));
+
 
 
 

@@ -1,6 +1,7 @@
 package net.guwy.radiated.mechanics.gasmask;
 
 import net.guwy.radiated.content.items.FilterItem;
+import net.guwy.radiated.index.ModSounds;
 import net.guwy.radiated.index.RDTTools;
 import net.guwy.radiated.utils.ItemTagUtils;
 import net.minecraft.ChatFormatting;
@@ -68,7 +69,18 @@ public interface IGasmaskItem {
             player.setItemInHand(interactionHand, new ItemStack(Blocks.AIR));
 
             // Play Sound
+            Player soundPlayer = new Player(player.getLevel(), player.getOnPos(), 0, player.getGameProfile(), null) {
+                @Override
+                public boolean isSpectator() {
+                    return false;
+                }
 
+                @Override
+                public boolean isCreative() {
+                    return false;
+                }
+            };
+            soundPlayer.playSound(ModSounds.GAS_MASK_SCREW.get());
         }
         // If player isn't wearing a gas mask, send them a message
         else {
@@ -92,17 +104,20 @@ public interface IGasmaskItem {
 
     static List<Component> FilterTooltip(ItemStack pStack){
         List<Component> pTooltipComponents = new ArrayList<Component>();
-        pTooltipComponents.add(Component.literal(""));
 
         Item filterItem = Item.byId(ItemTagUtils.getInt(pStack, TAG_FILTER_ID));
         int durability = ItemTagUtils.getInt(pStack, TAG_FILTER_DURABILITY);
 
-        if(true){
+        if(filterItem != Blocks.AIR.asItem()){
             ItemStack itemStack = new ItemStack(filterItem);
 
             String durabilityDisplay = (itemStack.getDisplayName().getString() + " (" + (durability / Math.max(itemStack.getMaxDamage(), 1) * 100) + "%)");
             pTooltipComponents.add(Component.literal(durabilityDisplay).withStyle(ChatFormatting.GRAY));
+        }else {
+            pTooltipComponents.add(Component.translatable("tooltip.radiated.armor.gas_mask.warning"));
         }
+
+        pTooltipComponents.add(Component.literal(""));  // Formatting
 
         return pTooltipComponents;
     }

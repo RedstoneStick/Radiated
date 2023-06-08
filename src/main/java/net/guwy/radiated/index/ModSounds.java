@@ -24,6 +24,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> GEIGER6 = registerSoundEvent("geiger6");
 
     public static final RegistryObject<SoundEvent> DUCT_TAPE = registerSoundEvent("duct_tape");
+    public static final RegistryObject<SoundEvent> GAS_MASK_SCREW = registerSoundEvent("gas_mask_screw");
 
     public static final RegistryObject<SoundEvent> TECH_BOOP = registerSoundEvent("tech_boop");
 

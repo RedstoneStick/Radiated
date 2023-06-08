@@ -4,14 +4,11 @@ import net.minecraft.world.item.ItemStack;
 
 public class BasicFilterItem extends FilterItem{
     boolean airborneParticles, particulates, chemicalGas, bacteriaAerosol, carbonMonoxide, nerveAgent;
-    int durability;
 
-    public BasicFilterItem(Properties pProperties, int durability,
+    public BasicFilterItem(Properties pProperties,
                            boolean airborneParticles, boolean particulates, boolean chemicalGas,
                            boolean bacteriaAerosol, boolean carbonMonoxide, boolean nerveAgent) {
         super(pProperties);
-
-        this.durability = durability;
 
         this.airborneParticles = airborneParticles;
         this.particulates = particulates;
@@ -23,34 +20,27 @@ public class BasicFilterItem extends FilterItem{
 
 
 
-    //@Override
-    //public int getMaxDamage(ItemStack stack) {
-    //    return durability;
-    //}
-
-
-
-    public boolean isAirborneParticles() {
+    public boolean doesProtectAgainstAirborneParticles() {
         return this.airborneParticles;
     }
 
-    public boolean particulates() {
+    public boolean doesProtectAgainstParticulates() {
         return this.particulates;
     }
 
-    public boolean chemicalGas() {
+    public boolean doesProtectAgainstChemicalGas() {
         return this.chemicalGas;
     }
 
-    public boolean bacteriaAerosol() {
+    public boolean doesProtectAgainstBacteriaAerosols() {
         return this.bacteriaAerosol;
     }
 
-    public boolean carbonMonoxide() {
+    public boolean doesProtectAgainstCarbonMonoxide() {
         return this.carbonMonoxide;
     }
 
-    public boolean nerveAgent() {
+    public boolean doesProtectAgainstNerveAgent() {
         return this.nerveAgent;
     }
 }

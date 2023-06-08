@@ -52,5 +52,11 @@
     "sounds": [
       "radiated:item/duct_tape"
     ]
+  },
+  "gas_mask_screw": {
+    "subtitle": "sounds.radiated.gas_mask_screw",
+    "sounds": [
+      "radiated:item/gas_mask_screw"
+    ]
   }
 }

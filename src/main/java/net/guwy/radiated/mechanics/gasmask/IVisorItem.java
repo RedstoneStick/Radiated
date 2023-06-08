@@ -181,6 +181,8 @@ public interface IVisorItem {
 
         if(visorWater > 0 || totalVisorGunk > 0.2){
             pTooltipComponents.add(Component.translatable("tooltip.radiated.visor.outer.wipe"));
+
+            pTooltipComponents.add(Component.literal(""));  // Formatting
         }
 
         return pTooltipComponents;
