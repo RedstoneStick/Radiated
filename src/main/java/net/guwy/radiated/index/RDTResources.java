@@ -36,103 +36,103 @@ public class RDTResources {
     public static final RegistryObject<Block> BERYLLIUM_ORE = registerBlock("beryllium_ore", () ->
             new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).
                     strength(3f).explosionResistance(3f).requiresCorrectToolForDrops().
-                    sound(SoundType.STONE), UniformInt.of(3,7)), RDTCreativeModeTabs.MAIN);
+                    sound(SoundType.STONE), UniformInt.of(3,7)), RDTCreativeModeTabs.ORES_AND_BLOCKS);
 
     public static final RegistryObject<Block> BERYLLIUM_ORE_DEEPSLATE = registerBlock("beryllium_ore_deepslate", () ->
             new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).
                     strength(3f).explosionResistance(6f).requiresCorrectToolForDrops().
-                    sound(SoundType.DEEPSLATE), UniformInt.of(3,7)), RDTCreativeModeTabs.MAIN);
+                    sound(SoundType.DEEPSLATE), UniformInt.of(3,7)), RDTCreativeModeTabs.ORES_AND_BLOCKS);
 
     public static final RegistryObject<Item> RAW_BERYLLIUM = ITEMS.register("raw_beryllium",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> CRUSHED_BERYLLIUM = ITEMS.register("crushed_beryllium",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> BERYLLIUM_INGOT = ITEMS.register("beryllium_ingot",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> BERYLLIUM_NUGGET = ITEMS.register("beryllium_nugget",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> BERYLLIUM_BILLET = ITEMS.register("beryllium_billet",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
 
 
     public static final RegistryObject<Item> RED_COPPER = ITEMS.register("red_copper",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> RED_COPPER_WIRE = ITEMS.register("red_copper_wire",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
 
 
     public static final RegistryObject<Item> QUARTZ_DUST = ITEMS.register("quartz_dust",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
 
 
     public static final RegistryObject<Item> URANIUM_BILLET = ITEMS.register("uranium_billet",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.175));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.175));
 
     public static final RegistryObject<Item> THORIUM_BILLET = ITEMS.register("thorium_billet",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.05));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.05));
 
 
 
     public static final RegistryObject<Item> RADIUM_INGOT = ITEMS.register("radium_ingot",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 7.5));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 7.5));
 
     public static final RegistryObject<Item> RADIUM_NUGGET = ITEMS.register("radium_nugget",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.75));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.75));
 
     public static final RegistryObject<Item> RADIUM_BILLET = ITEMS.register("radium_billet",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 3.75));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 3.75));
 
 
 
     public static final RegistryObject<Item> URANIUM_235_INGOT = ITEMS.register("uranium_235_ingot",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 1.0));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 1.0));
 
     public static final RegistryObject<Item> URANIUM_235_NUGGET = ITEMS.register("uranium_235_nugget",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.1));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.1));
 
     public static final RegistryObject<Item> URANIUM_235_BILLET = ITEMS.register("uranium_235_billet",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.5));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.5));
 
 
 
     public static final RegistryObject<Item> URANIUM_238_INGOT = ITEMS.register("uranium_238_ingot",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.25));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.25));
 
     public static final RegistryObject<Item> URANIUM_238_NUGGET = ITEMS.register("uranium_238_nugget",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.025));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.025));
 
     public static final RegistryObject<Item> URANIUM_238_BILLET = ITEMS.register("uranium_238_billet",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.125));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.125));
 
 
 
     public static final RegistryObject<Item> URANIUM_FUEL_INGOT = ITEMS.register("uranium_fuel_ingot",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.5));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.5));
 
     public static final RegistryObject<Item> URANIUM_FUEL_NUGGET = ITEMS.register("uranium_fuel_nugget",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.05));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.05));
 
     public static final RegistryObject<Item> URANIUM_FUEL_BILLET = ITEMS.register("uranium_fuel_billet",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.25));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.25));
 
 
 
     public static final RegistryObject<Item> THORIUM_FUEL_INGOT = ITEMS.register("thorium_fuel_ingot",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 1.75));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 1.75));
 
     public static final RegistryObject<Item> THORIUM_FUEL_NUGGET = ITEMS.register("thorium_fuel_nugget",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.175));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.175));
 
     public static final RegistryObject<Item> THORIUM_FUEL_BILLET = ITEMS.register("thorium_fuel_billet",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN), 0.875));
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS), 0.875));
 
 
 

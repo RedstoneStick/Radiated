@@ -22,11 +22,35 @@ public class RDTTools {
 
 
     public static final RegistryObject<Item> GEIGER_COUNTER = ITEMS.register("geiger_counter",
-            () -> new GeigerCounterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new GeigerCounterItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR)));
+
+
+
+    public static final RegistryObject<Item> GAS_MASK_FILTER = ITEMS.register("gas_mask_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(20000),
+                    true, true, true, true, false, true));
+
+    public static final RegistryObject<Item> CATALYTIC_MASK_FILTER = ITEMS.register("catalytic_mask_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(20000),
+                    true, false, false, false, true, false));
+
+    public static final RegistryObject<Item> GAS_MASK_COMBO_FILTER = ITEMS.register("gas_mask_combo_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(1000),
+                    true, true, true, true, true, true));
+
+    public static final RegistryObject<Item> MAKESHIFT_GAS_MASK_FILTER = ITEMS.register("makeshift_gas_mask_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(1000),
+                    true, false, false, false, false, false));
+
+    public static final RegistryObject<Item> ADVANCED_MAKESHIFT_GAS_MASK_FILTER = ITEMS.register("advanced_makeshift_gas_mask_filter",
+            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(1000),
+                    true, false, true, false, false, false));
+
+
 
 
     public static final RegistryObject<Item> RAD_X = ITEMS.register("rad_x",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.RAD_X)){
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR).food(ModFoods.RAD_X)){
                 @Override
                 public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                     pTooltipComponents.add(Component.translatable("tooltip.radiated.rad_x").withStyle(ChatFormatting.GRAY));
@@ -36,40 +60,19 @@ public class RDTTools {
 
 
 
-    public static final RegistryObject<Item> GAS_MASK_FILTER = ITEMS.register("gas_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(20000),
-                    true, true, true, true, false, true));
-
-    public static final RegistryObject<Item> CATALYTIC_MASK_FILTER = ITEMS.register("catalytic_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(20000),
-                    true, false, false, false, true, false));
-
-    public static final RegistryObject<Item> GAS_MASK_COMBO_FILTER = ITEMS.register("gas_mask_combo_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(1000),
-                    true, true, true, true, true, true));
-
-    public static final RegistryObject<Item> MAKESHIFT_GAS_MASK_FILTER = ITEMS.register("makeshift_gas_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(1000),
-                    true, false, false, false, false, false));
-
-    public static final RegistryObject<Item> ADVANCED_MAKESHIFT_GAS_MASK_FILTER = ITEMS.register("advanced_makeshift_gas_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).durability(1000),
-                    true, false, true, false, false, false));
-
-
-
-
     public static final RegistryObject<Item> IV_BAG = ITEMS.register("iv_bag",
-            () -> new IVBagItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new IVBagItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR)));
 
     public static final RegistryObject<Item> BLOOD_BAG = ITEMS.register("blood_bag",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR)));
 
     public static final RegistryObject<Item> RADAWAY = ITEMS.register("radaway",
-            () -> new RadawayItem(200, new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new RadawayItem(200, new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR)));
+
+
 
     public static final RegistryObject<Item> DUCT_TAPE = ITEMS.register("duct_tape",
-            () -> new DuctTapeItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new DuctTapeItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR)));
 
 
 

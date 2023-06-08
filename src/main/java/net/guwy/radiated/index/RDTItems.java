@@ -31,28 +31,28 @@ public class RDTItems {
 
     // Components
     public static final RegistryObject<Item> THERMOELECTRIC_ELEMENT = ITEMS.register("thermoelectric_element",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> RTG_UNIT = ITEMS.register("rtg_unit",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> COPPER_PANEL = ITEMS.register("copper_panel",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> POLYMER_BAR = ITEMS.register("polymer_bar",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> HAZMAT_CLOTH = ITEMS.register("hazmat_cloth",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> HAZMAT_ADVANCED_CLOTH = ITEMS.register("hazmat_advanced_cloth",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> HAZMAT_HIGH_PERFORMANCE_CLOTH = ITEMS.register("hazmat_high_performance_cloth",
-            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.MAIN)));
+            () -> new Item(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS)));
 
     public static final RegistryObject<Item> YELLOWCAKE = ITEMS.register("yellowcake",
-            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.YELLOWCAKE), 1.05){
+            () -> new BasicRadioactiveItem(new Item.Properties().tab(RDTCreativeModeTabs.RESOURCES_AND_PARTS).food(ModFoods.YELLOWCAKE), 1.05){
                 @Override
                 public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                     pTooltipComponents.add(Component.translatable("tooltip.radiated.yellowcake").withStyle(ChatFormatting.GOLD));
@@ -64,10 +64,10 @@ public class RDTItems {
 
     // Foods
     public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
-            () -> new CoffeeItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE)));
+            () -> new CoffeeItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR).food(ModFoods.COFFE)));
 
     public static final RegistryObject<Item> COFFEE_RADIUM = ITEMS.register("coffee_radium",
-            () -> new CoffeeItem(new Item.Properties().tab(RDTCreativeModeTabs.MAIN).food(ModFoods.COFFE_RADIUM)){
+            () -> new CoffeeItem(new Item.Properties().tab(RDTCreativeModeTabs.CONSUMABLES_AND_GEAR).food(ModFoods.COFFE_RADIUM)){
                 @Override
                 public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                     pTooltipComponents.add(Component.translatable("tooltip.radiated.radium_coffee").withStyle(ChatFormatting.GRAY));

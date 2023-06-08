@@ -29,7 +29,7 @@ public class RDTFluidBlocknBuckets {
             () -> new GaseousLiquidBlock(RDTFluids.SOURCE_UF6, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     public static final RegistryObject<Item> UF6_BUCKET = ITEMS.register("uf6_bucket",
-            () -> new BucketItem(RDTFluids.SOURCE_UF6, new Item.Properties().tab(RDTCreativeModeTabs.MAIN)
+            () -> new BucketItem(RDTFluids.SOURCE_UF6, new Item.Properties().tab(RDTCreativeModeTabs.MACHINE_ITEMS_AND_FUEL)
                     .craftRemainder(Items.BUCKET).stacksTo(1)));
 
 
@@ -38,7 +38,7 @@ public class RDTFluidBlocknBuckets {
             () -> new GaseousLiquidBlock(RDTFluids.SOURCE_STEAM_LOW_PRESSURE, BlockBehaviour.Properties.copy(Blocks.WATER).noOcclusion()));
 
     public static final RegistryObject<Item> STEAM_LOW_PRESSURE_BUCKET = ITEMS.register("steam_low_pressure_bucket",
-            () -> new BucketItem(RDTFluids.SOURCE_STEAM_LOW_PRESSURE, new Item.Properties().tab(RDTCreativeModeTabs.MAIN)
+            () -> new BucketItem(RDTFluids.SOURCE_STEAM_LOW_PRESSURE, new Item.Properties().tab(RDTCreativeModeTabs.MACHINE_ITEMS_AND_FUEL)
                     .craftRemainder(Items.BUCKET).stacksTo(1)));
 
 

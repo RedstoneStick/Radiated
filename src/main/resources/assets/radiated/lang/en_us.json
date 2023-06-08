@@ -1,5 +1,13 @@
 {
-  "itemGroup.radiated_tab": "Radiated",
+  "itemGroup.resources_and_parts": "NTM Resourced and Parts",
+  "itemGroup.machine_items_and_fuel": "NTM Machine Items and Fuel",
+  "itemGroup.templates": "NTM Templates",
+  "itemGroup.ores_and_blocks": "NTM Ores and Blocks",
+  "itemGroup.machines": "NTM Machines",
+  "itemGroup.bombs": "NTM Bombs",
+  "itemGroup.missiles_and_satellites": "NTM Missiles and Satellites",
+  "itemGroup.weapons_and_turrets": "NTM Weapons and Turrets",
+  "itemGroup.consumables_and_gear": "NTM Consumables and Gear",
 
   "advancements.radiated.root.title": "Radiated",
   "advancements.radiated.root.description": "Radiated",
