@@ -194,7 +194,7 @@ dependencies {
     implementation fg.deobf("curse.maven:cloth_config-348521:3972423")
     implementation fg.deobf("curse.maven:immersive_engineering-231951:4370621")
 
-    implementation fg.deobf("curse.maven:stickyfoundations-811241:4409994")
+    implementation fg.deobf("curse.maven:stickyfoundations-811241:4690638")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
