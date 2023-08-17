@@ -20,7 +20,6 @@ public interface IRadiationResistance {
 
         int ductTapeAmount = getDuctTapeAmount(pStack);
         if(ductTapeAmount > 0 || getMaxApplicableDuctTape(pStack) > 0){
-            pTooltipComponents.add(Component.literal(""));
 
             int currentMaxApplicableDuctTape = getMaxApplicableDuctTape(pStack);
 
