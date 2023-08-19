@@ -1,6 +1,6 @@
 package net.guwy.radiated.content.items;
 
-import net.guwy.radiated.mechanics.radiation.IRadiatedItem;
+import net.guwy.radiated.mechanics.hazard_items.IRadiatedItem;
 import net.guwy.radiated.utils.NumberToTextConverter;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;

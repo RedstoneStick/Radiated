@@ -17,31 +17,17 @@
 
 
 
-  "item.radiated.thermoelectric_element": "Thermoelectric Element",
-
-  "item.radiated.rtg_unit": "RTG Unit",
-
-  "item.radiated.copper_panel": "Copper Panel",
-
-  "item.radiated.polymer_bar": "Polymer Bar",
-
-  "item.radiated.hazmat_cloth": "Hazmat Cloth",
-  "item.radiated.hazmat_advanced_cloth": "Advanced Hazmat Cloth",
-  "item.radiated.hazmat_high_performance_cloth": "High-Performance Hazmat Cloth",
 
   "item.radiated.yellowcake": "Yellowcake",
   "tooltip.radiated.yellowcake": "22.8 billion calories",
-  "effect.radiated.food_yellowcake": "Yellowcake",
 
   "item.radiated.rad_x": "Rad-X",
   "tooltip.radiated.rad_x": "Increases radiation resistance by 37% for 3 minutes",
-  "effect.radiated.medicine_rad_x": "Rad-X",
 
   "item.radiated.coffee": "Coffee",
 
   "item.radiated.coffee_radium": "Radium Coffee",
   "tooltip.radiated.radium_coffee": "\"Mr. Incredible, you're fired for pouring Radium in my coffee!\" ~ Mr. Who cares (Mr. Huph)",
-  "effect.radiated.coffee_radium": "Radium Coffee",
 
   "item.radiated.iv_bag": "IV Bag",
 
@@ -67,43 +53,6 @@
   "item.radiated.gas_mask_combo_filter": "Gas Mask Combo Filter",
   "item.radiated.makeshift_gas_mask_filter": "Makeshift Gas Mask Filter",
   "item.radiated.advanced_makeshift_gas_mask_filter": "Advanced Makeshift Gas Mask Filter",
-
-
-  "item.radiated.uranium_billet": "Uranium Billet",
-  "item.radiated.thorium_billet": "Thorium Billet",
-
-  "item.radiated.thorium_fuel_ingot": "Ingot of Thorium Fuel",
-  "item.radiated.thorium_fuel_nugget": "Nugget of Thorium Fuel",
-  "item.radiated.thorium_fuel_billet": "Thorium Fuel Billet",
-
-  "item.radiated.radium_ingot": "Radium-226 Ingot",
-  "item.radiated.radium_nugget": "Radium-226 Nugget",
-  "item.radiated.radium_billet": "Radium-226 Billet",
-
-  "item.radiated.uranium_235_ingot": "Uranium-235 Ingot",
-  "item.radiated.uranium_235_nugget": "Uranium-235 Nugget",
-  "item.radiated.uranium_235_billet": "Uranium-235 Billet",
-
-  "item.radiated.uranium_238_ingot": "Uranium-238 Ingot",
-  "item.radiated.uranium_238_nugget": "Uranium-238 Nugget",
-  "item.radiated.uranium_238_billet": "Uranium-238 Billet",
-
-  "item.radiated.uranium_fuel_ingot": "Ingot of Uranium Fuel",
-  "item.radiated.uranium_fuel_nugget": "Nugget of Uranium Fuel",
-  "item.radiated.uranium_fuel_billet": "Uranium Fuel Billet",
-
-  "item.radiated.beryllium_ingot": "Beryllium Ingot",
-  "item.radiated.beryllium_nugget": "Beryllium Nugget",
-  "item.radiated.beryllium_billet": "Beryllium Billet",
-  "item.radiated.raw_beryllium": "Raw Beryllium",
-  "item.radiated.crushed_beryllium": "Crushed Beryllium",
-  "block.radiated.beryllium_ore": "Beryllium Ore",
-  "block.radiated.beryllium_ore_deepslate": "Deepslate Beryllium Ore",
-
-  "item.radiated.red_copper": "Minecraft Grade Copper",
-  "item.radiated.red_copper_wire": "Minecraft Grade Copper",
-
-  "item.radiated.quartz_dust": "Quartz Dust",
 
 
 
@@ -140,7 +89,6 @@
 
 
 
-
   "item.radiated.uf6_bucket": "Bucket of Uranium Hexafluorite",
   "fluid_type.radiated.uf6_fluid": "Uranium Hexafluorite",
 
@@ -154,6 +102,7 @@
   "death.attack.yellowcake_3": "%1$s has made a bad decision",
   "death.attack.radiation": "%1$s has died from radiation poisoning",
   "death.attack.iv_bag": "%1$s has drained his own blood",
+  "death.attack.vomit_blood": "%1$s has died due to excessive blood loss",
 
   "tooltip.radiated.generic.year_symbol": "y",
   "tooltip.radiated.generic.day_symbol": "d",
@@ -166,6 +115,12 @@
   "tooltip.radiated.radiation.rad_s": "RAD/s",
   "tooltip.radiated.radiation.rad": "RAD",
   "tooltip.radiated.radiation.resistance": "Radiation Resistance: %.2f%%",
+  "tooltip.radiated.hazard.asbestos": "[Asbestos]",
+  "tooltip.radiated.hazard.coal_dust": "[Coal Dust]",
+  "tooltip.radiated.hazard.pyrophoric_hot": "[Pyrophoric / Hot]",
+  "tooltip.radiated.hazard.hydroreactive": "[Hydroreactive]",
+  "tooltip.radiated.hazard.flammable_explosive": "[Flammable / Explosive]",
+  "tooltip.radiated.hazard.blinding": "[Blinding]",
 
   "tooltip.radiated.visor.outer.water": "§3Visor is wet, wiping will clean all gunk",
   "tooltip.radiated.visor.outer.gunk": "Visor is dirty",
@@ -192,5 +147,26 @@
 
 
 
-  "sounds.radiated.player_cough": "RadAway Being Used"
+  "sounds.radiated.player_cough": "RadAway Being Used",
+  "sounds.radiated.vomit": "Vomiting",
+
+
+
+  "effect.radiated.food_yellowcake": "Food: Yellowcake",
+  "effect.radiated.coffee_radium": "Food: Radium Coffee",
+  "effect.radiated.medicine_rad_x": "Rad-X",
+  "effect.radiated.vomit": "Vomiting",
+  "effect.radiated.vomit_blood": "Vomiting Blood",
+
+
+
+  "item.radiated.uranium_ingot": "Uranium Ingot",
+  "item.radiated.uranium_233_ingot": "Uranium-233 Ingot",
+  "item.radiated.uranium_235_ingot": "Uranium-235 Ingot",
+  "item.radiated.uranium_238_ingot": "Uranium-238 Ingot",
+  "item.radiated.thorium_232_ingot": "Thorium-232 Ingot",
+  "item.radiated.plutonium_ingot": "Plutonium Ingot",
+  "item.radiated.plutonium_238_ingot": "Plutonium-238 Ingot",
+  "item.radiated.plutonium_239_ingot": "Plutonium-239 Ingot",
+  "item.radiated.plutonium_240_ingot": "Plutonium-240 Ingot"
 }

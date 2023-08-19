@@ -1,5 +1,6 @@
 package net.guwy.radiated.events.server;
 
+import net.guwy.radiated.events.server.player.PlayerHazardHandler;
 import net.guwy.radiated.events.server.player.PlayerRadiationHandler;
 import net.guwy.radiated.mechanics.gasmask.VisorWearTick;
 import net.minecraftforge.event.TickEvent;
@@ -7,6 +8,9 @@ import net.minecraftforge.event.TickEvent;
 public class PlayerTickEventOrganizer {
     public static void init(TickEvent.PlayerTickEvent event){
         int counter = event.player.tickCount;
+
+        // Every Tick
+        PlayerHazardHandler.init(event);
 
         if((counter % 20) == 0){    //Every Second
             PlayerRadiationHandler.init(event);

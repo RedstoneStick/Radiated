@@ -18,6 +18,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
@@ -164,7 +165,7 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
             inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasCorrectItemInSlot = inventory.getItem(0).getItem().equals(RDTResources.THORIUM_FUEL_BILLET.get());
+        boolean hasCorrectItemInSlot = inventory.getItem(0).getItem().equals(Blocks.BARRIER.asItem());
 
         boolean tempBool = hasCorrectItemInSlot && inventory.getItem(0).getCount() == 1;
 

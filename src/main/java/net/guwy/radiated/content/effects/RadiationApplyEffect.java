@@ -1,7 +1,5 @@
 package net.guwy.radiated.content.effects;
 
-import net.guwy.radiated.index.ModDamageSources;
-import net.guwy.radiated.index.ModEffects;
 import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;

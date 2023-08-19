@@ -1,6 +1,7 @@
 package net.guwy.radiated.mechanics.radiation;
 
 import com.simibubi.create.AllItems;
+import net.guwy.radiated.mechanics.hazard_items.IRadiatedItem;
 import net.guwy.sticky_foundations.index.SFTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

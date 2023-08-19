@@ -18,10 +18,5 @@ public class RegisterGuiOverlaysEventHandler {
 
         //Helmet Window
         event.registerBelowAll("hazmat_helmet", HazmatHelmetOverlay.HELMET_OVERLAY);
-
-
-
-        //Helmet Outer
-        event.registerBelowAll("visor_outer_gunk", VisorOuterGunkOverlay.OUTER_GUNK_OVERLAY);
     }
 }

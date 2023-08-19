@@ -58,5 +58,11 @@
     "sounds": [
       "radiated:item/gas_mask_screw"
     ]
+  },
+  "vomit": {
+    "subtitle": "sounds.radiated.vomit",
+    "sounds": [
+      "radiated:entity/vomit"
+    ]
   }
 }

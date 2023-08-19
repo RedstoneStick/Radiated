@@ -28,6 +28,8 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> TECH_BOOP = registerSoundEvent("tech_boop");
 
+    public static final RegistryObject<SoundEvent> VOMIT = registerSoundEvent("vomit");
+
 
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name){

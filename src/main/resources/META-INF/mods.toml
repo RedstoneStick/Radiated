@@ -21,7 +21,7 @@ modId="radiated" #mandatory
 # see the associated build.gradle script for how to populate this completely automatically during a build
 version="${file.jarVersion}" #mandatory
  # A display name for the mod
-displayName="Radiated" #mandatory
+displayName="HBM's Nuclear Tech" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -51,7 +51,7 @@ But hey if youre seeking a HBM_NTM alternative i hope this mod can satisfy your 
 Check out the original mod btw: https://www.curseforge.com/minecraft/mc-mods/hbms-nuclear-tech-mod
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]] #optional
+[[dependencies.radiated]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -63,20 +63,20 @@ Check out the original mod btw: https://www.curseforge.com/minecraft/mc-mods/hbm
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.examplemod]]
+[[dependencies.radiated]]
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="[1.19.2,1.20)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.sticky_foundations]]
+[[dependencies.radiated]]
     modId="create"
     mandatory=true
     versionRange="[0.5.0g,0.6.0)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.rsimm]]
+[[dependencies.radiated]]
     modId="sticky_foundations"
     mandatory=true
     versionRange="[0.03,)"

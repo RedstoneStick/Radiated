@@ -29,13 +29,15 @@ public class Radiated {
 
         RDTTools.register(eventBus);
         RDTMachines.register(eventBus);
-        RDTItems.register(eventBus);
-        RDTRTGPellets.register(eventBus);
+        //RDTItems.register(eventBus);
+        //RDTRTGPellets.register(eventBus);
         RDTArmors.register(eventBus);
+        NTMResourcesAndParts.register(eventBus);
 
         RDTResources.register(eventBus);
 
-        ModEffects.register(eventBus);
+        NTMEffects.register(eventBus);
+        NTMParticles.register(eventBus);
         ModSounds.register(eventBus);
 
         ModConfiguredFeatures.register(eventBus);
@@ -68,21 +70,5 @@ public class Radiated {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-    }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-            MenuScreens.register(RDTMenuTypes.TURBINE_MENU.get(), TurbineScreen::new);
-            MenuScreens.register(RDTMenuTypes.RTG_MENU.get(), RTGScreen::new);
-
-            ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_UF6.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_UF6.get(), RenderType.translucent());
-
-            ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_STEAM_LOW_PRESSURE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_STEAM_LOW_PRESSURE.get(), RenderType.translucent());
-        }
     }
 }

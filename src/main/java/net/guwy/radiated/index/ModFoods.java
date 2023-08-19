@@ -7,17 +7,17 @@ import net.minecraft.world.food.FoodProperties;
 public class ModFoods {
     public static final FoodProperties BRED = (
             new FoodProperties.Builder()).nutrition(2).saturationMod(1F)
-            .effect(() -> new MobEffectInstance(ModEffects.FOOD_YELLOWCAKE.get()
+            .effect(() -> new MobEffectInstance(NTMEffects.FOOD_YELLOWCAKE.get()
                     , 100, 1, false, false, false), 1f )
             .build();
     public static final FoodProperties YELLOWCAKE = (
             new FoodProperties.Builder()).nutrition(16).saturationMod(1F).alwaysEat()
-            .effect(() -> new MobEffectInstance(ModEffects.FOOD_YELLOWCAKE.get()
+            .effect(() -> new MobEffectInstance(NTMEffects.FOOD_YELLOWCAKE.get()
                     , 100, 1, false, false, false), 1f)
             .build();
     public static final FoodProperties RAD_X = (
             new FoodProperties.Builder()).nutrition(0).saturationMod(0).alwaysEat()
-            .effect(() -> new MobEffectInstance(ModEffects.MEDICINE_RAD_X.get()
+            .effect(() -> new MobEffectInstance(NTMEffects.MEDICINE_RAD_X.get()
                     , 3600, 0, false, false, false), 1f)
             .build();
     public static final FoodProperties COFFE = (
@@ -33,7 +33,7 @@ public class ModFoods {
                     , 1200, 2, false, false, false), 1f)
             .effect(() -> new MobEffectInstance(MobEffects.HEAL
                     , 1, 0, false, false, false), 1f)
-            .effect(() -> new MobEffectInstance(ModEffects.COFFE_RADIUM.get()
+            .effect(() -> new MobEffectInstance(NTMEffects.COFFE_RADIUM.get()
                     , 1, 0, false, false, false), 1f)
             .build();
 }

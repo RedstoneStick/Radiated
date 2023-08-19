@@ -29,13 +29,13 @@ public class RDTMachines {
     public static final RegistryObject<Block> TURBINE = registerBlock("turbine", () ->
             new TurbineBlock(BlockBehaviour.Properties.of(Material.METAL).
                     strength(4.5f).explosionResistance(3f).
-                    sound(SoundType.METAL).noOcclusion()), RDTCreativeModeTabs.MACHINES);
+                    sound(SoundType.METAL).noOcclusion()), NTMCreativeModeTabs.MACHINES);
 
 
     public static final RegistryObject<Block> RTG = registerBlock("rtg", () ->
             new RTGBlock(BlockBehaviour.Properties.of(Material.METAL).
                     strength(4.5f).explosionResistance(3f).
-                    sound(SoundType.METAL).noOcclusion()), RDTCreativeModeTabs.MACHINES);
+                    sound(SoundType.METAL).noOcclusion()), NTMCreativeModeTabs.MACHINES);
 
 
 
