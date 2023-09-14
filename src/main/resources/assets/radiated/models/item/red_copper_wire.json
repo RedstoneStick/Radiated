@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "radiated:resources/red_copper/red_copper_wire"
-  }
-}

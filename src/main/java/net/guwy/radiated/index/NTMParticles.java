@@ -15,6 +15,8 @@ public class NTMParticles {
 
     public static final RegistryObject<SimpleParticleType> VOMIT_PARTICLE = PARTICLE_TYPES.register("vomit_particle", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> VOMIT_BLOOD_PARTICLE = PARTICLE_TYPES.register("vomit_blood_particle", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> COUGH_COAL_PARTICLE = PARTICLE_TYPES.register("cough_coal_particle", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> COUGH_BLOOD_PARTICLE = PARTICLE_TYPES.register("cough_blood_particle", () -> new SimpleParticleType(true));
 
 
 

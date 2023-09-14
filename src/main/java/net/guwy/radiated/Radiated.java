@@ -34,8 +34,6 @@ public class Radiated {
         RDTArmors.register(eventBus);
         NTMResourcesAndParts.register(eventBus);
 
-        RDTResources.register(eventBus);
-
         NTMEffects.register(eventBus);
         NTMParticles.register(eventBus);
         ModSounds.register(eventBus);

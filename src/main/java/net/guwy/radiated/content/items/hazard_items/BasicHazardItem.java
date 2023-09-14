@@ -5,10 +5,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class BasicHazardItem extends Item implements IRadiatedItem, IBlindingItem, IFlammableExplosiveItem, IHydroreactiveItem, IPyrophoricHotItem, IAsbestosItem, ICoalDustItem {
-    double radiationVal, coalDustVal, asbestosVal;
+    double radiationVal;
+    int coalDustVal, asbestosVal;
     boolean isBlinding, isFlammableExplosive, isHydroreactive, isPyrophoricHot;
 
-    public BasicHazardItem(Properties pProperties, double radiationVal, double coalDustVal, double asbestosVal, boolean isPyrophoricHot, boolean isHydroreactive, boolean isBlinding, boolean isFlammableExplosive) {
+    public BasicHazardItem(Properties pProperties, double radiationVal, int coalDustVal, int asbestosVal, boolean isPyrophoricHot, boolean isHydroreactive, boolean isBlinding, boolean isFlammableExplosive) {
         super(pProperties);
         this.radiationVal = radiationVal;
         this.coalDustVal = coalDustVal;
@@ -25,12 +26,12 @@ public class BasicHazardItem extends Item implements IRadiatedItem, IBlindingIte
     }
 
     @Override
-    public double asbestosVal(ItemStack itemStack) {
+    public int asbestosVal(ItemStack itemStack) {
         return asbestosVal;
     }
 
     @Override
-    public double coalDustVal(ItemStack itemStack) {
+    public int coalDustVal(ItemStack itemStack) {
         return coalDustVal;
     }
 

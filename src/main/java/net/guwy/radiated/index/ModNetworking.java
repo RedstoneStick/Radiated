@@ -4,7 +4,6 @@ import net.guwy.radiated.Radiated;
 import net.guwy.radiated.content.network_packages.EnergySyncS2CPacket;
 import net.guwy.radiated.content.network_packages.RTGSyncS2CPacket;
 import net.guwy.radiated.content.network_packages.TurbineSyncS2CPacket;
-import net.guwy.radiated.content.network_packages.VisorWipeC2SPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -46,12 +45,6 @@ public class ModNetworking {
                 .decoder(EnergySyncS2CPacket::new)
                 .encoder(EnergySyncS2CPacket::toBytes)
                 .consumerMainThread(EnergySyncS2CPacket::handle)
-                .add();
-
-        net.messageBuilder(VisorWipeC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
-                .decoder(VisorWipeC2SPacket::new)
-                .encoder(VisorWipeC2SPacket::toBytes)
-                .consumerMainThread(VisorWipeC2SPacket::handle)
                 .add();
 
 

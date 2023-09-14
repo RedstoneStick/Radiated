@@ -3,5 +3,5 @@ package net.guwy.radiated.mechanics.hazard_items;
 import net.minecraft.world.item.ItemStack;
 
 public interface ICoalDustItem {
-    double coalDustVal(ItemStack itemStack);
+    int coalDustVal(ItemStack itemStack);
 }

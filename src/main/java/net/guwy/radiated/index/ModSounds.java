@@ -29,6 +29,10 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> TECH_BOOP = registerSoundEvent("tech_boop");
 
     public static final RegistryObject<SoundEvent> VOMIT = registerSoundEvent("vomit");
+    public static final RegistryObject<SoundEvent> COUGH1 = registerSoundEvent("cough1");
+    public static final RegistryObject<SoundEvent> COUGH2 = registerSoundEvent("cough2");
+    public static final RegistryObject<SoundEvent> COUGH3 = registerSoundEvent("cough3");
+    public static final RegistryObject<SoundEvent> COUGH4 = registerSoundEvent("cough4");
 
 
 

@@ -1,6 +1,7 @@
 package net.guwy.radiated.events.server;
 
 import net.guwy.radiated.Radiated;
+import net.guwy.radiated.mechanics.lung_diseases.PlayerLungDiseasesProvider;
 import net.guwy.radiated.mechanics.radiation.ChunkRadiationProvider;
 import net.guwy.radiated.mechanics.radiation.EntityRadiation;
 import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
@@ -14,6 +15,10 @@ public class AttachCapabilitiesHandler {
     public static void initEntity(AttachCapabilitiesEvent<Entity> event){
         if (!event.getObject().getCapability(EntityRadiationProvider.ENTITY_RADIATION).isPresent()) {
             event.addCapability(new ResourceLocation(Radiated.MOD_ID, "radiation"), new EntityRadiationProvider());
+        }
+
+        if (!event.getObject().getCapability(PlayerLungDiseasesProvider.PLAYER_LUNG_DISEASES).isPresent()) {
+            event.addCapability(new ResourceLocation(Radiated.MOD_ID, "lungs"), new PlayerLungDiseasesProvider());
         }
     }
 

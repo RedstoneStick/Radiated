@@ -29,6 +29,12 @@ public class NTMEffects {
     public static final RegistryObject<MobEffect> VOMIT_BLOOD = MOB_EFFECTS.register("vomit_blood",
             () -> new VomitBloodEffect(MobEffectCategory.HARMFUL, FastColor.ARGB32.color(255, 140, 46, 49)));
 
+    public static final RegistryObject<MobEffect> COUGH_COAL = MOB_EFFECTS.register("cough_coal",
+            () -> new CoughCoalEffect(MobEffectCategory.NEUTRAL, FastColor.ARGB32.color(255, 112, 117, 112)));
+
+    public static final RegistryObject<MobEffect> COUGH_BLOOD = MOB_EFFECTS.register("cough_blood",
+            () -> new CoughBloodEffect(MobEffectCategory.HARMFUL, FastColor.ARGB32.color(255, 140, 46, 49)));
+
 
 
     public static void register(IEventBus eventBus){

@@ -20,4 +20,10 @@ public class NTMDamageSources {
 
     public static DamageSource VOMIT_BLOOD = new DamageSource("vomit_blood")
             .bypassArmor().bypassEnchantments().bypassMagic();
+
+    public static DamageSource ASBESTOS = new DamageSource("asbestos")
+            .bypassArmor().bypassEnchantments().bypassMagic();
+
+    public static DamageSource COAL_DUST = new DamageSource("coal_dust")
+            .bypassArmor().bypassEnchantments().bypassMagic();
 }

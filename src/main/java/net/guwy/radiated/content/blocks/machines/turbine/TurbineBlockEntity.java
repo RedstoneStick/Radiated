@@ -3,7 +3,6 @@ package net.guwy.radiated.content.blocks.machines.turbine;
 import net.guwy.radiated.content.network_packages.TurbineSyncS2CPacket;
 import net.guwy.radiated.index.ModNetworking;
 import net.guwy.radiated.index.RDTBlockEntities;
-import net.guwy.radiated.index.RDTResources;
 import net.guwy.radiated.utils.ModEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

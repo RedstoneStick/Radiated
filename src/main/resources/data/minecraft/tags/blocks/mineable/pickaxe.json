@@ -1,8 +1,5 @@
 {
   "replace": false,
   "values": [
-    "radiated:rtg",
-    "radiated:beryllium_ore",
-    "radiated:beryllium_ore_deepslate"
   ]
 }

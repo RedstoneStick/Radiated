@@ -17,10 +17,10 @@ public class ModPlacedFeatures {
 
 
 
-    public static final RegistryObject<PlacedFeature> BERYLLIUM_ORE_PLACED = PLACED_FEATURES.register("beryllium_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.BERYLLIUM_ORE.getHolder().get(),
-                    commonOrePlacement(14, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.absolute(-66), VerticalAnchor.absolute(40)))));
+    // public static final RegistryObject<PlacedFeature> BERYLLIUM_ORE_PLACED = PLACED_FEATURES.register("beryllium_ore_placed",
+    //         () -> new PlacedFeature(ModConfiguredFeatures.BERYLLIUM_ORE.getHolder().get(),
+    //                 commonOrePlacement(14, // VeinsPerChunk
+    //                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-66), VerticalAnchor.absolute(40)))));
 
 
 

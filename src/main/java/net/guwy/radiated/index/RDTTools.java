@@ -2,6 +2,7 @@ package net.guwy.radiated.index;
 
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.content.items.*;
+import net.guwy.radiated.mechanics.gasmask.AirborneHazardTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -14,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RDTTools {
@@ -26,24 +28,25 @@ public class RDTTools {
 
 
 
+
     public static final RegistryObject<Item> GAS_MASK_FILTER = ITEMS.register("gas_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(20000),
+            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(400000),
                     true, true, true, true, false, true));
 
     public static final RegistryObject<Item> CATALYTIC_MASK_FILTER = ITEMS.register("catalytic_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(20000),
+            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(400000),
                     true, false, false, false, true, false));
 
     public static final RegistryObject<Item> GAS_MASK_COMBO_FILTER = ITEMS.register("gas_mask_combo_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(1000),
+            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(200000),
                     true, true, true, true, true, true));
 
     public static final RegistryObject<Item> MAKESHIFT_GAS_MASK_FILTER = ITEMS.register("makeshift_gas_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(1000),
+            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(20000),
                     true, false, false, false, false, false));
 
     public static final RegistryObject<Item> ADVANCED_MAKESHIFT_GAS_MASK_FILTER = ITEMS.register("advanced_makeshift_gas_mask_filter",
-            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(1000),
+            () -> new BasicFilterItem(new Item.Properties().tab(NTMCreativeModeTabs.CONSUMABLES_AND_GEAR).durability(20000),
                     true, false, true, false, false, false));
 
 

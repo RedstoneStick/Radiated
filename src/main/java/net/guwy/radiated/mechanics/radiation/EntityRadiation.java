@@ -8,7 +8,7 @@ public class EntityRadiation {
     private double geigerVal = 0;
     private double lastGeigerVal = 0;
 
-    private static final double MAX_PLAYER_RADIATION = 1000;       //Gives you 50 minecraft days if the poison factor is 14 (175 for 4)
+    private static final double MAX_PLAYER_RADIATION = 1000;
 
     public EntityRadiation() {
     }

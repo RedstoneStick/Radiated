@@ -2,7 +2,6 @@ package net.guwy.radiated.events.client;
 
 import net.guwy.radiated.content.overlays.GeigerCounterOverlay;
 import net.guwy.radiated.content.overlays.HazmatHelmetOverlay;
-import net.guwy.radiated.content.overlays.VisorOuterGunkOverlay;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 
 public class RegisterGuiOverlaysEventHandler {

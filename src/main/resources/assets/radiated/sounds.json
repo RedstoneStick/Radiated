@@ -64,5 +64,29 @@
     "sounds": [
       "radiated:entity/vomit"
     ]
+  },
+  "cough1": {
+    "subtitle": "sounds.radiated.cough",
+    "sounds": [
+      "radiated:entity/cough1"
+    ]
+  },
+  "cough2": {
+    "subtitle": "sounds.radiated.cough",
+    "sounds": [
+      "radiated:entity/cough2"
+    ]
+  },
+  "cough3": {
+    "subtitle": "sounds.radiated.cough",
+    "sounds": [
+      "radiated:entity/cough3"
+    ]
+  },
+  "cough4": {
+    "subtitle": "sounds.radiated.cough",
+    "sounds": [
+      "radiated:entity/cough4"
+    ]
   }
 }

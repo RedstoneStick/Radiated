@@ -1,0 +1,22 @@
+coal dust cloud increases black lung by 10
+chunk radiation drops by (x * 0.999 - 0.05) every operation (tick?, sec?)
+! Add if has tungsten reacher functionality to radiation and hazards handler
+
+! Add Food Values for food items
+- S'more ingot
+- Bar Of Semtex
+- etc.
+- also euphemium dust, just cuz its funni and not in the og mod
+
+! Add Furnace Values
+- Solid Fuel
+- Presto Log
+- etc.
+
+! Add Out of the ordinary liquid containers
+- Drop of mercury (125mb)
+- Bottle of mercury (1000mb)
+- etc.
+
+! Add custom nuke values
+- As a seperate registry from the items itself

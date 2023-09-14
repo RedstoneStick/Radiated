@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "radiated:beryllium_ore"
-  },
-  "result": "radiated:beryllium_ingot",
-  "experience": 1.0,
-  "cookingtime": 100
-}

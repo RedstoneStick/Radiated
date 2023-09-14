@@ -7,5 +7,5 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
 public interface IAsbestosItem {
-    double asbestosVal(ItemStack itemStack);
+    int asbestosVal(ItemStack itemStack);
 }

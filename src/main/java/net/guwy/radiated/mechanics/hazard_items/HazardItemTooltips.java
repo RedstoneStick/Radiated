@@ -97,7 +97,7 @@ public class HazardItemTooltips {
                 Component tooltip;
 
                 tooltip = Component.translatable("tooltip.radiated.hazard.blinding")
-                        .withStyle(ChatFormatting.AQUA);
+                        .withStyle(ChatFormatting.DARK_AQUA);
                 event.getToolTip().add(tooltip);
             }
         }

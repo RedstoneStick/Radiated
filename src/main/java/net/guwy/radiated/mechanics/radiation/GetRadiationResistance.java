@@ -1,7 +1,5 @@
 package net.guwy.radiated.mechanics.radiation;
 
-import net.guwy.radiated.mechanics.gasmask.IVisorItem;
-import net.guwy.radiated.utils.ItemTagUtils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;

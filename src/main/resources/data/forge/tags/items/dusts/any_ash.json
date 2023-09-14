@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "radiated:ash_wood",
+    "radiated:ash_coal",
+    "radiated:ash_misc"
+  ]
+}

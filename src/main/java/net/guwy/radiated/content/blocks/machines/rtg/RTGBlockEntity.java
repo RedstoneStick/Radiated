@@ -4,7 +4,6 @@ import net.guwy.radiated.content.items.RTGPelletItem;
 import net.guwy.radiated.content.network_packages.RTGSyncS2CPacket;
 import net.guwy.radiated.index.ModNetworking;
 import net.guwy.radiated.index.RDTBlockEntities;
-import net.guwy.radiated.index.RDTResources;
 import net.guwy.radiated.utils.ModEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

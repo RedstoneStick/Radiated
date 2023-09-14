@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "radiated:oil_tar",
+    "radiated:oil_tar_crack",
+    "radiated:oil_tar_coal",
+    "radiated:oil_tar_wood"
+  ]
+}
