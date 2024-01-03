@@ -2,18 +2,14 @@ package net.guwy.radiated.content.overlays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.guwy.radiated.Radiated;
-import net.guwy.radiated.index.ModTags;
-import net.guwy.radiated.index.RDTTools;
+import net.guwy.radiated.index.NTMTools;
 import net.guwy.radiated.mechanics.radiation.EntityRadiation;
-import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
 import net.guwy.radiated.mechanics.radiation.GetRadiationResistance;
-import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -29,7 +25,7 @@ public class GeigerCounterOverlay {
         if(Minecraft.getInstance().player.getInventory().hasAnyMatching(new Predicate<ItemStack>() {
             @Override
             public boolean test(ItemStack itemStack) {
-                return itemStack.getItem().equals(RDTTools.GEIGER_COUNTER.get());
+                return itemStack.getItem().equals(NTMTools.GEIGER_COUNTER.get());
             }
         })){
             Player player = Minecraft.getInstance().player;
@@ -40,7 +36,7 @@ public class GeigerCounterOverlay {
             double playerRad = 0;
             for(int i = 0; i < inventory.getContainerSize(); i++){
                 ItemStack itemStack = inventory.getItem(i);
-                if(itemStack.getItem().equals(RDTTools.GEIGER_COUNTER.get()) && itemStack.getTag() != null){
+                if(itemStack.getItem().equals(NTMTools.GEIGER_COUNTER.get()) && itemStack.getTag() != null){
                     geigerVal = itemStack.getTag().getDouble("geiger_val");
                     geigerVal = geigerVal * (1 - GetRadiationResistance.getVal(player));
                     playerRad = itemStack.getTag().getDouble("player_rad");

@@ -2,7 +2,7 @@ package net.guwy.radiated.mechanics.radiation;
 
 import net.guwy.radiated.index.NTMDamageSources;
 import net.guwy.radiated.index.NTMEffects;
-import net.guwy.radiated.index.ModSounds;
+import net.guwy.radiated.index.NTMSounds;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -108,7 +108,7 @@ public class RadiationPoisoningHandler {
                                 return false;
                             }
                         };
-                        soundPlayer.playSound(ModSounds.VOMIT.get(), 1f, 1f);
+                        soundPlayer.playSound(NTMSounds.VOMIT.get(), 1f, 1f);
                         soundPlayer.remove(Entity.RemovalReason.DISCARDED);
                     }
                     // Nausea

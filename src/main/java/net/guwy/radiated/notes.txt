@@ -20,3 +20,5 @@ chunk radiation drops by (x * 0.999 - 0.05) every operation (tick?, sec?)
 
 ! Add custom nuke values
 - As a seperate registry from the items itself
+
+- Redo the minerals related to the foundry casting (it looks like crap rn)

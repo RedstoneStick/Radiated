@@ -1,6 +1,6 @@
 package net.guwy.radiated.content.blocks.machines.turbine;
 
-import net.guwy.radiated.index.RDTBlockEntities;
+import net.guwy.radiated.index.NTMBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -69,7 +69,7 @@ public class TurbineBlock extends BaseEntityBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state,
                                                                   BlockEntityType<T> type) {
-        return createTickerHelper(type, RDTBlockEntities.TURBINE.get(),
+        return createTickerHelper(type, NTMBlockEntities.TURBINE.get(),
                 TurbineBlockEntity::tick);
     }
 }

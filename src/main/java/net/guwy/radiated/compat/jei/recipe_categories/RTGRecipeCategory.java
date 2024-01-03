@@ -10,7 +10,7 @@ import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.compat.jei.JEIRadiatedPlugin;
-import net.guwy.radiated.index.RDTMachines;
+import net.guwy.radiated.index.NTMMachines;
 import net.guwy.radiated.recipes.RTGDecayRecipe;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -26,7 +26,7 @@ public class RTGRecipeCategory implements IRecipeCategory<RTGDecayRecipe> {
 
     public RTGRecipeCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 112, 36);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(RDTMachines.RTG.get()));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(NTMMachines.RTG.get()));
     }
 
 

@@ -1,6 +1,6 @@
 package net.guwy.radiated.mechanics.gasmask;
 
-import net.guwy.radiated.index.ModSounds;
+import net.guwy.radiated.index.NTMSounds;
 import net.guwy.radiated.utils.ItemTagUtils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -98,7 +98,7 @@ public interface IGasmaskItem {
                         return false;
                     }
                 };
-                soundPlayer.playSound(ModSounds.GAS_MASK_SCREW.get());
+                soundPlayer.playSound(NTMSounds.GAS_MASK_SCREW.get());
                 soundPlayer.remove(Entity.RemovalReason.DISCARDED);
             }
 
@@ -127,8 +127,8 @@ public interface IGasmaskItem {
 
 
 
-    static List<Component> FilterTooltip(ItemStack pStack){
-        List<Component> pTooltipComponents = new ArrayList<Component>();
+    static List<Component> FilterTooltip(ItemStack pStack, List<Component> pTooltipComponents, int index){
+        List<Component> newTooltipComponents = new ArrayList<Component>();
 
         Item filterItem = Item.byId(ItemTagUtils.getInt(pStack, TAG_FILTER_ID));
         int durability = ItemTagUtils.getInt(pStack, TAG_FILTER_DURABILITY);
@@ -139,14 +139,20 @@ public interface IGasmaskItem {
             double percent = (double)durability / Math.max(itemStack.getMaxDamage(), 1) * 100;
             percent = Math.floor(percent * 10) / 10; // round percent to 00.0 format
             String durabilityDisplay = (itemStack.getDisplayName().getString() + " (" + percent + "%)");
-            pTooltipComponents.add(Component.literal(durabilityDisplay).withStyle(ChatFormatting.GRAY));
+            newTooltipComponents.add(Component.literal(durabilityDisplay).withStyle(ChatFormatting.GRAY));
         }else {
-            pTooltipComponents.add(Component.translatable("tooltip.radiated.armor.gas_mask.warning"));
+            newTooltipComponents.add(Component.translatable("tooltip.radiated.armor.gas_mask.warning"));
         }
 
-        pTooltipComponents.add(Component.literal(""));  // Formatting
+        // Formatting with if there's any other tooltip in mind
+        if(pTooltipComponents.size() > index){
+            if(pTooltipComponents.get(index).getString() != ""){
+                newTooltipComponents.add(Component.literal(""));
+            }
+        }
 
-        return pTooltipComponents;
+
+        return newTooltipComponents;
     }
 
 

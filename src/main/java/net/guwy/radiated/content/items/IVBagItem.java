@@ -1,8 +1,8 @@
 package net.guwy.radiated.content.items;
 
 import net.guwy.radiated.index.NTMDamageSources;
-import net.guwy.radiated.index.ModSounds;
-import net.guwy.radiated.index.RDTTools;
+import net.guwy.radiated.index.NTMSounds;
+import net.guwy.radiated.index.NTMTools;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -35,9 +35,9 @@ public class IVBagItem extends Item {
                 return false;
             }
         };
-        soundPlayer.playSound(ModSounds.RADAWAY.get());
+        soundPlayer.playSound(NTMSounds.RADAWAY.get());
 
-        ItemStack output = new ItemStack(RDTTools.BLOOD_BAG.get());
+        ItemStack output = new ItemStack(NTMTools.BLOOD_BAG.get());
         pPlayer.getInventory().placeItemBackInInventory(output);
 
         pPlayer.hurt(NTMDamageSources.IV_BAG, 8);

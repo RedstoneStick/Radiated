@@ -2,7 +2,6 @@ package net.guwy.radiated.content.items;
 
 import net.guwy.radiated.mechanics.gasmask.IGasmaskItem;
 import net.guwy.radiated.mechanics.radiation.IRadiationResistance;
-import net.guwy.sticky_foundations.mechanics.visor.IVisorItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
@@ -14,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class HazmatArmorItem extends ArmorItem implements IRadiationResistance, IVisorItem, IGasmaskItem {
+public class HazmatArmorItem extends ArmorItem implements IRadiationResistance, IGasmaskItem {
     double radResistance;
     public HazmatArmorItem(double radResistance, ArmorMaterial pMaterial, EquipmentSlot pSlot, Properties pProperties) {
         super(pMaterial, pSlot, pProperties);
@@ -29,18 +28,16 @@ public class HazmatArmorItem extends ArmorItem implements IRadiationResistance, 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
 
+        // Armor patching with duct tape tooltips
+        pTooltipComponents.addAll(1, IRadiationResistance.DuctTapeTooltip(pStack, pTooltipComponents, 1));
+
         ArmorItem armorItem = (ArmorItem) pStack.getItem();
+        // Helmet specific tooltips
         if(armorItem.getSlot() == EquipmentSlot.HEAD){
 
-            // Visor Gunk Tooltips
-            pTooltipComponents.addAll(IVisorItem.VisorGunkTooltip(pStack));
-
             // Filter Tooltips
-            pTooltipComponents.addAll(IGasmaskItem.FilterTooltip(pStack));
+            pTooltipComponents.addAll(1, IGasmaskItem.FilterTooltip(pStack, pTooltipComponents, 1));
         }
-
-        // Armor patching with duct tape tooltips
-        pTooltipComponents.addAll(IRadiationResistance.DuctTapeTooltip(pStack));
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }

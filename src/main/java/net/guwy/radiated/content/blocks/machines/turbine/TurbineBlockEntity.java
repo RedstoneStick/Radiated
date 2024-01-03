@@ -1,8 +1,8 @@
 package net.guwy.radiated.content.blocks.machines.turbine;
 
 import net.guwy.radiated.content.network_packages.TurbineSyncS2CPacket;
-import net.guwy.radiated.index.ModNetworking;
-import net.guwy.radiated.index.RDTBlockEntities;
+import net.guwy.radiated.index.NTMNetworking;
+import net.guwy.radiated.index.NTMBlockEntities;
 import net.guwy.radiated.utils.ModEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -59,7 +59,7 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
     private int maxProgress = 200;
 
     public TurbineBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(RDTBlockEntities.TURBINE.get(), pPos, pBlockState);
+        super(NTMBlockEntities.TURBINE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
@@ -87,7 +87,7 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
 
     public static void onUse(Level pLevel, BlockPos pPos, BlockState pState, Player pPlayer) {
         TurbineBlockEntity blockEntity = (TurbineBlockEntity) pLevel.getBlockEntity(pPos);
-        ModNetworking.sendToClients(new TurbineSyncS2CPacket(blockEntity.getEnergyStorage().getEnergyStored(), pPos));
+        NTMNetworking.sendToClients(new TurbineSyncS2CPacket(blockEntity.getEnergyStorage().getEnergyStored(), pPos));
     }
 
     @Override
@@ -188,7 +188,7 @@ public class TurbineBlockEntity extends BlockEntity implements MenuProvider {
         @Override
         public void onEnergyChanged() {
             setChanged();
-            ModNetworking.sendToClients(new TurbineSyncS2CPacket(this.energy, getBlockPos()));
+            NTMNetworking.sendToClients(new TurbineSyncS2CPacket(this.energy, getBlockPos()));
         }
     };
 

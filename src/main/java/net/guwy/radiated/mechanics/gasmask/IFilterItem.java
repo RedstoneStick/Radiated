@@ -53,7 +53,7 @@ public interface IFilterItem {
             }
         }
 
-        pTooltipComponents.add(Component.literal(""));  // Formatting
+        //pTooltipComponents.add(Component.literal(""));  // Formatting
 
         return pTooltipComponents;
     }

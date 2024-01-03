@@ -1,8 +1,6 @@
 package net.guwy.radiated.utils;
 
-import net.guwy.radiated.content.blocks.machines.rtg.RTGBlockEntity;
-import net.guwy.radiated.index.RDTMachines;
-import net.guwy.radiated.index.RDTMenuTypes;
+import net.guwy.radiated.index.NTMMachines;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -10,8 +8,6 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class MenuWithPlayerInv extends AbstractContainerMenu {
@@ -91,7 +87,7 @@ public abstract class MenuWithPlayerInv extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, RDTMachines.RTG.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, NTMMachines.RTG.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

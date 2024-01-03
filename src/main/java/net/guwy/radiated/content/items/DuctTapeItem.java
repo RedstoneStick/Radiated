@@ -1,14 +1,9 @@
 package net.guwy.radiated.content.items;
 
-import net.guwy.radiated.index.ModSounds;
-import net.guwy.radiated.index.RDTItems;
-import net.guwy.radiated.mechanics.radiation.EntityRadiationProvider;
+import net.guwy.radiated.index.NTMSounds;
 import net.guwy.radiated.mechanics.radiation.IRadiationResistance;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -50,7 +45,7 @@ public class DuctTapeItem extends Item {
                             return false;
                         }
                     };
-                    soundPlayer.playSound(ModSounds.DUCT_TAPE.get());
+                    soundPlayer.playSound(NTMSounds.DUCT_TAPE.get());
 
                     pPlayer.getCooldowns().addCooldown(itemStack.getItem(), 5);
                     itemStack.setCount(itemStack.getCount() - 1);

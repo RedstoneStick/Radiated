@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "radiated:item/rtg_unit"
+    "layer0": "radiated:items/rtg_unit"
   }
 }

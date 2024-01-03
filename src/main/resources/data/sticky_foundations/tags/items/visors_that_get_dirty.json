@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "radiated:hazmat_helmet",
+    "radiated:hazmat_advanced_helmet",
+    "radiated:hazmat_high_performance_helmet"
+  ]
+}

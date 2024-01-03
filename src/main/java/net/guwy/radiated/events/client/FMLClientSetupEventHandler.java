@@ -2,8 +2,8 @@ package net.guwy.radiated.events.client;
 
 import net.guwy.radiated.content.blocks.machines.rtg.RTGScreen;
 import net.guwy.radiated.content.blocks.machines.turbine.TurbineScreen;
-import net.guwy.radiated.index.RDTFluids;
-import net.guwy.radiated.index.RDTMenuTypes;
+import net.guwy.radiated.index.NTMFluids;
+import net.guwy.radiated.index.NTMMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -16,14 +16,14 @@ public class FMLClientSetupEventHandler {
     }
 
     private static void RegisterMenuTypes(FMLClientSetupEvent event){
-        MenuScreens.register(RDTMenuTypes.TURBINE_MENU.get(), TurbineScreen::new);
-        MenuScreens.register(RDTMenuTypes.RTG_MENU.get(), RTGScreen::new);
+        MenuScreens.register(NTMMenuTypes.TURBINE_MENU.get(), TurbineScreen::new);
+        MenuScreens.register(NTMMenuTypes.RTG_MENU.get(), RTGScreen::new);
     }
 
     private static void SetBlockTransparency(FMLClientSetupEvent event){
-        ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_UF6.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_UF6.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(RDTFluids.SOURCE_STEAM_LOW_PRESSURE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(RDTFluids.FLOWING_STEAM_LOW_PRESSURE.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(NTMFluids.FLOWING_UF6.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(NTMFluids.SOURCE_UF6.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(NTMFluids.SOURCE_STEAM_LOW_PRESSURE.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(NTMFluids.FLOWING_STEAM_LOW_PRESSURE.get(), RenderType.translucent());
     }
 }

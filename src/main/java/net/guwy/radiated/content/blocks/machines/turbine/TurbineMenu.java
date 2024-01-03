@@ -1,7 +1,7 @@
 package net.guwy.radiated.content.blocks.machines.turbine;
 
-import net.guwy.radiated.index.RDTMachines;
-import net.guwy.radiated.index.RDTMenuTypes;
+import net.guwy.radiated.index.NTMMachines;
+import net.guwy.radiated.index.NTMMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -22,7 +22,7 @@ public class TurbineMenu extends AbstractContainerMenu {
     }
 
     public TurbineMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(RDTMenuTypes.TURBINE_MENU.get(), id);
+        super(NTMMenuTypes.TURBINE_MENU.get(), id);
         checkContainerSize(inv, 1);
         blockEntity = (TurbineBlockEntity) entity;
         this.level = inv.player.level;
@@ -103,7 +103,7 @@ public class TurbineMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, RDTMachines.TURBINE.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, NTMMachines.TURBINE.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

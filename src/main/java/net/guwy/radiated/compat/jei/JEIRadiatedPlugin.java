@@ -9,8 +9,7 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import net.guwy.radiated.Radiated;
 import net.guwy.radiated.compat.jei.recipe_categories.RTGRecipeCategory;
 import net.guwy.radiated.compat.jei.recipe_categories.UsageRecipeCategory;
-import net.guwy.radiated.index.ModRecipes;
-import net.guwy.radiated.index.RDTMachines;
+import net.guwy.radiated.index.NTMMachines;
 import net.guwy.radiated.recipes.RTGDecayRecipe;
 import net.guwy.radiated.recipes.UsageRecipe;
 import net.minecraft.client.Minecraft;
@@ -58,7 +57,7 @@ public class JEIRadiatedPlugin implements IModPlugin {
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-        registration.addRecipeCatalyst(new ItemStack(RDTMachines.RTG.get()), RTG_DECAY_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(NTMMachines.RTG.get()), RTG_DECAY_TYPE);
         IModPlugin.super.registerRecipeCatalysts(registration);
     }
 }

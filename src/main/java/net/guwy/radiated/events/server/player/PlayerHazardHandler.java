@@ -1,14 +1,12 @@
 package net.guwy.radiated.events.server.player;
 
-import net.guwy.radiated.index.ModSounds;
+import net.guwy.radiated.index.NTMSounds;
 import net.guwy.radiated.index.NTMDamageSources;
 import net.guwy.radiated.index.NTMEffects;
-import net.guwy.radiated.index.NTMParticles;
 import net.guwy.radiated.mechanics.hazard_items.*;
 import net.guwy.radiated.mechanics.lung_diseases.PlayerLungDiseases;
 import net.guwy.radiated.mechanics.lung_diseases.PlayerLungDiseasesProvider;
-import net.guwy.sticky_foundations.mechanics.visor.IVisorItem;
-import net.minecraft.core.particles.ParticleOptions;
+import net.guwy.sticky_foundations.index.SFTags;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -132,7 +130,7 @@ public class PlayerHazardHandler {
 
 
     private static void HandleBlindingHazard(Player player, double count){
-        if(count > 0 && !(player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof IVisorItem)){
+        if(count > 0 && !(player.getItemBySlot(EquipmentSlot.HEAD).is(SFTags.Items.VISORS_THAT_GET_DIRTY))){
             // Blind
             player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 45));
         }
@@ -174,10 +172,10 @@ public class PlayerHazardHandler {
                     }
                 };
                 double rand = Math.random();
-                if(rand > 0.75) soundPlayer.playSound(ModSounds.COUGH1.get(), 1f, 1f);
-                else if(rand > 0.50) soundPlayer.playSound(ModSounds.COUGH2.get(), 1f, 1f);
-                else if (rand > 0.25) soundPlayer.playSound(ModSounds.COUGH3.get(), 1f, 1f);
-                else soundPlayer.playSound(ModSounds.COUGH4.get(), 1f, 1f);
+                if(rand > 0.75) soundPlayer.playSound(NTMSounds.COUGH1.get(), 1f, 1f);
+                else if(rand > 0.50) soundPlayer.playSound(NTMSounds.COUGH2.get(), 1f, 1f);
+                else if (rand > 0.25) soundPlayer.playSound(NTMSounds.COUGH3.get(), 1f, 1f);
+                else soundPlayer.playSound(NTMSounds.COUGH4.get(), 1f, 1f);
                 soundPlayer.remove(Entity.RemovalReason.DISCARDED);
 
                 // Cough Particles

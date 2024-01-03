@@ -15,8 +15,8 @@ public interface IRadiationResistance {
 
     String TAG_DUCT_TAPE = "duct_tape";
 
-    static List<Component> DuctTapeTooltip(ItemStack pStack){
-        List<Component> pTooltipComponents = new ArrayList<Component>();
+    static List<Component> DuctTapeTooltip(ItemStack pStack, List<Component> pTooltipComponents, int index){
+        List<Component> newTooltipComponents = new ArrayList<Component>();
 
         int ductTapeAmount = getDuctTapeAmount(pStack);
         if(ductTapeAmount > 0 || getMaxApplicableDuctTape(pStack) > 0){
@@ -24,16 +24,21 @@ public interface IRadiationResistance {
             int currentMaxApplicableDuctTape = getMaxApplicableDuctTape(pStack);
 
             if(currentMaxApplicableDuctTape > ductTapeAmount) {
-                pTooltipComponents.add(Component.translatable("tooltip.radiated.armor.patching.1").withStyle(ChatFormatting.GRAY));
-                pTooltipComponents.add(Component.translatable("tooltip.radiated.armor.patching.2").withStyle(ChatFormatting.GRAY));
+                newTooltipComponents.add(Component.translatable("tooltip.radiated.armor.patching.1").withStyle(ChatFormatting.GRAY));
+                newTooltipComponents.add(Component.translatable("tooltip.radiated.armor.patching.2").withStyle(ChatFormatting.GRAY));
             }
 
-            pTooltipComponents.add(Component.translatable("tooltip.radiated.armor.patching.3", ductTapeAmount, currentMaxApplicableDuctTape));
+            newTooltipComponents.add(Component.literal(Component.translatable("tooltip.radiated.armor.patching.3").getString() + "[" + ductTapeAmount + "/" + currentMaxApplicableDuctTape + "]"));
 
-            pTooltipComponents.add(Component.literal(""));  // Formatting
+            // Formatting with if there's any other tooltip in mind
+            if(pTooltipComponents.size() > index){
+                if(pTooltipComponents.get(index).getString() != ""){
+                    newTooltipComponents.add(Component.literal(""));
+                }
+            }
         }
 
-        return pTooltipComponents;
+        return newTooltipComponents;
     }
 
     static int getDuctTapeAmount(ItemStack itemStack){

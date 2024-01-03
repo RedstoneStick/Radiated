@@ -2,8 +2,8 @@ package net.guwy.radiated.content.blocks.machines.rtg;
 
 import net.guwy.radiated.content.items.RTGPelletItem;
 import net.guwy.radiated.content.network_packages.RTGSyncS2CPacket;
-import net.guwy.radiated.index.ModNetworking;
-import net.guwy.radiated.index.RDTBlockEntities;
+import net.guwy.radiated.index.NTMNetworking;
+import net.guwy.radiated.index.NTMBlockEntities;
 import net.guwy.radiated.utils.ModEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -65,7 +65,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     public RTGBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(RDTBlockEntities.RTG.get(), pPos, pBlockState);
+        super(NTMBlockEntities.RTG.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
@@ -91,7 +91,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
 
     public static void onUse(Level pLevel, BlockPos pPos, BlockState pState, Player pPlayer) {
         RTGBlockEntity blockEntity = (RTGBlockEntity) pLevel.getBlockEntity(pPos);
-        ModNetworking.sendToClients(new RTGSyncS2CPacket(blockEntity.getEnergyStorage().getEnergyStored(), pPos));
+        NTMNetworking.sendToClients(new RTGSyncS2CPacket(blockEntity.getEnergyStorage().getEnergyStored(), pPos));
     }
 
     @Override
@@ -170,7 +170,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
         int energyGen = (int) (pEntity.heat * pEntity.ENERGY_MULTIPLIER);
 
         pEntity.ENERGY_STORAGE.setEnergy(Math.min(pEntity.CAPACITY, pEntity.ENERGY_STORAGE.getEnergyStored() + energyGen));
-        ModNetworking.sendToClients(new RTGSyncS2CPacket(pEntity.ENERGY_STORAGE.getEnergyStored(), pEntity.getBlockPos()));
+        NTMNetworking.sendToClients(new RTGSyncS2CPacket(pEntity.ENERGY_STORAGE.getEnergyStored(), pEntity.getBlockPos()));
         setChanged(level, blockPos, state);
 
         PushEnergyToSlot(inventory, pEntity, 0);
@@ -241,7 +241,7 @@ public class RTGBlockEntity extends BlockEntity implements MenuProvider {
         @Override
         public void onEnergyChanged() {
             setChanged();
-            ModNetworking.sendToClients(new RTGSyncS2CPacket(this.energy, getBlockPos()));
+            NTMNetworking.sendToClients(new RTGSyncS2CPacket(this.energy, getBlockPos()));
         }
     };
 

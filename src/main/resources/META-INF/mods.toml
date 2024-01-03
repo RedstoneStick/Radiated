@@ -71,14 +71,8 @@ Check out the original mod btw: https://www.curseforge.com/minecraft/mc-mods/hbm
     ordering="NONE"
     side="BOTH"
 [[dependencies.radiated]]
-    modId="create"
-    mandatory=true
-    versionRange="[0.5.0g,0.6.0)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.radiated]]
     modId="sticky_foundations"
     mandatory=true
-    versionRange="[0.09,)"
+    versionRange="[0.14,)"
     ordering="NONE"
     side="BOTH"
