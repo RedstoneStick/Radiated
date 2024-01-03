@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ntm:machines/turbine/turbine_top",
+    "side": "ntm:machines/turbine/turbine_side"
+  }
+}

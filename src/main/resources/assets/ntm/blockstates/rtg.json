@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "ntm:block/machines/rtg"
+      }
+    },
+    {
+      "apply": {
+        "model": "ntm:block/machines/rtg_connector",
+        "uvlock": false
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "ntm:block/machines/rtg_connector",
+        "uvlock": false,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "ntm:block/machines/rtg_connector",
+        "uvlock": false,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "ntm:block/machines/rtg_connector",
+        "uvlock": false,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

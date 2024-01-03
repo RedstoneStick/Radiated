@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "radiated:machines/rtg/pellets/decayed_lead_rtg_pellet"
+  }
+}

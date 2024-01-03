@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "radiated:items/ore_bedrock",
+    "layer1": "radiated:items/ore_overlay.borax"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "radiated:item/hazmat_high_performance_cloth"
+  }
+}

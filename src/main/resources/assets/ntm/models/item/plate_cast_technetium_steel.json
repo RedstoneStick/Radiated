@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "radiated:items/plate_cast.technetium_steel"
+  }
+}

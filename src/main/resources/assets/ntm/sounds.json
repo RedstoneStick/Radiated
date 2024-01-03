@@ -1,0 +1,92 @@
+{
+  "radaway": {
+    "subtitle": "sounds.ntm.player_cough",
+    "sounds": [
+      "ntm:item/radaway"
+    ]
+  },
+  "geiger1": {
+    "subtitle": "sounds.ntm.geiger_counter",
+    "sounds": [
+      "ntm:item/geiger1"
+    ]
+  },
+  "geiger2": {
+    "subtitle": "sounds.ntm.geiger_counter",
+    "sounds": [
+      "ntm:item/geiger2"
+    ]
+  },
+  "geiger3": {
+    "subtitle": "sounds.ntm.geiger_counter",
+    "sounds": [
+      "ntm:item/geiger3"
+    ]
+  },
+  "geiger4": {
+    "subtitle": "sounds.ntm.geiger_counter",
+    "sounds": [
+      "ntm:item/geiger4"
+    ]
+  },
+  "geiger5": {
+    "subtitle": "sounds.ntm.geiger_counter",
+    "sounds": [
+      "ntm:item/geiger5"
+    ]
+  },
+  "geiger6": {
+    "subtitle": "sounds.ntm.geiger_counter",
+    "sounds": [
+      "ntm:item/geiger6"
+    ]
+  },
+  "tech_boop": {
+    "subtitle": "sounds.ntm.tech_boop",
+    "sounds": [
+      "ntm:item/tech_boop"
+    ]
+  },
+  "duct_tape": {
+    "subtitle": "sounds.ntm.duct_tape",
+    "sounds": [
+      "ntm:item/duct_tape"
+    ]
+  },
+  "gas_mask_screw": {
+    "subtitle": "sounds.ntm.gas_mask_screw",
+    "sounds": [
+      "ntm:item/gas_mask_screw"
+    ]
+  },
+  "vomit": {
+    "subtitle": "sounds.ntm.vomit",
+    "sounds": [
+      "ntm:entity/vomit"
+    ]
+  },
+  "cough1": {
+    "subtitle": "sounds.ntm.cough",
+    "sounds": [
+      "ntm:entity/cough1"
+    ]
+  },
+  "cough2": {
+    "subtitle": "sounds.ntm.cough",
+    "sounds": [
+      "ntm:entity/cough2"
+    ]
+  },
+  "cough3": {
+    "subtitle": "sounds.ntm.cough",
+    "sounds": [
+      "ntm:entity/cough3"
+    ]
+  },
+  "cough4": {
+    "subtitle": "sounds.ntm.cough",
+    "sounds": [
+      "ntm:entity/cough4"
+    ]
+  }
+}
