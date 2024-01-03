@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:semtex_ingot",
-    "radiated:c4_ingot"
+    "ntm:semtex_ingot",
+    "ntm:c4_ingot"
   ]
 }

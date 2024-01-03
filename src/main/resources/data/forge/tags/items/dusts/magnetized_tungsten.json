@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:magnetized_tungsten_dust"
+    "ntm:magnetized_tungsten_dust"
   ]
 }

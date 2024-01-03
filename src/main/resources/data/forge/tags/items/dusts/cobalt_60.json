@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:cobalt_60_dust"
+    "ntm:cobalt_60_dust"
   ]
 }

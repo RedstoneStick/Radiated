@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "consumed_item": {
+      "conditions": {},
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.ntm.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ntm:rtg"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.ntm.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "consumed_item"
+    ]
+  ]
+}

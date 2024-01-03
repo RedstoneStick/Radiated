@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:niobium_dust"
+    "ntm:niobium_dust"
   ]
 }

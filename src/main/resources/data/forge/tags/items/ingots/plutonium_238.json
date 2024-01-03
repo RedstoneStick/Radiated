@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:plutonium_238_ingot"
+    "ntm:plutonium_238_ingot"
   ]
 }

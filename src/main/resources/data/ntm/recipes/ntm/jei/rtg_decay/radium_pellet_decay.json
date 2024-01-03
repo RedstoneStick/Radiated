@@ -1,0 +1,11 @@
+{
+  "type": "ntm:rtg_decay",
+  "ingredients": [
+    {
+      "item": "ntm:radium_rtg_pellet"
+    }
+  ],
+  "output": {
+    "item": "ntm:decayed_lead_rtg_pellet"
+  }
+}

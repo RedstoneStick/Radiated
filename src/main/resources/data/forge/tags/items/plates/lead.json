@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:plate_lead"
+    "ntm:plate_lead"
   ]
 }

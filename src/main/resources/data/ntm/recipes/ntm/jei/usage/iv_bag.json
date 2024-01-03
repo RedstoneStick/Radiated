@@ -1,0 +1,11 @@
+{
+  "type": "ntm:usage",
+  "ingredients": [
+    {
+      "item": "ntm:iv_bag"
+    }
+  ],
+  "output": {
+    "item": "ntm:blood_bag"
+  }
+}

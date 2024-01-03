@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:nugget_pu239"
+    "ntm:nugget_pu239"
   ]
 }

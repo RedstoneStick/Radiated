@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:cmb_steel_dust"
+    "ntm:cmb_steel_dust"
   ]
 }

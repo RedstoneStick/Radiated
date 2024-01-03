@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:lead_dust"
+    "ntm:lead_dust"
   ]
 }

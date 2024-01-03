@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:fragment_cobalt",
+    "ntm:fragment_cobalt",
     "radiated:nugget_cobalt"
   ]
 }

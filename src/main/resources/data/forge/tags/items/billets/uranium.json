@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:uranium_billet"
+    "ntm:uranium_billet"
   ]
 }

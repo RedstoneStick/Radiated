@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "radiated:items/chemical_dye",
-    "layer1": "radiated:items/chemical_dye_overlay"
-  }
-}

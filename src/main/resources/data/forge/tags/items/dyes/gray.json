@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:oil_tar_coal",
-    "radiated:ash_misc"
+    "ntm:oil_tar_coal",
+    "ntm:ash_misc"
   ]
 }

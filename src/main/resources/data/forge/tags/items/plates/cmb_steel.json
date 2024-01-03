@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:plate_combine_steel"
+    "ntm:plate_combine_steel"
   ]
 }

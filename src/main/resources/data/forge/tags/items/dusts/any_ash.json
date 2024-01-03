@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "radiated:ash_wood",
-    "radiated:ash_coal",
-    "radiated:ash_misc"
+    "ntm:ash_wood",
+    "ntm:ash_coal",
+    "ntm:ash_misc"
   ]
 }

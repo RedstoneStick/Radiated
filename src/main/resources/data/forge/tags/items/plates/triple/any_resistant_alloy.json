@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:plate_cast_technetium_steel",
-    "radiated:plate_cast_cadmium_steel"
+    "ntm:plate_cast_technetium_steel",
+    "ntm:plate_cast_cadmium_steel"
   ]
 }

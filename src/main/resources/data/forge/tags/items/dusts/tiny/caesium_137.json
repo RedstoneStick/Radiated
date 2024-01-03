@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:caesium_137_dust_tiny"
+    "ntm:caesium_137_dust_tiny"
   ]
 }

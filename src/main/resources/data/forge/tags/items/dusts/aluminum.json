@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:aluminium_dust"
+    "ntm:aluminium_dust"
   ]
 }

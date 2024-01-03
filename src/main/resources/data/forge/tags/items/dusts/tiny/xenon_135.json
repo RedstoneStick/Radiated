@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:xenon_135_dust_tiny"
+    "ntm:xenon_135_dust_tiny"
   ]
 }

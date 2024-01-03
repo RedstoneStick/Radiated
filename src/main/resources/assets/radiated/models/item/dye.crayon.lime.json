@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "radiated:items/crayon",
-    "layer1": "radiated:items/crayon_overlay"
-  }
-}

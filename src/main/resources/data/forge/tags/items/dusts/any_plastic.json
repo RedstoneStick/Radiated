@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:polymer_dust",
-    "radiated:bakelite_dust"
+    "ntm:polymer_dust",
+    "ntm:bakelite_dust"
   ]
 }

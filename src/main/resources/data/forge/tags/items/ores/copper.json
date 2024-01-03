@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:ore_enriched_copper"
+    "ntm:ore_enriched_copper"
   ]
 }

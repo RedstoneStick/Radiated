@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:oil_tar_wood",
-    "radiated:lignite_dust"
+    "ntm:oil_tar_wood",
+    "ntm:lignite_dust"
   ]
 }

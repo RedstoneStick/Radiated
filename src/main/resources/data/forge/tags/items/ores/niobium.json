@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:ore_enriched_niobium"
+    "ntm:ore_enriched_niobium"
   ]
 }

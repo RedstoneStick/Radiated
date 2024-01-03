@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:ore_enriched_borax"
+    "ntm:ore_enriched_borax"
   ]
 }

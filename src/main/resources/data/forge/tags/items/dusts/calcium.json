@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:calcium_dust"
+    "ntm:calcium_dust"
   ]
 }

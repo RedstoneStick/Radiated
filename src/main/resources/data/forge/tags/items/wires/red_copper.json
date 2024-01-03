@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:wire_red_copper"
+    "ntm:wire_red_copper"
   ]
 }

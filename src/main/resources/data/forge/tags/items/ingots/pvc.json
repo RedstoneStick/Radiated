@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:pvc"
+    "ntm:pvc"
   ]
 }

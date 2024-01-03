@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:iodine_131_dust_tiny"
+    "ntm:iodine_131_dust_tiny"
   ]
 }

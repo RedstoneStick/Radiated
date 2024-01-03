@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:thorium_232_ingot"
+    "ntm:thorium_232_ingot"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:oil_tar"
+    "ntm:oil_tar"
   ]
 }

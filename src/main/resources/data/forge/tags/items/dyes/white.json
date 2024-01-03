@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:oil_tar_paraffin",
-    "radiated:fluorite_dust"
+    "ntm:oil_tar_paraffin",
+    "ntm:fluorite_dust"
   ]
 }

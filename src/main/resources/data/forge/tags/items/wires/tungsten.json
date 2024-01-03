@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:wire_tungsten"
+    "ntm:wire_tungsten"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:tnt",
-    "radiated:tatb"
+    "ntm:tnt",
+    "ntm:tatb"
   ]
 }

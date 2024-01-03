@@ -21,8 +21,8 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'org.spongepowered.mixin'
 
 version = '0.0.6-1.19.2'
-group = 'net.guwy.radiated' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'radiated'
+group = 'net.guwy.ntm' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'ntm'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -65,10 +65,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'radiated'
+            property 'forge.enabledGameTestNamespaces', 'ntm'
 
             mods {
-                radiated {
+                ntm {
                     source sourceSets.main
                 }
             }
@@ -81,10 +81,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'radiated'
+            property 'forge.enabledGameTestNamespaces', 'ntm'
 
             mods {
-                radiated {
+                ntm {
                     source sourceSets.main
                 }
             }
@@ -100,10 +100,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'radiated'
+            property 'forge.enabledGameTestNamespaces', 'ntm'
 
             mods {
-                radiated {
+                ntm {
                     source sourceSets.main
                 }
             }
@@ -117,10 +117,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'radiated', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'ntm', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                radiated {
+                ntm {
                     source sourceSets.main
                 }
             }
@@ -213,7 +213,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "radiated",
+                "Specification-Title"     : "ntm",
                 "Specification-Vendor"    : "examplemodsareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,

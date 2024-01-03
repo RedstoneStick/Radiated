@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:nugget_co60"
+    "ntm:nugget_co60"
   ]
 }

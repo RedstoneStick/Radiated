@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:polycarbonate",
-    "radiated:pvc"
+    "ntm:polycarbonate",
+    "ntm:pvc"
   ]
 }

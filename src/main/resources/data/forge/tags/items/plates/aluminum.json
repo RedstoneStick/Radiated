@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "radiated:plate_aluminium"
+    "ntm:plate_aluminium"
   ]
 }

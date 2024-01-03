@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "radiated:bismuth_ingot",
-    "radiated:arsenic_ingot"
+    "ntm:bismuth_ingot",
+    "ntm:arsenic_ingot"
   ]
 }
