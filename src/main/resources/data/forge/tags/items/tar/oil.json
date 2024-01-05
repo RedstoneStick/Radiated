@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ntm:oil_tar"
+    "ntm:oil_tar.crude"
   ]
 }

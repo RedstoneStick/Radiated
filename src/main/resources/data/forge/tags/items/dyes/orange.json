@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ntm:cadmium_dust"
+    "ntm:powder_cadmium",
+    "ntm:dye.chem.orange",
+    "ntm:dye.crayon.orange"
   ]
 }

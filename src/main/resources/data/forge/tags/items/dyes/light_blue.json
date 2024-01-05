@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+  "ntm:dye.chem.light_blue",
+  "ntm:dye.crayon.light_blue"
   ]
 }

@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ntm:oil_tar_wood",
-    "ntm:lignite_dust"
+    "ntm:oil_tar.wood",
+    "ntm:powder_lignite",
+    "ntm:dye.chem.brown",
+    "ntm:dye.crayon.brown"
   ]
 }

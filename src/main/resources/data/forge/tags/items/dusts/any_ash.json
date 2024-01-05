@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ntm:ash_wood",
-    "ntm:ash_coal",
-    "ntm:ash_misc"
+    "ntm:powder_ash.wood",
+    "ntm:powder_ash.coal",
+    "ntm:powder_ash.misc"
   ]
 }

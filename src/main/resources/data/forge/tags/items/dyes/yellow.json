@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ntm:sulfur_dust"
+    "ntm:sulfur",
+    "ntm:dye.chem.yellow",
+    "ntm:dye.crayon.yellow"
   ]
 }

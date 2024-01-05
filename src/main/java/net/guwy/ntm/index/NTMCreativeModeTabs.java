@@ -9,7 +9,7 @@ public class NTMCreativeModeTabs {
     public static final CreativeModeTab RESOURCES_AND_PARTS = new CreativeModeTab("resources_and_parts") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(NTMResourcesAndParts.URANIUM_INGOT.get());
+            return new ItemStack(NTMResourcesAndParts.INGOT_URANIUM.get());
         }
     };
 

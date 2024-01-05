@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ntm:lapis_dust"
+    "ntm:powder_lapis",
+    "ntm:dye.chem.blue",
+    "ntm:dye.crayon.blue"
   ]
 }

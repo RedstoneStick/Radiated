@@ -1,9 +1,9 @@
 {
   "loader": "forge:obj",
   "flip_v": true,
-  "model": "radiated:models/item/sawmill_saw.obj",
+  "model": "ntm:models/item/sawmill_saw.obj",
   "textures": {
-    "texture0": "radiated:models/machines/sawmill"
+    "texture0": "ntm:models/machines/sawmill"
   },
   "display": {
     "thirdperson_righthand": {

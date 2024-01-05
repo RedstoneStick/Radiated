@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+  "ntm:dye.chem.red",
+  "ntm:dye.crayon.red"
   ]
 }

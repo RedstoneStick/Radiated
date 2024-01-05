@@ -1,9 +1,9 @@
 {
   "loader": "forge:obj",
   "flip_v": true,
-  "model": "radiated:models/item/stirling_gear.obj",
+  "model": "ntm:models/item/stirling_gear.obj",
   "textures": {
-    "texture0": "radiated:models/machines/stirling_steel"
+    "texture0": "ntm:models/machines/stirling_steel"
   },
   "display": {
     "thirdperson_righthand": {

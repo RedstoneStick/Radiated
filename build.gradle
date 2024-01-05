@@ -188,7 +188,7 @@ dependencies {
 
     implementation fg.deobf("curse.maven:the_one_probe-245211:3965693")
 
-    implementation fg.deobf("curse.maven:mekanism-268560:4385637")
+    //implementation fg.deobf("curse.maven:mekanism-268560:4385637")
     //implementation fg.deobf("curse.maven:powah-633483:4183078")
     implementation fg.deobf("curse.maven:architechtury-419699:4384406")
     implementation fg.deobf("curse.maven:cloth_config-348521:3972423")

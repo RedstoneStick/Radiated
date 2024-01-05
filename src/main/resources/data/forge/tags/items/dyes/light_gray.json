@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ntm:titanium_dust",
-    "ntm:ash_wood"
+    "ntm:powder_titanium",
+    "ntm:powder_ash.wood",
+    "ntm:dye.chem.light_gray",
+    "ntm:dye.crayon.light_gray"
   ]
 }

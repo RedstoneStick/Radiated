@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ntm:semtex_ingot",
-    "ntm:c4_ingot"
+    "ntm:ingot_semtex",
+    "ntm:ingot_c4"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ntm:polymer",
-    "ntm:bakelite"
+    "ntm:ingot_polymer",
+    "ntm:ingot_bakelite"
   ]
 }

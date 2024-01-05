@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ntm:items/ore_nitrated",
+    "layer1": "ntm:items/ore_overlay"
+  }
+}

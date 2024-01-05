@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ntm:bismuth_ingot",
-    "ntm:arsenic_ingot"
+    "ntm:ingot_bismuth",
+    "ntm:ingot_arsenic"
   ]
 }

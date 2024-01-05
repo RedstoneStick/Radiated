@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ntm:polymer_dust",
-    "ntm:bakelite_dust"
+    "ntm:powder_polymer",
+    "ntm:powder_bakelite"
   ]
 }

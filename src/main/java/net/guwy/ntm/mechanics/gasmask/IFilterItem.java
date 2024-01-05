@@ -42,7 +42,7 @@ public interface IFilterItem {
                 pTooltipComponents.add(Component.translatable("tooltip.ntm.filter.shift.carbon_monoxide"));
             }
             if(this.GetFiltrableHazards().contains(AirborneHazardTypes.NERVE_AGENT)){
-                pTooltipComponents.add(Component.translatable("tooltip.radiated.filter.shift.nerve_agent"));
+                pTooltipComponents.add(Component.translatable("tooltip.ntm.filter.shift.nerve_agent"));
             }
 
             // Return a debug message if no filtering can be done

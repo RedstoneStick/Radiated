@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ntm:oil_tar_paraffin",
-    "ntm:fluorite_dust"
+    "ntm:oil_tar.paraffin",
+    "ntm:fluorite",
+    "ntm:dye.chem.white",
+    "ntm:dye.crayon.white"
   ]
 }

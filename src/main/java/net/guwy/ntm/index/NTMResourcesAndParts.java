@@ -1,11 +1,14 @@
 package net.guwy.ntm.index;
 
 import net.guwy.ntm.NTM;
-import net.guwy.ntm.content.items.DyeItem;
+import net.guwy.ntm.content.items.MultiColorItem;
 import net.guwy.ntm.content.items.RagItem;
 import net.guwy.ntm.content.items.hazard_items.BasicHazardItem;
 import net.guwy.ntm.content.items.hazard_items.BasicRadioactiveItem;
-import net.guwy.ntm.enums.DyeColors;
+import net.guwy.ntm.enums.EBedrockOreByproducts;
+import net.guwy.ntm.enums.EBedrockOreTypes;
+import net.guwy.ntm.enums.EBedrockOres;
+import net.guwy.ntm.enums.EDyeColors;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -30,198 +33,198 @@ public class NTMResourcesAndParts {
 
 
 
-    public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_URANIUM = ITEMS.register("ingot_uranium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.35));
-    public static final RegistryObject<Item> URANIUM_233_INGOT = ITEMS.register("uranium_233_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_U233 = ITEMS.register("ingot_u233", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             5.0));
-    public static final RegistryObject<Item> URANIUM_235_INGOT = ITEMS.register("uranium_235_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_U235 = ITEMS.register("ingot_u235", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1.0));
-    public static final RegistryObject<Item> URANIUM_238_INGOT = ITEMS.register("uranium_238_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_U238 = ITEMS.register("ingot_u238", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.25));
-    public static final RegistryObject<Item> THORIUM_232_INGOT = ITEMS.register("thorium_232_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_TH232 = ITEMS.register("ingot_th232", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.1));
-    public static final RegistryObject<Item> PLUTONIUM_INGOT = ITEMS.register("plutonium_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_PLUTONIUM = ITEMS.register("ingot_plutonium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             7.5));
-    public static final RegistryObject<Item> PLUTONIUM_238_INGOT = ITEMS.register("plutonium_238_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_PU238 = ITEMS.register("ingot_pu238", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             10.0, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> PLUTONIUM_239_INGOT = ITEMS.register("plutonium_239_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_PU239 = ITEMS.register("ingot_pu239", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             5.0));
-    public static final RegistryObject<Item> PLUTONIUM_240_INGOT = ITEMS.register("plutonium_240_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_PU240 = ITEMS.register("ingot_pu240", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             7.5));
-    public static final RegistryObject<Item> PLUTONIUM_241_INGOT = ITEMS.register("plutonium_241_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_PU241 = ITEMS.register("ingot_pu241", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             25));
-    public static final RegistryObject<Item> PLUTONIUM_RG_INGOT = ITEMS.register("plutonium_rg_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_PU_MIX = ITEMS.register("ingot_pu_mix", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             6.25));
-    public static final RegistryObject<Item> AMERICIUM_241_INGOT = ITEMS.register("americium_241_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_AM241 = ITEMS.register("ingot_am241", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             8.5));
-    public static final RegistryObject<Item> AMERICIUM_242_INGOT = ITEMS.register("americium_242_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_AM242 = ITEMS.register("ingot_am242", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             9.5));
-    public static final RegistryObject<Item> AMERICIUM_RG_INGOT = ITEMS.register("americium_rg_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_AM_MIX = ITEMS.register("ingot_am_mix", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             9));
-    public static final RegistryObject<Item> NEPTUNIUM_INGOT = ITEMS.register("neptunium_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_NEPTUNIUM = ITEMS.register("ingot_neptunium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.5){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
 
-            pTooltipComponents.add(Component.translatable("item.ntm.neptunium_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_neptunium.tooltip"));
         }
     });
-    public static final RegistryObject<Item> POLONIUM_210_INGOT = ITEMS.register("polonium_210_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_POLONIUM = ITEMS.register("ingot_polonium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             75));
-    public static final RegistryObject<Item> TECHNETIUM_99_INGOT = ITEMS.register("technetium_99_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_TECHNETIUM = ITEMS.register("ingot_technetium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.75));
-    public static final RegistryObject<Item> COBALT_60_INGOT = ITEMS.register("cobalt_60_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_CO60 = ITEMS.register("ingot_co60", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             30, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> STRONTIUM_90_INGOT = ITEMS.register("strontium_90_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_SR90 = ITEMS.register("ingot_sr90", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             15, 0, 0, true, true, false, false));
-    public static final RegistryObject<Item> GOLD_198_INGOT = ITEMS.register("gold_198_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_AU198 = ITEMS.register("ingot_au198", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             500, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> LEAD_209_INGOT = ITEMS.register("lead_209_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_PB209 = ITEMS.register("ingot_pb209", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             10000, 0, 0, true, false, true, false));
-    public static final RegistryObject<Item> RADIUM_226_INGOT = ITEMS.register("radium_226_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_RA226 = ITEMS.register("ingot_ra226", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             7.5));
-    public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> RED_COPPER_INGOT = ITEMS.register("red_copper_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ADVANCED_ALLOY_INGOT = ITEMS.register("advanced_alloy_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> TECHNETIUM_STEEL_INGOT = ITEMS.register("technetium_steel_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CADMIUM_STEEL_INGOT = ITEMS.register("cadmium_steel_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> LEAD_INGOT = ITEMS.register("lead_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BISMUTH_INGOT = ITEMS.register("bismuth_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ARSENIC_INGOT = ITEMS.register("arsenic_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CALCIUM_INGOT = ITEMS.register("calcium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CADMIUM_INGOT = ITEMS.register("cadmium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> TANTALUM_INGOT = ITEMS.register("tantalum_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> INGOT_TITANIUM = ITEMS.register("ingot_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_COPPER = ITEMS.register("ingot_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_RED_COPPER = ITEMS.register("ingot_red_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_ADVANCED_ALLOY = ITEMS.register("ingot_advanced_alloy", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_TUNGSTEN = ITEMS.register("ingot_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_ALUMINIUM = ITEMS.register("ingot_aluminium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_STEEL = ITEMS.register("ingot_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_TCALLOY = ITEMS.register("ingot_tcalloy", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_CDALLOY = ITEMS.register("ingot_cdalloy", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_LEAD = ITEMS.register("ingot_lead", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_BISMUTH = ITEMS.register("ingot_bismuth", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_ARSENIC = ITEMS.register("ingot_arsenic", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_CALCIUM = ITEMS.register("ingot_calcium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_CADMIUM = ITEMS.register("ingot_cadmium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_TANTALIUM = ITEMS.register("ingot_tantalium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
 
-            pTooltipComponents.add(Component.translatable("item.ntm.tantalum_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_tantalium.tooltip"));
         }
     });
-    public static final RegistryObject<Item> NIOBIUM_INGOT = ITEMS.register("niobium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BERYLLIUM_INGOT = ITEMS.register("beryllium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BORON_INGOT = ITEMS.register("boron_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> GRAPHITE_INGOT = ITEMS.register("graphite_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> FIREBRICK = ITEMS.register("firebrick", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> DURA_STEEL_INGOT = ITEMS.register("dura_steel_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> POLYMER = ITEMS.register("polymer", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BAKELITE = ITEMS.register("bakelite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> RUBBER = ITEMS.register("rubber", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> POLYCARBONATE = ITEMS.register("polycarbonate", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PVC = ITEMS.register("pvc", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> WATZ_MUD = ITEMS.register("watz_mud", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)
+    public static final RegistryObject<Item> INGOT_NIOBIUM = ITEMS.register("ingot_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_BERYLLIUM = ITEMS.register("ingot_beryllium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_COBALT = ITEMS.register("ingot_cobalt", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_BORON = ITEMS.register("ingot_boron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_GRAPHITE = ITEMS.register("ingot_graphite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_FIREBRICK = ITEMS.register("ingot_firebrick", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_DURA_STEEL = ITEMS.register("ingot_dura_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_POLYMER = ITEMS.register("ingot_polymer", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_BAKELITE = ITEMS.register("ingot_bakelite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_RUBBER = ITEMS.register("ingot_rubber", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_PC = ITEMS.register("ingot_pc", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_PVC = ITEMS.register("ingot_pvc", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_MUD = ITEMS.register("ingot_mud", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)
             , 1));
-    public static final RegistryObject<Item> SCHRARANIUM_INGOT = ITEMS.register("schraranium_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_SCHRARANIUM = ITEMS.register("ingot_schraranium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1.5, 0, 0, false, false, true, false){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.schraranium_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_schraranium.tooltip"));
         }
     });
-    public static final RegistryObject<Item> SCHRABIDIUM_INGOT = ITEMS.register("schrabidium_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
+    public static final RegistryObject<Item> INGOT_SCHRABIDIUM = ITEMS.register("ingot_schrabidium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
             15, 0, 0, false, false, true, false));
-    public static final RegistryObject<Item> SCHRABIDATE_INGOT = ITEMS.register("schrabidate_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
+    public static final RegistryObject<Item> INGOT_SCHRABIDATE = ITEMS.register("ingot_schrabidate", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
             1.5, 0, 0, false, false, true, false));
-    public static final RegistryObject<Item> MAGNETIZED_TUNGSTEN_INGOT = ITEMS.register("magnetized_tungsten_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CMB_STEEL_INGOT = ITEMS.register("cmb_steel_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> INGOT_MAGNETIZED_TUNGSTEN = ITEMS.register("ingot_magnetized_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_COMBINE_STEEL = ITEMS.register("ingot_combine_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.cmb_steel_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_combine_steel.tooltip"));
         }
     });
-    public static final RegistryObject<Item> SOLINIUM_INGOT = ITEMS.register("solinium_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_SOLINIUM = ITEMS.register("ingot_solinium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             17.5, 0, 0, false, false, true, false));
-    public static final RegistryObject<Item> GHIORSIUM_336_INGOT = ITEMS.register("ghiorsium_336_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC),
+    public static final RegistryObject<Item> INGOT_GH336 = ITEMS.register("ingot_gh336", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC),
             5){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.ghiorsium_336_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_gh336.tooltip"));
         }
     });
-    public static final RegistryObject<Item> URANIUM_FUEL_INGOT = ITEMS.register("uranium_fuel_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_URANIUM_FUEL = ITEMS.register("ingot_uranium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.5));
-    public static final RegistryObject<Item> THORIUM_FUEL_INGOT = ITEMS.register("thorium_fuel_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_THORIUM_FUEL = ITEMS.register("ingot_thorium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1.75));
-    public static final RegistryObject<Item> PLUTONIUM_FUEL_INGOT = ITEMS.register("plutonium_fuel_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_PLUTONIUM_FUEL = ITEMS.register("ingot_plutonium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             4.25));
-    public static final RegistryObject<Item> NEPTUNIUM_FUEL_INGOT = ITEMS.register("neptunium_fuel_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_NEPTUNIUM_FUEL = ITEMS.register("ingot_neptunium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1.5));
-    public static final RegistryObject<Item> MOX_FUEL_INGOT = ITEMS.register("mox_fuel_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_MOX_FUEL = ITEMS.register("ingot_mox_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.5));
-    public static final RegistryObject<Item> AMERICIUM_FUEL_INGOT = ITEMS.register("americium_fuel_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_AMERICIUM_FUEL = ITEMS.register("ingot_americium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             4.75));
-    public static final RegistryObject<Item> SCHRABIDIUM_FUEL_INGOT = ITEMS.register("schrabidium_fuel_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_SCHRABIDIUM_FUEL = ITEMS.register("ingot_schrabidium_fuel", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             5.85, 0, 0, false, false, true, false));
-    public static final RegistryObject<Item> HES_FUEL_INGOT = ITEMS.register("hes_fuel_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_HES = ITEMS.register("ingot_hes", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             5.85));
-    public static final RegistryObject<Item> LES_FUEL_INGOT = ITEMS.register("les_fuel_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_LES = ITEMS.register("ingot_les", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             5.85));
-    public static final RegistryObject<Item> AUSTRALIUM_INGOT = ITEMS.register("australium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> LANTHANUM_INGOT = ITEMS.register("lanthanum_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> INGOT_AUSTRALIUM = ITEMS.register("ingot_australium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> INGOT_LANTHANIUM = ITEMS.register("ingot_lanthanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.lanthanum_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_lanthanium.tooltip"));
         }
     });
-    public static final RegistryObject<Item> ACTINIUM_227_INGOT = ITEMS.register("actinium_227_ingot", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_ACTINIUM = ITEMS.register("ingot_actinium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             30));
-    public static final RegistryObject<Item> DESH_INGOT = ITEMS.register("desh_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> FERROURANIUM_INGOT = ITEMS.register("ferrouranium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> STARMETAL_INGOT = ITEMS.register("starmetal_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> SATURNITE_INGOT = ITEMS.register("saturnite_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> EUPHEMIUM_INGOT = ITEMS.register("euphemium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)){
+    public static final RegistryObject<Item> INGOT_DESH = ITEMS.register("ingot_desh", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_FERROURANIUM = ITEMS.register("ingot_ferrouranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_STARMETAL = ITEMS.register("ingot_starmetal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INGOT_SATURNITE = ITEMS.register("ingot_saturnite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INGOT_EUPHEMIUM = ITEMS.register("ingot_euphemium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.euphemium_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_euphemium.tooltip"));
         }
     });
-    public static final RegistryObject<Item> DINEUTRONIUM_INGOT = ITEMS.register("dineutronium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ELECTRONIUM_INGOT = ITEMS.register("electronium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> SMORE_INGOT = ITEMS.register("smore_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> OSMIRIDIUM_INGOT = ITEMS.register("osmiridium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> DUSTED_STEEL_INGOT = ITEMS.register("dusted_steel_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> INGOT_DINEUTRONIUM = ITEMS.register("ingot_dineutronium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_ELECTRONIUM = ITEMS.register("ingot_electronium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_SMORE = ITEMS.register("ingot_smore", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_OSMIRIDIUM = ITEMS.register("ingot_osmiridium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> INGOT_STEEL_DUSTED = ITEMS.register("ingot_steel_dusted", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.literal("Non Usable").withStyle(ChatFormatting.LIGHT_PURPLE));
+            pTooltipComponents.add(Component.literal("Non Usable, for now").withStyle(ChatFormatting.LIGHT_PURPLE));
         }
     });
-    public static final RegistryObject<Item> CHAINSTEEL_INGOT = ITEMS.register("chainsteel_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> METEORITE_INGOT = ITEMS.register("meteorite_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> FORGED_METEORITE_INGOT = ITEMS.register("forged_meteorite_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> METEORITE_BLADE = ITEMS.register("meteorite_blade", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PHOSPHORUS_INGOT = ITEMS.register("phosphorus_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_CHAINSTEEL = ITEMS.register("ingot_chainsteel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_METEORITE = ITEMS.register("ingot_meteorite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_METEORITE_FORGED = ITEMS.register("ingot_meteorite_forged", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BLADE_METEORITE = ITEMS.register("blade_meteorite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_PHOSPHORUS = ITEMS.register("ingot_phosphorus", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> LITHIUM_INGOT = ITEMS.register("lithium_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> LITHIUM = ITEMS.register("lithium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 0, false, true, false, false));
-    public static final RegistryObject<Item> ZIRCONIUM_INGOT = ITEMS.register("zirconium_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> SEMTEX_INGOT = ITEMS.register("semtex_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> INGOT_ZIRCONIUM = ITEMS.register("ingot_zirconium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_SEMTEX = ITEMS.register("ingot_semtex", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.semtex_ingot.tooltip.1"));
-            pTooltipComponents.add(Component.translatable("item.ntm.semtex_ingot.tooltip.2"));
-            pTooltipComponents.add(Component.translatable("item.ntm.semtex_ingot.tooltip.3"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_semtex.tooltip.1"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_semtex.tooltip.2"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_semtex.tooltip.3"));
         }
     });
-    public static final RegistryObject<Item> C4_INGOT = ITEMS.register("c4_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> OIL_TAR = ITEMS.register("oil_tar", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> OIL_TAR_CRACK = ITEMS.register("oil_tar_crack", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> OIL_TAR_COAL = ITEMS.register("oil_tar_coal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> OIL_TAR_WOOD = ITEMS.register("oil_tar_wood", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> OIL_TAR_WAX = ITEMS.register("oil_tar_wax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> OIL_TAR_PARAFFIN = ITEMS.register("oil_tar_paraffin", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> INGOT_C4 = ITEMS.register("ingot_c4", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> OIL_TAR_CRUDE = ITEMS.register("oil_tar.crude", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> OIL_TAR_CRACK = ITEMS.register("oil_tar.crack", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> OIL_TAR_COAL = ITEMS.register("oil_tar.coal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> OIL_TAR_WOOD = ITEMS.register("oil_tar.wood", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> OIL_TAR_WAX = ITEMS.register("oil_tar.wax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> OIL_TAR_PARAFFIN = ITEMS.register("oil_tar.paraffin", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> SOLID_FUEL = ITEMS.register("solid_fuel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
@@ -267,145 +270,145 @@ public class NTMResourcesAndParts {
             return 200 * 32; // 32 Items
         }
     });
-    public static final RegistryObject<Item> FIBERGLASS_INGOT = ITEMS.register("fiberglass_ingot", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> INGOT_FIBERGLASS = ITEMS.register("ingot_fiberglass", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.fiberglass_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_fiberglass.tooltip"));
         }
     });
-    public static final RegistryObject<Item> ASBESTOS_INGOT = ITEMS.register("asbestos_ingot", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> INGOT_ASBESTOS = ITEMS.register("ingot_asbestos", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 1, false, false, false, false){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.asbestos_ingot.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.ingot_asbestos.tooltip"));
         }
     });
-    public static final RegistryObject<Item> URANIUM_BILLET = ITEMS.register("uranium_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_URANIUM = ITEMS.register("billet_uranium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.175));
-    public static final RegistryObject<Item> URANIUM_233_BILLET = ITEMS.register("uranium_233_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_U233 = ITEMS.register("billet_u233", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.5));
-    public static final RegistryObject<Item> URANIUM_235_BILLET = ITEMS.register("uranium_235_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_U235 = ITEMS.register("billet_u235", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.5));
-    public static final RegistryObject<Item> URANIUM_238_BILLET = ITEMS.register("uranium_238_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_U238 = ITEMS.register("billet_u238", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.125));
-    public static final RegistryObject<Item> THORIUM_232_BILLET = ITEMS.register("thorium_232_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_TH232 = ITEMS.register("billet_th232", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.05));
-    public static final RegistryObject<Item> PLUTONIUM_BILLET = ITEMS.register("plutonium_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PLUTONIUM = ITEMS.register("billet_plutonium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             3.75));
-    public static final RegistryObject<Item> PLUTONIUM_238_BILLET = ITEMS.register("plutonium_238_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PU238 = ITEMS.register("billet_pu238", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             5.0, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> PLUTONIUM_239_BILLET = ITEMS.register("plutonium_239_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PU239 = ITEMS.register("billet_pu239", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.5));
-    public static final RegistryObject<Item> PLUTONIUM_240_BILLET = ITEMS.register("plutonium_240_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PU240 = ITEMS.register("billet_pu240", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             3.75));
-    public static final RegistryObject<Item> PLUTONIUM_241_BILLET = ITEMS.register("plutonium_241_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PU241 = ITEMS.register("billet_pu241", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             12.5));
-    public static final RegistryObject<Item> PLUTONIUM_RG_BILLET = ITEMS.register("plutonium_rg_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PU_MIX = ITEMS.register("billet_pu_mix", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             3.125));
-    public static final RegistryObject<Item> AMERICIUM_241_BILLET = ITEMS.register("americium_241_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_AM241 = ITEMS.register("billet_am241", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             4.25));
-    public static final RegistryObject<Item> AMERICIUM_242_BILLET = ITEMS.register("americium_242_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_AM242 = ITEMS.register("billet_am242", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             4.75));
-    public static final RegistryObject<Item> AMERICIUM_RG_BILLET = ITEMS.register("americium_rg_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_AM_MIX = ITEMS.register("billet_am_mix", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             4.5));
-    public static final RegistryObject<Item> NEPTUNIUM_BILLET = ITEMS.register("neptunium_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_NEPTUNIUM = ITEMS.register("billet_neptunium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1.25));
-    public static final RegistryObject<Item> POLONIUM_210_BILLET = ITEMS.register("polonium_210_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_POLONIUM = ITEMS.register("billet_polonium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             37.5));
-    public static final RegistryObject<Item> TECHNETIUM_99_BILLET = ITEMS.register("technetium_99_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_TECHNETIUM = ITEMS.register("billet_technetium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1.375));
 
-    public static final RegistryObject<Item> COBALT_BILLET = ITEMS.register("cobalt_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> COBALT_60_BILLET = ITEMS.register("cobalt_60_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_COBALT = ITEMS.register("billet_cobalt", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BILLET_CO60 = ITEMS.register("billet_co60", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             15, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> STRONTIUM_90_BILLET = ITEMS.register("strontium_90_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_SR90 = ITEMS.register("billet_sr90", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             7.5, 0, 0, true, true, false, false));
-    public static final RegistryObject<Item> GOLD_198_BILLET = ITEMS.register("gold_198_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_AU198 = ITEMS.register("billet_au198", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             250, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> LEAD_209_BILLET = ITEMS.register("lead_209_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PB209 = ITEMS.register("billet_pb209", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             5000, 0, 0, true, false, true, false));
-    public static final RegistryObject<Item> RADIUM_226_BILLET = ITEMS.register("radium_226_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_RA226 = ITEMS.register("billet_ra226", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             3.75));
-    public static final RegistryObject<Item> ACTINIUM_227_BILLET = ITEMS.register("actinium_227_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_ACTINIUM = ITEMS.register("billet_actinium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             15));
-    public static final RegistryObject<Item> SCHRABIDIUM_BILLET = ITEMS.register("schrabidium_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
+    public static final RegistryObject<Item> BILLET_SCHRABIDIUM = ITEMS.register("billet_schrabidium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
             7.5, 0, 0, false, false, true, false));
-    public static final RegistryObject<Item> SOLINIUM_BILLET = ITEMS.register("solinium_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_SOLINIUM = ITEMS.register("billet_solinium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             8.75, 0, 0, false, false, true, false));
-    public static final RegistryObject<Item> GHIORSIUM_336_BILLET = ITEMS.register("ghiorsium_336_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC),
+    public static final RegistryObject<Item> BILLET_GH336 = ITEMS.register("billet_gh336", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC),
             2.5){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.ghiorsium_336_billet.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.billet_gh336.tooltip"));
         }
     });
-    public static final RegistryObject<Item> AUSTRALIUM_BILLET = ITEMS.register("australium_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> AUSTRALIUM_BILLET_LESSER = ITEMS.register("australium_billet_lesser", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> AUSTRALIUM_BILLET_GREATER = ITEMS.register("australium_billet_greater", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> URANIUM_FUEL_BILLET = ITEMS.register("uranium_fuel_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_AUSTRALIUM = ITEMS.register("billet_australium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BILLET_AUSTRALIUM_LESSER = ITEMS.register("billet_australium_lesser", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BILLET_AUSTRALIUM_GREATER = ITEMS.register("billet_australium_greater", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BILLET_URANIUM_FUEL = ITEMS.register("billet_uranium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.25));
-    public static final RegistryObject<Item> THORIUM_FUEL_BILLET = ITEMS.register("thorium_fuel_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_THORIUM_FUEL = ITEMS.register("billet_thorium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.875));
-    public static final RegistryObject<Item> PLUTONIUM_FUEL_BILLET = ITEMS.register("plutonium_fuel_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PLUTONIUM_FUEL = ITEMS.register("billet_plutonium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.125));
-    public static final RegistryObject<Item> NEPTUNIUM_FUEL_BILLET = ITEMS.register("neptunium_fuel_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_NEPTUNIUM_FUEL = ITEMS.register("billet_neptunium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0.75));
-    public static final RegistryObject<Item> MOX_FUEL_BILLET = ITEMS.register("mox_fuel_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_MOX_FUEL = ITEMS.register("billet_mox_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1.25));
-    public static final RegistryObject<Item> AMERICIUM_FUEL_BILLET = ITEMS.register("americium_fuel_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_AMERICIUM_FUEL = ITEMS.register("billet_americium_fuel", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.375));
-    public static final RegistryObject<Item> LES_FUEL_BILLET = ITEMS.register("les_fuel_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_LES = ITEMS.register("billet_les", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.925));
-    public static final RegistryObject<Item> SCHRABIDIUM_FUEL_BILLET = ITEMS.register("schrabidium_fuel_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_SCHRABIDIUM_FUEL = ITEMS.register("billet_schrabidium_fuel", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.925, 0, 0, false, false, true, false));
-    public static final RegistryObject<Item> HES_FUEL_BILLET = ITEMS.register("hes_fuel_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_HES = ITEMS.register("billet_hes", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             2.925));
-    public static final RegistryObject<Item> PO210BE_BILLET = ITEMS.register("po210be_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PO210BE = ITEMS.register("billet_po210be", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             112.5));
-    public static final RegistryObject<Item> RA226BE_BILLET = ITEMS.register("ra226be_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_RA226BE = ITEMS.register("billet_ra226be", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             11.25));
-    public static final RegistryObject<Item> PU238BE_BILLET = ITEMS.register("pu238be_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_PU238BE = ITEMS.register("billet_pu238be", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             15));
-    public static final RegistryObject<Item> BERYLLIUM_BILLET = ITEMS.register("beryllium_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BISMUTH_BILLET = ITEMS.register("bismuth_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ZIRCONIUM_BILLET = ITEMS.register("zirconium_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BISMUTH_ZFB_BILLET = ITEMS.register("bismuth_zfb_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLUTONIUM_241_ZFB_BILLET = ITEMS.register("plutonium_241_zfb_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> AMERICIUM_RG_ZFB_BILLET = ITEMS.register("americium_rg_zfb_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> YHARONITE_BILLET = ITEMS.register("yharonite_billet", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> FLASHGOLD_BILLET = ITEMS.register("flashgold_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON),
+    public static final RegistryObject<Item> BILLET_BERYLLIUM = ITEMS.register("billet_beryllium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BILLET_BISMUTH = ITEMS.register("billet_bismuth", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BILLET_ZIRCONIUM = ITEMS.register("billet_zirconium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BILLET_ZFB_BISMUTH = ITEMS.register("billet_zfb_bismuth", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BILLET_ZFB_PU241 = ITEMS.register("billet_zfb_pu241", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BILLET_ZFB_AM_MIX = ITEMS.register("billet_zfb_am_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BILLET_YHARONITE = ITEMS.register("billet_yharonite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BILLET_BALEFIRE_GOLD = ITEMS.register("billet_balefire_gold", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON),
             250));
-    public static final RegistryObject<Item> FLASHLEAD_BILLET = ITEMS.register("flashlead_billet", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON),
+    public static final RegistryObject<Item> BILLET_FLASHLEAD = ITEMS.register("billet_flashlead", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON),
             6250, 0, 0, true, false, false, false){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.flashlead_billet.tooltip.1"));
-            pTooltipComponents.add(Component.translatable("item.ntm.flashlead_billet.tooltip.2"));
+            pTooltipComponents.add(Component.translatable("item.ntm.billet_flashlead.tooltip.1"));
+            pTooltipComponents.add(Component.translatable("item.ntm.billet_flashlead.tooltip.2"));
         }
     });
-    public static final RegistryObject<Item> NUCLEAR_WASTE_BILLET = ITEMS.register("nuclear_waste_billet", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BILLET_NUCLEAR_WASTE = ITEMS.register("billet_nuclear_waste", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             7.5));
-    public static final RegistryObject<Item> CINNABAR = ITEMS.register("cinnabar", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> MERCURY_NUGGET_TINY = ITEMS.register("mercury_nugget_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> MERCURY_NUGGET = ITEMS.register("mercury_nugget", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> MERCURY_BOTTLE = ITEMS.register("mercury_bottle", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> COAL_COKE = ITEMS.register("coal_coke", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> CINNEBAR = ITEMS.register("cinnebar", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> NUGGET_MERCURY_TINY = ITEMS.register("nugget_mercury_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> NUGGET_MERCURY = ITEMS.register("nugget_mercury", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BOTTLE_MERCURY = ITEMS.register("bottle_mercury", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> COKE_COAL = ITEMS.register("coke.coal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 16; // 16 Items
         }
     });
-    public static final RegistryObject<Item> LIGNITE_COKE = ITEMS.register("lignite_coke", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> COKE_LIGNITE = ITEMS.register("coke.lignite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 16; // 16 Items
         }
     });
-    public static final RegistryObject<Item> PETROLEUM_COKE = ITEMS.register("petroleum_coke", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> COKE_PETROLEUM = ITEMS.register("coke.petroleum", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 16; // 16 Items
@@ -417,196 +420,196 @@ public class NTMResourcesAndParts {
             return 200 * 6; // 6 Items
         }
     });
-    public static final RegistryObject<Item> INFERNAL_COAL = ITEMS.register("infernal_coal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> COAL_INFERNAL = ITEMS.register("coal_infernal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 24; // 24 Items
         }
     });
-    public static final RegistryObject<Item> COAL_BRIQUETTE = ITEMS.register("coal_briquette", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> BRIQUETTE_COAL = ITEMS.register("briquette.coal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 10; // 10 Items
         }
     });
-    public static final RegistryObject<Item> LIGNITE_BRIQUETTE = ITEMS.register("lignite_briquette", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> BRIQUETTE_LIGNITE = ITEMS.register("briquette.lignite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 8; // 8 Items
         }
     });
-    public static final RegistryObject<Item> SAWDUST_BRIQUETTE = ITEMS.register("sawdust_briquette", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> BRIQUETTE_WOOD = ITEMS.register("briquette.wood", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 2; // 2 Items
         }
     });
-    public static final RegistryObject<Item> SULFUR_DUST = ITEMS.register("sulfur_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> NITER_DUST = ITEMS.register("niter_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> FLUORITE_DUST = ITEMS.register("fluorite_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> COAL_DUST = ITEMS.register("coal_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> SULFUR = ITEMS.register("sulfur", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> SALPETER = ITEMS.register("salpeter", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> FLUORITE = ITEMS.register("fluorite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_COAL = ITEMS.register("powder_coal", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 9, 0, false, false, false, false){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 8; // 8 Items
         }
     });
-    public static final RegistryObject<Item> COAL_DUST_TINY = ITEMS.register("coal_dust_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_COAL_TINY = ITEMS.register("powder_coal_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 1, 0, false, false, false, false));
-    public static final RegistryObject<Item> IRON_DUST = ITEMS.register("iron_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> LAPIS_DUST = ITEMS.register("lapis_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> QUARTZ_DUST = ITEMS.register("quartz_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> DIAMOND_DUST = ITEMS.register("diamond_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> EMERALD_DUST = ITEMS.register("emerald_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> URANIUM_DUST = ITEMS.register("uranium_dust", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_IRON = ITEMS.register("powder_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_GOLD = ITEMS.register("powder_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_LAPIS = ITEMS.register("powder_lapis", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_QUARTZ = ITEMS.register("powder_quartz", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_DIAMOND = ITEMS.register("powder_diamond", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_EMERALD = ITEMS.register("powder_emerald", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_URANIUM = ITEMS.register("powder_uranium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1.05));
-    public static final RegistryObject<Item> PLUTONIUM_DUST = ITEMS.register("plutonium_dust", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_PLUTONIUM = ITEMS.register("powder_plutonium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             22.5));
-    public static final RegistryObject<Item> NEPTUNIUM_DUST = ITEMS.register("neptunium_dust", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_NEPTUNIUM = ITEMS.register("powder_neptunium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             7.5));
-    public static final RegistryObject<Item> POLONIUM_DUST = ITEMS.register("polonium_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_POLONIUM = ITEMS.register("powder_polonium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             225, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> COBALT_60_DUST = ITEMS.register("cobalt_60_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_CO60 = ITEMS.register("powder_co60", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             90, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> STRONTIUM_90_DUST = ITEMS.register("strontium_90_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_SR90 = ITEMS.register("powder_sr90", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             45, 0, 0, true, true, false, false));
-    public static final RegistryObject<Item> STRONTIUM_90_DUST_TINY = ITEMS.register("strontium_90_dust_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_SR90_TINY = ITEMS.register("powder_sr90_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             4.5, 0, 0, true, true, false, false));
-    public static final RegistryObject<Item> IODINE_131_DUST = ITEMS.register("iodine_131_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_I131 = ITEMS.register("powder_i131", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             450, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> IODINE_131_DUST_TINY = ITEMS.register("iodine_131_dust_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_I131_TINY = ITEMS.register("powder_i131_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             45, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> XENON_135_DUST = ITEMS.register("xenon_135_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_XE135 = ITEMS.register("powder_xe135", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             3750, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> XENON_135_DUST_TINY = ITEMS.register("xenon_135_dust_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_XE135_TINY = ITEMS.register("powder_xe135_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             375, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> CAESIUM_137_DUST = ITEMS.register("caesium_137_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_CAESIUM = ITEMS.register("powder_caesium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             60, 0, 0, true, true, false, false));
-    public static final RegistryObject<Item> CAESIUM_137_DUST_TINY = ITEMS.register("caesium_137_dust_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_CS137_TINY = ITEMS.register("powder_cs137_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             6, 0, 0, true, true, false, false));
-    public static final RegistryObject<Item> GOLD_198_DUST = ITEMS.register("gold_198_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_AU198 = ITEMS.register("powder_au198", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             1500, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> RADIUM_226_DUST = ITEMS.register("radium_226_dust", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_RA226 = ITEMS.register("powder_ra226", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             22.5));
-    public static final RegistryObject<Item> ASTATINE_209_DUST = ITEMS.register("astatine_209_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_ASTATINE = ITEMS.register("powder_astatine", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             22500, 0, 0, true, false, false, false));
-    public static final RegistryObject<Item> TITANIUM_DUST = ITEMS.register("titanium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> COPPER_DUST = ITEMS.register("copper_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> RED_COPPER_DUST = ITEMS.register("red_copper_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ADVANCED_ALLOY_DUST = ITEMS.register("advanced_alloy_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> TUNGSTEN_DUST = ITEMS.register("tungsten_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ALUMINIUM_DUST = ITEMS.register("aluminium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> STEEL_DUST = ITEMS.register("steel_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> STEEL_DUST_TINY = ITEMS.register("steel_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> TECHNETIUM_STEEL_DUST = ITEMS.register("technetium_steel_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> LEAD_DUST = ITEMS.register("lead_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BISMUTH_DUST = ITEMS.register("bismuth_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CALCIUM_DUST = ITEMS.register("calcium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CADMIUM_DUST = ITEMS.register("cadmium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> COLTAN_ORE_DUST = ITEMS.register("coltan_ore_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_TITANIUM = ITEMS.register("powder_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_COPPER = ITEMS.register("powder_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_RED_COPPER = ITEMS.register("powder_red_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_ADVANCED_ALLOY = ITEMS.register("powder_advanced_alloy", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_TUNGSTEN = ITEMS.register("powder_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_ALUMINIUM = ITEMS.register("powder_aluminium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_STEEL = ITEMS.register("powder_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_STEEL_TINY = ITEMS.register("powder_steel_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_TCALLOY = ITEMS.register("powder_tcalloy", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_LEAD = ITEMS.register("powder_lead", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_BISMUTH = ITEMS.register("powder_bismuth", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_CALCIUM = ITEMS.register("powder_calcium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_CADMIUM = ITEMS.register("powder_cadmium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_COLTAN_ORE = ITEMS.register("powder_coltan_ore", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 3, false, false, false, false));
-    public static final RegistryObject<Item> COLTAN_DUST = ITEMS.register("coltan_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> TANTALIUM_DUST = ITEMS.register("tantalium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> POWDER_COLTAN = ITEMS.register("powder_coltan", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_TANTALIUM = ITEMS.register("powder_tantalium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.tantalium_dust.tootlip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_tantalium.tootlip"));
         }
     });
-    public static final RegistryObject<Item> TEKTITE_DUST = ITEMS.register("tektite_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PALEOGENITE_DUST = ITEMS.register("paleogenite_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PALEOGENITE_DUST_TINY = ITEMS.register("paleogenite_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> IMPURE_OSMIRIDIUM_DUST = ITEMS.register("impure_osmiridium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BORAX_DUST = ITEMS.register("borax_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CHLOROCALCYTE_DUST = ITEMS.register("chlorocalcite_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> YELLOWCAKE = ITEMS.register("yellowcake", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).food(NTMFoods.YELLOWCAKE),
+    public static final RegistryObject<Item> POWDER_TEKTITE = ITEMS.register("powder_tektite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_PALEOGENITE = ITEMS.register("powder_paleogenite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_PALEOGENITE_TINY = ITEMS.register("powder_paleogenite_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_IMPURE_OSMIRIDIUM = ITEMS.register("powder_impure_osmiridium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_BORAX = ITEMS.register("powder_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_CHLOROCALCYTE = ITEMS.register("powder_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_YELLOWCAKE = ITEMS.register("powder_yellowcake", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).food(NTMFoods.YELLOWCAKE),
             1.05){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.yellowcake.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_yellowcake.tooltip"));
         }
     });
-    public static final RegistryObject<Item> BERYLLIUM_DUST = ITEMS.register("beryllium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> DURA_STEEL_DUST = ITEMS.register("dura_steel_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> POLYMER_DUST = ITEMS.register("polymer_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BAKELITE_DUST = ITEMS.register("bakelite_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> SCHRABIDIUM_DUST = ITEMS.register("schrabidium_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
+    public static final RegistryObject<Item> POWDER_BERYLLIUM = ITEMS.register("powder_beryllium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_DURA_STEEL = ITEMS.register("powder_dura_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_POLYMER = ITEMS.register("powder_polymer", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_BAKELITE = ITEMS.register("powder_bakelite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_SCHRABIDIUM = ITEMS.register("powder_schrabidium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
             45, 0, 0, false, false, true   , false));
-    public static final RegistryObject<Item> SCHRABIDATE_DUST = ITEMS.register("schrabidate_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
+    public static final RegistryObject<Item> POWDER_SCHRABIDATE = ITEMS.register("powder_schrabidate", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.RARE),
             4.5, 0, 0, false, false, true   , false));
 
-    public static final RegistryObject<Item> MAGNETIZED_TUNGSTEN_DUST = ITEMS.register("magnetized_tungsten_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CHLOROPHYTE_DUST = ITEMS.register("chlorophyte_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CMB_STEEL_DUST = ITEMS.register("cmb_steel_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> LITHIUM_DUST = ITEMS.register("lithium_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_MAGNETIZED_TUNGSTEN = ITEMS.register("powder_magnetized_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_CHLOROPHYTE = ITEMS.register("powder_chlorophyte", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_COMBINE_STEEL = ITEMS.register("powder_combine_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_LITHIUM = ITEMS.register("powder_lithium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 0, false, true, false, false));
-    public static final RegistryObject<Item> LITHIUM_DUST_TINY = ITEMS.register("lithium_dust_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_LITHIUM_TINY = ITEMS.register("powder_lithium_tiny", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 0, false, true, false, false));
-    public static final RegistryObject<Item> ZIRCONIUM_DUST = ITEMS.register("zirconium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> LIGNITE_DUST = ITEMS.register("lignite_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_ZIRCONIUM = ITEMS.register("powder_zirconium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_LIGNITE = ITEMS.register("powder_lignite", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 9, 0, false, false, false, false){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 * 6; // 6 Items
         }
     });
-    public static final RegistryObject<Item> NEODYMIUM_DUST = ITEMS.register("neodymium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> NEODYMIUM_DUST_TINY = ITEMS.register("neodymium_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> AUSTRALIUM_DUST = ITEMS.register("australium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> COBALT_DUST = ITEMS.register("cobalt_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> COBALT_DUST_TINY = ITEMS.register("cobalt_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> NIOBIUM_DUST = ITEMS.register("niobium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> NIOBIUM_DUST_TINY = ITEMS.register("niobium_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CERIUM_DUST = ITEMS.register("cerium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> CERIUM_DUST_TINY = ITEMS.register("cerium_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> LANTHANUM_DUST = ITEMS.register("lanthanum_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> LANTHANUM_DUST_TINY = ITEMS.register("lanthanum_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ACTINIUM_227_DUST = ITEMS.register("actinium_227_dust", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC),
+    public static final RegistryObject<Item> POWDER_NEODYMIUM = ITEMS.register("powder_neodymium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> POWDER_NEODYMIUM_TINY = ITEMS.register("powder_neodymium_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_AUSTRALIUM = ITEMS.register("powder_australium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> POWDER_COBALT = ITEMS.register("powder_cobalt", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> POWDER_COBALT_TINY = ITEMS.register("powder_cobalt_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_NIOBIUM = ITEMS.register("powder_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> POWDER_NIOBIUM_TINY = ITEMS.register("powder_niobium_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_CERIUM = ITEMS.register("powder_cerium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> POWDER_CERIUM_TINY = ITEMS.register("powder_cerium_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_LANTHANIUM = ITEMS.register("powder_lanthanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> POWDER_LANTHANIUM_TINY = ITEMS.register("powder_lanthanium_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_ACTINIUM = ITEMS.register("powder_actinium", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC),
             90));
-    public static final RegistryObject<Item> ACTINIUM_227_DUST_TINY = ITEMS.register("actinium_227_dust_tiny", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_ACTINIUM_TINY = ITEMS.register("powder_actinium_tiny", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             9));
-    public static final RegistryObject<Item> BORON_DUST = ITEMS.register("boron_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> BORON_DUST_TINY = ITEMS.register("boron_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ASBESTOS_DUST = ITEMS.register("asbestos_dust", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_BORON = ITEMS.register("powder_boron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> POWDER_BORON_TINY = ITEMS.register("powder_boron_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_ASBESTOS = ITEMS.register("powder_asbestos", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 3, false, false, false, false){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.asbestos_dust.tooltip"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_asbestos.tooltip"));
         }
     });
 
-    public static final RegistryObject<Item> MAGIC_DUST = ITEMS.register("magic_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CLOUD_RESIDUE = ITEMS.register("cloud_residue", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> SAWDUST = ITEMS.register("sawdust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> POWDER_MAGIC = ITEMS.register("powder_magic", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_CLOUD = ITEMS.register("powder_cloud", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_SAWDUST = ITEMS.register("powder_sawdust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 / 2; // 0.5 Items
         }
     });
-    public static final RegistryObject<Item> FLUX = ITEMS.register("flux", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> INDUSTRIAL_FERTILIZER = ITEMS.register("industrial_fertilizer", () -> new BoneMealItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BALEFIRE_DUST = ITEMS.register("balefire_dust", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_FLUX = ITEMS.register("powder_flux", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_FERTILIZER = ITEMS.register("powder_fertilizer", () -> new BoneMealItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_BALEFIRE = ITEMS.register("powder_balefire", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             500));
-    public static final RegistryObject<Item> SEMTEX_MIX = ITEMS.register("semtex_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> DESH_MIX = ITEMS.register("desh_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> DESH_READY = ITEMS.register("desh_ready", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> DESH_DUST = ITEMS.register("desh_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> NITAN_MIX = ITEMS.register("nitan_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> SPARK_MIX = ITEMS.register("spark_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> METEORITE_DUST = ITEMS.register("meteorite_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> METEORITE_DUST_TINY = ITEMS.register("meteorite_dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> EUPHEMIUM_DUST = ITEMS.register("euphemium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)){
+    public static final RegistryObject<Item> POWDER_SEMTEX_MIX = ITEMS.register("powder_semtex_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_DESH_MIX = ITEMS.register("powder_desh_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_DESH_READY = ITEMS.register("powder_desh_ready", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_DESH = ITEMS.register("powder_desh", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_NITAN_MIX = ITEMS.register("powder_nitan_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_SPARK_MIX = ITEMS.register("powder_spark_mix", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_METEORITE = ITEMS.register("powder_meteorite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_METEORITE_TINY = ITEMS.register("powder_meteorite_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_EUPHEMIUM = ITEMS.register("powder_euphemium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.EPIC)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.euphemium_dust.tooltip.1"));
-            pTooltipComponents.add(Component.translatable("item.ntm.euphemium_dust.tooltip.2"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_euphemium.tooltip.1"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_euphemium.tooltip.2"));
         }
     });
-    public static final RegistryObject<Item> DINEUTRONIUM_DUST = ITEMS.register("dineutronium_dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_DINEUTRONIUM = ITEMS.register("powder_dineutronium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> REDSTONE_DEPLETED = ITEMS.register("redstone_depleted", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> DUST = ITEMS.register("dust", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
@@ -622,177 +625,55 @@ public class NTMResourcesAndParts {
     public static final RegistryObject<Item> DUST_TINY = ITEMS.register("dust_tiny", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> FALLOUT = ITEMS.register("fallout", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             30));
-    public static final RegistryObject<Item> ASH_WOOD = ITEMS.register("ash_wood", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> POWDER_ASH_WOOD = ITEMS.register("powder_ash.wood", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 / 2; // 0.5 Items
         }
     });
-    public static final RegistryObject<Item> ASH_COAL = ITEMS.register("ash_coal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> POWDER_ASH_COAL = ITEMS.register("powder_ash.coal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200; // 1 Items
         }
     });
-    public static final RegistryObject<Item> ASH_MISC = ITEMS.register("ash_misc", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> POWDER_ASH_MISC = ITEMS.register("powder_ash.misc", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
             return 200 / 2; // 0.5 Items
         }
     });
-    public static final RegistryObject<Item> RED_PHOSPHORUS = ITEMS.register("red_phosphorus", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> POWDER_RED_PHOSPHORUS = ITEMS.register("powder_red_phosphorus", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 0, true, false, false, false){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.red_phosphorus.tooltip.1"));
-            pTooltipComponents.add(Component.translatable("item.ntm.red_phosphorus.tooltip.2"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_red_phosphorus.tooltip.1"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_red_phosphorus.tooltip.2"));
         }
     });
-    public static final RegistryObject<Item> CRYO_POWDER = ITEMS.register("cryo_powder", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> POISON_POWDER = ITEMS.register("poison_powder", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
+    public static final RegistryObject<Item> POWDER_ICE = ITEMS.register("powder_ice", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_POISON = ITEMS.register("powder_poison", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)){
         @Override
         public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
-            pTooltipComponents.add(Component.translatable("item.ntm.poison_powder.tooltip.1"));
-            pTooltipComponents.add(Component.translatable("item.ntm.poison_powder.tooltip.2"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_poison.tooltip.1"));
+            pTooltipComponents.add(Component.translatable("item.ntm.powder_poison.tooltip.2"));
         }
     });
-    public static final RegistryObject<Item> THERMITE = ITEMS.register("thermite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ENERGY_POWDER = ITEMS.register("energy_powder", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> POWDER_THERMITE = ITEMS.register("powder_thermite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> POWDER_ENERGY = ITEMS.register("powder_energy", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> CORDITE = ITEMS.register("cordite", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 0, false, false, false, true));
     public static final RegistryObject<Item> BALLISTITE = ITEMS.register("ballistite", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 0, false, false, false, true));
-    public static final RegistryObject<Item> DYNAMITE = ITEMS.register("dynamite", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> BALL_DYNAMITE = ITEMS.register("ball_dynamite", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             0, 0, 0, false, false, false, true));
-    public static final RegistryObject<Item> TNT = ITEMS.register("tnt", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> TATB = ITEMS.register("tatb", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> FIRECLAY = ITEMS.register("fireclay", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_IRON = ITEMS.register("ore_bedrock_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_COPPER = ITEMS.register("ore_bedrock_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_BORAX = ITEMS.register("ore_bedrock_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_ASBESTOS = ITEMS.register("ore_bedrock_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_NIOBIUM = ITEMS.register("ore_bedrock_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_TITANIUM = ITEMS.register("ore_bedrock_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_TUNGSTEN = ITEMS.register("ore_bedrock_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_GOLD = ITEMS.register("ore_bedrock_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_URANIUM = ITEMS.register("ore_bedrock_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_THORIUM = ITEMS.register("ore_bedrock_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_BEDROCK_CHLOROCALCITE = ITEMS.register("ore_bedrock_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_IRON = ITEMS.register("ore_centrifuged_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_COPPER = ITEMS.register("ore_centrifuged_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_BORAX = ITEMS.register("ore_centrifuged_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_ASBESTOS = ITEMS.register("ore_centrifuged_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_NIOBIUM = ITEMS.register("ore_centrifuged_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_TITANIUM = ITEMS.register("ore_centrifuged_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_TUNGSTEN = ITEMS.register("ore_centrifuged_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_GOLD = ITEMS.register("ore_centrifuged_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_URANIUM = ITEMS.register("ore_centrifuged_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_THORIUM = ITEMS.register("ore_centrifuged_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CENTRIFUGED_CHLOROCALCITE = ITEMS.register("ore_centrifuged_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_IRON = ITEMS.register("ore_cleaned_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_COPPER = ITEMS.register("ore_cleaned_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_BORAX = ITEMS.register("ore_cleaned_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_ASBESTOS = ITEMS.register("ore_cleaned_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_NIOBIUM = ITEMS.register("ore_cleaned_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_TITANIUM = ITEMS.register("ore_cleaned_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_TUNGSTEN = ITEMS.register("ore_cleaned_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_GOLD = ITEMS.register("ore_cleaned_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_URANIUM = ITEMS.register("ore_cleaned_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_THORIUM = ITEMS.register("ore_cleaned_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_CLEANED_CHLOROCALCITE = ITEMS.register("ore_cleaned_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_IRON = ITEMS.register("ore_separated_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_COPPER = ITEMS.register("ore_separated_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_BORAX = ITEMS.register("ore_separated_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_ASBESTOS = ITEMS.register("ore_separated_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_NIOBIUM = ITEMS.register("ore_separated_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_TITANIUM = ITEMS.register("ore_separated_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_TUNGSTEN = ITEMS.register("ore_separated_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_GOLD = ITEMS.register("ore_separated_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_URANIUM = ITEMS.register("ore_separated_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_THORIUM = ITEMS.register("ore_separated_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEPARATED_CHLOROCALCITE = ITEMS.register("ore_separated_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_IRON = ITEMS.register("ore_purified_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_COPPER = ITEMS.register("ore_purified_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_BORAX = ITEMS.register("ore_purified_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_ASBESTOS = ITEMS.register("ore_purified_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_NIOBIUM = ITEMS.register("ore_purified_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_TITANIUM = ITEMS.register("ore_purified_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_TUNGSTEN = ITEMS.register("ore_purified_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_GOLD = ITEMS.register("ore_purified_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_URANIUM = ITEMS.register("ore_purified_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_THORIUM = ITEMS.register("ore_purified_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_PURIFIED_CHLOROCALCITE = ITEMS.register("ore_purified_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_IRON = ITEMS.register("ore_nitrated_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_COPPER = ITEMS.register("ore_nitrated_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_BORAX = ITEMS.register("ore_nitrated_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_ASBESTOS = ITEMS.register("ore_nitrated_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_NIOBIUM = ITEMS.register("ore_nitrated_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_TITANIUM = ITEMS.register("ore_nitrated_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_TUNGSTEN = ITEMS.register("ore_nitrated_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_GOLD = ITEMS.register("ore_nitrated_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_URANIUM = ITEMS.register("ore_nitrated_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_THORIUM = ITEMS.register("ore_nitrated_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITRATED_CHLOROCALCITE = ITEMS.register("ore_nitrated_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_IRON = ITEMS.register("ore_nitrocrystalline_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_COPPER = ITEMS.register("ore_nitrocrystalline_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_BORAX = ITEMS.register("ore_nitrocrystalline_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_ASBESTOS = ITEMS.register("ore_nitrocrystalline_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_NIOBIUM = ITEMS.register("ore_nitrocrystalline_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_TITANIUM = ITEMS.register("ore_nitrocrystalline_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_TUNGSTEN = ITEMS.register("ore_nitrocrystalline_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_GOLD = ITEMS.register("ore_nitrocrystalline_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_URANIUM = ITEMS.register("ore_nitrocrystalline_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_THORIUM = ITEMS.register("ore_nitrocrystalline_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_NITROCRYSTALLINE_CHLOROCALCITE = ITEMS.register("ore_nitrocrystalline_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_IRON = ITEMS.register("ore_deepcleaned_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_COPPER = ITEMS.register("ore_deepcleaned_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_BORAX = ITEMS.register("ore_deepcleaned_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_ASBESTOS = ITEMS.register("ore_deepcleaned_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_NIOBIUM = ITEMS.register("ore_deepcleaned_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_TITANIUM = ITEMS.register("ore_deepcleaned_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_TUNGSTEN = ITEMS.register("ore_deepcleaned_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_GOLD = ITEMS.register("ore_deepcleaned_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_URANIUM = ITEMS.register("ore_deepcleaned_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_THORIUM = ITEMS.register("ore_deepcleaned_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_DEEPCLEANED_CHLOROCALCITE = ITEMS.register("ore_deepcleaned_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_IRON = ITEMS.register("ore_seared_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_COPPER = ITEMS.register("ore_seared_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_BORAX = ITEMS.register("ore_seared_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_ASBESTOS = ITEMS.register("ore_seared_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_NIOBIUM = ITEMS.register("ore_seared_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_TITANIUM = ITEMS.register("ore_seared_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_TUNGSTEN = ITEMS.register("ore_seared_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_GOLD = ITEMS.register("ore_seared_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_URANIUM = ITEMS.register("ore_seared_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_THORIUM = ITEMS.register("ore_seared_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_SEARED_CHLOROCALCITE = ITEMS.register("ore_seared_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_IRON = ITEMS.register("ore_enriched_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_COPPER = ITEMS.register("ore_enriched_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_BORAX = ITEMS.register("ore_enriched_borax", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_ASBESTOS = ITEMS.register("ore_enriched_asbestos", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_NIOBIUM = ITEMS.register("ore_enriched_niobium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_TITANIUM = ITEMS.register("ore_enriched_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_TUNGSTEN = ITEMS.register("ore_enriched_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_GOLD = ITEMS.register("ore_enriched_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_URANIUM = ITEMS.register("ore_enriched_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_THORIUM = ITEMS.register("ore_enriched_thorium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> ORE_ENRICHED_CHLOROCALCITE = ITEMS.register("ore_enriched_chlorocalcite", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_IRON = ITEMS.register("byproduct_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_COPPER = ITEMS.register("byproduct_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_LITHIUM = ITEMS.register("byproduct_lithium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_SILICON = ITEMS.register("byproduct_silicon", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_LEAD = ITEMS.register("byproduct_lead", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_TITANIUM = ITEMS.register("byproduct_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_ALUMINIUM = ITEMS.register("byproduct_aluminium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_SULFUR = ITEMS.register("byproduct_sulfur", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_CALCIUM = ITEMS.register("byproduct_calcium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_BISMUTH = ITEMS.register("byproduct_bismuth", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_RADIUM = ITEMS.register("byproduct_radium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_TECHNETIUM = ITEMS.register("byproduct_technetium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_POLONIUM = ITEMS.register("byproduct_polonium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> BYPRODUCT_URANIUM = ITEMS.register("byproduct_uranium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BALL_TNT = ITEMS.register("ball_tnt", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BALL_TATB = ITEMS.register("ball_tatb", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> BALL_FIRECLAY = ITEMS.register("ball_fireclay", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item>[] ORE_BEDROCK = registerBedrockOres();
+    public static final RegistryObject<Item>[] ORE_BEDROCK_BYPRODUCT = registerBedrockByproducts();
     public static final RegistryObject<Item> CRYSTAL_COAL = ITEMS.register("crystal_coal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> CRYSTAL_IRON = ITEMS.register("crystal_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> CRYSTAL_GOLD = ITEMS.register("crystal_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
@@ -825,7 +706,7 @@ public class NTMResourcesAndParts {
             0, 0, 0, false, true, false, false));
     public static final RegistryObject<Item> CRYSTAL_COBALT = ITEMS.register("crystal_cobalt", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> CRYSTAL_STARMETAL = ITEMS.register("crystal_starmetal", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> CRYSTAL_CINNABAR = ITEMS.register("crystal_cinnabar", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> CRYSTAL_CINNEBAR = ITEMS.register("crystal_cinnebar", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> CRYSTAL_TRIXITE = ITEMS.register("crystal_trixite", () -> new BasicRadioactiveItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             250));
     public static final RegistryObject<Item> CRYSTAL_OSMIRIDIUM = ITEMS.register("crystal_osmiridium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
@@ -962,22 +843,22 @@ public class NTMResourcesAndParts {
     public static final RegistryObject<Item> PLATE_ARMOR_LUNAR = ITEMS.register("plate_armor_lunar", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> PLATE_ARMOR_FAU = ITEMS.register("plate_armor_fau", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> PLATE_ARMOR_DNT = ITEMS.register("plate_armor_dnt", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_IRON = ITEMS.register("plate_cast_iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_GOLD = ITEMS.register("plate_cast_gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_SCHRABIDIUM = ITEMS.register("plate_cast_schrabidium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
+    public static final RegistryObject<Item> PLATE_CAST_IRON = ITEMS.register("plate_cast.iron", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_GOLD = ITEMS.register("plate_cast.gold", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_SCHRABIDIUM = ITEMS.register("plate_cast.schrabidium", () -> new BasicHazardItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS),
             45, 0, 0, false ,false, true, false));
-    public static final RegistryObject<Item> PLATE_CAST_TITANIUM = ITEMS.register("plate_cast_titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_COPPER = ITEMS.register("plate_cast_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_ALUMINIUM = ITEMS.register("plate_cast_aluminium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_LEAD = ITEMS.register("plate_cast_lead", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_ZIRCONIUM = ITEMS.register("plate_cast_zirconium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_OSMIRIDIUM = ITEMS.register("plate_cast_osmiridium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_STEEL = ITEMS.register("plate_cast_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_ADVANCED_ALLOY = ITEMS.register("plate_cast_advanced_alloy", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_DESH = ITEMS.register("plate_cast_desh", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_TECHNETIUM_STEEL = ITEMS.register("plate_cast_technetium_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_CADMIUM_STEEL = ITEMS.register("plate_cast_cadmium_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
-    public static final RegistryObject<Item> PLATE_CAST_COMBINE_STEEL = ITEMS.register("plate_cast_combine_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_TITANIUM = ITEMS.register("plate_cast.titanium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_COPPER = ITEMS.register("plate_cast.copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_ALUMINIUM = ITEMS.register("plate_cast.aluminium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_LEAD = ITEMS.register("plate_cast.lead", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_ZIRCONIUM = ITEMS.register("plate_cast.zirconium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_OSMIRIDIUM = ITEMS.register("plate_cast.osmiridium", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_STEEL = ITEMS.register("plate_cast.steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_ADVANCED_ALLOY = ITEMS.register("plate_cast.advanced_alloy", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_DESH = ITEMS.register("plate_cast.desh", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_TECHNETIUM_STEEL = ITEMS.register("plate_cast.technetium_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_CADMIUM_STEEL = ITEMS.register("plate_cast.cadmium_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
+    public static final RegistryObject<Item> PLATE_CAST_COMBINE_STEEL = ITEMS.register("plate_cast.combine_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> BOARD_COPPER = ITEMS.register("board_copper", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> BOLT_DURA_STEEL = ITEMS.register("bolt_dura_steel", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
     public static final RegistryObject<Item> BOLT_TUNGSTEN = ITEMS.register("bolt_tungsten", () -> new Item(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS)));
@@ -1093,10 +974,49 @@ public class NTMResourcesAndParts {
     }
 
     private static <T extends Item> RegistryObject<T>[] registerDyes(String unlocalizedName){
-        RegistryObject<?>[] toReturn = new RegistryObject[DyeColors.values().length];
-        EnumSet.allOf(DyeColors.class).forEach(dye -> {
+        RegistryObject<?>[] toReturn = new RegistryObject[EDyeColors.values().length];
+        EnumSet.allOf(EDyeColors.class).forEach(dye -> {
             String name = "dye." + unlocalizedName + "." + dye.dictName;
-            toReturn[dye.ordinal()] = ITEMS.register(name, () -> new DyeItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS), dye.color));
+            toReturn[dye.ordinal()] = ITEMS.register(name, () -> new MultiColorItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS), -1, dye.color));
+        });
+        return (RegistryObject<T>[]) toReturn;
+    }
+    private static <T extends Item> RegistryObject<T>[] registerBedrockOres(){
+        RegistryObject<?>[] toReturn = new RegistryObject[EBedrockOres.values().length * EBedrockOreTypes.values().length];
+        EnumSet.allOf(EBedrockOreTypes.class).forEach(type -> {
+            EnumSet.allOf(EBedrockOres.class).forEach(ore -> {
+                String name = "ore." + type.oreName + "." + ore.oreName;
+                toReturn[(type.ordinal() * EBedrockOres.values().length) + ore.ordinal()]
+                = ITEMS.register(name, () -> new MultiColorItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS), -1, ore.color){
+                    // Code formatted name cuz i'm lazy
+                    @Override
+                    public Component getName(ItemStack pStack) {
+                        String typeNameResourceLocation = "item.ntm.bedrock_ore.type." + type.oreName;
+                        String oreNameResourceLocation = "item.ntm.bedrock_ore.ore." + ore.oreName;
+                        return Component.literal(Component.translatable(typeNameResourceLocation).getString()
+                                + " " + Component.translatable(oreNameResourceLocation).getString()
+                                + " " + Component.translatable("item.ntm.bedrock_ore.postfix").getString());
+                    }
+                });
+            });
+        });
+
+        return (RegistryObject<T>[]) toReturn;
+    }
+    private static <T extends Item> RegistryObject<T>[] registerBedrockByproducts(){
+        RegistryObject<?>[] toReturn = new RegistryObject[EBedrockOreByproducts.values().length];
+        EnumSet.allOf(EBedrockOreByproducts.class).forEach(byproduct -> {
+            String name = "byproduct." + byproduct.oreName;
+            toReturn[byproduct.ordinal()] = ITEMS.register(name, () -> new MultiColorItem(new Item.Properties().tab(NTMCreativeModeTabs.RESOURCES_AND_PARTS), byproduct.color){
+                // Code formatted name cuz i'm lazy
+                @Override
+                public Component getName(ItemStack pStack) {
+                    String oreNameResourceLocation = "item.ntm.bedrock_ore.byproduct." + byproduct.oreName;
+                    return Component.literal(Component.translatable("item.ntm.bedrock_ore.byproduct.prefix").getString()
+                            + " " + Component.translatable(oreNameResourceLocation).getString()
+                            + " " + Component.translatable("item.ntm.bedrock_ore.byproduct.postfix").getString());
+                }
+            });
         });
         return (RegistryObject<T>[]) toReturn;
     }

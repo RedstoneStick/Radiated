@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ntm:polycarbonate",
-    "ntm:pvc"
+    "ntm:ingot_pc",
+    "ntm:ingot_pvc"
   ]
 }

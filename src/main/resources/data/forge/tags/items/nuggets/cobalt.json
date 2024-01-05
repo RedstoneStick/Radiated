@@ -2,6 +2,6 @@
   "replace": false,
   "values": [
     "ntm:fragment_cobalt",
-    "radiated:nugget_cobalt"
+    "ntm:nugget_cobalt"
   ]
 }

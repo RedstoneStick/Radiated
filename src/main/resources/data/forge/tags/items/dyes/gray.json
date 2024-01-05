@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ntm:oil_tar_coal",
-    "ntm:ash_misc"
+    "ntm:oil_tar.coal",
+    "ntm:powder_ash.misc",
+    "ntm:dye.chem.gray",
+    "ntm:dye.crayon.gray"
   ]
 }

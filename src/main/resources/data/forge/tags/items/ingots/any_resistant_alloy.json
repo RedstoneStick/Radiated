@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ntm:technetium_steel_ingot",
-    "ntm:cadmium_steel_ingot"
+    "ntm:ingot_tcalloy",
+    "ntm:ingot_cdalloy"
   ]
 }

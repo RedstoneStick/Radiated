@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "radiated:items/ore_centrifuged",
-    "layer1": "radiated:items/ore_overlay.thorium"
-  }
-}

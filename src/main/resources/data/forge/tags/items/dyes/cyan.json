@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ntm:oil_tar_wax"
+    "ntm:oil_tar.wax",
+    "ntm:dye.chem.cyan",
+    "ntm:dye.crayon.cyan"
   ]
 }

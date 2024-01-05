@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ntm:coal_coke",
-    "ntm:lignite_coke",
-    "ntm:petroleum_coke"
+    "ntm:coke.coal",
+    "ntm:coke.lignite",
+    "ntm:coke.petroleum"
   ]
 }

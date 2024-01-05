@@ -1,9 +1,11 @@
 {
   "replace": false,
   "values": [
-    "ntm:oil_tar",
-    "ntm:oil_tar_crack",
-    "ntm:coal_dust",
-    "ntm:ash_coal"
+    "ntm:oil_tar.crude",
+    "ntm:oil_tar.crack",
+    "ntm:powder_coal",
+    "ntm:powder_ash.coal",
+    "ntm:dye.chem.black",
+    "ntm:dye.crayon.black"
   ]
 }
