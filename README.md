@@ -1,25 +1,20 @@
-
-Installation information
+Radiated
+(a crappy rewrite of the HBM's Nuclear Tech Mod)
 =======
+You can find the original mod here: https://github.com/HbmMods/Hbm-s-Nuclear-Tech-GIT
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+About
+=======
+This is a scuffed up rewrite of the original mod. It's missing a lot of features, some will be added later some won't.
+Most of the textures and models will be updated to fit the new minecraft textures and since i have no idea what i'm doing, they'll also be scuffed
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+So yea, NTM for new mc versions. But its bad
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+Have fun :D
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+The mod will be updated whenever i see fit, so don't ask me when the next update is or what'll be added
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Requirements
+=======
+- NeoForge (preferably the lastest version)
+- Geckolib (also the lastest version)
