@@ -1,0 +1,27 @@
+{
+  "item.hbm.test_item": "Testing Item",
+  "block.hbm.test_block": "Testing Block",
+
+  "block.hbm.ore_uranium": "Uranium Ore",
+  "block.hbm.ore_thorium": "Thorium Ore",
+  "block.hbm.ore_titanium": "Titanium Ore",
+  "block.hbm.ore_sulfur": "Sulfur Ore",
+  "block.hbm.ore_niter": "Niter Ore",
+  "block.hbm.ore_tungsten": "Tungsten Ore",
+  "block.hbm.ore_aluminium": "Aluminium Ore",
+  "block.hbm.ore_fluorite": "Fluorite Ore",
+  "block.hbm.ore_beryllium": "Beryllium Ore",
+  "block.hbm.ore_lead": "Lead Ore",
+  "block.hbm.ore_oil": "Oil Deposit",
+  "block.hbm.ore_lignite": "Lignite Ore",
+  "block.hbm.ore_asbestos": "Asbestos Ore",
+  "block.hbm.ore_australium": "Australian Ore",
+  "block.hbm.ore_rare": "Rare Earth Ore",
+  "block.hbm.ore_cobalt": "Cobalt Ore",
+  "block.hbm.ore_cinnebar": "Cinnabar Ore",
+  "block.hbm.ore_coltan": "Coltan Ore",
+  "block.hbm.cluster_iron": "Iron Ore Cluster",
+  "block.hbm.cluster_titanium": "Titanium Ore Cluster",
+  "block.hbm.cluster_aluminium": "Aluminium Ore Cluster",
+  "block.hbm.cluster_copper": "Copper Ore Cluster"
+}

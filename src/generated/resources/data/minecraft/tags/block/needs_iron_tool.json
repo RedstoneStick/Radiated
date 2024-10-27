@@ -1,0 +1,10 @@
+{
+  "values": [
+    "hbm:ore_titanium",
+    "hbm:ore_lead",
+    "hbm:ore_rare",
+    "hbm:ore_cobalt",
+    "hbm:ore_coltan",
+    "hbm:cluster_titanium"
+  ]
+}

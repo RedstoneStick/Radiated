@@ -1,0 +1,10 @@
+{
+  "values": [
+    "hbm:ore_thorium",
+    "hbm:ore_aluminium",
+    "hbm:ore_beryllium",
+    "hbm:cluster_iron",
+    "hbm:cluster_aluminium",
+    "hbm:cluster_copper"
+  ]
+}

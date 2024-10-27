@@ -1,0 +1,26 @@
+{
+  "values": [
+    "hbm:ore_uranium",
+    "hbm:ore_thorium",
+    "hbm:ore_titanium",
+    "hbm:ore_sulfur",
+    "hbm:ore_niter",
+    "hbm:ore_tungsten",
+    "hbm:ore_aluminium",
+    "hbm:ore_fluorite",
+    "hbm:ore_beryllium",
+    "hbm:ore_lead",
+    "hbm:ore_oil",
+    "hbm:ore_lignite",
+    "hbm:ore_asbestos",
+    "hbm:ore_australium",
+    "hbm:ore_rare",
+    "hbm:ore_cobalt",
+    "hbm:ore_cinnebar",
+    "hbm:ore_coltan",
+    "hbm:cluster_iron",
+    "hbm:cluster_titanium",
+    "hbm:cluster_aluminium",
+    "hbm:cluster_copper"
+  ]
+}
