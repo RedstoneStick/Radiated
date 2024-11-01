@@ -1,8 +1,8 @@
 package net.guwy.hbm;
 
 import net.guwy.hbm.index.NTMOresNBlocks;
+import net.guwy.hbm.index.NTMWorldFeatures;
 import net.guwy.hbm.index.NTMResourcesNParts;
-import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -17,7 +17,6 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 @Mod(NTMMain.MODID)
@@ -38,6 +37,8 @@ public class NTMMain {
 
         NTMResourcesNParts.register(modEventBus);
         NTMOresNBlocks.register(modEventBus);
+
+        NTMWorldFeatures.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(RegisterCreativeMenuContents::register);

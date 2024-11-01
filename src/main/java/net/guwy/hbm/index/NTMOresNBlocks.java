@@ -1,6 +1,9 @@
 package net.guwy.hbm.index;
 
 import net.guwy.hbm.NTMMain;
+import net.guwy.hbm.items.misc.BasicTooltipBlockItem;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -20,7 +23,7 @@ public class NTMOresNBlocks {
 
 
 
-    /// ORES ///
+    // ORES //
     public static final DeferredBlock<Block> ORE_URANIUM = registerBlock("ore_uranium",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3, 3)
@@ -96,7 +99,10 @@ public class NTMOresNBlocks {
                     .strength(3, 3)
                     .requiresCorrectToolForDrops()
                     .mapColor(MapColor.STONE)
-                    .sound(SoundType.STONE))
+                    .sound(SoundType.STONE)),
+            Component.translatable("block.hbm.ore_oil.tooltip.1").withStyle(ChatFormatting.GRAY),
+            Component.translatable("block.hbm.ore_oil.tooltip.2").withStyle(ChatFormatting.GRAY),
+            Component.translatable("block.hbm.ore_oil.tooltip.3").withStyle(ChatFormatting.GRAY)
     );
     public static final DeferredBlock<Block> ORE_LIGNITE= registerBlock("ore_lignite",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -118,7 +124,10 @@ public class NTMOresNBlocks {
                     .requiresCorrectToolForDrops()
                     .mapColor(MapColor.STONE)
                     .sound(SoundType.STONE)),
-            Rarity.UNCOMMON
+            new Item.Properties().rarity(Rarity.UNCOMMON),
+            Component.translatable("block.hbm.ore_australium.tooltip.1").withStyle(ChatFormatting.GRAY),
+            Component.translatable("block.hbm.ore_australium.tooltip.2").withStyle(ChatFormatting.GRAY),
+            Component.translatable("block.hbm.ore_australium.tooltip.3").withStyle(ChatFormatting.GRAY)
     );
     public static final DeferredBlock<Block> ORE_RARE= registerBlock("ore_rare",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -126,7 +135,7 @@ public class NTMOresNBlocks {
                     .requiresCorrectToolForDrops()
                     .mapColor(MapColor.STONE)
                     .sound(SoundType.STONE)),
-            Rarity.UNCOMMON
+            new Item.Properties().rarity(Rarity.UNCOMMON)
     );
     public static final DeferredBlock<Block> ORE_COBALT= registerBlock("ore_cobalt",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -185,20 +194,33 @@ public class NTMOresNBlocks {
      */
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
+        registerBlockItem(name, toReturn, new Item.Properties());
         return toReturn;
     }
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block, Rarity rarity) {
+    /// Registers a block with custom block item properties
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block, Item.Properties itemProperties) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, rarity);
+        registerBlockItem(name, toReturn, itemProperties);
+        return toReturn;
+    }
+    /// Registers a block, with custom block item tooltip
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block, Component... tooltip) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, new Item.Properties(), tooltip);
+        return toReturn;
+    }
+    /// Registers a block, with custom block item properties and tooltip
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block, Item.Properties itemProperties, Component... tooltip) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, itemProperties, tooltip);
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, Item.Properties itemProperties) {
+        ITEMS.register(name, () -> new BlockItem(block.get(), itemProperties));
     }
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, Rarity rarity) {
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(rarity)));
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, Item.Properties itemProperties, Component... tooltip) {
+        ITEMS.register(name, () -> new BasicTooltipBlockItem(block.get(), itemProperties, tooltip));
     }
 
     public static void register(IEventBus eventBus) {

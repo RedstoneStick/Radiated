@@ -1,6 +1,7 @@
 package net.guwy.hbm.index;
 
 import net.guwy.hbm.NTMMain;
+import net.guwy.hbm.items.ColtanCompassItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.EventBus;
 import net.neoforged.bus.api.IEventBus;
@@ -13,7 +14,7 @@ public class NTMResourcesNParts {
 
 
     public static final DeferredItem<Item> TEST_ITEM = ITEMS.register("test_item",
-            () -> new Item(new Item.Properties()));
+            () -> new ColtanCompassItem(new Item.Properties()));
 
 
 

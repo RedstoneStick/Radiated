@@ -20,13 +20,13 @@ license="${mod_license}"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="hbm" #mandatory
+modId="${mod_id}" #mandatory
 
 # The version number of the mod
-version="${file.jarVersion}" #mandatory
+version="${mod_version}" #mandatory
 
 # A display name for the mod
-displayName="${mod_name}" #mandatory    TODO check the info on exported mod to see if mods.toml fetches stuff from gradle.prop (in dev, it doesn't)
+displayName="${mod_name}" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
@@ -41,7 +41,7 @@ displayName="${mod_name}" #mandatory    TODO check the info on exported mod to s
 #credits="" #optional
 
 # A text field displayed in the mod UI
-authors="${mod_authors}" #optional
+authors='''${mod_authors}''' #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''${mod_description}'''
