@@ -1,6 +1,7 @@
 package net.guwy.hbm.datagen.loot_tables;
 
 import net.guwy.hbm.index.NTMOresNBlocks;
+import net.guwy.hbm.index.NTMResourcesNParts;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
@@ -9,8 +10,23 @@ import java.util.HashMap;
 public class OreBlockLootTableRegistry {
 
     public static void init() {
-        //register(NTMOresNBlocks.ORE_URANIUM.get(), NTMOresNBlocks.ORE_URANIUM.asItem());
-        //register(NTMOresNBlocks.ORE_URANIUM.get(), NTMOresNBlocks.ORE_URANIUM.asItem(), 1, 10);
+        register(NTMOresNBlocks.ORE_URANIUM.get(), NTMResourcesNParts.RAW_URANIUM.get());
+        register(NTMOresNBlocks.ORE_THORIUM.get(), NTMResourcesNParts.RAW_THORIUM.get());
+        register(NTMOresNBlocks.ORE_TITANIUM.get(), NTMResourcesNParts.RAW_TITANIUM.get());
+        register(NTMOresNBlocks.ORE_TUNGSTEN.get(), NTMResourcesNParts.RAW_TUNGSTEN.get());
+        register(NTMOresNBlocks.ORE_ALUMINIUM.get(), NTMResourcesNParts.RAW_ALUMINIUM.get());
+        register(NTMOresNBlocks.ORE_BERYLLIUM.get(), NTMResourcesNParts.RAW_BERYLLIUM.get());
+        register(NTMOresNBlocks.ORE_LEAD.get(), NTMResourcesNParts.RAW_LEAD.get());
+        register(NTMOresNBlocks.ORE_AUSTRALIUM.get(), NTMResourcesNParts.RAW_AUSTRALIUM.get());
+
+        register(NTMOresNBlocks.DEEPSLATE_ORE_URANIUM.get(), NTMResourcesNParts.RAW_URANIUM.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_THORIUM.get(), NTMResourcesNParts.RAW_THORIUM.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_TITANIUM.get(), NTMResourcesNParts.RAW_TITANIUM.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_TUNGSTEN.get(), NTMResourcesNParts.RAW_TUNGSTEN.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_ALUMINIUM.get(), NTMResourcesNParts.RAW_ALUMINIUM.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_BERYLLIUM.get(), NTMResourcesNParts.RAW_BERYLLIUM.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_LEAD.get(), NTMResourcesNParts.RAW_LEAD.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_AUSTRALIUM.get(), NTMResourcesNParts.RAW_AUSTRALIUM.get());
     }
 
     public static HashMap<Block, Item> oreBlockToItemMap = new HashMap<>();

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block_raw_lead": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hbm:block_raw_lead"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hbm:crafting/packing_unpacking/9packed/block_raw_lead_to_raw_lead"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_block_raw_lead"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hbm:crafting/packing_unpacking/9packed/block_raw_lead_to_raw_lead"
+    ]
+  }
+}

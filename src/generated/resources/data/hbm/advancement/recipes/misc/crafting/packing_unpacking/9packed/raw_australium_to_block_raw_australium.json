@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_australium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hbm:raw_australium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hbm:crafting/packing_unpacking/9packed/raw_australium_to_block_raw_australium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_australium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hbm:crafting/packing_unpacking/9packed/raw_australium_to_block_raw_australium"
+    ]
+  }
+}

@@ -12,14 +12,11 @@ public class RegisterCreativeMenuContents {
 
     public static void register(BuildCreativeModeTabContentsEvent event) {
 
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(NTMResourcesNParts.TEST_ITEM);
-        }
+        //if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+        //    NTMResourcesNParts.ITEMS.getEntries().forEach((item) -> {
+        //        event.accept(item.get());
+        //    });
+        //}
 
-        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            NTMOresNBlocks.ITEMS.getEntries().forEach((entry) -> {
-                event.accept(entry.get());
-            });
-        }
     }
 }

@@ -3,6 +3,9 @@ package net.guwy.hbm.worldgen.util;
 import net.guwy.hbm.NTMMain;
 import net.guwy.hbm.worldgen.ModOrePlacement;
 import net.guwy.hbm.worldgen.ore.overworld.OGOverworldOreGen;
+import net.guwy.hbm.worldgen.ore.overworld.OverworldCommonOreGen;
+import net.guwy.hbm.worldgen.ore.overworld.OverworldRareOreGen;
+import net.guwy.hbm.worldgen.ore.overworld.OverworldSpecialOreGen;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -28,7 +31,16 @@ import java.util.List;
 public class QuickFeatureRegistry {
 
     private static void init() {
-        OGOverworldOreGen.init(); // an init calling another init. Now you could call that oresInit
+        /*
+        An init calling another init. Now you could call that oresInit.
+        Now that's sum bullshit right there.
+        Lorem ipsum dolor sit amet, NO!
+        Hi!
+         */
+        // OGOverworldOreGen.init();
+        OverworldCommonOreGen.init();
+        OverworldRareOreGen.init();
+        OverworldSpecialOreGen.init();
     }
 
 

@@ -1,29 +1,30 @@
 package net.guwy.hbm.datagen.tags.item;
 
+import net.guwy.hbm.index.NTMResourcesNParts;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class IngotTags {
-    private static void init() {
-        //register(Items.IRON_AXE, "uranium");
+    private static void addTags() {
     }
 
-    private static HashMap<Item, TagKey<Item>> ingotTags = new HashMap<>();
 
-    private static void register(Item item, TagKey<Item> tagKey) {
-        ingotTags.put(item, tagKey);
+    private static HashMap<List<TagKey<Item>>, Item[]> itemTags = new HashMap<>();
+
+    private static void register(TagKey<Item> tagKey, Item... item) {
+        itemTags.put(List.of(tagKey, TagKey.create(Registries.ITEM, ResourceLocation.parse("c:ingots"))), item);
     }
-    private static void register(Item item, String tagKey) {
-        register(item, TagKey.create(Registries.ITEM, ResourceLocation.parse("c:ingots/" + tagKey)));
+    private static void register(String tagKey, Item... item) {
+        register(TagKey.create(Registries.ITEM, ResourceLocation.parse("c:ingots/" + tagKey)), item);
     }
 
-    public static HashMap<Item, TagKey<Item>> getMap() {
-        init();
-        return ingotTags;
+    public static HashMap<List<TagKey<Item>>, Item[]> getMap() {
+        addTags();
+        return itemTags;
     }
 }

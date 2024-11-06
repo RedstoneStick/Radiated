@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#hbm:is_swamp",
+  "features": "hbm:ore_lignite_swamp",
+  "step": "underground_ores"
+}

@@ -2,6 +2,12 @@
   "values": [
     "hbm:ore_uranium",
     "hbm:ore_tungsten",
-    "hbm:ore_australium"
+    "hbm:ore_australium",
+    "hbm:deepslate_ore_uranium",
+    "hbm:deepslate_ore_tungsten",
+    "hbm:deepslate_ore_australium",
+    "hbm:block_raw_uranium",
+    "hbm:block_raw_tungsten",
+    "hbm:block_raw_australium"
   ]
 }

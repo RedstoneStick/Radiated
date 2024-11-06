@@ -5,6 +5,15 @@
     "hbm:ore_beryllium",
     "hbm:cluster_iron",
     "hbm:cluster_aluminium",
-    "hbm:cluster_copper"
+    "hbm:cluster_copper",
+    "hbm:deepslate_ore_thorium",
+    "hbm:deepslate_ore_aluminium",
+    "hbm:deepslate_ore_beryllium",
+    "hbm:deepslate_cluster_iron",
+    "hbm:deepslate_cluster_aluminium",
+    "hbm:deepslate_cluster_copper",
+    "hbm:block_raw_thorium",
+    "hbm:block_raw_aluminium",
+    "hbm:block_raw_beryllium"
   ]
 }

@@ -24,6 +24,7 @@ public class NTMOresNBlocks {
 
 
     // ORES //
+    // Stone
     public static final DeferredBlock<Block> ORE_URANIUM = registerBlock("ore_uranium",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3, 3)
@@ -185,6 +186,226 @@ public class NTMOresNBlocks {
                     .requiresCorrectToolForDrops()
                     .mapColor(MapColor.STONE)
                     .sound(SoundType.STONE))
+    );
+    // Deepslate
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_URANIUM = registerBlock("deepslate_ore_uranium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_THORIUM = registerBlock("deepslate_ore_thorium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_TITANIUM= registerBlock("deepslate_ore_titanium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_SULFUR= registerBlock("deepslate_ore_sulfur",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );public static final DeferredBlock<Block> DEEPSLATE_ORE_NITER= registerBlock("deepslate_ore_niter",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    // Copper is omitted
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_TUNGSTEN= registerBlock("deepslate_ore_tungsten",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_ALUMINIUM= registerBlock("deepslate_ore_aluminium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_FLUORITE= registerBlock("deepslate_ore_fluorite",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_BERYLLIUM= registerBlock("deepslate_ore_beryllium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_LEAD= registerBlock("deepslate_ore_lead",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_OIL= registerBlock("deepslate_ore_oil",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE)),
+            Component.translatable("block.hbm.ore_oil.tooltip.1").withStyle(ChatFormatting.GRAY),
+            Component.translatable("block.hbm.ore_oil.tooltip.2").withStyle(ChatFormatting.GRAY),
+            Component.translatable("block.hbm.ore_oil.tooltip.3").withStyle(ChatFormatting.GRAY)
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_LIGNITE= registerBlock("deepslate_ore_lignite",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_ASBESTOS= registerBlock("deepslate_ore_asbestos",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_AUSTRALIUM= registerBlock("deepslate_ore_australium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE)),
+            new Item.Properties().rarity(Rarity.UNCOMMON),
+            Component.translatable("block.hbm.ore_australium.tooltip.1").withStyle(ChatFormatting.GRAY),
+            Component.translatable("block.hbm.ore_australium.tooltip.2").withStyle(ChatFormatting.GRAY),
+            Component.translatable("block.hbm.ore_australium.tooltip.3").withStyle(ChatFormatting.GRAY)
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_RARE= registerBlock("deepslate_ore_rare",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE)),
+            new Item.Properties().rarity(Rarity.UNCOMMON)
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_COBALT= registerBlock("deepslate_ore_cobalt",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_CINNEBAR= registerBlock("deepslate_ore_cinnebar",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_ORE_COLTAN= registerBlock("deepslate_ore_coltan",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_CLUSTER_IRON = registerBlock("deepslate_cluster_iron",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_CLUSTER_TITANIUM = registerBlock("deepslate_cluster_titanium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_CLUSTER_ALUMINIUM = registerBlock("deepslate_cluster_aluminium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_CLUSTER_COPPER = registerBlock("deepslate_cluster_copper",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4.5f, 3)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .sound(SoundType.DEEPSLATE))
+    );
+
+    // Raw Blocks
+    public static final DeferredBlock<Block> BLOCK_RAW_URANIUM = registerBlock("block_raw_uranium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.DEEPSLATE))
+    );
+    public static final DeferredBlock<Block> BLOCK_RAW_THORIUM = registerBlock("block_raw_thorium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_BROWN))
+    );
+    public static final DeferredBlock<Block> BLOCK_RAW_TITANIUM = registerBlock("block_raw_titanium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.QUARTZ))
+    );
+    public static final DeferredBlock<Block> BLOCK_RAW_TUNGSTEN = registerBlock("block_raw_tungsten",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_BLACK))
+    );
+    public static final DeferredBlock<Block> BLOCK_RAW_ALUMINIUM = registerBlock("block_raw_aluminium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.TERRACOTTA_WHITE))
+    );
+    public static final DeferredBlock<Block> BLOCK_RAW_BERYLLIUM = registerBlock("block_raw_beryllium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.TERRACOTTA_BLACK))
+    );
+    public static final DeferredBlock<Block> BLOCK_RAW_LEAD = registerBlock("block_raw_lead",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.TERRACOTTA_BLUE))
+    );
+    public static final DeferredBlock<Block> BLOCK_RAW_AUSTRALIUM = registerBlock("block_raw_australium",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_YELLOW)),
+            new Item.Properties().rarity(Rarity.UNCOMMON)
+    );
+    public static final DeferredBlock<Block> BLOCK_RAW_COBALT = registerBlock("block_raw_cobalt",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f, 6)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_BLUE))
     );
 
 

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_mountain",
+  "features": "hbm:ore_uranium_mountain",
+  "step": "underground_ores"
+}

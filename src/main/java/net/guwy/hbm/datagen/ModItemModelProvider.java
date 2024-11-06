@@ -21,7 +21,16 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         //basicItem(NTMResourcesNParts.TEST_ITEM.get());
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.TEST_ITEM.get(), "hbm:item/21/test_item");
+
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_URANIUM.get(), "hbm:item/21/raw_uranium");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_THORIUM.get(), "hbm:item/21/raw_thorium");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_TITANIUM.get(), "hbm:item/21/raw_titanium");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_TUNGSTEN.get(), "hbm:item/21/raw_tungsten");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_ALUMINIUM.get(), "hbm:item/21/raw_aluminium");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_BERYLLIUM.get(), "hbm:item/21/raw_beryllium");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_LEAD.get(), "hbm:item/21/raw_lead");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_AUSTRALIUM.get(), "hbm:item/21/raw_australium");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_COBALT.get(), "hbm:item/21/raw_cobalt");
     }
 
     public ItemModelBuilder basicItemWithSpecialTextureLoc(Item item, String texture) {

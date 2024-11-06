@@ -12,20 +12,12 @@ import java.util.List;
 public class SimpleBlockLootTableRegistry {
 
     public static void init() {
-        register(NTMOresNBlocks.ORE_URANIUM.get());
-        register(NTMOresNBlocks.ORE_THORIUM.get());
-        register(NTMOresNBlocks.ORE_TITANIUM.get());
         register(NTMOresNBlocks.ORE_SULFUR.get());
         register(NTMOresNBlocks.ORE_NITER.get());
-        register(NTMOresNBlocks.ORE_TUNGSTEN.get());
-        register(NTMOresNBlocks.ORE_ALUMINIUM.get());
         register(NTMOresNBlocks.ORE_FLUORITE.get());
-        register(NTMOresNBlocks.ORE_BERYLLIUM.get());
-        register(NTMOresNBlocks.ORE_LEAD.get());
         register(NTMOresNBlocks.ORE_OIL.get(), Blocks.COBBLESTONE.asItem(), true);
         register(NTMOresNBlocks.ORE_LIGNITE.get());
         register(NTMOresNBlocks.ORE_ASBESTOS.get());
-        register(NTMOresNBlocks.ORE_AUSTRALIUM.get());
         register(NTMOresNBlocks.ORE_RARE.get());
         register(NTMOresNBlocks.ORE_COBALT.get());
         register(NTMOresNBlocks.ORE_CINNEBAR.get());
@@ -34,6 +26,31 @@ public class SimpleBlockLootTableRegistry {
         register(NTMOresNBlocks.CLUSTER_TITANIUM.get());
         register(NTMOresNBlocks.CLUSTER_ALUMINIUM.get());
         register(NTMOresNBlocks.CLUSTER_COPPER.get());
+
+        register(NTMOresNBlocks.DEEPSLATE_ORE_SULFUR.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_NITER.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_OIL.get(), Blocks.COBBLESTONE.asItem(), true);
+        register(NTMOresNBlocks.DEEPSLATE_ORE_LIGNITE.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_ASBESTOS.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_RARE.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_COBALT.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_CINNEBAR.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_COLTAN.get());
+        register(NTMOresNBlocks.DEEPSLATE_CLUSTER_IRON.get());
+        register(NTMOresNBlocks.DEEPSLATE_CLUSTER_TITANIUM.get());
+        register(NTMOresNBlocks.DEEPSLATE_CLUSTER_ALUMINIUM.get());
+        register(NTMOresNBlocks.DEEPSLATE_CLUSTER_COPPER.get());
+
+        register(NTMOresNBlocks.BLOCK_RAW_URANIUM.get());
+        register(NTMOresNBlocks.BLOCK_RAW_THORIUM.get());
+        register(NTMOresNBlocks.BLOCK_RAW_TITANIUM.get());
+        register(NTMOresNBlocks.ORE_TUNGSTEN.get());
+        register(NTMOresNBlocks.BLOCK_RAW_ALUMINIUM.get());
+        register(NTMOresNBlocks.BLOCK_RAW_BERYLLIUM.get());
+        register(NTMOresNBlocks.BLOCK_RAW_LEAD.get());
+        register(NTMOresNBlocks.BLOCK_RAW_AUSTRALIUM.get());
+        register(NTMOresNBlocks.BLOCK_RAW_COBALT.get());
     }
 
     public static List<Block> selfDroppingBlockList = new ArrayList<>();

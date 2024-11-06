@@ -41,6 +41,39 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.CLUSTER_TITANIUM, "hbm:block/21/ore/cluster_titanium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.CLUSTER_ALUMINIUM, "hbm:block/21/ore/cluster_aluminium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.CLUSTER_COPPER, "hbm:block/21/ore/cluster_copper");
+
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_URANIUM, "hbm:block/21/ore/deepslate_ore_uranium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_THORIUM, "hbm:block/21/ore/deepslate_ore_thorium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_TITANIUM, "hbm:block/21/ore/deepslate_ore_titanium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_SULFUR, "hbm:block/21/ore/deepslate_ore_sulfur");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_NITER, "hbm:block/21/ore/deepslate_ore_niter");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_TUNGSTEN, "hbm:block/21/ore/deepslate_ore_tungsten");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_ALUMINIUM, "hbm:block/21/ore/deepslate_ore_aluminium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE, "hbm:block/21/ore/deepslate_ore_fluorite");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_BERYLLIUM, "hbm:block/21/ore/deepslate_ore_beryllium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_LEAD, "hbm:block/21/ore/deepslate_ore_lead");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_OIL, "hbm:block/21/ore/deepslate_ore_oil");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_LIGNITE, "hbm:block/21/ore/deepslate_ore_lignite");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_ASBESTOS, "hbm:block/21/ore/deepslate_ore_asbestos");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_AUSTRALIUM, "hbm:block/21/ore/deepslate_ore_australium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_RARE, "hbm:block/21/ore/deepslate_ore_rare");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_COBALT, "hbm:block/21/ore/deepslate_ore_cobalt");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_CINNEBAR, "hbm:block/21/ore/deepslate_ore_cinnebar");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_COLTAN, "hbm:block/21/ore/deepslate_ore_coltan");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_CLUSTER_IRON, "hbm:block/21/ore/deepslate_cluster_iron");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_CLUSTER_TITANIUM, "hbm:block/21/ore/deepslate_cluster_titanium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_CLUSTER_ALUMINIUM, "hbm:block/21/ore/deepslate_cluster_aluminium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_CLUSTER_COPPER, "hbm:block/21/ore/deepslate_cluster_copper");
+
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_URANIUM, "hbm:block/21/block_raw_uranium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_THORIUM, "hbm:block/21/block_raw_thorium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_TITANIUM, "hbm:block/21/block_raw_titanium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_TUNGSTEN, "hbm:block/21/block_raw_tungsten");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_ALUMINIUM, "hbm:block/21/block_raw_aluminium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_BERYLLIUM, "hbm:block/21/block_raw_beryllium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_LEAD, "hbm:block/21/block_raw_lead");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_AUSTRALIUM, "hbm:block/21/block_raw_australium");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_COBALT, "hbm:block/21/block_raw_cobalt");
     }
 
     /**

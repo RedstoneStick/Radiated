@@ -2,10 +2,10 @@
   "type": "hbm:within_area_ore",
   "config": {
     "discard_chance_on_air_exposure": 0.0,
-    "maxX": 200,
-    "maxZ": 200,
-    "minX": 100,
-    "minZ": 100,
+    "maxX": -350,
+    "maxZ": -350,
+    "minX": -450,
+    "minZ": -450,
     "size": 50,
     "targets": [
       {
@@ -15,6 +15,15 @@
         "target": {
           "predicate_type": "minecraft:tag_match",
           "tag": "minecraft:stone_ore_replaceables"
+        }
+      },
+      {
+        "state": {
+          "Name": "hbm:deepslate_ore_australium"
+        },
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:deepslate_ore_replaceables"
         }
       }
     ]
