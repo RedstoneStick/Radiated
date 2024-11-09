@@ -1,5 +1,6 @@
 package net.guwy.hbm.datagen.tags.block;
 
+import net.guwy.hbm.index.ModTags;
 import net.guwy.hbm.index.NTMOresNBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -27,7 +28,7 @@ public class StorageBlockTags {
     private static HashMap<List<TagKey<Block>>, Block[]> blockTags = new HashMap<>();
 
     private static void register(TagKey<Block> tagKey, Block... block) {
-        blockTags.put(List.of(tagKey, TagKey.create(Registries.BLOCK, ResourceLocation.parse("c:storage_blocks"))), block);
+        blockTags.put(List.of(tagKey, ModTags.Blocks.STORAGE_BLOCKS), block);
     }
     private static void register(String tagKey, Block... block) {
         register(TagKey.create(Registries.BLOCK, ResourceLocation.parse("c:storage_blocks/" + tagKey)), block);

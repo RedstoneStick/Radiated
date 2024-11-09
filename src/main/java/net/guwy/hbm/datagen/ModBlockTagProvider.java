@@ -27,10 +27,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         super(output, lookupProvider, NTMMain.MODID, existingFileHelper);
     }
 
+
+    // What happens when a snake eats a snake that ate a snake which ate the rabbit
+    // Very messy, but i can't think of a better way to register multiple blocks to multiple tags using one line
     public static final List<HashMap<List<TagKey<Block>>, Block[]>> multiTagRegistryMapList =  List.of(
             StorageBlockTags.getMap(),
             OreTags.getMap()
     );
+
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
