@@ -2,16 +2,12 @@ package net.guwy.hbm.index;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ModTags {
     public static class Blocks {
@@ -22,6 +18,7 @@ public class ModTags {
         public static TagKey<Block> ORES_AUSTRALIUM = tag("ores/australium");
         public static TagKey<Block> ORES_BERYLLIUM = tag("ores/beryllium");
         public static TagKey<Block> ORES_CINNABAR = tag("ores/cinnabar");
+        public static TagKey<Block> ORES_COAL = tag("ores/coal");
         public static TagKey<Block> ORES_COBALT = tag("ores/cobalt");
         public static TagKey<Block> ORES_COLTAN = tag("ores/coltan");
         public static TagKey<Block> ORES_FLUORITE = tag("ores/fluorite");
@@ -37,15 +34,21 @@ public class ModTags {
         public static TagKey<Block> ORES_URANIUM = tag("ores/uranium");
 
         public static TagKey<Block> STORAGE_BLOCKS = tag("storage_blocks");
-        public static TagKey<Block> STORAGE_BLOCKS_ALUMINIUM = tag("storage_blocks/raw_aluminium");
-        public static TagKey<Block> STORAGE_BLOCKS_AUSTRALIUM = tag("storage_blocks/raw_australium");
-        public static TagKey<Block> STORAGE_BLOCKS_BERYLLIUM = tag("storage_blocks/raw_beryllium");
-        public static TagKey<Block> STORAGE_BLOCKS_COBALT = tag("storage_blocks/raw_cobalt");
-        public static TagKey<Block> STORAGE_BLOCKS_LEAD = tag("storage_blocks/raw_lead");
-        public static TagKey<Block> STORAGE_BLOCKS_THORIUM = tag("storage_blocks/raw_thorium");
-        public static TagKey<Block> STORAGE_BLOCKS_TITANIUM = tag("storage_blocks/raw_titanium");
-        public static TagKey<Block> STORAGE_BLOCKS_TUNGSTEN = tag("storage_blocks/raw_tungsten");
-        public static TagKey<Block> STORAGE_BLOCKS_URANIUM = tag("storage_blocks/raw_uranium");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_ALUMINIUM = tag("storage_blocks/raw_aluminium");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_AUSTRALIUM = tag("storage_blocks/raw_australium");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_BERYLLIUM = tag("storage_blocks/raw_beryllium");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_COBALT = tag("storage_blocks/raw_cobalt");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_LEAD = tag("storage_blocks/raw_lead");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_THORIUM = tag("storage_blocks/raw_thorium");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_TITANIUM = tag("storage_blocks/raw_titanium");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_TUNGSTEN = tag("storage_blocks/raw_tungsten");
+        public static TagKey<Block> STORAGE_BLOCKS_RAW_URANIUM = tag("storage_blocks/raw_uranium");
+
+        public static TagKey<Block> STORAGE_BLOCKS_SULFUR = tag("storage_blocks/sulfur");
+        public static TagKey<Block> STORAGE_BLOCKS_NITER = tag("storage_blocks/niter");
+        public static TagKey<Block> STORAGE_BLOCKS_FLUORITE = tag("storage_blocks/fluorite");
+        public static TagKey<Block> STORAGE_BLOCKS_COLTAN = tag("storage_blocks/coltan");
+        public static TagKey<Block> STORAGE_BLOCKS_ASBESTOS = tag("storage_blocks/asbestos");
 
 
 
@@ -66,6 +69,7 @@ public class ModTags {
         public static TagKey<Item> ORES_AUSTRALIUM = tag("ores/australium");
         public static TagKey<Item> ORES_BERYLLIUM = tag("ores/beryllium");
         public static TagKey<Item> ORES_CINNABAR = tag("ores/cinnabar");
+        public static TagKey<Item> ORES_COAL = tag("ores/coal");
         public static TagKey<Item> ORES_COBALT = tag("ores/cobalt");
         public static TagKey<Item> ORES_COLTAN = tag("ores/coltan");
         public static TagKey<Item> ORES_FLUORITE = tag("ores/fluorite");
@@ -81,15 +85,21 @@ public class ModTags {
         public static TagKey<Item> ORES_URANIUM = tag("ores/uranium");
 
         public static TagKey<Item> STORAGE_BLOCKS = tag("storage_blocks");
-        public static TagKey<Item> STORAGE_BLOCKS_ALUMINIUM = tag("storage_blocks/raw_aluminium");
-        public static TagKey<Item> STORAGE_BLOCKS_AUSTRALIUM = tag("storage_blocks/raw_australium");
-        public static TagKey<Item> STORAGE_BLOCKS_BERYLLIUM = tag("storage_blocks/raw_beryllium");
-        public static TagKey<Item> STORAGE_BLOCKS_COBALT = tag("storage_blocks/raw_cobalt");
-        public static TagKey<Item> STORAGE_BLOCKS_LEAD = tag("storage_blocks/raw_lead");
-        public static TagKey<Item> STORAGE_BLOCKS_THORIUM = tag("storage_blocks/raw_thorium");
-        public static TagKey<Item> STORAGE_BLOCKS_TITANIUM = tag("storage_blocks/raw_titanium");
-        public static TagKey<Item> STORAGE_BLOCKS_TUNGSTEN = tag("storage_blocks/raw_tungsten");
-        public static TagKey<Item> STORAGE_BLOCKS_URANIUM = tag("storage_blocks/raw_uranium");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_ALUMINIUM = tag("storage_blocks/raw_aluminium");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_AUSTRALIUM = tag("storage_blocks/raw_australium");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_BERYLLIUM = tag("storage_blocks/raw_beryllium");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_COBALT = tag("storage_blocks/raw_cobalt");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_LEAD = tag("storage_blocks/raw_lead");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_THORIUM = tag("storage_blocks/raw_thorium");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_TITANIUM = tag("storage_blocks/raw_titanium");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_TUNGSTEN = tag("storage_blocks/raw_tungsten");
+        public static TagKey<Item> STORAGE_BLOCKS_RAW_URANIUM = tag("storage_blocks/raw_uranium");
+
+        public static TagKey<Item> STORAGE_BLOCKS_SULFUR = tag("storage_blocks/sulfur");
+        public static TagKey<Item> STORAGE_BLOCKS_NITER = tag("storage_blocks/niter");
+        public static TagKey<Item> STORAGE_BLOCKS_FLUORITE = tag("storage_blocks/fluorite");
+        public static TagKey<Item> STORAGE_BLOCKS_COLTAN = tag("storage_blocks/coltan");
+        public static TagKey<Item> STORAGE_BLOCKS_ASBESTOS = tag("storage_blocks/asbestos");
 
         /// ITEM TAGS
         public static TagKey<Item> RAW_MATERIALS = tag("raw_materials");

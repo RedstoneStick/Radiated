@@ -29,6 +29,12 @@ public class PackingUnpackingRecipes extends RecipeProvider implements IConditio
         pack9(NTMResourcesNParts.RAW_LEAD, NTMOresNBlocks.BLOCK_RAW_LEAD);
         pack9(NTMResourcesNParts.RAW_AUSTRALIUM, NTMOresNBlocks.BLOCK_RAW_AUSTRALIUM);
         pack9(NTMResourcesNParts.RAW_COBALT, NTMOresNBlocks.BLOCK_RAW_COBALT);
+
+        pack9(NTMResourcesNParts.SULFUR, NTMOresNBlocks.BLOCK_SULFUR);
+        pack9(NTMResourcesNParts.NITER, NTMOresNBlocks.BLOCK_NITER);
+        pack9(NTMResourcesNParts.FLUORITE, NTMOresNBlocks.BLOCK_FLUORITE);
+        pack9(NTMResourcesNParts.FRAGMENT_COLTAN, NTMOresNBlocks.BLOCK_COLTAN);
+        pack9(NTMResourcesNParts.INGOT_ASBESTOS, NTMOresNBlocks.BLOCK_ASBESTOS);
     }
 
     public PackingUnpackingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

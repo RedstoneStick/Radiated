@@ -1,13 +1,10 @@
 package net.guwy.hbm;
 
+import com.mojang.logging.LogUtils;
 import net.guwy.hbm.index.NTMCreativeModTabs;
 import net.guwy.hbm.index.NTMOresNBlocks;
-import net.guwy.hbm.index.NTMWorldFeatures;
 import net.guwy.hbm.index.NTMResourcesNParts;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
+import net.guwy.hbm.index.NTMWorldFeatures;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,6 +16,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 
 @Mod(NTMMain.MODID)
 public class NTMMain {
@@ -46,8 +44,17 @@ public class NTMMain {
         // Register the item to a creative tab
         modEventBus.addListener(RegisterCreativeMenuContents::register);
 
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        // Config registries
+        //GeneralConfig.loadFromConfig(config);
+        //WorldConfig.loadFromConfig(config);
+        //MachineConfig.loadFromConfig(config);
+        //BombConfig.loadFromConfig(config);
+        //modContainer.registerConfig(ModConfig.Type.COMMON, RadiationConfigE.SPEC, "hbm-common.toml");
+        //PotionConfig.loadFromConfig(config);
+        //ToolConfig.loadFromConfig(config);
+        //WeaponConfig.loadFromConfig(config);
+        //MobConfig.loadFromConfig(config);
+        //StructureConfig.loadFromConfig(config);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

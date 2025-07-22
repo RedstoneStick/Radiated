@@ -1,0 +1,495 @@
+{
+  "name": "Ores and Minerals",
+  "icon": "hbm:raw_uranium",
+  "category": "hbm:the_world_category",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ores and minerals in NTM are many. Each one is used in the production of variety of machines and are useful conditionally.$(br2)Its not necessary to gather everything you find. But it is still good practice to mine some so you have a few when the need arises."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The next several pages show the ores you can find in the world, what do they look like and where to find them.$(br2)Some ores are distributed evenly and some are distributed triangularly.$(br2)Triangular distribution means you'll find most of that ore in the middle of the highest and lowest points it can be found."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Uranium$() is a common overworld ore that can be found between Y=-60 and Y=10 with a density of 22 veins per chunk, in a triangular distribution.$(br2)Alternatively it can be found in $(2)Mountain$() biomes between Y=5 and Y=50 with a density of 13, with even distribution.",
+      "title": "Uranium"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Uranium Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_uranium"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Thorium$() is a common overworld ore that can be found between Y=-20 and Y=30 with a density of 14 veins per chunk, with even distribution.$(br2)Alternatively it can be found in $(2)Mountain$() biomes between Y=60 and Y=200 with a density of 30, in a triangular distribution. But 80% of it being unexposed to air.",
+      "title": "Thorium"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Thorium Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_thorium"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Titanium$() is a common overworld ore that can be found between Y=-60 and Y=35 with a density of 18 veins per chunk, with even distribution.$(br2)Additional veins can be found between Y=-25 and Y=35 with a density of 8, in a triangular distribution.",
+      "title": "Titanium"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Titanium Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_titanium"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Sulfur$() is a common overworld ore that can be found between Y=-60 and Y=35 with a density of 16 veins per chunk, with even distribution.$(br2)Additional veins can be found in $(2)Savanna$() and $(2)Badlands$() biomes between Y=5 and Y=35 with a density of 5, with even distribution.",
+      "title": "Sulfur"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Sulfur Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_sulfur"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Niter$() is a common overworld ore that can be found between Y=-60 and Y=35 with a density of 19 veins per chunk, with even distribution.$(br2)Additional veins can be found in $(2)Savanna$() and $(2)Badlands$() biomes between Y=5 and Y=35 with a density of 6, with even distribution.",
+      "title": "Niter"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Niter Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_niter"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Tungsten$() is a common overworld ore that can be found between Y=-60 and Y=35 with a density of 29 veins per chunk, with even distribution.",
+      "title": "Tungsten"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Tungsten Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_tungsten"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Aluminium$() is a common overworld ore that can be found between Y=-60 and Y=45 with a density of 17 veins per chunk, with even distribution.",
+      "title": "Aluminium"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Aluminium Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_aluminium"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Fluorite$() is a rare overworld mineral that can be found making up the inner shell of geodes in the form of $(2)Calcium Fluorite$() (also known as $(2)Calcite$()).",
+      "title": "Fluorite"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Calcite Block.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "minecraft:calcite"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Beryllium$() is a common overworld ore that can be found between Y=-60 and Y=35 with a density of 13 veins per chunk, with even distribution.$(br2)Additional veins can be found between Y=-60 and Y=-15 with a density of 6, in a triangular distribution.",
+      "title": "Beryllium"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Beryllium Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_beryllium"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Lead$() is a common overworld ore that can be found between Y=-60 and Y=35 with a density of 13 veins per chunk, with even distribution.$(br2)Additional veins can be found between Y=-10 and Y=35 with a density of 6, in a triangular distribution.",
+      "title": "Lead"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Lead Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_lead"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Lignite$() is a type of low-grade $(2)Coal$(). Found in large veins between Y=35 and Y=60.$(br2)In $(2)Swamp$() biomes can be found at +100% the rate of normal.$(br2)Alternatively it can be found between Y=80 and Y=160 at +150% the rate of normal. But 70% of it being unexposed to air.",
+      "title": "Lignite"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Lignite Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_lignite"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Asbestos$() is a common overworld ore that can be found between Y=16 and Y=32 with a density of 4 veins per chunk, with even distribution.",
+      "title": "Asbestos"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Asbestos Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_asbestos"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Rare Earth Ore$() can be found in overworld between Y=-5 and Y=25 with a density of 9 veins per chunk, with even distribution.$(br2)Alternatively it can be found between Y=-60 and Y=20 with a density of 12, with even distribution. But 40% of it being unexposed to air.",
+      "title": "Rare Earth Minerals"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Rare Earth Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_rare"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Cobalt$() is a common overworld ore that can be found between Y=-4 and Y=12 with a density of 4 veins per chunk, with even distribution.",
+      "title": "Cobalt"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Cobalt Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_cobalt"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Cinnabar$() is a common overworld ore that can be found between Y=8 and Y=24 with a density of 1 vein per chunk, with even distribution.",
+      "title": "Cinnabar"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Cinnabar Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_cinnebar"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Oil$() is a rare overworld resource that can be found between Y=32 and Y=64 once every 128 chunks, with even distribution.$(br2)You cannot mine it with conventional means, instead you need a $(t:[Not Yet Implemented])$(9)Oil Derrick$() to extract oil.",
+      "title": "Oil"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Oil in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_oil"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Coltan$() is a special overworld ore that can be found between Y=15 and Y=40 within 750m circular radius of a set position.$(br2)The deposit is centered on a randomly generated position that is determined by the world seed. This center can be at most 1500m away from spawn.$(br2)You need a $(t:[Not Yet Implemented])$(9)Coltass$() to locate the worlds only coltan deposit.",
+      "title": "Coltan"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Coltan Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_coltan"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Australium$() is a special overworld ore that can be found between Y=15 and Y=30 within 100m square radius of X=-400 Z=-400, with a estimated size of 490 ores.",
+      "title": "Australium"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "text": "Australium Ore in Stone.",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:ore_australium"
+        }
+      },
+      "enable_visualize": false
+    }
+  ],
+  "extra_recipe_mappings": {
+    "hbm:ore_uranium": 2,
+    "hbm:deepslate_ore_uranium": 2,
+    "hbm:raw_uranium": 2,
+    "hbm:block_raw_uranium": 2,
+    "hbm:ore_thorium": 4,
+    "hbm:deepslate_ore_thorium": 4,
+    "hbm:raw_thorium": 4,
+    "hbm:block_raw_thorium": 4,
+    "hbm:ore_titanium": 6,
+    "hbm:deepslate_ore_titanium": 6,
+    "hbm:raw_titanium": 6,
+    "hbm:block_raw_titanium": 6,
+    "hbm:ore_sulfur": 8,
+    "hbm:deepslate_ore_sulfur": 8,
+    "hbm:raw_sulfur": 8,
+    "hbm:block_raw_sulfur": 8,
+    "hbm:ore_niter": 10,
+    "hbm:deepslate_ore_niter": 10,
+    "hbm:niter": 10,
+    "hbm:ore_tungsten": 12,
+    "hbm:deepslate_ore_tungsten": 12,
+    "hbm:raw_tungsten": 12,
+    "hbm:block_raw_tungsten": 12,
+    "hbm:ore_aluminium": 14,
+    "hbm:deepslate_ore_aluminium": 14,
+    "hbm:raw_aluminium": 14,
+    "hbm:block_raw_aluminium": 14,
+    "hbm:ore_fluorite": 16,
+    "hbm:deepslate_ore_fluorite": 16,
+    "hbm:fluorite": 16,
+    "hbm:ore_beryllium": 18,
+    "hbm:deepslate_ore_beryllium": 18,
+    "hbm:raw_beryllium": 18,
+    "hbm:block_raw_beryllium": 18,
+    "hbm:ore_lead": 20,
+    "hbm:deepslate_ore_lead": 20,
+    "hbm:raw_lead": 20,
+    "hbm:block_raw_lead": 20,
+    "hbm:ore_lignite": 22,
+    "hbm:deepslate_ore_lignite": 22,
+    "hbm:lignite": 22,
+    "hbm:ore_asbestos": 24,
+    "hbm:deepslate_ore_asbestos": 24,
+    "hbm:ingot_asbestos": 24,
+    "hbm:ore_rare": 26,
+    "hbm:deepslate_ore_rare": 26,
+    "hbm:chunk_ore.rare": 26,
+    "hbm:ore_cobalt": 28,
+    "hbm:deepslate_ore_cobalt": 28,
+    "hbm:raw_cobalt": 28,
+    "hbm:block_raw_cobalt": 28,
+    "hbm:ore_cinnebar": 30,
+    "hbm:deepslate_ore_cinnebar": 30,
+    "hbm:cinnebar": 30,
+    "hbm:ore_oil": 32,
+    "hbm:deepslate_ore_oil": 32,
+    "hbm:ore_coltan": 34,
+    "hbm:deepslate_ore_coltan": 34,
+    "hbm:fragment_coltan": 34,
+    "hbm:ore_australium": 36,
+    "hbm:deepslate_ore_australium": 36,
+    "hbm:raw_australium": 36,
+    "hbm:block_raw_australium": 36
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Mechanics",
+  "description": "test",
+  "icon": "minecraft:lightning_rod",
+  "sortnum": 1,
+  "flag": "testing_mode"
+}

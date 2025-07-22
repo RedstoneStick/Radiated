@@ -1,0 +1,37 @@
+{
+  "name": "Nuclear Tech Mod",
+  "icon": "minecraft:light",
+  "category": "hbm:getting_started_category",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You are currently playing with $(n)Radiated$() is a crappy rewrite of $(n)HBM's Nuclear Tech Mod$() made by yours truly $(2)Guwy$().$(br2)This mod will be different from the original and have some features missing/altered $(m)due to my incompetence with mod development$() in order to better fit new versions of the game."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Original mod is made by $(2)HBMmods$() and the mods name is $(2)Nuclear Tech$(). Thus named $(2)HBM's Nuclear Tech$() Mod.$(br2)For those who don't know the original mod. Its a 1.7.10 mod that has ammassed a ton of content over its 9 years of development. And most crazy of all, it's still in active development and recieves updates every other week adding new features. $(7)I tell you the guy is crazy.$()"
+    },
+    {
+      "type": "patchouli:link",
+      "text": "$(l)This book itself will act as this mods wiki.$() As there will be differences between the original mod and this one. The book you are holding will include everything about this mod, in detail.$(br2)You can check out the original wiki if you want to see potential upcoming features or just curious about the original.",
+      "url": "https://nucleartech.wiki/wiki/Main_Page",
+      "link_text": "Original NTM Wiki"
+    },
+    {
+      "type": "patchouli:link",
+      "text": "If you have enjoyed this mod, i highly recommend checking out the original. 1.7.10 may look old, but it was the greatest modding version for many years. And it still contains some amazing mods that never got updated past it.$(br2)You can go to the download page of the original mod using the button below.",
+      "url": "https://github.com/HbmMods/Hbm-s-Nuclear-Tech-GIT/releases",
+      "link_text": "NTM releases"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "A Love Letter",
+      "text": "Nuclear Tech gave me $(m)$(7)agony$() joy on mulitple aspects. Whether it being going loose with friends, setting up puzzling production chains, cleaning up reactor debris that went everywhere and more.$(br)I hope my port of this mod can let you experience some of this fun i had.$(br2)Thank you $(d)HBM$(), for your continued work on making 1.7.10 one of the best there is. ❤"
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["hbm:textures/gui/book/door.png"]
+    }
+  ]
+}

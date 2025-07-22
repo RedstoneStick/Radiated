@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hbm:item/21/raw_thorium"
+    "layer0": "hbm:item/21/raw_thorium_2"
   }
 }

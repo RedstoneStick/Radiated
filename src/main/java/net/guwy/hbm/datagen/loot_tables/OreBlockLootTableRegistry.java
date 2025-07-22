@@ -3,6 +3,7 @@ package net.guwy.hbm.datagen.loot_tables;
 import net.guwy.hbm.index.NTMOresNBlocks;
 import net.guwy.hbm.index.NTMResourcesNParts;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
 import java.util.HashMap;
@@ -18,6 +19,16 @@ public class OreBlockLootTableRegistry {
         register(NTMOresNBlocks.ORE_BERYLLIUM.get(), NTMResourcesNParts.RAW_BERYLLIUM.get());
         register(NTMOresNBlocks.ORE_LEAD.get(), NTMResourcesNParts.RAW_LEAD.get());
         register(NTMOresNBlocks.ORE_AUSTRALIUM.get(), NTMResourcesNParts.RAW_AUSTRALIUM.get());
+        register(NTMOresNBlocks.ORE_COBALT.get(), NTMResourcesNParts.RAW_COBALT.get());
+        register(NTMOresNBlocks.ORE_COAL_OIL.get(), Items.COAL, 2, 4);
+        register(NTMOresNBlocks.ORE_SULFUR.get(), NTMResourcesNParts.SULFUR.get(), 2, 5);
+        register(NTMOresNBlocks.ORE_NITER.get(), NTMResourcesNParts.NITER.get(), 2, 5);
+        register(NTMOresNBlocks.ORE_FLUORITE.get(), NTMResourcesNParts.FLUORITE.get(), 2, 5);
+        register(NTMOresNBlocks.ORE_LIGNITE.get(), NTMResourcesNParts.LIGNITE.get());
+        register(NTMOresNBlocks.ORE_ASBESTOS.get(), NTMResourcesNParts.INGOT_ASBESTOS.get());
+        register(NTMOresNBlocks.ORE_RARE.get(), NTMResourcesNParts.CHUNK_ORE_RARE.get());
+        register(NTMOresNBlocks.ORE_CINNEBAR.get(), NTMResourcesNParts.CINNEBAR.get());
+        register(NTMOresNBlocks.ORE_COLTAN.get(), NTMResourcesNParts.FRAGMENT_COLTAN.get());
 
         register(NTMOresNBlocks.DEEPSLATE_ORE_URANIUM.get(), NTMResourcesNParts.RAW_URANIUM.get());
         register(NTMOresNBlocks.DEEPSLATE_ORE_THORIUM.get(), NTMResourcesNParts.RAW_THORIUM.get());
@@ -27,6 +38,16 @@ public class OreBlockLootTableRegistry {
         register(NTMOresNBlocks.DEEPSLATE_ORE_BERYLLIUM.get(), NTMResourcesNParts.RAW_BERYLLIUM.get());
         register(NTMOresNBlocks.DEEPSLATE_ORE_LEAD.get(), NTMResourcesNParts.RAW_LEAD.get());
         register(NTMOresNBlocks.DEEPSLATE_ORE_AUSTRALIUM.get(), NTMResourcesNParts.RAW_AUSTRALIUM.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_COBALT.get(), NTMResourcesNParts.RAW_COBALT.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_COAL_OIL.get(), Items.COAL, 2, 4);
+        register(NTMOresNBlocks.DEEPSLATE_ORE_SULFUR.get(), NTMResourcesNParts.SULFUR.get(), 2, 5);
+        register(NTMOresNBlocks.DEEPSLATE_ORE_NITER.get(), NTMResourcesNParts.NITER.get(), 2, 5);
+        register(NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get(), NTMResourcesNParts.FLUORITE.get(), 2, 5);
+        register(NTMOresNBlocks.DEEPSLATE_ORE_LIGNITE.get(), NTMResourcesNParts.LIGNITE.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_ASBESTOS.get(), NTMResourcesNParts.INGOT_ASBESTOS.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_RARE.get(), NTMResourcesNParts.CHUNK_ORE_RARE.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_CINNEBAR.get(), NTMResourcesNParts.CINNEBAR.get());
+        register(NTMOresNBlocks.DEEPSLATE_ORE_COLTAN.get(), NTMResourcesNParts.FRAGMENT_COLTAN.get());
     }
 
     public static HashMap<Block, Item> oreBlockToItemMap = new HashMap<>();

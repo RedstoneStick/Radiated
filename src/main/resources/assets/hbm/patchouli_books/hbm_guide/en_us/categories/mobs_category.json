@@ -1,0 +1,7 @@
+{
+  "name": "Mobs",
+  "description": "There are no mobs in the current version of the mod.$(br2)Please come back at a later date",
+  "icon": "minecraft:creeper_spawn_egg",
+  "sortnum": 5,
+  "flag": "testing_mode"
+}

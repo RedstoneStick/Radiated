@@ -5,6 +5,7 @@ import net.guwy.hbm.datagen.tags.block.*;
 import net.guwy.hbm.datagen.tags.block.mineable.MineableWithPickaxeTags;
 import net.guwy.hbm.datagen.tags.item.IngotTags;
 import net.guwy.hbm.datagen.tags.item.RawMaterialTags;
+import net.guwy.hbm.index.NTMOresNBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -38,6 +39,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        // Add Simple Tags
+        tag(BlockTags.WOOL).add(NTMOresNBlocks.BLOCK_ASBESTOS.get());
+
+
+
+        // Add Mining Tags
         tag(BlockTags.MINEABLE_WITH_PICKAXE).addAll(MineableWithPickaxeTags.getList());
 
         tag(BlockTags.NEEDS_STONE_TOOL).addAll(NeedsStoneToolTags.getList());
@@ -46,6 +53,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
 
 
+        // Add Multi Registry Tags
         multiTagRegistryMapList.forEach((map) -> {
             map.forEach((tagKeyList, blockArray) -> {
                 tagKeyList.forEach((tagKey) -> {

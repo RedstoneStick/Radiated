@@ -1,0 +1,7 @@
+{
+  "name": "Machines",
+  "description": "test",
+  "icon": "minecraft:furnace",
+  "sortnum": 3,
+  "flag": "testing_mode"
+}

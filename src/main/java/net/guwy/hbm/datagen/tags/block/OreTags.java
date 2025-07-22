@@ -31,6 +31,7 @@ public class OreTags {
         register("cobalt", NTMOresNBlocks.ORE_COBALT.get(), NTMOresNBlocks.DEEPSLATE_ORE_COBALT.get());
         register("cinnabar", NTMOresNBlocks.ORE_CINNEBAR.get(), NTMOresNBlocks.DEEPSLATE_ORE_CINNEBAR.get());
         register("coltan", NTMOresNBlocks.ORE_COLTAN.get(), NTMOresNBlocks.DEEPSLATE_ORE_COLTAN.get());
+        register("coal", NTMOresNBlocks.ORE_COAL_OIL.get(), NTMOresNBlocks.DEEPSLATE_ORE_COAL_OIL.get(), NTMOresNBlocks.ORE_COAL_OIL_BURNING.get(), NTMOresNBlocks.DEEPSLATE_ORE_COAL_OIL_BURNING.get());
     }
 
 

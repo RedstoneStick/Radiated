@@ -30,7 +30,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_BERYLLIUM, "hbm:block/21/ore/ore_beryllium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_LEAD, "hbm:block/21/ore/ore_lead");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_OIL, "hbm:block/21/ore/ore_oil");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_LIGNITE, "hbm:block/21/ore/ore_lignite");
+        orientableBlockWithItem(NTMOresNBlocks.ORE_LIGNITE, "hbm:block/21/ore/ore_lignite_side", "hbm:block/21/ore/ore_lignite_side", "hbm:block/21/ore/ore_lignite_top", "hbm:block/21/ore/ore_lignite_top");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_ASBESTOS, "hbm:block/21/ore/ore_asbestos");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_AUSTRALIUM, "hbm:block/21/ore/ore_australium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_RARE, "hbm:block/21/ore/ore_rare");
@@ -41,6 +41,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.CLUSTER_TITANIUM, "hbm:block/21/ore/cluster_titanium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.CLUSTER_ALUMINIUM, "hbm:block/21/ore/cluster_aluminium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.CLUSTER_COPPER, "hbm:block/21/ore/cluster_copper");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_COAL_OIL, "hbm:block/21/ore/ore_coal_oil");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.ORE_COAL_OIL_BURNING, "hbm:block/21/ore/ore_coal_oil_burning");
 
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_URANIUM, "hbm:block/21/ore/deepslate_ore_uranium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_THORIUM, "hbm:block/21/ore/deepslate_ore_thorium");
@@ -53,7 +55,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_BERYLLIUM, "hbm:block/21/ore/deepslate_ore_beryllium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_LEAD, "hbm:block/21/ore/deepslate_ore_lead");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_OIL, "hbm:block/21/ore/deepslate_ore_oil");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_LIGNITE, "hbm:block/21/ore/deepslate_ore_lignite");
+        orientableBlockWithItem(NTMOresNBlocks.DEEPSLATE_ORE_LIGNITE, "hbm:block/21/ore/deepslate_ore_lignite_side", "hbm:block/21/ore/deepslate_ore_lignite_side", "hbm:block/21/ore/deepslate_ore_lignite_top", "hbm:block/21/ore/deepslate_ore_lignite_top");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_ASBESTOS, "hbm:block/21/ore/deepslate_ore_asbestos");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_AUSTRALIUM, "hbm:block/21/ore/deepslate_ore_australium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_RARE, "hbm:block/21/ore/deepslate_ore_rare");
@@ -64,16 +66,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_CLUSTER_TITANIUM, "hbm:block/21/ore/deepslate_cluster_titanium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_CLUSTER_ALUMINIUM, "hbm:block/21/ore/deepslate_cluster_aluminium");
         blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_CLUSTER_COPPER, "hbm:block/21/ore/deepslate_cluster_copper");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_COAL_OIL, "hbm:block/21/ore/deepslate_ore_coal_oil");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.DEEPSLATE_ORE_COAL_OIL_BURNING, "hbm:block/21/ore/deepslate_ore_coal_oil_burning");
 
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_URANIUM, "hbm:block/21/block_raw_uranium");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_THORIUM, "hbm:block/21/block_raw_thorium");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_TITANIUM, "hbm:block/21/block_raw_titanium");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_TUNGSTEN, "hbm:block/21/block_raw_tungsten");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_ALUMINIUM, "hbm:block/21/block_raw_aluminium");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_BERYLLIUM, "hbm:block/21/block_raw_beryllium");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_LEAD, "hbm:block/21/block_raw_lead");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_AUSTRALIUM, "hbm:block/21/block_raw_australium");
-        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_COBALT, "hbm:block/21/block_raw_cobalt");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_URANIUM, "hbm:block/21/block_raw_uranium_2");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_THORIUM, "hbm:block/21/block_raw_thorium_2");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_TITANIUM, "hbm:block/21/block_raw_titanium_2");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_TUNGSTEN, "hbm:block/21/block_raw_tungsten_2");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_ALUMINIUM, "hbm:block/21/block_raw_aluminium_2");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_BERYLLIUM, "hbm:block/21/block_raw_beryllium_2");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_LEAD, "hbm:block/21/block_raw_lead_2");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_AUSTRALIUM, "hbm:block/21/block_raw_australium_2");
+        blockWithItemWithSpecialTextureLoc(NTMOresNBlocks.BLOCK_RAW_COBALT, "hbm:block/21/block_raw_cobalt_2");
+
+        blockWithItem(NTMOresNBlocks.BLOCK_SULFUR);
+        blockWithItem(NTMOresNBlocks.BLOCK_NITER);
+        blockWithItem(NTMOresNBlocks.BLOCK_FLUORITE);
+        blockWithItem(NTMOresNBlocks.BLOCK_COLTAN);
+        blockWithItem(NTMOresNBlocks.BLOCK_ASBESTOS);
     }
 
     /**
@@ -88,7 +98,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
      */
     private void blockWithItemWithSpecialTextureLoc(DeferredBlock<?> deferredBlock, String texture) {
         Block block = deferredBlock.get();
-        simpleBlock(block, models().cubeAll(BuiltInRegistries.BLOCK.getKey(block).getPath(), ResourceLocation.parse(texture)));
-        simpleBlockItem(block, models().cubeAll(BuiltInRegistries.BLOCK.getKey(block).getPath(), ResourceLocation.parse(texture)));
+        simpleBlockWithItem(deferredBlock.get(), models().cubeAll(BuiltInRegistries.BLOCK.getKey(block).getPath(), ResourceLocation.parse(texture)));
+    }
+
+    private void orientableBlockWithItem(DeferredBlock<?> deferredBlock, String sideTexture, String frontTexture, String bottomTexture, String topTexture) {
+        Block block = deferredBlock.get();
+        simpleBlockWithItem(deferredBlock.get(), models().orientableWithBottom(BuiltInRegistries.BLOCK.getKey(block).getPath(),
+                ResourceLocation.parse(sideTexture), ResourceLocation.parse(frontTexture), ResourceLocation.parse(bottomTexture), ResourceLocation.parse(topTexture)));
     }
 }

@@ -18,6 +18,7 @@ public class OverworldRareOreGen {
     public static void init() {
 
         registerUniform("ore_oil", 128, 64, 32, 64, NTMOresNBlocks.ORE_OIL.get(), NTMOresNBlocks.DEEPSLATE_ORE_OIL.get());
+        //registerUniform("ore_coal_oil", 128, 64, 32, 64, NTMOresNBlocks.ORE_COAL_OIL.get(), NTMOresNBlocks.DEEPSLATE_ORE_OIL.get());
     }
 
     public static void registerUniform(String name, int onceEvery, int veinSize, int minHeight, int maxHeight,

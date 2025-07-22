@@ -1,0 +1,5 @@
+{
+  "values": {
+    "hbm:lignite": {"burn_time": 1200}
+  }
+}

@@ -48,8 +48,8 @@ public class OverworldCommonOreGen {
         registerUniform("ore_aluminium", 17, 6, -60, 45, NTMOresNBlocks.ORE_ALUMINIUM.get(), NTMOresNBlocks.DEEPSLATE_ORE_ALUMINIUM.get());
 
         //Fluorite (0.13 *y)
-        registerUniform("ore_fluorite", 7, 4, -60, 50, NTMOresNBlocks.ORE_FLUORITE.get(), NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
-        registerTriangle("ore_fluorite_weighted", 7, 4, -30, 50, NTMOresNBlocks.ORE_FLUORITE.get(), NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
+        //registerUniform("ore_fluorite", 7, 4, -60, 50, NTMOresNBlocks.ORE_FLUORITE.get(), NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
+        //registerTriangle("ore_fluorite_weighted", 7, 4, -30, 50, NTMOresNBlocks.ORE_FLUORITE.get(), NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
 
         //Beryllium (0.2 *y)
         registerUniform("ore_beryllium", 13, 4, -60, 35, NTMOresNBlocks.ORE_BERYLLIUM.get(), NTMOresNBlocks.DEEPSLATE_ORE_BERYLLIUM.get());
@@ -78,10 +78,10 @@ public class OverworldCommonOreGen {
         registerUniform("ore_cinnebar", 1, 4, 8, 24, NTMOresNBlocks.ORE_CINNEBAR.get(), NTMOresNBlocks.DEEPSLATE_ORE_CINNEBAR.get());
 
 
-        registerUniform("cluster_iron", 4, 6, 15, 60, NTMOresNBlocks.CLUSTER_IRON.get(), NTMOresNBlocks.DEEPSLATE_CLUSTER_IRON.get());
-        registerUniform("cluster_titanium", 2, 6, 15, 45, NTMOresNBlocks.CLUSTER_TITANIUM.get(), NTMOresNBlocks.DEEPSLATE_CLUSTER_TITANIUM.get());
-        registerUniform("cluster_aluminium", 3, 6, 15, 50, NTMOresNBlocks.CLUSTER_ALUMINIUM.get(), NTMOresNBlocks.DEEPSLATE_CLUSTER_ALUMINIUM.get());
-        registerUniform("cluster_copper", 4, 6, 15, 35, NTMOresNBlocks.CLUSTER_COPPER.get(), NTMOresNBlocks.DEEPSLATE_CLUSTER_COPPER.get());
+        //registerUniform("cluster_iron", 4, 6, 15, 60, NTMOresNBlocks.CLUSTER_IRON.get(), NTMOresNBlocks.DEEPSLATE_CLUSTER_IRON.get());
+        //registerUniform("cluster_titanium", 2, 6, 15, 45, NTMOresNBlocks.CLUSTER_TITANIUM.get(), NTMOresNBlocks.DEEPSLATE_CLUSTER_TITANIUM.get());
+        //registerUniform("cluster_aluminium", 3, 6, 15, 50, NTMOresNBlocks.CLUSTER_ALUMINIUM.get(), NTMOresNBlocks.DEEPSLATE_CLUSTER_ALUMINIUM.get());
+        //registerUniform("cluster_copper", 4, 6, 15, 35, NTMOresNBlocks.CLUSTER_COPPER.get(), NTMOresNBlocks.DEEPSLATE_CLUSTER_COPPER.get());
     }
 
     public static void registerUniform(String name, int veinCount, int veinSize, int minHeight, int maxHeight,

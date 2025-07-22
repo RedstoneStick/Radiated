@@ -22,15 +22,24 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         //basicItem(NTMResourcesNParts.TEST_ITEM.get());
 
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_URANIUM.get(), "hbm:item/21/raw_uranium");
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_THORIUM.get(), "hbm:item/21/raw_thorium");
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_TITANIUM.get(), "hbm:item/21/raw_titanium");
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_TUNGSTEN.get(), "hbm:item/21/raw_tungsten");
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_ALUMINIUM.get(), "hbm:item/21/raw_aluminium");
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_BERYLLIUM.get(), "hbm:item/21/raw_beryllium");
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_LEAD.get(), "hbm:item/21/raw_lead");
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_AUSTRALIUM.get(), "hbm:item/21/raw_australium");
-        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_COBALT.get(), "hbm:item/21/raw_cobalt");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_URANIUM.get(), "hbm:item/21/raw_uranium_2");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_THORIUM.get(), "hbm:item/21/raw_thorium_2");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_TITANIUM.get(), "hbm:item/21/raw_titanium_2");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_TUNGSTEN.get(), "hbm:item/21/raw_tungsten_2");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_ALUMINIUM.get(), "hbm:item/21/raw_aluminium_2");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_BERYLLIUM.get(), "hbm:item/21/raw_beryllium_2");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_LEAD.get(), "hbm:item/21/raw_lead_2");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_AUSTRALIUM.get(), "hbm:item/21/raw_australium_2");
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.RAW_COBALT.get(), "hbm:item/21/raw_cobalt_2");
+
+        basicItem(NTMResourcesNParts.SULFUR.get());
+        basicItemWithSpecialTextureLoc(NTMResourcesNParts.NITER.get(), "hbm:item/salpeter");
+        basicItem(NTMResourcesNParts.FLUORITE.get());
+        basicItem(NTMResourcesNParts.LIGNITE.get());
+        basicItem(NTMResourcesNParts.INGOT_ASBESTOS.get());
+        basicItem(NTMResourcesNParts.CHUNK_ORE_RARE.get());
+        basicItem(NTMResourcesNParts.CINNEBAR.get());
+        basicItem(NTMResourcesNParts.FRAGMENT_COLTAN.get());
     }
 
     public ItemModelBuilder basicItemWithSpecialTextureLoc(Item item, String texture) {

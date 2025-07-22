@@ -1,0 +1,7 @@
+{
+  "name": "Weapons",
+  "description": "test",
+  "icon": "minecraft:iron_sword",
+  "sortnum": 4,
+  "flag": "testing_mode"
+}

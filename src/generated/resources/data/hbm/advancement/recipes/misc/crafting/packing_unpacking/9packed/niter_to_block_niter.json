@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_niter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hbm:niter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hbm:crafting/packing_unpacking/9packed/niter_to_block_niter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_niter"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hbm:crafting/packing_unpacking/9packed/niter_to_block_niter"
+    ]
+  }
+}

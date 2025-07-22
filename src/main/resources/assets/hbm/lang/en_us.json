@@ -9,6 +9,8 @@
   "itemGroup.hbm.template": "NTM Templates",
   "itemGroup.hbm.weapon": "NTM Weapons and Turrets",
 
+
+
   "item.hbm.raw_uranium": "Raw Uranium",
   "item.hbm.raw_thorium": "Raw Thorium",
   "item.hbm.raw_thorium.tooltip.1": "The texture is actually a baked potato",
@@ -19,6 +21,19 @@
   "item.hbm.raw_lead": "Raw Lead",
   "item.hbm.raw_australium": "Raw Australium",
   "item.hbm.raw_cobalt": "Raw Cobalt",
+
+  "item.hbm.ingot_asbestos": "Asbestos Sheet",
+  "item.hbm.ingot_asbestos.tooltip": "\"Filled with life, self-doubt and asbestos. That comes with the air.\"",
+
+  "item.hbm.lignite": "Lignite",
+  "item.hbm.cinnebar": "Cinnabar",
+
+  "item.hbm.sulfur": "Sulfur",
+  "item.hbm.niter": "Niter",
+  "item.hbm.fluorite": "Fluorite",
+
+  "item.hbm.chunk_ore.rare": "Rare Earth Ore Chunk",
+  "item.hbm.fragment_coltan": "Coltan",
 
 
 
@@ -37,7 +52,7 @@
   "block.hbm.ore_oil.tooltip.old.2": "Come on, get a derrick you doofus.",
   "block.hbm.ore_oil.tooltip.1": "I won't let you mine it.",
   "block.hbm.ore_oil.tooltip.2": "Get a derrick you doofus.",
-  "block.hbm.ore_oil.tooltip.3": "Wait a minute...",
+  "block.hbm.ore_oil.tooltip.3": "...Wait a minute...",
   "block.hbm.ore_lignite": "Lignite Ore",
   "block.hbm.ore_asbestos": "Asbestos Ore",
   "block.hbm.ore_australium": "Australian Ore",
@@ -54,6 +69,8 @@
   "block.hbm.cluster_titanium": "Titanium Ore Cluster",
   "block.hbm.cluster_aluminium": "Aluminium Ore Cluster",
   "block.hbm.cluster_copper": "Copper Ore Cluster",
+  "block.hbm.ore_coal_oil": "Oily Coal Ore",
+  "block.hbm.ore_coal_oil_burning": "Burning Oily Coal Ore",
 
   "block.hbm.deepslate_ore_uranium": "Deepslate Uranium Ore",
   "block.hbm.deepslate_ore_thorium": "Deepslate Thorium Ore",
@@ -77,6 +94,8 @@
   "block.hbm.deepslate_cluster_titanium": "Deepslate Titanium Ore Cluster",
   "block.hbm.deepslate_cluster_aluminium": "Deepslate Aluminium Ore Cluster",
   "block.hbm.deepslate_cluster_copper": "Deepslate Copper Ore Cluster",
+  "block.hbm.deepslate_ore_coal_oil": "Deepslate Oily Coal Ore",
+  "block.hbm.deepslate_ore_coal_oil_burning": "Burning Deepslate Oily Coal Ore",
 
   "block.hbm.block_raw_uranium": "Block of Raw Uranium",
   "block.hbm.block_raw_thorium": "Block of Raw Thorium",
@@ -86,5 +105,28 @@
   "block.hbm.block_raw_beryllium": "Block of Raw Beryllium",
   "block.hbm.block_raw_lead": "Block of Raw Lead",
   "block.hbm.block_raw_australium": "Block of Raw Australium",
-  "block.hbm.block_raw_cobalt": "Block of Raw Cobalt"
+  "block.hbm.block_raw_cobalt": "Block of Raw Cobalt",
+
+  "block.hbm.block_sulfur": "Block of Sulfur",
+  "block.hbm.block_niter": "Block of Niter",
+  "block.hbm.block_fluorite": "Block of Fluorite",
+  "block.hbm.block_coltan": "Block of Coltan",
+  "block.hbm.block_asbestos": "Block of Asbestos",
+
+
+
+  "trait.hbm.asbestos": "Asbestos",
+  "trait.hbm.blinding": "Blinding",
+  "trait.hbm.coal": "Coal Dust",
+  "trait.hbm.digamma": "Digamma Radiation",
+  "trait.hbm.drop": "Dangerous Drop",
+  "trait.hbm.explosive": "Flammable / Explosive",
+  "trait.hbm.furnace": "Worth %s operations in nuclear furnace",
+  "trait.hbm.heat": "Provides %s HEAT",
+  "trait.hbm.hlParticle": "Particle Half-Life: %s",
+  "trait.hbm.hlPlayer": "Player Half-Life: %s",
+  "trait.hbm.hot": "Pyrophoric / Hot",
+  "trait.hbm.hydro": "Hydroreactive",
+  "trait.hbm.radioactive": "Radioactive",
+  "trait.hbm.radResistance": "Radiation resistance: %s"
 }

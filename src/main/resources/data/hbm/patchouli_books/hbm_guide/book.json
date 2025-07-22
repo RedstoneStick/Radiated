@@ -1,0 +1,9 @@
+{
+  "name": "Guide to Nuclear Tech",
+  "landing_text": " Everything you need to know about Radiated (A crappy HBM's Nuclear Tech Mod Rewrite).$(br2) This book acts as a wiki and includes everything you need and might want to know about the mod.",
+  "version": 1,
+  "creative_tab": "hbm:template",
+  "use_resource_pack": true,
+  "book_texture": "hbm:textures/gui/book/patchouli_book_gray_fixed.png",
+  "model": "hbm:book_guide"
+}

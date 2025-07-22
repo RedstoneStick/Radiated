@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "hbm:raw_uranium"
+    }
+  ],
+  "result": {
+    "components": {
+      "patchouli:book": "hbm:hbm_guide"
+    },
+    "count": 1,
+    "id": "patchouli:guide_book"
+  }
+}

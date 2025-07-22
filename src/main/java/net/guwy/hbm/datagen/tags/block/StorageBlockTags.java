@@ -22,6 +22,13 @@ public class StorageBlockTags {
         register("raw_lead", NTMOresNBlocks.BLOCK_RAW_LEAD.get());
         register("raw_australium", NTMOresNBlocks.BLOCK_RAW_AUSTRALIUM.get());
         register("raw_cobalt", NTMOresNBlocks.BLOCK_RAW_COBALT.get());
+
+        register("sulfur", NTMOresNBlocks.BLOCK_SULFUR.get());
+        register("saltpeter", NTMOresNBlocks.BLOCK_NITER.get());
+        register("niter", NTMOresNBlocks.BLOCK_NITER.get());
+        register("fluorite", NTMOresNBlocks.BLOCK_FLUORITE.get());
+        register("coltan", NTMOresNBlocks.BLOCK_COLTAN.get());
+        register("asbestos", NTMOresNBlocks.BLOCK_ASBESTOS.get());
     }
 
 

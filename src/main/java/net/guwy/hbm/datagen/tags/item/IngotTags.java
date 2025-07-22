@@ -11,6 +11,9 @@ import java.util.List;
 
 public class IngotTags {
     private static void addTags() {
+        register("asbestos", NTMResourcesNParts.INGOT_ASBESTOS.get());
+        register("rare_earth", NTMResourcesNParts.CHUNK_ORE_RARE.get());
+        register("coltan", NTMResourcesNParts.FRAGMENT_COLTAN.get());
     }
 
 

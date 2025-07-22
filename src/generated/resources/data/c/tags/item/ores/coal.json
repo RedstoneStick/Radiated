@@ -1,0 +1,8 @@
+{
+  "values": [
+    "hbm:ore_coal_oil",
+    "hbm:deepslate_ore_coal_oil",
+    "hbm:ore_coal_oil_burning",
+    "hbm:deepslate_ore_coal_oil_burning"
+  ]
+}

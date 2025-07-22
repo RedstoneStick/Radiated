@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hbm:item/21/raw_lead"
+    "layer0": "hbm:item/21/raw_lead_2"
   }
 }

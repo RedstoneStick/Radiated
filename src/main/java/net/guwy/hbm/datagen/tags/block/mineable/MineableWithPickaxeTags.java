@@ -32,6 +32,8 @@ public class MineableWithPickaxeTags {
         register(NTMOresNBlocks.CLUSTER_TITANIUM);
         register(NTMOresNBlocks.CLUSTER_ALUMINIUM);
         register(NTMOresNBlocks.CLUSTER_COPPER);
+        register(NTMOresNBlocks.ORE_COAL_OIL);
+        register(NTMOresNBlocks.ORE_COAL_OIL_BURNING);
 
         register(NTMOresNBlocks.DEEPSLATE_ORE_URANIUM);
         register(NTMOresNBlocks.DEEPSLATE_ORE_THORIUM);
@@ -55,6 +57,8 @@ public class MineableWithPickaxeTags {
         register(NTMOresNBlocks.DEEPSLATE_CLUSTER_TITANIUM);
         register(NTMOresNBlocks.DEEPSLATE_CLUSTER_ALUMINIUM);
         register(NTMOresNBlocks.DEEPSLATE_CLUSTER_COPPER);
+        register(NTMOresNBlocks.DEEPSLATE_ORE_COAL_OIL);
+        register(NTMOresNBlocks.DEEPSLATE_ORE_COAL_OIL_BURNING);
 
         register(NTMOresNBlocks.BLOCK_RAW_URANIUM);
         register(NTMOresNBlocks.BLOCK_RAW_THORIUM);
@@ -65,6 +69,11 @@ public class MineableWithPickaxeTags {
         register(NTMOresNBlocks.BLOCK_RAW_LEAD);
         register(NTMOresNBlocks.BLOCK_RAW_AUSTRALIUM);
         register(NTMOresNBlocks.BLOCK_RAW_COBALT);
+
+        register(NTMOresNBlocks.BLOCK_SULFUR);
+        register(NTMOresNBlocks.BLOCK_NITER);
+        register(NTMOresNBlocks.BLOCK_FLUORITE);
+        register(NTMOresNBlocks.BLOCK_COLTAN);
     }
 
     private static List<ResourceKey<Block>> list = new ArrayList<>();

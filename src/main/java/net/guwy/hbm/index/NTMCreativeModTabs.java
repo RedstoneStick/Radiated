@@ -39,7 +39,7 @@ public class NTMCreativeModTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(NTMMain.MODID, "control"))
                     .title(Component.translatable("itemGroup.hbm.template"))
                     .displayItems((parameters, output) -> {
-                        output.accept(Blocks.BARRIER.asItem());
+                        //output.accept(Blocks.BARRIER.asItem());
                     })
                     .withSearchBar().build());
 

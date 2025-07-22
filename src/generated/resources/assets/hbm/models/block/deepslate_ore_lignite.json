@@ -1,6 +1,9 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable_with_bottom",
   "textures": {
-    "all": "hbm:block/21/ore/deepslate_ore_lignite"
+    "bottom": "hbm:block/21/ore/deepslate_ore_lignite_top",
+    "front": "hbm:block/21/ore/deepslate_ore_lignite_side",
+    "side": "hbm:block/21/ore/deepslate_ore_lignite_side",
+    "top": "hbm:block/21/ore/deepslate_ore_lignite_top"
   }
 }

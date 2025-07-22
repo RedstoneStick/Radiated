@@ -1,0 +1,6 @@
+{
+  "name": "The World",
+  "description": "All the world generation related to nuclear technology and their details.",
+  "icon": "hbm:ore_uranium",
+  "sortnum": 2
+}
