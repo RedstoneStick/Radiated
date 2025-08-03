@@ -75,7 +75,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
             ModTags.Blocks.STORAGE_BLOCKS_FLUORITE,
             ModTags.Blocks.STORAGE_BLOCKS_COLTAN,
             ModTags.Blocks.STORAGE_BLOCKS_ASBESTOS
-            );
+    );
 
 
     @Override
