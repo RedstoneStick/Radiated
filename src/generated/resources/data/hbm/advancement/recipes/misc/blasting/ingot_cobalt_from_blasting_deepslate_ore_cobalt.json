@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ingot_cobalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hbm:deepslate_ore_cobalt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hbm:blasting/ingot_cobalt_from_blasting_deepslate_ore_cobalt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ingot_cobalt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hbm:blasting/ingot_cobalt_from_blasting_deepslate_ore_cobalt"
+    ]
+  }
+}

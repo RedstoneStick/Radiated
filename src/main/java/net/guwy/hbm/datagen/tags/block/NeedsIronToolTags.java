@@ -27,6 +27,10 @@ public class NeedsIronToolTags {
         register(NTMOresNBlocks.BLOCK_RAW_TITANIUM);
         register(NTMOresNBlocks.BLOCK_RAW_LEAD);
         register(NTMOresNBlocks.BLOCK_RAW_COBALT);
+
+        register(NTMOresNBlocks.BLOCK_TITANIUM);
+        register(NTMOresNBlocks.BLOCK_STEEL);
+        register(NTMOresNBlocks.BLOCK_COBALT);
     }
 
     private static List<ResourceKey<Block>> list = new ArrayList<>();

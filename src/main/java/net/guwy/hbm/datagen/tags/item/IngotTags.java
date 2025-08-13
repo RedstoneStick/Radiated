@@ -14,6 +14,9 @@ public class IngotTags {
         register("asbestos", NTMResourcesNParts.INGOT_ASBESTOS.get());
         register("rare_earth", NTMResourcesNParts.CHUNK_ORE_RARE.get());
         register("coltan", NTMResourcesNParts.FRAGMENT_COLTAN.get());
+        register("titanium", NTMResourcesNParts.INGOT_TITANIUM.get());
+        register("steel", NTMResourcesNParts.INGOT_STEEL.get());
+        register("cobalt", NTMResourcesNParts.INGOT_COBALT.get());
     }
 
 

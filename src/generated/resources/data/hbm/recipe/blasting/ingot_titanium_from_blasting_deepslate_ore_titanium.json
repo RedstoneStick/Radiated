@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "item.hbm.ingot_titanium",
+  "ingredient": {
+    "item": "hbm:deepslate_ore_titanium"
+  },
+  "result": {
+    "count": 1,
+    "id": "hbm:ingot_titanium"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "values": [
+    "hbm:steel_plate",
+    "hbm:titanium_plate",
+    "hbm:cobalt_plate"
+  ]
+}

@@ -22,8 +22,15 @@
   "item.hbm.raw_australium": "Raw Australium",
   "item.hbm.raw_cobalt": "Raw Cobalt",
 
+  "item.hbm.ingot_titanium": "Titanium Ingot",
+  "item.hbm.ingot_steel": "Steel Ingot",
+  "item.hbm.ingot_steel.tooltip": "Temporary Recipe",
+  "item.hbm.ingot_cobalt": "Cobalt Ingot",
+
   "item.hbm.ingot_asbestos": "Asbestos Sheet",
   "item.hbm.ingot_asbestos.tooltip": "\"Filled with life, self-doubt and asbestos. That comes with the air.\"",
+
+  "item.hbm.billet_cobalt": "Cobalt Billet",
 
   "item.hbm.lignite": "Lignite",
   "item.hbm.cinnebar": "Cinnabar",
@@ -34,6 +41,8 @@
 
   "item.hbm.chunk_ore.rare": "Rare Earth Ore Chunk",
   "item.hbm.fragment_coltan": "Coltan",
+
+  "item.hbm.nugget_cobalt": "Cobalt Nugget",
 
 
 
@@ -112,6 +121,43 @@
   "block.hbm.block_fluorite": "Block of Fluorite",
   "block.hbm.block_coltan": "Block of Coltan",
   "block.hbm.block_asbestos": "Block of Asbestos",
+  "block.hbm.block_titanium": "Block of Titanium",
+  "block.hbm.block_cobalt": "Block of Cobalt",
+  "block.hbm.block_steel": "Block of Steel",
+
+
+
+  "item.hbm.redstone_sword": "Redstone Sword",
+  "item.hbm.big_sword": "Great Sword",
+  "item.hbm.steel_sword": "Steel Sword",
+  "item.hbm.titanium_sword": "Titanium Sword",
+  "item.hbm.cobalt_sword": "Cobalt Sword",
+
+  "item.hbm.steel_shovel": "Steel Shovel",
+  "item.hbm.steel_pickaxe": "Steel Pickaxe",
+  "item.hbm.steel_axe": "Steel Axe",
+  "item.hbm.steel_hoe": "Steel Hoe",
+  "item.hbm.titanium_shovel": "Titanium Shovel",
+  "item.hbm.titanium_pickaxe": "Titanium Pickaxe",
+  "item.hbm.titanium_axe": "Titanium Axe",
+  "item.hbm.titanium_hoe": "Titanium Hoe",
+  "item.hbm.cobalt_shovel": "Cobalt Shovel",
+  "item.hbm.cobalt_pickaxe": "Cobalt Pickaxe",
+  "item.hbm.cobalt_axe": "Cobalt Axe",
+  "item.hbm.cobalt_hoe": "Cobalt Hoe",
+
+  "item.hbm.steel_helmet": "Steel Helmet",
+  "item.hbm.steel_plate": "Steel Chestplate",
+  "item.hbm.steel_legs": "Steel Leggings",
+  "item.hbm.steel_boots": "Steel Boots",
+  "item.hbm.titanium_helmet": "Titanium Helmet",
+  "item.hbm.titanium_plate": "Titanium Chestplate",
+  "item.hbm.titanium_legs": "Titanium Leggings",
+  "item.hbm.titanium_boots": "Titanium Boots",
+  "item.hbm.cobalt_helmet": "Cobalt Helmet",
+  "item.hbm.cobalt_plate": "Cobalt Chestplate",
+  "item.hbm.cobalt_legs": "Cobalt Leggings",
+  "item.hbm.cobalt_boots": "Cobalt Boots",
 
 
 

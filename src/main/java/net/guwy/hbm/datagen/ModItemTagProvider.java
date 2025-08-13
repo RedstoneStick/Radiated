@@ -32,7 +32,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
             RawMaterialTags.getMap(),
             DustTags.getMap(),
             DyeTags.getMap(),
-            GemTags.getMap()
+            GemTags.getMap(),
+            BilletTags.getMap(),
+            NuggetTags.getMap(),
+            MinecraftTags.getMap()
     );
 
     /**
@@ -74,7 +77,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
             ModTags.Blocks.STORAGE_BLOCKS_NITER,
             ModTags.Blocks.STORAGE_BLOCKS_FLUORITE,
             ModTags.Blocks.STORAGE_BLOCKS_COLTAN,
-            ModTags.Blocks.STORAGE_BLOCKS_ASBESTOS
+            ModTags.Blocks.STORAGE_BLOCKS_ASBESTOS,
+            ModTags.Blocks.STORAGE_BLOCKS_TITANIUM,
+            ModTags.Blocks.STORAGE_BLOCKS_STEEL,
+            ModTags.Blocks.STORAGE_BLOCKS_COBALT
     );
 
 

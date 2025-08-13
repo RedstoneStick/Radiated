@@ -80,20 +80,27 @@ public class NTMCreativeModTabs {
                     }).build());
 
     public static final Supplier<CreativeModeTab> WEAPON = CREATIVE_MODE_TAB.register("ntm_weapon",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Blocks.BARRIER.asItem()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(NTMWeapons.BIG_SWORD.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(NTMMain.MODID, "ntm_missile"))
                     .title(Component.translatable("itemGroup.hbm.weapon"))
                     .displayItems((parameters, output) -> {
-                        output.accept(Blocks.BARRIER.asItem());
+                        NTMWeapons.ITEMS.getEntries().forEach((item) -> {
+                            output.accept(item.get());
+                        });
                     })
                     .withScrollBarSpriteLocation(ResourceLocation.fromNamespaceAndPath(NTMMain.MODID, "container/creative_inventory/scroller_weapon")).build());
 
     public static final Supplier<CreativeModeTab> CONSUMABLE = CREATIVE_MODE_TAB.register("ntm_consumable",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Blocks.BARRIER.asItem()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(NTMTools.COBALT_PICKAXE.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(NTMMain.MODID, "ntm_weapon"))
                     .title(Component.translatable("itemGroup.hbm.consumable"))
                     .displayItems((parameters, output) -> {
-                        output.accept(Blocks.BARRIER.asItem());
+                        NTMTools.ITEMS.getEntries().forEach((item) -> {
+                            output.accept(item.get());
+                        });
+                        NTMArmors.ITEMS.getEntries().forEach((item) -> {
+                            output.accept(item.get());
+                        });
                     })
                     .withScrollBarSpriteLocation(ResourceLocation.fromNamespaceAndPath(NTMMain.MODID, "container/creative_inventory/scroller_consumable")).build());
 

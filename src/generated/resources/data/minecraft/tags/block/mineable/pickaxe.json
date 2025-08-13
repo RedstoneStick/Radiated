@@ -60,6 +60,9 @@
     "hbm:block_sulfur",
     "hbm:block_niter",
     "hbm:block_fluorite",
-    "hbm:block_coltan"
+    "hbm:block_coltan",
+    "hbm:block_titanium",
+    "hbm:block_steel",
+    "hbm:block_cobalt"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "c:billets/cobalt"
+    },
+    "B": {
+      "item": "hbm:steel_boots"
+    }
+  },
+  "pattern": [
+    "ABA"
+  ],
+  "result": {
+    "id": "hbm:cobalt_boots"
+  }
+}

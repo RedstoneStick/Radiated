@@ -84,6 +84,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(NTMOresNBlocks.BLOCK_FLUORITE);
         blockWithItem(NTMOresNBlocks.BLOCK_COLTAN);
         blockWithItem(NTMOresNBlocks.BLOCK_ASBESTOS);
+        blockWithItem(NTMOresNBlocks.BLOCK_TITANIUM);
+        blockWithItem(NTMOresNBlocks.BLOCK_STEEL);
+        blockWithItem(NTMOresNBlocks.BLOCK_COBALT);
     }
 
     /**

@@ -1,10 +1,7 @@
 package net.guwy.hbm;
 
 import com.mojang.logging.LogUtils;
-import net.guwy.hbm.index.NTMCreativeModTabs;
-import net.guwy.hbm.index.NTMOresNBlocks;
-import net.guwy.hbm.index.NTMResourcesNParts;
-import net.guwy.hbm.index.NTMWorldFeatures;
+import net.guwy.hbm.index.*;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -38,6 +35,9 @@ public class NTMMain {
 
         NTMResourcesNParts.register(modEventBus);
         NTMOresNBlocks.register(modEventBus);
+        NTMWeapons.register(modEventBus);
+        NTMTools.register(modEventBus);
+        NTMArmors.register(modEventBus);
 
         NTMWorldFeatures.register(modEventBus);
 

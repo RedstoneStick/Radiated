@@ -14,6 +14,9 @@
     "hbm:deepslate_cluster_titanium",
     "hbm:block_raw_titanium",
     "hbm:block_raw_lead",
-    "hbm:block_raw_cobalt"
+    "hbm:block_raw_cobalt",
+    "hbm:block_titanium",
+    "hbm:block_steel",
+    "hbm:block_cobalt"
   ]
 }

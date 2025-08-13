@@ -191,7 +191,7 @@
           ]
         ],
         "mapping": {
-          "X": "minecraft:calcite"
+          "X": "hbm:ore_fluorite"
         }
       },
       "enable_visualize": false

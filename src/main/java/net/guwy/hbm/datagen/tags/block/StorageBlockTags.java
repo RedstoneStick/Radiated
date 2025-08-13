@@ -29,6 +29,9 @@ public class StorageBlockTags {
         register("fluorite", NTMOresNBlocks.BLOCK_FLUORITE.get());
         register("coltan", NTMOresNBlocks.BLOCK_COLTAN.get());
         register("asbestos", NTMOresNBlocks.BLOCK_ASBESTOS.get());
+        register("titanium", NTMOresNBlocks.BLOCK_TITANIUM.get());
+        register("steel", NTMOresNBlocks.BLOCK_STEEL.get());
+        register("cobalt", NTMOresNBlocks.BLOCK_COBALT.get());
     }
 
 

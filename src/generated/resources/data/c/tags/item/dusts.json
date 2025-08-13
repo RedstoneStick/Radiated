@@ -1,8 +1,8 @@
 {
   "values": [
     "hbm:niter",
-    "hbm:fluorite",
+    "hbm:niter",
     "hbm:sulfur",
-    "hbm:niter"
+    "hbm:fluorite"
   ]
 }

@@ -252,6 +252,9 @@ public class NTMOresNBlocks {
 
 
     // STORAGE BLOCKS //
+    public static final DeferredBlock<Block> BLOCK_TITANIUM = registerBlock("block_titanium",
+            () -> new Block(BlockBehaviour.Properties.of().strength(5f, 50).requiresCorrectToolForDrops().mapColor(MapColor.METAL).sound(SoundType.METAL))
+    );
     public static final DeferredBlock<Block> BLOCK_SULFUR = registerBlock("block_sulfur",
             () -> new Block(BlockBehaviour.Properties.of().strength(5f, 10).requiresCorrectToolForDrops().mapColor(MapColor.COLOR_YELLOW))
     );
@@ -260,6 +263,12 @@ public class NTMOresNBlocks {
     );
     public static final DeferredBlock<Block> BLOCK_FLUORITE = registerBlock("block_fluorite",
             () -> new Block(BlockBehaviour.Properties.of().strength(5f, 10).requiresCorrectToolForDrops().mapColor(MapColor.SNOW))
+    );
+    public static final DeferredBlock<Block> BLOCK_COBALT = registerBlock("block_cobalt",
+            () -> new Block(BlockBehaviour.Properties.of().strength(5f, 50).requiresCorrectToolForDrops().mapColor(MapColor.TERRACOTTA_BLUE).sound(SoundType.METAL))
+    );
+    public static final DeferredBlock<Block> BLOCK_STEEL = registerBlock("block_steel",
+            () -> new Block(BlockBehaviour.Properties.of().strength(5f, 50).requiresCorrectToolForDrops().mapColor(MapColor.METAL).sound(SoundType.METAL))
     );
     public static final DeferredBlock<Block> BLOCK_COLTAN = registerBlock("block_coltan",
             () -> new Block(BlockBehaviour.Properties.of().strength(5f, 50).requiresCorrectToolForDrops().mapColor(MapColor.TERRACOTTA_BROWN).sound(SoundType.METAL))

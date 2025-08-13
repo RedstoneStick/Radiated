@@ -74,6 +74,9 @@ public class MineableWithPickaxeTags {
         register(NTMOresNBlocks.BLOCK_NITER);
         register(NTMOresNBlocks.BLOCK_FLUORITE);
         register(NTMOresNBlocks.BLOCK_COLTAN);
+        register(NTMOresNBlocks.BLOCK_TITANIUM);
+        register(NTMOresNBlocks.BLOCK_STEEL);
+        register(NTMOresNBlocks.BLOCK_COBALT);
     }
 
     private static List<ResourceKey<Block>> list = new ArrayList<>();

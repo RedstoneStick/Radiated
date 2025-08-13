@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobalt_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ingots/cobalt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hbm:crafting/equipment/shovel/cobalt_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cobalt_shovel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hbm:crafting/equipment/shovel/cobalt_shovel"
+    ]
+  }
+}

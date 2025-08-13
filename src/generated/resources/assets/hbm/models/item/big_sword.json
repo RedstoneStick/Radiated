@@ -1,0 +1,6 @@
+{
+  "parent": "hbm:item/large_handheld",
+  "textures": {
+    "layer0": "hbm:item/big_sword"
+  }
+}

@@ -40,6 +40,13 @@ public class NTMResourcesNParts {
 
 
     // Ingots //
+    public static final DeferredItem<Item> INGOT_TITANIUM = ITEMS.register("ingot_titanium",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> INGOT_STEEL = ITEMS.register("ingot_steel",
+            () -> new BasicTooltipItem(new Item.Properties(),
+                    Component.translatable("item.hbm.ingot_steel.tooltip").withStyle(ChatFormatting.GRAY)));
+    public static final DeferredItem<Item> INGOT_COBALT = ITEMS.register("ingot_cobalt",
+            () -> new Item(new Item.Properties()));
 
 
 
@@ -51,6 +58,8 @@ public class NTMResourcesNParts {
 
 
     // Billets //
+    public static final DeferredItem<Item> BILLET_COBALT = ITEMS.register("billet_cobalt",
+            () -> new Item(new Item.Properties()));
 
 
 
@@ -93,6 +102,8 @@ public class NTMResourcesNParts {
 
 
     // Nuggets //
+    public static final DeferredItem<Item> NUGGET_COBALT = ITEMS.register("nugget_cobalt",
+            () -> new Item(new Item.Properties()));
 
 
 

@@ -1,19 +1,22 @@
 {
   "values": [
-    "hbm:block_raw_beryllium",
     "hbm:block_sulfur",
+    "hbm:block_raw_beryllium",
     "hbm:block_coltan",
-    "hbm:block_fluorite",
+    "hbm:block_cobalt",
     "hbm:block_raw_aluminium",
+    "hbm:block_fluorite",
     "hbm:block_raw_lead",
-    "hbm:block_raw_tungsten",
     "hbm:block_raw_titanium",
+    "hbm:block_raw_tungsten",
     "hbm:block_raw_uranium",
+    "hbm:block_steel",
     "hbm:block_raw_cobalt",
     "hbm:block_niter",
-    "hbm:block_asbestos",
-    "hbm:block_niter",
+    "hbm:block_titanium",
     "hbm:block_raw_thorium",
-    "hbm:block_raw_australium"
+    "hbm:block_asbestos",
+    "hbm:block_raw_australium",
+    "hbm:block_niter"
   ]
 }

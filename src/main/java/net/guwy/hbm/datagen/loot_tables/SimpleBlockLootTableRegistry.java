@@ -40,6 +40,9 @@ public class SimpleBlockLootTableRegistry {
         register(NTMOresNBlocks.BLOCK_FLUORITE.get());
         register(NTMOresNBlocks.BLOCK_COLTAN.get());
         register(NTMOresNBlocks.BLOCK_ASBESTOS.get());
+        register(NTMOresNBlocks.BLOCK_TITANIUM.get());
+        register(NTMOresNBlocks.BLOCK_STEEL.get());
+        register(NTMOresNBlocks.BLOCK_COBALT.get());
     }
 
     public static List<Block> selfDroppingBlockList = new ArrayList<>();
