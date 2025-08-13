@@ -175,7 +175,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(2)Fluorite$() is a rare overworld mineral that can be found making up the inner shell of geodes in the form of $(2)Calcium Fluorite$() (also known as $(2)Calcite$()).",
+      "text": "$(2)Fluorite$() is a common overworld ore that can be found between Y=-60 and Y=50 with a density of 7 veins per chunk, with even distribution.$(br2)Additional veins can be found between Y=-30 and Y=50 with a density of 7, in a triangular distribution.",
       "title": "Fluorite"
     },
     {

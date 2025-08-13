@@ -48,8 +48,8 @@ public class OverworldCommonOreGen {
         registerUniform("ore_aluminium", 17, 6, -60, 45, NTMOresNBlocks.ORE_ALUMINIUM.get(), NTMOresNBlocks.DEEPSLATE_ORE_ALUMINIUM.get());
 
         //Fluorite (0.13 *y)
-        //registerUniform("ore_fluorite", 7, 4, -60, 50, NTMOresNBlocks.ORE_FLUORITE.get(), NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
-        //registerTriangle("ore_fluorite_weighted", 7, 4, -30, 50, NTMOresNBlocks.ORE_FLUORITE.get(), NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
+        registerUniform("ore_fluorite", 7, 4, -60, 50, NTMOresNBlocks.ORE_FLUORITE.get(), NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
+        registerTriangle("ore_fluorite_weighted", 7, 4, -30, 50, NTMOresNBlocks.ORE_FLUORITE.get(), NTMOresNBlocks.DEEPSLATE_ORE_FLUORITE.get());
 
         //Beryllium (0.2 *y)
         registerUniform("ore_beryllium", 13, 4, -60, 35, NTMOresNBlocks.ORE_BERYLLIUM.get(), NTMOresNBlocks.DEEPSLATE_ORE_BERYLLIUM.get());
