@@ -1,0 +1,22 @@
+{
+  "values": {
+    "hbm:lignite": {
+      "burn_time": 1200
+    },
+    "hbm:powder_ash.coal": {
+      "burn_time": 200
+    },
+    "hbm:powder_ash.fly": {
+      "burn_time": 200
+    },
+    "hbm:powder_ash.misc": {
+      "burn_time": 100
+    },
+    "hbm:powder_ash.soot": {
+      "burn_time": 100
+    },
+    "hbm:powder_ash.wood": {
+      "burn_time": 100
+    }
+  }
+}

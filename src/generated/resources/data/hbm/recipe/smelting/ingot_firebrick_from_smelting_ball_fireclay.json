@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "item.hbm.ingot_firebrick",
+  "ingredient": {
+    "item": "hbm:ball_fireclay"
+  },
+  "result": {
+    "count": 1,
+    "id": "hbm:ingot_firebrick"
+  }
+}

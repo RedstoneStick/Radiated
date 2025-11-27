@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "#c:coal_coke",
+      "required": false
+    },
+    {
+      "id": "#c:coke/coal",
+      "required": false
+    },
+    {
+      "id": "#c:coke/lignite",
+      "required": false
+    },
+    {
+      "id": "#c:coke/petroleum",
+      "required": false
+    }
+  ]
+}
