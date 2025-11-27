@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.HashMap;
 
-public class OreBlockLootTableRegistry {
+public class  OreBlockLootTableRegistry {
 
     public static void init() {
         register(NTMOresNBlocks.ORE_URANIUM.get(), NTMResourcesNParts.RAW_URANIUM.get());

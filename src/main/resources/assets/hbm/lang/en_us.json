@@ -26,6 +26,7 @@
   "item.hbm.ingot_steel": "Steel Ingot",
   "item.hbm.ingot_steel.tooltip": "Temporary Recipe",
   "item.hbm.ingot_cobalt": "Cobalt Ingot",
+  "item.hbm.ingot_firebrick": "Firebrick",
 
   "item.hbm.ingot_asbestos": "Asbestos Sheet",
   "item.hbm.ingot_asbestos.tooltip": "\"Filled with life, self-doubt and asbestos. That comes with the air.\"",
@@ -38,6 +39,14 @@
   "item.hbm.sulfur": "Sulfur",
   "item.hbm.niter": "Niter",
   "item.hbm.fluorite": "Fluorite",
+  "item.hbm.powder_ash.coal": "Coal Ash",
+  "item.hbm.powder_ash.wood": "Wood Ash",
+  "item.hbm.powder_ash.misc": "Ash",
+  "item.hbm.powder_ash.fly": "Fly Ash",
+  "item.hbm.powder_ash.soot": "Fine Soot",
+  "item.hbm.powder_ash.fullerene": "Fullerene",
+
+  "item.hbm.ball_fireclay": "Fireclay",
 
   "item.hbm.chunk_ore.rare": "Rare Earth Ore Chunk",
   "item.hbm.fragment_coltan": "Coltan",
@@ -158,6 +167,19 @@
   "item.hbm.cobalt_plate": "Cobalt Chestplate",
   "item.hbm.cobalt_legs": "Cobalt Leggings",
   "item.hbm.cobalt_boots": "Cobalt Boots",
+
+
+
+  "block.hbm.brick_furnace": "Bricked Furnace",
+  "container.hbm.brick_furnace": "Bricked Furnace",
+  "screen.hbm.brick_furnace.speed_tooltip.1": "Smelting Speed Bonus:",
+  "screen.hbm.brick_furnace.speed_tooltip.2": "- Blocks into other Blocks = 200%",
+  "screen.hbm.brick_furnace.speed_tooltip.3": "- Logs into Charcoal = 200%",
+  "screen.hbm.brick_furnace.speed_tooltip.4": "- Clay into Brick = 400%",
+  "screen.hbm.brick_furnace.speed_tooltip.5": "- Netherrack into Nether Brick = 400%",
+  "screen.hbm.brick_furnace.speed_tooltip.6": "- Fireclay into Firebrick = 400%",
+  "screen.hbm.brick_furnace.ash_slot_tooltip.1": "Ashtray",
+  "screen.hbm.brick_furnace.ash_slot_tooltip.2": "Ashes of used fuels will accumulate here",
 
 
 

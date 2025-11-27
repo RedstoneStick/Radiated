@@ -38,6 +38,10 @@ public class NTMMain {
         NTMWeapons.register(modEventBus);
         NTMTools.register(modEventBus);
         NTMArmors.register(modEventBus);
+        NTMMachines.register(modEventBus);
+
+        ModBlockEntityTypes.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         NTMWorldFeatures.register(modEventBus);
 

@@ -1,0 +1,42 @@
+{
+  "name": "Brick Furnace",
+  "icon": "hbm:brick_furnace",
+  "category": "hbm:machines_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Bricked Furnace$() is a type of $(2)Furnace$() that functions mostly identical to the normal one. However, it can smelt certain items faster while consuming less coal.$(br2)It'll also collect Ash as a byproduct that can be used as dye or fuel.$(br)$(7)More information can be found inside the blocks GUI."
+    },
+    {
+      "type": "patchouli:multiblock",
+      "name": "Bricked Furnace",
+      "multiblock": {
+        "pattern": [
+          [
+            "X"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "mapping": {
+          "X": "hbm:brick_furnace"
+        }
+      },
+      "enable_visualize": false
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(2)Fuel$() can be put into the top left.$(li)$(2)Ingredient$() into the center slot.$(li)$(2)Output$() will be placed on the right most slot.$(li)$(2)Ashes$() will drop down under the fuel. $(br)$(6)$(l)NOTE:$() Ashes can clog the furnace and stop it from working if backed up.$(br)$(7)Hopper functionality is identical to Furnace. (Ashes can be picked up from below)"
+    },
+    {
+      "type": "patchouli:image",
+      "title": "GUI",
+      "text": "Every slot serves its purpose.",
+      "images": ["hbm:textures/gui/book/brick_furnace_gui.png"]
+    }
+  ],
+  "extra_recipe_mappings": {
+    "hbm:brick_furnace": 0
+  }
+}

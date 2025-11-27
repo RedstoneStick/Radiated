@@ -54,11 +54,13 @@ public class NTMCreativeModTabs {
                     }).build());
 
     public static final Supplier<CreativeModeTab> MACHINE = CREATIVE_MODE_TAB.register("ntm_machine",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Blocks.BARRIER.asItem()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(NTMMachines.BRICK_FURNACE.asItem()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(NTMMain.MODID, "ntm_blocks"))
                     .title(Component.translatable("itemGroup.hbm.machine"))
                     .displayItems((parameters, output) -> {
-                        output.accept(Blocks.BARRIER.asItem());
+                        NTMMachines.ITEMS.getEntries().forEach((item) -> {
+                            output.accept(item.get());
+                        });
                     }).build());
 
     public static final Supplier<CreativeModeTab> NUKE = CREATIVE_MODE_TAB.register("ntm_nuke",

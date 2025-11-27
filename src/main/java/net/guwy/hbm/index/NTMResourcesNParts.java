@@ -47,6 +47,8 @@ public class NTMResourcesNParts {
                     Component.translatable("item.hbm.ingot_steel.tooltip").withStyle(ChatFormatting.GRAY)));
     public static final DeferredItem<Item> INGOT_COBALT = ITEMS.register("ingot_cobalt",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> INGOT_FIREBRICK = ITEMS.register("ingot_firebrick",
+            () -> new Item(new Item.Properties()));
 
 
 
@@ -78,10 +80,24 @@ public class NTMResourcesNParts {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FLUORITE = ITEMS.register("fluorite",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> POWDER_ASH_COAL = ITEMS.register("powder_ash.coal",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> POWDER_ASH_WOOD = ITEMS.register("powder_ash.wood",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> POWDER_ASH_MISC = ITEMS.register("powder_ash.misc",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> POWDER_ASH_FLY = ITEMS.register("powder_ash.fly",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> POWDER_ASH_SOOT = ITEMS.register("powder_ash.soot",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> POWDER_ASH_FULLERENE = ITEMS.register("powder_ash.fullerene",
+            () -> new Item(new Item.Properties()));
 
 
 
     // Explosives N Compounds //
+    public static final DeferredItem<Item> FIRECLAY_BALL = ITEMS.register("ball_fireclay",
+            () -> new Item(new Item.Properties()));
 
 
 

@@ -1,7 +1,6 @@
 {
   "name": "Machines",
-  "description": "test",
-  "icon": "minecraft:furnace",
-  "sortnum": 3,
-  "flag": "testing_mode"
+  "description": "All the machines within the mod.",
+  "icon": "hbm:brick_furnace",
+  "sortnum": 3
 }

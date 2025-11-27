@@ -1,8 +1,13 @@
 {
   "values": [
+    "hbm:powder_ash.coal",
+    "hbm:powder_ash.wood",
+    "hbm:powder_ash.misc",
+    "hbm:powder_ash.fly",
+    "hbm:powder_ash.soot",
+    "hbm:fluorite",
     "hbm:niter",
     "hbm:niter",
-    "hbm:sulfur",
-    "hbm:fluorite"
+    "hbm:sulfur"
   ]
 }

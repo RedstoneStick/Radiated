@@ -35,7 +35,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
             GemTags.getMap(),
             BilletTags.getMap(),
             NuggetTags.getMap(),
-            MinecraftTags.getMap()
+            MinecraftTags.getMap(),
+            BasicItemTags.getMap()
     );
 
     /**
@@ -87,7 +88,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         // Add Simple Tags
-        tag(ItemTags.WOOL).add(NTMOresNBlocks.BLOCK_ASBESTOS.get().asItem());
+        //tag(ItemTags.WOOL).add(NTMOresNBlocks.BLOCK_ASBESTOS.get().asItem());
+        tag(ModTags.Items.COKE).addOptionalTags(ModTags.Items.IE_COKE, ModTags.Items.COKE_COAL, ModTags.Items.COKE_LIGNITE, ModTags.Items.COKE_PETROLEUM);
 
 
 

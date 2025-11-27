@@ -20,7 +20,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class EquipmentRecipes extends RecipeProvider implements IConditionBuilder {
     private static void init() {
-        makeSword(NTMWeapons.REDSTONE_SWORD, Tags.Items.DUSTS_REDSTONE);
+        makeSword(NTMWeapons.REDSTONE_SWORD, Tags.Items.STORAGE_BLOCKS_REDSTONE);
         makeSword(NTMWeapons.STEEL_SWORD, ModTags.Items.INGOTS_STEEL);
         makeSword(NTMWeapons.TITANIUM_SWORD, ModTags.Items.INGOTS_TITANIUM);
         makeSword(NTMWeapons.COBALT_SWORD, ModTags.Items.INGOTS_COBALT);

@@ -135,6 +135,15 @@ public class ModTags {
         public static TagKey<Item> DUSTS_SALTPETER = tag("dusts/saltpeter");
         public static TagKey<Item> DUSTS_NITER = tag("dusts/niter");
         public static TagKey<Item> DUSTS_FLUORITE = tag("dusts/fluorite");
+        public static TagKey<Item> DUSTS_ANY_ASH = tag("dusts/ash");
+
+        // COALS //
+        public static TagKey<Item> LIGNITE = tag("lignite");
+        public static TagKey<Item> COKE = tag("coke");
+        public static TagKey<Item> COKE_COAL = tag("coke/coal");
+        public static TagKey<Item> COKE_LIGNITE = tag("coke/lignite");
+        public static TagKey<Item> COKE_PETROLEUM = tag("coke/petroleum");
+        public static TagKey<Item> IE_COKE = tag("coal_coke");   // Coke from the immersive engineering mod
 
         // GEMS //
         public static TagKey<Item> GEMS = tag("gems");

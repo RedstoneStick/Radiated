@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "A": {
-      "tag": "c:dusts/redstone"
+      "tag": "c:storage_blocks/redstone"
     },
     "B": {
       "tag": "c:rods/wooden"

@@ -53,6 +53,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(NTMResourcesNParts.INGOT_COBALT.get());
         basicItem(NTMResourcesNParts.BILLET_COBALT.get());
         basicItem(NTMResourcesNParts.NUGGET_COBALT.get());
+        basicItem(NTMResourcesNParts.INGOT_FIREBRICK.get());
+        basicItem(NTMResourcesNParts.POWDER_ASH_COAL.get());
+        basicItem(NTMResourcesNParts.POWDER_ASH_WOOD.get());
+        basicItem(NTMResourcesNParts.POWDER_ASH_MISC.get());
+        basicItem(NTMResourcesNParts.POWDER_ASH_FLY.get());
+        basicItem(NTMResourcesNParts.POWDER_ASH_SOOT.get());
+        basicItem(NTMResourcesNParts.POWDER_ASH_FULLERENE.get());
+        basicItem(NTMResourcesNParts.FIRECLAY_BALL.get());
 
         toolItem(NTMWeapons.REDSTONE_SWORD.get());
         largeToolItem(NTMWeapons.BIG_SWORD.get());

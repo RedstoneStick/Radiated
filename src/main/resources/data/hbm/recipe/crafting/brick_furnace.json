@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:bricks"
+    },
+    "B": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "A A",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hbm:brick_furnace"
+  }
+}

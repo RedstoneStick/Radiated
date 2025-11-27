@@ -15,6 +15,7 @@ public class DustTags {
         register("saltpeter", NTMResourcesNParts.NITER.get());
         register("niter", NTMResourcesNParts.NITER.get());
         register("fluorite", NTMResourcesNParts.FLUORITE.get());
+        register("ash", NTMResourcesNParts.POWDER_ASH_COAL.get(), NTMResourcesNParts.POWDER_ASH_WOOD.get(), NTMResourcesNParts.POWDER_ASH_MISC.get(), NTMResourcesNParts.POWDER_ASH_FLY.get(), NTMResourcesNParts.POWDER_ASH_SOOT.get());
     }
 
 

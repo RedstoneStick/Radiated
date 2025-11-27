@@ -38,6 +38,8 @@ public class SmeltingRecipes extends RecipeProvider implements IConditionBuilder
         blastInto(NTMOresNBlocks.DEEPSLATE_ORE_TITANIUM, NTMResourcesNParts.INGOT_TITANIUM);
         smeltInto(NTMResourcesNParts.RAW_TITANIUM, NTMResourcesNParts.INGOT_TITANIUM);
         blastInto(NTMResourcesNParts.RAW_TITANIUM, NTMResourcesNParts.INGOT_TITANIUM);
+
+        smeltInto(NTMResourcesNParts.FIRECLAY_BALL, NTMResourcesNParts.INGOT_FIREBRICK);
     }
 
 

@@ -1,7 +1,13 @@
 {
   "values": [
-    "hbm:sulfur",
+    "hbm:powder_ash.coal",
+    "hbm:powder_ash.soot",
     "hbm:fluorite",
-    "hbm:cinnebar"
+    "hbm:powder_ash.fly",
+    "hbm:powder_ash.fullerene",
+    "hbm:cinnebar",
+    "hbm:powder_ash.wood",
+    "hbm:powder_ash.misc",
+    "hbm:sulfur"
   ]
 }

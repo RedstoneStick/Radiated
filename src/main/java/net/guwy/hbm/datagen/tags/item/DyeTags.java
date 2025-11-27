@@ -12,20 +12,20 @@ import java.util.List;
 
 public class DyeTags {
     private static void addTags() {
-        //register(Tags.Items.DYES_BLACK);
+        register(Tags.Items.DYES_BLACK, NTMResourcesNParts.POWDER_ASH_COAL.get(), NTMResourcesNParts.POWDER_ASH_SOOT.get());
         register(Tags.Items.DYES_RED, NTMResourcesNParts.CINNEBAR.get());
         //register(Tags.Items.DYES_GREEN);
-        //register(Tags.Items.DYES_BROWN);
+        register(Tags.Items.DYES_BROWN, NTMResourcesNParts.POWDER_ASH_FLY.get());
         //register(Tags.Items.DYES_BLUE);
         //register(Tags.Items.DYES_PURPLE);
         //register(Tags.Items.DYES_CYAN);
-        //register(Tags.Items.DYES_LIGHT_GRAY);
-        //register(Tags.Items.DYES_GRAY);
+        register(Tags.Items.DYES_LIGHT_GRAY, NTMResourcesNParts.POWDER_ASH_WOOD.get());
+        register(Tags.Items.DYES_GRAY, NTMResourcesNParts.POWDER_ASH_MISC.get());
         //register(Tags.Items.DYES_PINK);
         //register(Tags.Items.DYES_LIME);
         register(Tags.Items.DYES_YELLOW, NTMResourcesNParts.SULFUR.get());
         //register(Tags.Items.DYES_LIGHT_BLUE);
-        //register(Tags.Items.DYES_MAGENTA);
+        register(Tags.Items.DYES_MAGENTA, NTMResourcesNParts.POWDER_ASH_FULLERENE.get());
         //register(Tags.Items.DYES_ORANGE);
         register(Tags.Items.DYES_WHITE, NTMResourcesNParts.FLUORITE.get());
     }
