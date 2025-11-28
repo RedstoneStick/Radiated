@@ -40,10 +40,10 @@ public class BrickFurnaceEntityBlock extends AbstractFurnaceBlock {
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!state.is(newState.getBlock())) {
             BlockEntity blockentity = level.getBlockEntity(pos);
-            if (blockentity instanceof AbstractBrickFurnaceBlockEntity) {
+            if (blockentity instanceof BrickFurnaceBlockEntity) {
                 if (level instanceof ServerLevel) {
-                    Containers.dropContents(level, pos, (AbstractBrickFurnaceBlockEntity)blockentity);
-                    ((AbstractBrickFurnaceBlockEntity)blockentity).getRecipesToAwardAndPopExperience((ServerLevel)level, Vec3.atCenterOf(pos));
+                    Containers.dropContents(level, pos, (BrickFurnaceBlockEntity)blockentity);
+                    ((BrickFurnaceBlockEntity)blockentity).getRecipesToAwardAndPopExperience((ServerLevel)level, Vec3.atCenterOf(pos));
                 }
 
                 super.onRemove(state, level, pos, newState, isMoving);
@@ -62,8 +62,6 @@ public class BrickFurnaceEntityBlock extends AbstractFurnaceBlock {
 
     /**
      * Called to open this furnace's container.
-     *
-     * @see #use
      */
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {

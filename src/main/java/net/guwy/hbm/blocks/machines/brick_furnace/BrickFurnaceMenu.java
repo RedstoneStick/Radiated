@@ -239,7 +239,7 @@ public class BrickFurnaceMenu extends AbstractContainerMenu {
         @Override
         protected void checkTakeAchievements(ItemStack stack) {
             stack.onCraftedBy(this.player.level(), this.player, this.removeCount);
-            if (this.player instanceof ServerPlayer serverplayer && this.container instanceof AbstractBrickFurnaceBlockEntity abstractbrickfurnaceblockentity) {
+            if (this.player instanceof ServerPlayer serverplayer && this.container instanceof BrickFurnaceBlockEntity abstractbrickfurnaceblockentity) {
                 abstractbrickfurnaceblockentity.awardUsedRecipesAndPopExperience(serverplayer);
             }
 
