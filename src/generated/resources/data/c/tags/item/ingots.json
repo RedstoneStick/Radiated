@@ -1,10 +1,10 @@
 {
   "values": [
-    "hbm:fragment_coltan",
     "hbm:ingot_steel",
-    "hbm:ingot_cobalt",
     "hbm:ingot_asbestos",
     "hbm:chunk_ore.rare",
-    "hbm:ingot_titanium"
+    "hbm:ingot_cobalt",
+    "hbm:ingot_titanium",
+    "hbm:fragment_coltan"
   ]
 }

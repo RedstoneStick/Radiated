@@ -1,5 +1,6 @@
 package net.guwy.hbm.datagen.loot_tables;
 
+import net.guwy.hbm.index.NTMMachines;
 import net.guwy.hbm.index.NTMOresNBlocks;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -43,6 +44,8 @@ public class SimpleBlockLootTableRegistry {
         register(NTMOresNBlocks.BLOCK_TITANIUM.get());
         register(NTMOresNBlocks.BLOCK_STEEL.get());
         register(NTMOresNBlocks.BLOCK_COBALT.get());
+
+        register(NTMMachines.BRICK_FURNACE.get());
     }
 
     public static List<Block> selfDroppingBlockList = new ArrayList<>();

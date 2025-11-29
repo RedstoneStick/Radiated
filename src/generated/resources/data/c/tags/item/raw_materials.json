@@ -1,12 +1,12 @@
 {
   "values": [
+    "hbm:raw_thorium",
     "hbm:raw_australium",
-    "hbm:raw_titanium",
     "hbm:raw_uranium",
-    "hbm:raw_aluminium",
+    "hbm:raw_titanium",
     "hbm:raw_cobalt",
     "hbm:raw_beryllium",
-    "hbm:raw_thorium",
+    "hbm:raw_aluminium",
     "hbm:raw_tungsten",
     "hbm:raw_lead"
   ]

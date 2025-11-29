@@ -196,5 +196,12 @@
   "trait.hbm.hot": "Pyrophoric / Hot",
   "trait.hbm.hydro": "Hydroreactive",
   "trait.hbm.radioactive": "Radioactive",
-  "trait.hbm.radResistance": "Radiation resistance: %s"
+  "trait.hbm.radResistance": "Radiation resistance: %s",
+
+
+
+  "config.jade.plugin_hbm.remove_default_item_storage_display": "Remove Default Item Storage Display",
+  "config.jade.plugin_hbm.brick_furnace": "Brick Furnace",
+  "tooltip.jade.brick_furnace.ash": "Ash: %d%% Coal, %d%% Wood, %d%% Misc",
+  "tooltip.jade.brick_furnace.clogged": "Clogged with ash"
 }

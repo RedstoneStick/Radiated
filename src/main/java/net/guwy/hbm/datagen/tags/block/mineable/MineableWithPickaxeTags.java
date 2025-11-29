@@ -1,5 +1,6 @@
 package net.guwy.hbm.datagen.tags.block.mineable;
 
+import net.guwy.hbm.index.NTMMachines;
 import net.guwy.hbm.index.NTMOresNBlocks;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
@@ -77,6 +78,8 @@ public class MineableWithPickaxeTags {
         register(NTMOresNBlocks.BLOCK_TITANIUM);
         register(NTMOresNBlocks.BLOCK_STEEL);
         register(NTMOresNBlocks.BLOCK_COBALT);
+
+        register(NTMMachines.BRICK_FURNACE);
     }
 
     private static List<ResourceKey<Block>> list = new ArrayList<>();

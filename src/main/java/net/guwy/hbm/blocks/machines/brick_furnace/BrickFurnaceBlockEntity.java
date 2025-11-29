@@ -368,6 +368,26 @@ public class BrickFurnaceBlockEntity extends BaseContainerBlockEntity implements
         else return cookTime;
     }
 
+    public int getDataCookingProgress() {
+        return this.cookingProgress;
+    }
+
+    public int getDataCookingTotalTime() {
+        return this.cookingTotalTime;
+    }
+
+    public int getDataAshCoal() {
+        return this.ashLevelCoal;
+    }
+
+    public int getDataAshWood() {
+        return this.ashLevelWood;
+    }
+
+    public int getDataAshMisc() {
+        return this.ashLevelMisc;
+    }
+
     public static boolean isFuel(ItemStack stack) {
         return stack.getBurnTime(null) > 0;
     }

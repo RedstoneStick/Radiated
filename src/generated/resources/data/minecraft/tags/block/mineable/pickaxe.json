@@ -63,6 +63,7 @@
     "hbm:block_coltan",
     "hbm:block_titanium",
     "hbm:block_steel",
-    "hbm:block_cobalt"
+    "hbm:block_cobalt",
+    "hbm:brick_furnace"
   ]
 }
